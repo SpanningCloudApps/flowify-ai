@@ -1,6 +1,7 @@
 import config from 'config';
 import { initServer } from './server';
 import { createLogger } from './logger/logger';
+import { queueService } from './service/workflow/QueueService';
 
 const logger = createLogger('core-api');
 
@@ -10,6 +11,7 @@ const start = async (): Promise<void> => {
 
   try {
     const server = await initServer();
+    await queueService.initializeQueues();
     await server.listen({ port, host });
     logger.info(`Server had been started on port ${port}`);
   } catch (e) {

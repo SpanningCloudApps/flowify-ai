@@ -1,11 +1,11 @@
 CREATE TABLE IF NOT EXISTS classification_result
 (
-    id          BIGSERIAL NOT NULL,
-    input       JSONB     NOT NULL default '{}',
-    workflow_id VARCHAR   NOT NULL,
-    probability FLOAT     NOT NULL,
-    data        JSONB     NOT NULL default '{}',
-    created_at  TIMESTAMP NOT NULL default NOW()
+    id            BIGSERIAL NOT NULL,
+    input         JSONB     NOT NULL default '{}',
+    workflow_name VARCHAR   NOT NULL,
+    probability   FLOAT     NOT NULL,
+    data          JSONB     NOT NULL default '{}',
+    created_at    TIMESTAMP NOT NULL default NOW()
 );
 
 CREATE TABLE IF NOT EXISTS workflow
