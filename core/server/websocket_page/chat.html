@@ -141,10 +141,10 @@
           }}
         >
           <Typography component="h1" variant="h5">
-            Fastify WebSockets React Chat
+            STATE YOUR NAME
           </Typography>
           <WsConnection
-            url="ws://localhost:3000/chat"
+            url="ws://localhost:3300/ecosystem/api/clients/chat"
             onOpen={() => setConnecting(false)}
             onChannelOpened={openChannel}
             onMessage={displayMessage}
