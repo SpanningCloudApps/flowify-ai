@@ -6,7 +6,9 @@ package com.spanning.core.service.workflow;
 
 import java.util.List;
 
-import com.spanning.api.dto.response.workflow.WorkflowResponseDto;
+import com.spanning.core.dto.request.workflow.SearchParams;
+import com.spanning.core.dto.response.workflow.Workflow;
+import com.spanning.core.repository.workflow.WorkflowRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -15,18 +17,17 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class WorkflowService {
 
-  public List<WorkflowResponseDto> getAll() {
-    return List.of(
-      WorkflowResponseDto.builder()
-        .id(1L)
-        .name("NAME1")
-        .description("description")
-        .build(),
-      WorkflowResponseDto.builder()
-        .id(2L)
-        .name("NAME2")
-        .description("description2")
-        .build());
+  private final WorkflowRepository workflowRepository;
+
+  public List<Workflow> search(final SearchParams searchParams) {
+    return workflowRepository.search(
+      searchParams.getWorkflowName(),
+      searchParams.getPageToken(),
+      searchParams.getLimit()
+    );
   }
 
+  public void delete(final long id) {
+    workflowRepository.delete(id);
+  }
 }

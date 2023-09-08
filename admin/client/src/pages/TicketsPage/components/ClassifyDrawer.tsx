@@ -22,11 +22,17 @@ const ClassifyDrawer: FC = () => {
   const [type, setType] = useState('PREDEFINED');
 
   useEffect(() => {
-    getWorkflows();
-  }, []);
+    if (openClassifier) {
+      getWorkflows({});
+    }
+  }, [openClassifier]);
 
   const onTypeChange = useCallback((e: any) => {
-    form.resetFields();
+    if (e.target.value === 'DONT_KNOW') {
+      form.setFieldValue('workflowName', 'REVIEWED_UNKNOWN');
+    } else {
+      form.resetFields();
+    }
     setType(e.target.value);
   }, []);
 
@@ -35,13 +41,19 @@ const ClassifyDrawer: FC = () => {
   }, []);
 
   const onSubmit = useCallback((values: any) => {
-    updateTicket();
-  }, []);
+    console.log(values);
+    updateTicket({
+      id: selectedTicket.id,
+      workflowName: values.workflowName?.trim(),
+      description: values.description?.trim()
+    });
+    toggleClassifier({}, false);
+  }, [selectedTicket]);
 
   return <Drawer
-      title={formatMessage({ id: 'TICKET_DRAWER_TITLE' }, { type: selectedTicket.title?.toLowerCase() || '' })}
+      title={formatMessage({ id: 'TICKET_DRAWER_TITLE' }, { type: selectedTicket.title || '' })}
       placement="right"
-      width={300}
+      width={400}
       onClose={onClose}
       open={openClassifier}
       rootStyle={{ position: 'fixed' }}
@@ -53,17 +65,13 @@ const ClassifyDrawer: FC = () => {
       <Radio value={'DONT_KNOW'}>Don't Know</Radio>
     </Radio.Group>
     <Form form={form}
-          labelCol={{ span: 6 }}
-          wrapperCol={{ span: 12 }}
+          style={{ marginTop: 20 }}
           requiredMark
-          layout="horizontal"
-          initialValues={selectedTicket}
           onFinish={onSubmit}
     >
       {type === 'PREDEFINED' && <Row gutter={24}>
         <Col xs={24}>
           <Form.Item name="workflowName"
-                     valuePropName="workflowName"
                      rules={[
                        {
                          required: true,
@@ -119,10 +127,14 @@ const ClassifyDrawer: FC = () => {
       {type === 'DONT_KNOW' && <Row gutter={24}>
         <Col xs={24}>
           <Form.Item name="workflowName"
-                     initialValue={'REVIEWED_UNKNOWN'}
-                     valuePropName="workflowName"
-                     label={formatMessage({ id: 'DRAWER_TICKET_LABEL_WORKFLOW' })}>
-            <Select disabled>
+                     label={formatMessage({ id: 'DRAWER_TICKET_LABEL_WORKFLOW' })}
+                     rules={[
+                       {
+                         required: true,
+                         message: formatMessage({ id: 'FIELD_IS_REQUIRED' })
+                       }
+                     ]}>
+            <Select>
               <Select.Option value={'REVIEWED_UNKNOWN'}>REVIEWED_UNKNOWN</Select.Option>
             </Select>
           </Form.Item>
