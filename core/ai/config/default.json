@@ -1,7 +1,7 @@
 {
   "ai": {
     "openai": {
-      "apiKey": "POPEN_AI_API_KEY",
+      "apiKey": "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",
       "maxTokens": 1024,
       "model": "gpt-3.5-turbo",
       "temperature": 0.3
