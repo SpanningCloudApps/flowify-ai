@@ -1,0 +1,9 @@
+version: '3'
+services:
+  hackathon-admin-ui:
+    image: "${IMAGE_NAME}:${IMAGE_TAG}"
+    container_name: hackathon-admin-ui
+    environment:
+      API_GATEWAY_URL: ${API_GATEWAY_URL:-http://localhost:8080}
+    ports:
+      - '3000:8080'

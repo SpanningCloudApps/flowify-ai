@@ -1,0 +1,130 @@
+/*
+ * Copyright (C) 2021 Spanning Cloud Apps.  All rights reserved
+ */
+@import 'src/constants/constants-styles.scss';
+
+:global(.ant-layout-sider-collapsed) {
+  .header__logo_container, .navlink__text {
+    width: 0;
+    overflow: hidden;
+  }
+
+  .sider__header {
+    justify-content: center;
+    padding: 15px 20px;
+  }
+
+  .menu__title {
+    display: none;
+  }
+}
+
+.sider {
+  :global(.ant-menu-inline .ant-menu-item::after) {
+    right: unset;
+    left: 0;
+  }
+
+  background: transparent !important;
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 14px 15px 20px;
+    height: 60px;
+    color: $clr-super-light
+  }
+
+  &__menu {
+    background: transparent;
+    border: none;
+  }
+}
+
+.header {
+  &__logo_container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s;
+    gap: 4px;
+  }
+
+  &__logo {
+    width: 65px;
+  }
+
+  &__title {
+    margin-bottom: 0;
+    margin-top: 0;
+    width: 45%;
+    font-size: 18px;
+    color: $clr-super-light;
+  }
+
+  &__btn_collapse {
+    padding: 6px;
+    width: 80px;
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.menu {
+  &__title {
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 8px;
+    font-size: 12px;
+    color: #fff;
+    opacity: 0.5;
+  }
+
+  &__item {
+    margin: 0 !important;
+    &:global(.ant-menu-item-selected) {
+      background-color: $clr-super-light-transparent !important;
+
+      .navlink__text, .navlink__icon {
+        color: $clr-super-light;
+      }
+    }
+
+    &:hover, &:active {
+      background-color: #FFF1;
+
+      .navlink__text, .navlink__icon {
+        color: $clr-super-light;
+      }
+    }
+  }
+
+  &__navlink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF7 !important;
+  }
+}
+
+.navlink {
+  &__text {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    font-size: 18px;
+  }
+}
