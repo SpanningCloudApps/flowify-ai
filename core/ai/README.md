@@ -1,0 +1,3 @@
+# Authors
+
+Nikita Gurets
