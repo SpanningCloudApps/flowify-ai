@@ -1,7 +1,7 @@
 import { DataProcessBodyDto } from '../dto/DataDto';
 import { getLogger } from '../logger/logger';
 import { classifierService } from '../service/ClassifierService';
-import { dataStorageService } from '../service/data/DataStorageService';
+import { dataStorageService } from '../repository/data/DataStorageRepostory';
 
 const logger = getLogger();
 

@@ -5,6 +5,10 @@ const logger = getLogger();
 export class ClassifierService {
   private static _instance = new ClassifierService();
 
+  private ClassifierService() {
+
+  }
+
   static get instance(): ClassifierService {
     return this._instance;
   }

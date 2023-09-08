@@ -7,5 +7,14 @@
   },
   "swagger": {
     "enabled": true
+  },
+  "sql": {
+    "indexdb": {
+      "user": "postgres",
+      "pass": "postgres",
+      "host": "localhost",
+      "port": "7432",
+      "db": "index"
+    }
   }
 }
