@@ -78,12 +78,12 @@ export class QueueService {
   }
 
   public async retrieveClientInteractionWorkflowResult(processMessage: (sqsMessage: SqsMessage, progress: SqsPollQueueStats) => any) {
-    logger.info(`Poll message from the queue ${this.workflowStepInteractionResultQueue}`);
+    logger.info(`Poll message from the queue ${this.workflowStepInteractionRequestQueue}`);
 
     const queueOpts = {
       sqsPrefix: config.get('sqs.prefix') as string,
       defaultConfig: config.get('sqs.default') as DefaultQueueConfig,
-      originalConfig: config.get(`sqs.queues.${this.workflowStepInteractionResultQueue}`) as QueueConfig
+      originalConfig: config.get(`sqs.queues.${this.workflowStepInteractionRequestQueue}`) as QueueConfig
     };
     const data = {
       visibilityTimeout: config.get('sqs.messageVisibilityTimeoutSeconds') as number,
