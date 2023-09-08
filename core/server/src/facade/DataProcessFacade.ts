@@ -1,9 +1,7 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
- */
-
 import { DataProcessBodyDto } from '../dto/DataDto';
 import { getLogger } from '../logger/logger';
+import { classifierService } from '../service/ClassifierService';
+import { dataStorageService } from '../service/data/DataStorageService';
 
 const logger = getLogger();
 
@@ -15,6 +13,9 @@ export class DataProcessFacade {
   }
 
   public async process(body: DataProcessBodyDto) {
+    await classifierService.classify(body);
+    await dataStorageService.save(body);
+
     logger.info(`Data to process: ${JSON.stringify(body)}`);
   }
 
