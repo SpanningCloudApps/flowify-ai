@@ -1,8 +1,8 @@
 import config from 'config';
 
 import { getLogger } from '../../logger/logger';
-import { Database } from '../Database';
-import { sql } from 'slonik';
+// import { Database } from '../Database';
+// import { sql } from 'slonik';
 
 const logger = getLogger();
 
@@ -34,6 +34,9 @@ export class DataStorageRepostory {
   }
 
   // public async save(data: Record<string, unknown>) {
+  //   const query = knex(this.tableName);
+  //
+  //   query.in;
   //
   //   const connection = Database.ofConnection(this.pgConnectionUri).connect();
   //   const result = await connection.query(query.text, query.values);
