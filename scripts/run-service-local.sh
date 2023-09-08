@@ -66,7 +66,7 @@ function init_dbs() {
     docker exec -i timescale-ai psql -U postgres -c "CREATE USER dev WITH PASSWORD 'dev';"
     docker exec -i timescale-ai psql -U postgres -c "GRANT ALL PRIVILEGES ON DATABASE index TO dev;"
 
-    ${AI_HOME}/dev-setup/run-db-migration.sh -p dev
+    ${AI_HOME}/scripts/run-db-migration.sh -p dev
   fi
 }
 
@@ -80,7 +80,7 @@ function run_db_migrations() {
     pushd "${AI_HOME}/db"
        ./mvnw clean package
     popd
-    ${AI_HOME}/dev-setup/run-db-migration.sh -p dev
+    ${AI_HOME}/scripts/run-db-migration.sh -p dev
   fi
 }
 
