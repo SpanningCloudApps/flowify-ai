@@ -1,12 +1,16 @@
 CREATE TABLE IF NOT EXISTS classification_result
 (
-    id          BIGSERIAL NOT NULL,
-    input       JSONB     NOT NULL default '{}',
-    workflow_id VARCHAR   NOT NULL,
-    probability FLOAT     NOT NULL,
-    data        JSONB     NOT NULL default '{}',
-    created_at  TIMESTAMP NOT NULL default NOW()
+    id            BIGSERIAL NOT NULL,
+    input         JSONB     NOT NULL default '{}',
+    workflow_name VARCHAR   NOT NULL,
+    probability   FLOAT     NOT NULL,
+    data          JSONB     NOT NULL default '{}',
+    created_at    TIMESTAMP NOT NULL default NOW()
 );
+ALTER TABLE classification_result
+    ADD PRIMARY KEY (id);
+
+CREATE INDEX CONCURRENTLY IF NOT EXISTS cr_w ON classification_result (workflow_name);
 
 CREATE TABLE IF NOT EXISTS workflow
 (
@@ -16,6 +20,8 @@ CREATE TABLE IF NOT EXISTS workflow
     data        JSONB     NOT NULL default '{}',
     created_at  TIMESTAMP NOT NULL default NOW()
 );
+
+CREATE UNIQUE INDEX CONCURRENTLY IF NOT EXISTS w_n ON workflow (name);
 
 CREATE TABLE IF NOT EXISTS workflow_step
 (
