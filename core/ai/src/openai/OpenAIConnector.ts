@@ -81,7 +81,8 @@ export class OpenAIConnector {
       return `Please imagine you're trying to help user according to the following flow:
       You need to decide what type of workflow is the most suitable for the user's request. Defaults workflow are the following:
       ${messages}
-      In case user's request cannot be applied to any of the given workflows, please let me know.`;
+      Please in your response specify the title of chosen workflow if format like "Title: WORKFLOW_TITLE" if possible.
+      If it's not possible to decide from the given variants, please respond like "Unable to recognize".`;
     } catch (err) {
       console.error(`Failed to prepare analyzing context.`, err);
       throw err;
