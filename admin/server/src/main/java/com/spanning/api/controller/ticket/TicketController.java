@@ -4,13 +4,8 @@
 
 package com.spanning.api.controller.ticket;
 
-import java.util.List;
-
-import com.spanning.api.dto.response.ticket.TicketResponseDto;
 import com.spanning.api.dto.response.ticket.TicketsResponseDto;
 import com.spanning.api.facade.ticket.TicketFacade;
-import com.spanning.api.facade.workflow.WorkflowFacade;
-import com.spanning.config.security.UserContext;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
