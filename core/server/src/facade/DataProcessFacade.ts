@@ -18,7 +18,7 @@ export class DataProcessFacade {
     const classificationData = await classifierService.classify(body);
     const dataStorageData = {
       input: body,
-      workflow_name: classificationData.workflowName,
+      workflowName: classificationData.workflowName,
       probability: classificationData.highProbability,
       data: {
         allClassifications: classificationData.allClassifications
