@@ -54,6 +54,34 @@ export const useWorkflowsStore = create<any>((set, get) => ({
     }
   },
 
+  addWorkflow: async (props: any): Promise<void> => {
+    const { workflowName, description, id } = props;
+    const reqParams = {
+      workflowName,
+      description
+    };
+    try {
+      set({ loading: true });
+      const resp: any = await workflowsService.addWorkflow({
+        data: reqParams,
+        signal: get().controller.signal
+      });
+      const newWorkflows = resp?.workflows ?? [];
+      set({
+        classifiedTickets: [...workflows, ...newWorkflows ?? []],
+        hasMore: newWorkflows.length === PAGE_ENTITIES_LIMIT,
+        loading: false
+      });
+    } catch (error) {
+      set({ loading: false });
+      const newError = error as AxiosError;
+      showErrorNotification({
+        error: newError,
+        subject: intl.formatMessage({ id: 'NOTIFICATION_SUBJECT_CLASSIFIED_TICKETS_LIST' })
+      });
+    }
+  },
+
   clearWorkflows: () => {
     set({
       workflows: []

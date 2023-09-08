@@ -101,19 +101,25 @@ export const useTicketsStore = create<any>((set, get) => ({
     const { workflowName, description, id } = props;
     const reqParams = {
       workflowName,
-      description,
-      id
+      description
     };
     try {
-      set({ isUnclassifiedDataLoading: true });
+      set({
+        isUnclassifiedDataLoading: true,
+        isClassifiedDataLoading: true
+      });
       await ticketService.updateTicket({
+        ticketId: id,
         data: reqParams,
         signal: get().controller.signal
       });
       get().getClassifiedTickets({});
       get().getUnclassifiedTickets({});
     } catch (error) {
-      set({ isUnclassifiedDataLoading: false });
+      set({
+        isUnclassifiedDataLoading: false,
+        isClassifiedDataLoading: false
+      });
       const newError = error as AxiosError;
       showErrorNotification({
         error: newError,

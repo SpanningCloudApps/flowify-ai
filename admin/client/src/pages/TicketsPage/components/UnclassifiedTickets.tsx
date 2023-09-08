@@ -5,7 +5,7 @@
 /*
  * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
  */
-import { FC, useCallback, useEffect, useRef, useState } from 'react';
+import { FC, useCallback, useEffect, useState } from 'react';
 import { Card, Col, Input, Row, Space, Table } from 'antd';
 import { isJsonString } from '../../../utils/helper';
 import { getUnclassifiedTicketsColumns } from '../helpers';
@@ -26,7 +26,6 @@ const UnclassifiedTickets: FC = () => {
   const toggleClassifier = useTicketsStore(state => state.toggleClassifier);
 
   const [query, setQuery] = useState('');
-  const queryRef = useRef<any>(null);
 
   useEffect(() => {
     clearUnclassifiedTickets();
@@ -40,9 +39,6 @@ const UnclassifiedTickets: FC = () => {
 
   const renderExpandedRow = useCallback(row => {
     const rowForView = { ...row };
-    rowForView.input = isJsonString(rowForView.input)
-        ? JSON.parse(rowForView.input)
-        : rowForView.input;
     rowForView.data = isJsonString(rowForView.data)
         ? JSON.parse(rowForView.data)
         : rowForView.data;
@@ -64,7 +60,6 @@ const UnclassifiedTickets: FC = () => {
                 <Space>
                   <Input.Search
                       className={style.tableTools__search}
-                      ref={queryRef}
                       placeholder={formatMessage({ id: 'TABLE_TICKETS_SEARCH_PLACEHOLDER' })}
                       onSearch={setQuery}
                       maxLength={250}

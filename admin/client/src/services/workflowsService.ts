@@ -17,9 +17,9 @@ const service = {
     return resp.data;
   },
 
-  async addWorkflow({ workflowId, data, signal }: any): Promise<any> {
-    const resp: AxiosResponse<any> = await axios.post(
-        `${API_GATEWAY}/api/workflows/${workflowId.toString()}`,
+  async addWorkflow({ data, signal }: any): Promise<any> {
+    const resp: AxiosResponse<any> = await axios.put(
+        `${API_GATEWAY}/api/workflows`,
         data,
         { signal }
     );
