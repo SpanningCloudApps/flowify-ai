@@ -11,10 +11,11 @@ export default class QueueService {
   private readonly workflowStepInteractionResultQueue: string;
 
   constructor() {
-    this.workflowRequestQueue = config.get('sqs.queues.workflowRequestQueue');
-    this.workflowResultQueue = config.get('sqs.queues.workflowResultQueue');
-    this.workflowStepInteractionRequestQueue = config.get('sqs.queues.workflowStepInteractionRequestQueue');
-    this.workflowStepInteractionResultQueue = config.get('sqs.queues.workflowStepInteractionResultQueue');
+    const prefix = config.get('sqs.prefix');
+    this.workflowRequestQueue = `${prefix}_${config.get('sqs.queues.workflowRequestQueue')}`;
+    this.workflowResultQueue = `${prefix}_${config.get('sqs.queues.workflowResultQueue')}`;
+    this.workflowStepInteractionRequestQueue = `${prefix}_${config.get('sqs.queues.workflowStepInteractionRequestQueue')}`;
+    this.workflowStepInteractionResultQueue = `${prefix}_${config.get('sqs.queues.workflowStepInteractionResultQueue')}`;
   }
 
   public async subscribeToWorkflows() {
