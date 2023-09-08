@@ -91,7 +91,6 @@ out
 
 ### Eclipse ###
 .metadata
-bin/
 tmp/
 *.tmp
 *.bak

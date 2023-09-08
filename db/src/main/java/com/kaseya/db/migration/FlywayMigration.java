@@ -42,7 +42,9 @@ public class FlywayMigration {
           // partition specific
           ConfigUtils.USER, dbConfiguration.getUsername(),
           ConfigUtils.PASSWORD, dbConfiguration.getPassword(),
-          ConfigUtils.URL, dbConfiguration.getUrl());
+          ConfigUtils.URL, dbConfiguration.getUrl(),
+          "flyway.postgresql.transactional.lock", "false"
+        );
 
         final Flyway flyway = Flyway.configure().configuration(configuration).load();
         flyway.migrate();

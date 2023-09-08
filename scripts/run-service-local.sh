@@ -51,7 +51,7 @@ function setup_infrastructure() {
   if array_contains options "--setup-infrastructure" || array_contains options "--internal"; then
     echo "Run infrastructure in the doсker"
     pushd "${AI_HOME}"
-      docker-compose up -d timescale-ai
+      docker-compose up -d timescale-ai localstack-ai
     popd
   fi
 }
