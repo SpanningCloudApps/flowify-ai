@@ -11,7 +11,7 @@ export class DataStorageService {
     const model = {
       input: data.input,
       workflow_name: data.workflowName,
-      probability: data.highProbability,
+      probability: data.probability,
       data: data.data
     };
 

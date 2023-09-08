@@ -2,6 +2,7 @@ import { getLogger } from '../../logger/logger';
 
 const logger = getLogger();
 
+// TODO: Integrate with Anton
 export class WebSocketService {
   private static _instance = new WebSocketService();
 
