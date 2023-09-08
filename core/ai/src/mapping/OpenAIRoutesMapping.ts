@@ -4,7 +4,7 @@
 
 import { FastifyInstance } from 'fastify/types/instance';
 import { FastifyRequest } from 'fastify/types/request';
-import { openAIConnector } from 'openai/OpenAIConnector';
+import { openAIFacade } from 'facades/OpenAIFacade';
 import { OpenAIRequestBody } from 'dto/RequestDto';
 
 const addOpenAiRoutes = (server: FastifyInstance) => {
@@ -12,12 +12,12 @@ const addOpenAiRoutes = (server: FastifyInstance) => {
     app.post(
       '/test',
       async (req: FastifyRequest, res) => {
-        const request: string = (req.body as OpenAIRequestBody).message;
+        const { ticket } = (req.body as OpenAIRequestBody);
 
         try {
-          const result = await openAIConnector.execute(request);
+          const result = await openAIFacade.categorize(ticket);
 
-          res.send({ execution: result });
+          res.send(result);
         } catch (err) {
           console.error('Request to /ai/test failed', err);
           res.status(500).send({ errorMessage: err.message });

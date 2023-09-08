@@ -6,6 +6,20 @@
       "model": "gpt-3.5-turbo",
       "temperature": 0.3
     },
+    "tickets": [
+      {
+        "createdBy": "CEO X0XL0B",
+        "title": "request1",
+        "description": "How to eat?",
+        "additionalInfo": ["kek", "lol", "azaza"]
+      },
+      {
+        "createdBy": "CEO X0XL0B",
+        "title": "request2",
+        "description": "How to pee?",
+        "additionalInfo": ["kek", "lol", "azaza"]
+      }
+    ],
     "server": {
       "host": "0.0.0.0",
       "port": "3080"
