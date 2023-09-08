@@ -41,7 +41,7 @@ const clientInteractionRoute = async (server: FastifyInstance): Promise<void> =>
         });
 
         function sendMessage(message) {
-          socket.push(JSON.stringify(message));
+          socket.send(JSON.stringify(message));
         }
       });
 

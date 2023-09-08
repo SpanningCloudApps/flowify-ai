@@ -41,7 +41,7 @@ export class WebSocketManager {
   }
 
   public async process(actor: string, clientData: Record<string, unknown>) {
-    logger.info(`WEBSOCKET = [${actor}] receive = ${JSON.stringify(data)}`);
+    logger.info(`WEBSOCKET = [${actor}] receive = ${JSON.stringify(clientData)}`);
     const data = {
       actor,
       clientResponse: clientData.response,

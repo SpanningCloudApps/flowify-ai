@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Fastify WebSockets chat</title>
+  <title>FLOWIFY.CO Chat</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1, width=device-width" />
   <script src="https://unpkg.com/react@latest/umd/react.development.js" crossorigin="anonymous"></script>
@@ -18,15 +18,6 @@
 <body>
 <div id="root"></div>
 <script type="text/babel">
-  /**
-   * PLEASE DON'T BLAME ME FOR THIS ONE SINGLE HUGE FILE.
-   * The target of this file is for the purpose of learning WebSocket.
-   * It's not meant to be a production-ready solution.
-   * It's just a proof of concept.
-   *
-   * Thank you for your understanding.
-   */
-
   const {
     colors,
     CssBaseline,
@@ -88,7 +79,7 @@
 
       ws.onerror = function (error) {
         console.log('WebSocket error: ', error);
-        if (ws.readyState === 1) {  // open
+        if (ws.readyState === 1) {
           props.onError(error)
           ws.close(error);
         }
@@ -96,7 +87,7 @@
 
       return function cleanup() {
         console.log('WebSocket connection cleanup');
-        // ws.close();
+        ws.close();
       };
     }, []);
 
@@ -141,7 +132,7 @@
           }}
         >
           <Typography component="h1" variant="h5">
-            STATE YOUR NAME
+            FLOWIFY.CO
           </Typography>
           <WsConnection
             url="ws://localhost:3300/ecosystem/api/clients/chat"

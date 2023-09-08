@@ -1,4 +1,5 @@
-# hackathon-ai
+# FLOWIFY.CO
+
 8/9/2023-9/9/2023
 
 # Authors
