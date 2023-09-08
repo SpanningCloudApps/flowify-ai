@@ -40,6 +40,17 @@ export default class ExecutedWorkflowStepRepository {
     return result.rows[0];
   };
 
+  public getAllSteps = async (executedWorkflowId: number): Promise<Array<ExecutedWorkflowStepRow>> => {
+    const query = ExecutedWorkflowStep.select(ExecutedWorkflowStep.star())
+      .from(ExecutedWorkflowStep)
+      .where(ExecutedWorkflowStep?.workflow_execution_id?.equals(executedWorkflowId))
+      .toQuery();
+
+    const connection = Database.ofConnection(this.pgConnection).connect();
+    const result = await connection.query(query.text, query.values);
+    return result.rows;
+  };
+
   public createStepExecution = async (executedWorkflowStepRow: ExecutedWorkflowStepRow) => {
     const query = ExecutedWorkflowStep.insert(executedWorkflowStepRow)
       .toQuery();

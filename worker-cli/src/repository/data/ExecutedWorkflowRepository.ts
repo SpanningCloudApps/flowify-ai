@@ -58,4 +58,15 @@ export default class ExecutedWorkflowRepository {
     await connection.query(query.text, query.values);
   }
 
+  public async completeExecutedWorkflow(executedWorkflowId: number) {
+    const query = ExecutedWorkflow.update({
+      status: WorkflowStatus.COMPLETED
+    })
+      .where(ExecutedWorkflow.id?.equals(executedWorkflowId))
+      .returning('*')
+      .toQuery();
+
+    const connection = Database.ofConnection(this.pgConnection).connect();
+    await connection.query(query.text, query.values);
+  }
 }

@@ -26,7 +26,15 @@ export default class ExecutedWorkflowStepService {
   public async getWaitingStep(executedWorkflowId: number, workflowSteps: Array<WorkflowStepRow>): Promise<WorkflowStepRow> {
     const waitingStep = await this.executedWorkflowStepRepository.getWaitingStep(executedWorkflowId);
 
+    if (!waitingStep) {
+      return await this.getNextStep(executedWorkflowId, workflowSteps);
+    }
+
     return workflowSteps.find(step => step.type === waitingStep?.type)!;
+  }
+
+  public async getExecutedSteps(executedWorkflowId: number): Promise<Array<ExecutedWorkflowStepRow>> {
+    return await this.executedWorkflowStepRepository.getAllSteps(executedWorkflowId);
   }
 
   public async createStepExecution(executedWorkflowId: number, workflowStep: WorkflowStepRow) {

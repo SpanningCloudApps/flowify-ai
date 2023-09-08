@@ -26,7 +26,7 @@ export default class AskFullNameStepExecutor implements StepExecutor {
   }
 
   public execute = async (executedWorkflow: ExecutedWorkflowRow, workflowStep: WorkflowStepRow, message: any): Promise<boolean> => {
-    if (!message.clientResponse) {
+    if (message.type !== workflowStep.type || !message.clientResponse) {
       const clientRequest = {
         question: 'Could you provide me a full name of the user?',
         workflowExecutionId: executedWorkflow.id!,

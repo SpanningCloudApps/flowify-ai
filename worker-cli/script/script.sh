@@ -11,6 +11,7 @@ export DEFAULT_STABMIN_CLIENT_IMAGE_TAG="latest"
 valid_options=(
   "--start-wf"
   "--publish-fn"
+  "--publish-cd"
 )
 
 array_contains() {
@@ -59,11 +60,9 @@ publish_full_name() {
 }
 
 publish_create_date() {
-  echo "publish_create_date"
-}
-
-publish_create_user() {
-  echo "publish_create_user"
+  docker exec localstack-ai awslocal sqs send-message \
+          --queue-url http://localhost:8666/000000000000/dev_workflow_step_interaction_result \
+          --message-body '{"workflowExecutionId": 1, "type": "ASK_ABOUT_THE_DATE", "clientResponse": "Andrei Kozel2"}'
 }
 
 main() {
