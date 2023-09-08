@@ -1,0 +1,25 @@
+{
+  "aws": {
+    "localstack": {
+      "endpoint": "http://localstack-ai:4566"
+    }
+  },
+  "server": {
+    "ports": {
+      "http": 3300
+    },
+    "host": "0.0.0.0"
+  },
+  "swagger": {
+    "enabled": true
+  },
+  "sql": {
+    "indexdb": {
+      "user": "postgres",
+      "pass": "postgres",
+      "host": "timescale-ai",
+      "port": 5432,
+      "db": "index"
+    }
+  }
+}
