@@ -22,10 +22,10 @@ export const useWorkflowsStore = create<any>((set, get) => ({
   ...initialState,
 
   getWorkflows: async (props: any): Promise<void> => {
-    const { query } = props;
+    const { query, pageToken } = props;
     const workflows = get().workflows;
-    const additionalParams = workflows?.length > 0
-        ? { pageToken: workflows[workflows.length - 1].id }
+    const additionalParams = pageToken
+        ? { pageToken }
         : {};
     const reqParams = {
       ...additionalParams,
@@ -40,7 +40,7 @@ export const useWorkflowsStore = create<any>((set, get) => ({
       });
       const newWorkflows = resp?.workflows ?? [];
       set({
-        classifiedTickets: [...workflows, ...newWorkflows ?? []],
+        workflows: pageToken ? [...workflows, ...newWorkflows] : [...newWorkflows],
         hasMore: newWorkflows.length === PAGE_ENTITIES_LIMIT,
         loading: false
       });
@@ -49,7 +49,7 @@ export const useWorkflowsStore = create<any>((set, get) => ({
       const newError = error as AxiosError;
       showErrorNotification({
         error: newError,
-        subject: intl.formatMessage({ id: 'NOTIFICATION_SUBJECT_CLASSIFIED_TICKETS_LIST' })
+        subject: 'Get Workflows'
       });
     }
   },
@@ -62,22 +62,36 @@ export const useWorkflowsStore = create<any>((set, get) => ({
     };
     try {
       set({ loading: true });
-      const resp: any = await workflowsService.addWorkflow({
+      await workflowsService.addWorkflow({
         data: reqParams,
         signal: get().controller.signal
       });
-      const newWorkflows = resp?.workflows ?? [];
-      set({
-        classifiedTickets: [...workflows, ...newWorkflows ?? []],
-        hasMore: newWorkflows.length === PAGE_ENTITIES_LIMIT,
-        loading: false
-      });
+      get().getWorkflows({});
     } catch (error) {
       set({ loading: false });
       const newError = error as AxiosError;
       showErrorNotification({
         error: newError,
-        subject: intl.formatMessage({ id: 'NOTIFICATION_SUBJECT_CLASSIFIED_TICKETS_LIST' })
+        subject: 'Add Workflow'
+      });
+    }
+  },
+
+  deleteWorkflow: async (props: any): Promise<void> => {
+    const { id } = props;
+    try {
+      set({ loading: true });
+      await workflowsService.deleteWorkflow({
+        workflowId: id,
+        signal: get().controller.signal
+      });
+      get().getWorkflows({});
+    } catch (error) {
+      set({ loading: false });
+      const newError = error as AxiosError;
+      showErrorNotification({
+        error: newError,
+        subject: 'Delete Workflow'
       });
     }
   },

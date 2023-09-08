@@ -30,10 +30,10 @@ export const useTicketsStore = create<any>((set, get) => ({
   ...initialState,
 
   getClassifiedTickets: async (props: any): Promise<void> => {
-    const { query } = props;
+    const { query, pageToken } = props;
     const tickets = get().classifiedTickets;
-    const additionalParams = tickets?.length > 0
-        ? { pageToken: tickets[tickets.length - 1].id }
+    const additionalParams = pageToken
+        ? { pageToken }
         : {};
     const reqParams = {
       ...additionalParams,
@@ -49,7 +49,7 @@ export const useTicketsStore = create<any>((set, get) => ({
       });
       const newTickets = resp?.tickets ?? [];
       set({
-        classifiedTickets: [...tickets, ...newTickets ?? []],
+        classifiedTickets: pageToken ? [...tickets, ...newTickets] : [...newTickets],
         hasMoreClassified: newTickets.length === PAGE_ENTITIES_LIMIT,
         isClassifiedDataLoading: false
       });
@@ -64,10 +64,10 @@ export const useTicketsStore = create<any>((set, get) => ({
   },
 
   getUnclassifiedTickets: async (props: any): Promise<void> => {
-    const { query } = props;
+    const { query, pageToken } = props;
     const tickets = get().unclassifiedTickets;
-    const additionalParams = tickets?.length > 0
-        ? { pageToken: tickets[tickets.length - 1].id }
+    const additionalParams = pageToken
+        ? { pageToken }
         : {};
     const reqParams = {
       ...additionalParams,
@@ -83,7 +83,7 @@ export const useTicketsStore = create<any>((set, get) => ({
       });
       const newTickets = resp?.tickets ?? [];
       set({
-        unclassifiedTickets: [...tickets, ...newTickets ?? []],
+        unclassifiedTickets:  pageToken ? [...tickets, ...newTickets] : [...newTickets],
         hasMoreUnclassified: newTickets.length === PAGE_ENTITIES_LIMIT,
         isUnclassifiedDataLoading: false
       });

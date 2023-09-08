@@ -1,11 +1,11 @@
 /*
  * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
  */
-import { Typography } from 'antd';
+import { Button, Popconfirm, Typography } from 'antd';
 import { ColumnsType } from 'antd/lib/table';
 import { intl } from '../../intl';
 
-export const getWorkflowsColumns = (): ColumnsType<any> => [
+export const getWorkflowsColumns = (confirm): ColumnsType<any> => [
   {
     title: intl.formatMessage({ id: 'TABLE_TICKETS_COLUMN_ID' }),
     dataIndex: 'id',
@@ -32,6 +32,30 @@ export const getWorkflowsColumns = (): ColumnsType<any> => [
       return <Typography.Text copyable ellipsis={true}>
         {input}
       </Typography.Text>;
+    }
+  },
+  {
+    width: 100,
+    ellipsis: true,
+    align: 'center',
+    render(data: any): JSX.Element {
+      return <Popconfirm title="Delete the Workflow"
+                         description={<Typography.Paragraph>
+                           <span>Are you sure to delete this Workflow?</span>
+                           <br />
+                           <span>If any tickets classified with this workflow you won't be able to remove it.</span>
+                         </Typography.Paragraph>}
+                         placement={'topLeft'}
+                         onConfirm={confirm(data)}
+                         okText="Yes"
+                         cancelText="No">
+        <Button danger type={'link'}
+                onClick={event => {
+                  event.stopPropagation();
+                }}>
+          Delete
+        </Button>
+      </Popconfirm>;
     }
   }
 ];

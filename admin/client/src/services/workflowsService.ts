@@ -12,13 +12,13 @@ const service = {
                        signal
                      }: any): Promise<any> {
     const resp: AxiosResponse<any> = await axios.post(
-        `${API_GATEWAY}/api/workflows`, data, { signal }
+        `${API_GATEWAY}/api/workflows/search`, data, { signal }
     );
     return resp.data;
   },
 
   async addWorkflow({ data, signal }: any): Promise<any> {
-    const resp: AxiosResponse<any> = await axios.put(
+    const resp: AxiosResponse<any> = await axios.post(
         `${API_GATEWAY}/api/workflows`,
         data,
         { signal }
@@ -26,9 +26,9 @@ const service = {
     return resp.data;
   },
 
-  async deleteWorkflow({ domainId, signal }: any): Promise<void> {
+  async deleteWorkflow({ workflowId, signal }: any): Promise<void> {
     await axios.delete(
-        `${API_GATEWAY}/api/workflows/${domainId.toString()}`,
+        `${API_GATEWAY}/api/workflows/${workflowId.toString()}`,
         { signal }
     );
   }

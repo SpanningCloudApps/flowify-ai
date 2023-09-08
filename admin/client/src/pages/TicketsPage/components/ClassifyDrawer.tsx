@@ -38,6 +38,7 @@ const ClassifyDrawer: FC = () => {
 
   const onClose = useCallback(() => {
     toggleClassifier({}, false);
+    form.resetFields();
   }, []);
 
   const onSubmit = useCallback((values: any) => {

@@ -22,6 +22,7 @@ const WorkflowsPage: FC = () => {
   const loading = useWorkflowsStore(state => state.loading);
   const hasMore = useWorkflowsStore(state => state.hasMore);
   const toggleDrawer = useWorkflowsStore(state => state.toggleDrawer);
+  const deleteWorkflow = useWorkflowsStore(state => state.deleteWorkflow);
 
   const [query, setQuery] = useState('');
   const queryRef = useRef<any>(null);
@@ -47,6 +48,11 @@ const WorkflowsPage: FC = () => {
         : rowForView.data;
     delete rowForView.id;
     return <pre>{JSON.stringify(rowForView, null, 2)}</pre>;
+  }, []);
+
+  const confirmDelete = useCallback(data => e => {
+    e.stopPropagation();
+    deleteWorkflow({ id: data.id });
   }, []);
 
   return (
@@ -98,7 +104,7 @@ const WorkflowsPage: FC = () => {
                         expandRowByClick: true,
                         expandIconColumnIndex: -1
                       }}
-                      columns={getWorkflowsColumns()}
+                      columns={getWorkflowsColumns(confirmDelete)}
                       showSorterTooltip={false}
                   />
                 </InfinityScroll>

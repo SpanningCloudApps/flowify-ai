@@ -4,7 +4,6 @@
 
 import { AxiosResponse } from 'axios';
 import axios from '../config/axiosConfig';
-import { PAGE_ENTITIES_LIMIT } from '../constants/constants';
 import { API_GATEWAY } from '../constants/urls';
 
 const service = {
@@ -13,7 +12,7 @@ const service = {
                      signal
                    }: any): Promise<any> {
     const resp: AxiosResponse<any> = await axios.post(
-        `${API_GATEWAY}/api/tickets`, data, { signal }
+        `${API_GATEWAY}/api/tickets/search`, data, { signal }
     );
     return resp.data;
   },

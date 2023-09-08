@@ -16,6 +16,7 @@ const WorkflowDrawer: FC = () => {
 
   const onClose = useCallback(() => {
     toggleDrawer(false);
+    form.resetFields();
   }, []);
 
   const onSubmit = useCallback((values: any) => {
