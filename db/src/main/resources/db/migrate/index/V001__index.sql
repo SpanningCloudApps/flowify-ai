@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS classification_result
 (
     id          BIGSERIAL NOT NULL,
-    input       VARCHAR   NOT NULL,
+    input       JSONB NOT NULL default '{}',
     workflow_id VARCHAR   NOT NULL,
     probability FLOAT     NOT NULL,
     data        JSONB NOT NULL default '{}',
