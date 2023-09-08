@@ -1,13 +1,14 @@
 /*
- * Copyright (C) 2022 Spanning Cloud Apps.  All rights reserved.
+ * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
  */
 
-package com.spanning.api.controller.workflow;
+package com.spanning.api.controller.ticket;
 
 import java.util.List;
 
-import com.spanning.api.dto.response.workflow.WorkflowResponseDto;
-import com.spanning.api.dto.response.workflow.WorkflowsResponseDto;
+import com.spanning.api.dto.response.ticket.TicketResponseDto;
+import com.spanning.api.dto.response.ticket.TicketsResponseDto;
+import com.spanning.api.facade.ticket.TicketFacade;
 import com.spanning.api.facade.workflow.WorkflowFacade;
 import com.spanning.config.security.UserContext;
 import lombok.RequiredArgsConstructor;
@@ -19,18 +20,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 @RestController
-@RequestMapping("/api/workflows")
+@RequestMapping("/api/tickets")
 @Validated
-public class WorkflowController {
+public class TicketController {
 
-  private final WorkflowFacade workflowFacade;
+  private final TicketFacade ticketFacade;
 
   @GetMapping
-  public WorkflowsResponseDto getAll() {
-    return
-      WorkflowsResponseDto.builder()
-        .workflows(workflowFacade.getAll())
-        .build();
+  public TicketsResponseDto getAll() {
+    return TicketsResponseDto.builder()
+      .tickets(ticketFacade.getAll())
+      .build();
   }
 
 }

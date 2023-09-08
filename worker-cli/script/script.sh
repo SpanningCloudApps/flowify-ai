@@ -9,8 +9,7 @@ export DEFAULT_STABMIN_CLIENT_IMAGE_NAME="stabmin-client"
 export DEFAULT_STABMIN_CLIENT_IMAGE_TAG="latest"
 
 valid_options=(
-  "--build-image"
-  "--skip-image-build"
+  "--start-wf"
 )
 
 array_contains() {
@@ -47,19 +46,19 @@ check_options_are_valid() {
 }
 
 start_workflow() {
-  docker exec localstack-ai awslocal sqs send-message --queue-url http://localhost:8666/000000000000/dev_workflow_requests --message-body '{"workfloId": "ADD_USER"}'
+  docker exec localstack-ai awslocal sqs send-message --queue-url http://localhost:8666/000000000000/dev_workflow_requests --message-body '{"workflowId": "ADD_USER"}'
 }
 
 publish_full_name() {
-
+  echo "publish_full_name"
 }
 
 publish_create_date() {
-
+  echo "publish_create_date"
 }
 
 publish_create_user() {
-
+  echo "publish_create_user"
 }
 
 main() {
