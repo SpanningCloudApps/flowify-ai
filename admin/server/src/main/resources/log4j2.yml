@@ -1,0 +1,36 @@
+Configuration:
+  name: AppConfigDev
+  status: info
+  packages: "com.spanning.core.log"
+
+  properties:
+    property:
+      - name: fileName
+        value: /var/log/spanning/ai-admin-server.log
+
+  Appenders:
+    Console:
+      name: Console
+      target: SYSTEM_OUT
+      PatternLayout:
+        pattern: "%d{yyyy-MM-dd HH:mm:ss} [cid.%X{correlationId}] [%thread] %-5level %logger{36} %notEmpty{[%X{name}] }- %msg%n"
+    RollingFile:
+      - name: RollingFile
+        fileName: ${fileName}
+        append: true
+        PatternLayout:
+          pattern: "%d{yyyy-MM-dd HH:mm:ss} [cid.%X{correlationId}] [%thread] %-5level %logger{36} %notEmpty{[%X{name}] }- %msg%n"
+        filePattern: "${fileName}.%i.gz"
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: 100 MB
+        DefaultRollOverStrategy:
+          fileIndex: min
+          max: 9
+
+  Loggers:
+    AsyncRoot:
+      level: ${env:AI_LOG_LEVEL:-info}
+      AppenderRef:
+        - ref: Console
+        - ref: RollingFile

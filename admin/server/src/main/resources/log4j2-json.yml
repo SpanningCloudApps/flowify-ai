@@ -1,0 +1,29 @@
+Configuration:
+  name: AppConfig
+  status: info
+  packages: "com.spanning.core.log"
+
+  Appenders:
+    Console:
+      name: Console
+      target: SYSTEM_OUT
+      JsonTemplateLayout:
+        eventTemplateUri: "classpath:SpanningJsonEventLayoutV1.json"
+    Syslog:
+      - name: Syslog
+        appName: api-gatewaye.log
+        host: 127.0.0.1
+        port: 514
+        protocol: UDP
+        ignoreExceptions: false
+        facility: LOCAL7
+        newLine: true
+        SyslogJsonTemplateLayout:
+          eventTemplateUri: classpath:SpanningJsonEventLayoutV1.json
+
+  Loggers:
+    AsyncRoot:
+      level: ${env:SCAR_LOG_LEVEL:-info}
+      AppenderRef:
+        - ref: Console
+        - ref: Syslog
