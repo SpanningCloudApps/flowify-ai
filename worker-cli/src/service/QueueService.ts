@@ -18,6 +18,10 @@ export default class QueueService {
     this.workflowStepInteractionResultQueue = `${prefix}_${config.get('sqs.queues.workflowStepInteractionResultQueue')}`;
   }
 
+  public async initialize_queues() {
+
+  }
+
   public async subscribeToWorkflows() {
     console.log(`Subscribed to workflows ${this.workflowRequestQueue}`);
   }

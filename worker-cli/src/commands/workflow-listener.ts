@@ -10,7 +10,10 @@ export default class WorkflowListenerCommand extends Command {
 
   async run(): Promise<void> {
     const { args, flags } = await this.parse(WorkflowListenerCommand);
+
     const queueService = new QueueService();
+    await queueService.initialize_queues();
+
     queueService.subscribeToWorkflows();
     queueService.subscribeToStepResults();
   }
