@@ -25,8 +25,22 @@ export default class AskCreateDateStepExecutor implements StepExecutor {
     this.queueService = queueService;
   }
 
-  execute(executedWorkflow: ExecutedWorkflowRow, workflowStep: WorkflowStepRow, message: any): Promise<boolean> {
-    return Promise.resolve(false);
+  public async execute(executedWorkflow: ExecutedWorkflowRow, workflowStep: WorkflowStepRow, message: any): Promise<boolean> {
+    if (message.type !== workflowStep.type || !message.clientResponse) {
+      const clientRequest = {
+        question: 'Could you provide me a date when user should be added?',
+        workflowExecutionId: executedWorkflow.id!,
+        type: workflowStep.type,
+        actor: executedWorkflow.data?.actor
+      }
+      await this.queueService.publishStepDataRequest(JSON.stringify(clientRequest));
+      await this.executedWorkflowStepService.createStepExecution(executedWorkflow.id!, workflowStep);
+      await this.executedWorkflowService.updateExecutedWorkflowStep(executedWorkflow.id!, workflowStep.type);
+      return false;
+    } else {
+      await this.executedWorkflowStepService.updateStepExecutionWithUserData(executedWorkflow.id!, workflowStep.type, message.clientResponse);
+      return true;
+    }
   }
 
 }

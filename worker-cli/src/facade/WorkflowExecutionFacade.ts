@@ -60,15 +60,20 @@ export default class WorkflowExecutionFacade {
 
   public handleStepResultReceived = async (message: any) => {
     console.log(message);
-    const { workflowExecutionId, type } = message;
+    const { workflowExecutionId } = message;
 
     const workflowExecution = await this.executedWorkflowService.getExecutedWorkflow(workflowExecutionId);
     const workflow: any = await this.workflowService.getWorkflow(workflowExecution.workflow_name);
     const workflowSteps: Array<WorkflowStepRow> = await this.workflowStepService.getWorkflowSteps(workflowExecution.workflow_name);
     let nextStep = await this.executedWorkflowStepService.getWaitingStep(workflowExecution.id!, workflowSteps);
-    let nextExecutor = this.workflowStepExecutor.getExecutor(type);
 
-    while (await nextExecutor.execute(workflowExecution, nextStep, message)) {
+    if (!nextStep) {
+      return;
+    }
+
+    let nextExecutor = this.workflowStepExecutor.getExecutor(nextStep.type);
+
+    while ((await nextExecutor.execute(workflowExecution, nextStep, message))) {
       nextStep = await this.executedWorkflowStepService.getNextStep(workflowExecution.id!, workflowSteps);
       nextExecutor = this.workflowStepExecutor.getExecutor(nextStep.type);
       console.log(`Running workflow ${JSON.stringify(workflow)} with ${workflowSteps.length} steps. Next step ${nextStep?.type}`);
@@ -77,7 +82,7 @@ export default class WorkflowExecutionFacade {
     if (nextStep.type === workflowSteps[workflowSteps.length - 1].type) {
       console.log(`Workflow ${JSON.stringify(workflow)} finished`);
     } else {
-      console.log(`Workflow ${JSON.stringify(workflow)} on pause. Waiting for user input`);
+      console.log(`Workflow ${JSON.stringify(workflow)} on pause. Step ${nextStep.type} Waiting for user input`);
     }
   };
 
