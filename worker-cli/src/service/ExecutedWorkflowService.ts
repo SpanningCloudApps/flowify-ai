@@ -5,6 +5,7 @@
 import ExecutedWorkflowRepository from '../repository/data/ExecutedWorkflowRepository';
 import { WorkflowRow } from '../repository/model/Workflow';
 import { StepType } from '../enum/StepType';
+import { ExecutedWorkflowRow } from '../repository/model/ExecutedWorkflow';
 
 export default class ExecutedWorkflowService {
 
@@ -14,8 +15,12 @@ export default class ExecutedWorkflowService {
     this.executedWorkflowRepository = executedWorkflowRepository;
   }
 
-  public async getOrCreateExecutedWorkflow(workflow: WorkflowRow, firstStep: StepType, actor?: string, workflowExecutionId?: number): Promise<any> {
-    return this.executedWorkflowRepository.getOrCreateExecutedWorkflow(workflow, firstStep, actor, workflowExecutionId)
+  public async createExecutedWorkflow(workflow: WorkflowRow, firstStep: StepType, actor: string): Promise<ExecutedWorkflowRow> {
+    return this.executedWorkflowRepository.createExecutedWorkflow(workflow, firstStep, actor)
+  }
+
+  public async getExecutedWorkflow(workflowExecutionId: number): Promise<ExecutedWorkflowRow> {
+    return this.executedWorkflowRepository.getExecutedWorkflow(workflowExecutionId)
   }
 
   public async updateExecutedWorkflowStep(executedWorkflowId: number, stepType: StepType) {

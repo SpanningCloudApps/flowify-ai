@@ -4,6 +4,7 @@
 
 import { WorkflowType } from '../enum/WorkflowType';
 import WorkflowStepRepository from '../repository/data/WorkflowStepRepository';
+import { WorkflowStepRow } from '../repository/model/WorkflowStep';
 
 export default class WorkflowStepService {
 
@@ -13,7 +14,7 @@ export default class WorkflowStepService {
     this.workflowStepRepository = workflowStepRepository;
   }
 
-  public async getWorkflowSteps(workflowName: WorkflowType): Promise<any[]> {
+  public async getWorkflowSteps(workflowName: WorkflowType): Promise<Array<WorkflowStepRow>> {
     return await this.workflowStepRepository.getWorkflowSteps(workflowName);
   }
 

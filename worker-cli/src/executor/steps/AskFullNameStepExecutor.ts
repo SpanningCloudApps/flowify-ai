@@ -28,6 +28,8 @@ export default class AskFullNameStepExecutor implements StepExecutor {
   public execute = async (executedWorkflow: ExecutedWorkflowRow, workflowStep: WorkflowStepRow, message: any): Promise<boolean> => {
     const clientRequest = {
       question: 'Could you provide me a full name of the user?',
+      workflowExecutionId: executedWorkflow.id!,
+      type: workflowStep.type,
       actor: executedWorkflow.data?.actor
     }
     await this.queueService.publishStepDataRequest(JSON.stringify(clientRequest));

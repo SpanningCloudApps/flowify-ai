@@ -22,6 +22,12 @@ export default class ExecutedWorkflowStepService {
     return remainingSteps[0];
   }
 
+  public async getWaitingStep(executedWorkflowId: number, workflowSteps: Array<WorkflowStepRow>): Promise<WorkflowStepRow> {
+    const waitingStep = await this.executedWorkflowStepRepository.getWaitingStep(executedWorkflowId);
+
+    return workflowSteps.find(step => step.type === waitingStep?.type)!;
+  }
+
   public async createStepExecution(executedWorkflowId: number, workflowStep: WorkflowStepRow) {
     const executedWorkflowStepRow: ExecutedWorkflowStepRow = {
       workflow_step_id: workflowStep.id,
@@ -30,7 +36,7 @@ export default class ExecutedWorkflowStepService {
       status: StepExecutionStatus.WAITING_FOR_RESULT,
       data: {}
     }
-    this.executedWorkflowStepRepository.createStepExecution(executedWorkflowStepRow);
+    await this.executedWorkflowStepRepository.createStepExecution(executedWorkflowStepRow);
   }
 
 }

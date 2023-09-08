@@ -8,6 +8,7 @@ import WorkflowStepService from '../service/WorkflowStepService';
 import ExecutedWorkflowStepService from '../service/ExecutedWorkflowStepService';
 import WorkflowStepExecutor from '../executor/WorkflowStepExecutor';
 import ExecutedWorkflowService from '../service/ExecutedWorkflowService';
+import { WorkflowStepRow } from '../repository/model/WorkflowStep';
 
 export default class WorkflowExecutionFacade {
 
@@ -36,16 +37,16 @@ export default class WorkflowExecutionFacade {
 
   public processWorkflow = async (message: any) => {
     console.log(message);
-    const { workflowName, actor, workflowExecutionId } = message;
+    const { workflowName, actor } = message;
     const workflow: any = await this.workflowService.getWorkflow(workflowName);
     const workflowSteps: any[] = await this.workflowStepService.getWorkflowSteps(workflowName);
-    const workflowExecution = await this.executedWorkflowService.getOrCreateExecutedWorkflow(workflow, workflowSteps[0].type, actor, workflowExecutionId);
-    let nextStep = await this.executedWorkflowStepService.getNextStep(workflowExecution.id, workflowSteps);
+    const workflowExecution = await this.executedWorkflowService.createExecutedWorkflow(workflow, workflowSteps[0].type, actor);
+    let nextStep = await this.executedWorkflowStepService.getNextStep(workflowExecution.id!, workflowSteps);
     let nextExecutor = this.workflowStepExecutor.getExecutor(nextStep.type);
 
     console.log(`Running workflow ${JSON.stringify(workflow)} with ${workflowSteps.length} steps. Next step ${nextStep?.type}`);
     while (await nextExecutor.execute(workflowExecution, nextStep, message)) {
-      nextStep = await this.executedWorkflowStepService.getNextStep(workflowExecution.id, workflowSteps);
+      nextStep = await this.executedWorkflowStepService.getNextStep(workflowExecution.id!, workflowSteps);
       nextExecutor = this.workflowStepExecutor.getExecutor(nextStep.type);
       console.log(`Running workflow ${JSON.stringify(workflow)} with ${workflowSteps.length} steps. Next step ${nextStep?.type}`);
     }
@@ -55,10 +56,29 @@ export default class WorkflowExecutionFacade {
     } else {
       console.log(`Workflow ${JSON.stringify(workflow)} on pause. Waiting for user input`);
     }
-  }
+  };
 
   public handleStepResultReceived = async (message: any) => {
+    console.log(message);
+    const { workflowExecutionId, type } = message;
 
-  }
+    const workflowExecution = await this.executedWorkflowService.getExecutedWorkflow(workflowExecutionId);
+    const workflow: any = await this.workflowService.getWorkflow(workflowExecution.workflow_name);
+    const workflowSteps: Array<WorkflowStepRow> = await this.workflowStepService.getWorkflowSteps(workflowExecution.workflow_name);
+    let nextStep = await this.executedWorkflowStepService.getWaitingStep(workflowExecution.id!, workflowSteps);
+    let nextExecutor = this.workflowStepExecutor.getExecutor(type);
+
+    while (await nextExecutor.execute(workflowExecution, nextStep, message)) {
+      nextStep = await this.executedWorkflowStepService.getNextStep(workflowExecution.id!, workflowSteps);
+      nextExecutor = this.workflowStepExecutor.getExecutor(nextStep.type);
+      console.log(`Running workflow ${JSON.stringify(workflow)} with ${workflowSteps.length} steps. Next step ${nextStep?.type}`);
+    }
+
+    if (nextStep.type === workflowSteps[workflowSteps.length - 1].type) {
+      console.log(`Workflow ${JSON.stringify(workflow)} finished`);
+    } else {
+      console.log(`Workflow ${JSON.stringify(workflow)} on pause. Waiting for user input`);
+    }
+  };
 
 }

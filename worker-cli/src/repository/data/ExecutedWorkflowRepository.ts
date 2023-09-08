@@ -18,18 +18,7 @@ export default class ExecutedWorkflowRepository {
     this.pgConnection = `postgres://${conf.user}:${conf.pass}@${conf.host}:${conf.port}/${conf.db}`;
   }
 
-  public getOrCreateExecutedWorkflow = async (workflow: WorkflowRow, firstStep: StepType, actor?: string, workflowExecutionId?: number): Promise<ExecutedWorkflowRow> => {
-    if (workflowExecutionId) {
-      const query = ExecutedWorkflow.select(ExecutedWorkflow.star())
-        .from(ExecutedWorkflow)
-        .where(ExecutedWorkflow?.id?.equals(workflowExecutionId))
-        .toQuery();
-
-      const connection = Database.ofConnection(this.pgConnection).connect();
-      const result = await connection.query(query.text, query.values);
-      return result.rows[0];
-    }
-
+  public createExecutedWorkflow = async (workflow: WorkflowRow, firstStep: StepType, actor: string): Promise<ExecutedWorkflowRow> => {
     const query = ExecutedWorkflow.insert({
       workflow_name: workflow.name,
       status: WorkflowStatus.RUNNING,
@@ -39,6 +28,17 @@ export default class ExecutedWorkflowRepository {
       }
     })
       .returning('*')
+      .toQuery();
+
+    const connection = Database.ofConnection(this.pgConnection).connect();
+    const result = await connection.query(query.text, query.values);
+    return result.rows[0];
+  };
+
+  public getExecutedWorkflow = async (workflowExecutionId: number): Promise<ExecutedWorkflowRow> => {
+    const query = ExecutedWorkflow.select(ExecutedWorkflow.star())
+      .from(ExecutedWorkflow)
+      .where(ExecutedWorkflow?.id?.equals(workflowExecutionId))
       .toQuery();
 
     const connection = Database.ofConnection(this.pgConnection).connect();

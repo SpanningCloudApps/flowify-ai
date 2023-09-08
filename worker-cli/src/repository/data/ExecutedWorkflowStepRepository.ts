@@ -5,6 +5,7 @@
 import config from 'config';
 import { ExecutedWorkflowStep, ExecutedWorkflowStepRow } from '../model/ExecutedWorkflowStep';
 import { Database } from '../Database';
+import { StepExecutionStatus } from '../../enum/StepExecutionStatus';
 
 export default class ExecutedWorkflowStepRepository {
 
@@ -25,6 +26,18 @@ export default class ExecutedWorkflowStepRepository {
     const result = await connection.query(query.text, query.values);
     return result.rows;
   };
+
+  public getWaitingStep = async (executedWorkflowId: number): Promise<ExecutedWorkflowStepRow> => {
+  const query = ExecutedWorkflowStep.select(ExecutedWorkflowStep.star())
+    .from(ExecutedWorkflowStep)
+    .where(ExecutedWorkflowStep?.workflow_execution_id?.equals(executedWorkflowId))
+    .and(ExecutedWorkflowStep.status.equals(StepExecutionStatus.WAITING_FOR_RESULT))
+    .toQuery();
+
+  const connection = Database.ofConnection(this.pgConnection).connect();
+  const result = await connection.query(query.text, query.values);
+  return result.rows[0];
+}
 
   public createStepExecution = async (executedWorkflowStepRow: ExecutedWorkflowStepRow) => {
     const query = ExecutedWorkflowStep.insert(executedWorkflowStepRow)
