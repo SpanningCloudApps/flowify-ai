@@ -50,6 +50,7 @@ export default class ExecutedWorkflowStepRepository {
 
   public updateStepExecutionWithUserData = async (executedWorkflowId: number, stepType: StepType, clientResponse: string) => {
     const query = ExecutedWorkflowStep.update({
+      status: StepExecutionStatus.COMPLETED,
       data: { clientResponse }
     })
       .where(ExecutedWorkflowStep.workflow_execution_id.equals(executedWorkflowId))

@@ -10,6 +10,7 @@ export DEFAULT_STABMIN_CLIENT_IMAGE_TAG="latest"
 
 valid_options=(
   "--start-wf"
+  "--publish-fn"
 )
 
 array_contains() {
@@ -46,11 +47,15 @@ check_options_are_valid() {
 }
 
 start_workflow() {
-  docker exec localstack-ai awslocal sqs send-message --queue-url http://localhost:8666/000000000000/dev_workflow_requests --message-body '{"workflowName": "ADD_USER"}'
+  docker exec localstack-ai awslocal sqs send-message \
+      --queue-url http://localhost:8666/000000000000/dev_workflow_requests \
+      --message-body '{"workflowName": "ADD_USER", "actor": "Andrei Kozel"}'
 }
 
 publish_full_name() {
-  echo "publish_full_name"
+  docker exec localstack-ai awslocal sqs send-message \
+        --queue-url http://localhost:8666/000000000000/dev_workflow_step_interaction_result \
+        --message-body '{"workflowExecutionId": 1, "type": "ASK_FOR_FULL_NAME", "clientResponse": "Andrei Kozel2"}'
 }
 
 publish_create_date() {

@@ -68,7 +68,7 @@ export default class WorkflowExecutionFacade {
     let nextStep = await this.executedWorkflowStepService.getWaitingStep(workflowExecution.id!, workflowSteps);
     let nextExecutor = this.workflowStepExecutor.getExecutor(type);
 
-    while (await nextExecutor.execute(workflowExecution, nextStep, message)) {
+    while ((await nextExecutor.execute(workflowExecution, nextStep, message))) {
       nextStep = await this.executedWorkflowStepService.getNextStep(workflowExecution.id!, workflowSteps);
       nextExecutor = this.workflowStepExecutor.getExecutor(nextStep.type);
       console.log(`Running workflow ${JSON.stringify(workflow)} with ${workflowSteps.length} steps. Next step ${nextStep?.type}`);
