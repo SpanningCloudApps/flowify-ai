@@ -5,6 +5,14 @@
 import config from 'config';
 import OpenAI from 'openai';
 
+export interface AIResponse {
+  index: number;
+  message: {
+    role: string;
+    content: string;
+  }
+}
+
 export class OpenAIConnector {
   private static _instance = new OpenAIConnector();
 
@@ -16,18 +24,20 @@ export class OpenAIConnector {
 
   private readonly maxTokens: number;
   private readonly model: string;
+  private readonly responseDistribution: number;
   private readonly temperature: number;
 
   constructor() {
     this.maxTokens = config.get<number>('ai.openai.maxTokens');
     this.model = config.get<string>('ai.openai.model');
     this.temperature = config.get<number>('ai.openai.temperature');
+    this.responseDistribution = config.get<number>('ai.openai.responseDistribution');
 
     const apiKey = config.get<string>('ai.openai.apiKey');
     this.openAIClient = new OpenAI({ apiKey });
   }
 
-  public async execute(requestContent: string, maxTokens?: number, temperature?: number) {
+  public async execute(requestContent: string, maxTokens?: number, temperature?: number): Promise<AIResponse[]> {
     try {
       const context = await this.prepareContext();
 
@@ -38,13 +48,11 @@ export class OpenAIConnector {
         ],
         model: this.model,
         max_tokens: maxTokens ?? this.maxTokens,
-        temperature: temperature ?? this.temperature
+        temperature: temperature ?? this.temperature,
+        n: 10
       });
 
-      return {
-        resultMessage: completion.choices.map(choice => choice.message),
-        metrics: completion.usage
-      };
+      return completion.choices as AIResponse[];
     } catch (err) {
       console.error(`Failed to analyze request with prompt: ${requestContent}`, err);
       throw err;
