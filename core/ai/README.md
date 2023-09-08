@@ -1,3 +1,3 @@
 # Authors
 
-ai: Nikita Gurets
+Nikita Gurets

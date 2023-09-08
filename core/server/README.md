@@ -1,3 +1,3 @@
 # Authors
 
-client: Anton Bachykin
+Alina Glumova

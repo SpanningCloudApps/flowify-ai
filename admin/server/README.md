@@ -1,3 +1,3 @@
 # Authors
 
-Anton Bachykin
+Ruslan Zianevich

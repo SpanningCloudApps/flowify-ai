@@ -1,0 +1,61 @@
+{
+  "name": "worker-cli",
+  "version": "0.0.0",
+  "description": "Executes Workflows",
+  "author": "Andrey Kozel",
+  "bin": {
+    "worker-cli": "./bin/run"
+  },
+  "homepage": "https://github.com/hackathon-ai/worker-cli",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "repository": "hackathon-ai/worker-cli",
+  "files": [
+    "/bin",
+    "/dist",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "dependencies": {
+    "@oclif/core": "^2",
+    "@oclif/plugin-help": "^5",
+    "@oclif/plugin-plugins": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.47",
+    "oclif": "^3.14.0",
+    "shx": "^0.3.3",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.6.2",
+    "typescript": "^4.9.5"
+  },
+  "oclif": {
+    "bin": "worker-cli",
+    "dirname": "worker-cli",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
+    ],
+    "topicSeparator": " ",
+    "topics": {
+      "hello": {
+        "description": "Say hello to the world and others"
+      }
+    }
+  },
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "prepack": "npm run build && oclif manifest && oclif readme",
+    "version": "oclif readme && git add README.md"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "bugs": "https://github.com/hackathon-ai/worker-cli/issues",
+  "keywords": [
+    "oclif"
+  ],
+  "types": "dist/index.d.ts"
+}
