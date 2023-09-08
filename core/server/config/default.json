@@ -1,13 +1,13 @@
 {
   "aws": {
     "region": "us-east-1",
+    "accessKey": "123",
+    "secretKey": "123",
     "sqs": {
       "prefix": "dev",
       "pollIntervalMillis": 5000,
       "messageVisibilityTimeoutSeconds": 4,
       "messageVisibilityUpdateIntervalSeconds": 2,
-      "awsAccessKey": "",
-      "awsSecretKey": "",
       "default": {
         "waitTimeSecs": 20,
         /* 14 days */

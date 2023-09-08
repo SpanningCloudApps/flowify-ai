@@ -1,15 +1,18 @@
 import config from 'config';
 
 import fastifySwagger from '@fastify/swagger';
+import websocket from '@fastify/websocket';
 import fastify, { FastifyError, FastifyInstance, FastifyReply, FastifyRequest, FastifyServerOptions } from 'fastify';
 import { getLogger } from './logger/logger';
 import { addDataRoute } from './mapping/DataRoutesMapping';
+import { clientInteractionRoute } from './mapping/ClientInteractionRouteMapping';
 
 const initServer = async (): Promise<FastifyInstance> => {
   const logger = getLogger();
   const swaggerEnabled: boolean = config.has('swagger.enabled') && config.get<boolean>('swagger.enabled');
   const afterCreated = async (server: FastifyInstance): Promise<void> => {
     await addDataRoute(server);
+    await clientInteractionRoute(server);
   };
   const errorHandler = (error: FastifyError, request: FastifyRequest, reply: FastifyReply): FastifyReply => {
     logger.error(`Failed to execute request. Url=[${request.url}], body=[${JSON.stringify(request.body)})].`, error);
@@ -57,6 +60,11 @@ const initServer = async (): Promise<FastifyInstance> => {
       exposeRoute: true
     });
   }
+
+  // Register client interactive interaction socket
+  server.register(websocket, {
+    clientTracking: true
+  });
 
   await afterCreated(server);
   return server;

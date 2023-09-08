@@ -62,7 +62,7 @@ publish_full_name() {
 publish_create_date() {
   docker exec localstack-ai awslocal sqs send-message \
           --queue-url http://localhost:8666/000000000000/dev_workflow_step_interaction_result \
-          --message-body '{"workflowExecutionId": 1, "type": "ASK_ABOUT_THE_DATE", "clientResponse": "Andrei Kozel2"}'
+          --message-body '{"workflowExecutionId": 1, "type": "ASK_ABOUT_THE_DATE", "clientResponse": "2023-01-01"}'
 }
 
 main() {

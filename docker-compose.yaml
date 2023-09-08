@@ -10,7 +10,7 @@ services:
       POSTGRES_INITDB_ARGS: '--auth=trust --auth-host=md5 --auth-local=trust'
     ports:
       - '7432:5432'
-  
+
   localstack:
     image: localstack/localstack:latest
     container_name: localstack-ai
@@ -22,5 +22,7 @@ services:
     environment:
       - SERVICES:sqs      # List other services if needed
       - DEBUG=1
+      - AWS_ACCESS_KEY_ID=123
+      - AWS_SECRET_ACCESS_KEY=123
       - DATA_DIR=/tmp/localstack/data
       - DOCKER_HOST=unix:///var/run/docker.sock

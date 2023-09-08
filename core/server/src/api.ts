@@ -10,8 +10,8 @@ const start = async (): Promise<void> => {
   const host: string = config.get<string>('server.host');
 
   try {
+   const history = [];
     const server = await initServer();
-
     await server.listen({ port, host });
     logger.info(`Server had been started on port ${port}`);
   } catch (e) {
@@ -24,6 +24,7 @@ try {
 } catch (err) {
   logger.error('Error occurred during common queue poll', err);
 }
+
 
 start();
 

@@ -1,5 +1,5 @@
 import { backOff } from 'exponential-backoff';
-import { AwsClientFactory, AwsSettings } from '/AwsClientFactory';
+import { AwsClientFactory, AwsSettings } from './AwsClientFactory';
 import {
   ChangeMessageVisibilityCommand,
   CreateQueueCommand,
@@ -9,8 +9,8 @@ import {
   SendMessageCommand,
   SetQueueAttributesCommand
 } from '@aws-sdk/client-sqs';
-import SQSDeadLetterProvider from '/SQSDeadLetterProvider';
-import { DefaultQueueConfig, QueueConfig, SQSQueueConfigProvider } from '/SQSQueueConfigProvider';
+import SQSDeadLetterProvider from './SQSDeadLetterProvider';
+import { DefaultQueueConfig, QueueConfig, SQSQueueConfigProvider } from './SQSQueueConfigProvider';
 import { getLogger } from '../../../logger/logger';
 
 const logger = getLogger();
