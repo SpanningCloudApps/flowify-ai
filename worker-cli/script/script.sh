@@ -46,7 +46,7 @@ check_options_are_valid() {
 }
 
 start_workflow() {
-  docker exec localstack-ai awslocal sqs send-message --queue-url http://localhost:8666/000000000000/dev_workflow_requests --message-body '{"workflowId": "ADD_USER"}'
+  docker exec localstack-ai awslocal sqs send-message --queue-url http://localhost:8666/000000000000/dev_workflow_requests --message-body '{"workflowName": "ADD_USER"}'
 }
 
 publish_full_name() {

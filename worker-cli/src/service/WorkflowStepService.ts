@@ -13,8 +13,8 @@ export default class WorkflowStepService {
     this.workflowStepRepository = workflowStepRepository;
   }
 
-  public async getWorkflowSteps(workflowId: WorkflowType): Promise<any[]> {
-    return await this.workflowStepRepository.getWorkflowSteps(workflowId);
+  public async getWorkflowSteps(workflowName: WorkflowType): Promise<any[]> {
+    return await this.workflowStepRepository.getWorkflowSteps(workflowName);
   }
 
 }

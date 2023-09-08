@@ -34,6 +34,7 @@ CREATE TABLE IF NOT EXISTS workflow_execution
     id          BIGSERIAL NOT NULL,
     workflow_id BIGINT    NOT NULL,
     status      VARCHAR   NOT NULL,
+    step        VARCHAR   NOT NULL,
     data        JSONB     NOT NULL default '{}',
     created_at  TIMESTAMP NOT NULL default NOW()
 );

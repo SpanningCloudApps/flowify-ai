@@ -16,10 +16,10 @@ export default class WorkflowStepRepository {
     this.pgConnection = `postgres://${conf.user}:${conf.pass}@${conf.host}:${conf.port}/${conf.db}`;
   }
 
-  public getWorkflowSteps = async (workflowId: WorkflowType) => {
+  public getWorkflowSteps = async (workflowName: WorkflowType) => {
     const query = WorkflowStep.select(WorkflowStep.star())
       .from(WorkflowStep)
-      .where(WorkflowStep.workflow_id.equals(workflowId))
+      .where(WorkflowStep.workflow_id.equals(workflowName))
       .order(WorkflowStep.ordinal)
       .toQuery();
 
