@@ -26,7 +26,7 @@ CREATE UNIQUE INDEX CONCURRENTLY IF NOT EXISTS w_n ON workflow (name);
 CREATE TABLE IF NOT EXISTS workflow_step
 (
     id          BIGSERIAL NOT NULL,
-    workflow_id VARCHAR    NOT NULL,
+    workflow_id VARCHAR   NOT NULL,
     description VARCHAR   NOT NULL,
     title       VARCHAR   NOT NULL,
     type        VARCHAR   NOT NULL,
@@ -37,12 +37,12 @@ CREATE TABLE IF NOT EXISTS workflow_step
 
 CREATE TABLE IF NOT EXISTS workflow_execution
 (
-    id          BIGSERIAL NOT NULL,
-    workflow_id BIGINT    NOT NULL,
-    status      VARCHAR   NOT NULL,
-    step        VARCHAR   NOT NULL,
-    data        JSONB     NOT NULL default '{}',
-    created_at  TIMESTAMP NOT NULL default NOW()
+    id            BIGSERIAL NOT NULL,
+    workflow_name VARCHAR   NOT NULL,
+    status        VARCHAR   NOT NULL,
+    step          VARCHAR   NOT NULL,
+    data          JSONB     NOT NULL default '{}',
+    created_at    TIMESTAMP NOT NULL default NOW()
 );
 
 CREATE TABLE IF NOT EXISTS workflow_step_execution

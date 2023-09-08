@@ -31,7 +31,7 @@ export default class ExecutedWorkflowRepository {
     }
 
     const query = ExecutedWorkflow.insert({
-      workflow_id: workflow.name,
+      workflow_name: workflow.name,
       status: WorkflowStatus.RUNNING,
       step: firstStep,
       data: {}

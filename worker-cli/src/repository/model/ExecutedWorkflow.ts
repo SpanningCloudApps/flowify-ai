@@ -8,7 +8,7 @@ import { StepType } from '../../enum/StepType';
 
 export interface ExecutedWorkflowRow {
   id?: number;
-  workflow_id: WorkflowType;
+  workflow_name: WorkflowType;
   status: WorkflowStatus;
   step: StepType;
   data: Record<string, any>;
@@ -20,7 +20,7 @@ export const ExecutedWorkflow = define<'workflow_execution', ExecutedWorkflowRow
   schema: '',
   columns: {
     id: { dataType: 'integer' },
-    workflow_id: { dataType: 'varchar' },
+    workflow_name: { dataType: 'varchar' },
     status: { dataType: 'varchar' },
     step: { dataType: 'varchar' },
     data: { dataType: 'jsonb' },
