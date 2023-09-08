@@ -26,4 +26,13 @@ export default class ExecutedWorkflowStepRepository {
     return result.rows;
   };
 
+  public createStepExecution = async (executedWorkflowStepRow: ExecutedWorkflowStepRow) => {
+    const query = ExecutedWorkflowStep.insert(executedWorkflowStepRow)
+      .returning('*')
+      .toQuery();
+
+    const connection = Database.ofConnection(this.pgConnection).connect();
+    await connection.query(query.text, query.values);
+  };
+
 }

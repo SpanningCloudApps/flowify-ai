@@ -6,6 +6,7 @@ import StepExecutor from '../StepExecutor';
 import ExecutedWorkflowService from '../../service/ExecutedWorkflowService';
 import ExecutedWorkflowStepService from '../../service/ExecutedWorkflowStepService';
 import QueueService from '../../service/QueueService';
+import { WorkflowStepRow } from '../../repository/model/WorkflowStep';
 
 export default class CreateMicrosoftActiveDirectoryUser implements StepExecutor {
 
@@ -23,7 +24,7 @@ export default class CreateMicrosoftActiveDirectoryUser implements StepExecutor 
     this.queueService = queueService;
   }
 
-  execute(message: any): Promise<boolean> {
+  execute(executedWorkflowId: number, workflowStep: WorkflowStepRow, message: any): Promise<boolean> {
     return Promise.resolve(false);
   }
 
