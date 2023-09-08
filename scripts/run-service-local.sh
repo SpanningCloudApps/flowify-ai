@@ -4,6 +4,7 @@ valid_options=(
   "--help"
   "--setup-infrastructure"
   "--worker-cli"
+  "--server"
   "--init-dbs"
   "--run-db-migrations"
   "--internal"
@@ -44,6 +45,7 @@ Options:
   --init-dbs                   TimescaleDB initialization. Creates dev user, all the necessary databases, applies migrations
   --run-db-migrations          Run timescaledb db migrations script.
   --worker-cli                 Run worker-cli
+  --server                     Run server
   --internal                   Runs all the previous commands in appropriate order to setup full infrastructure
 EOF
 }
@@ -68,6 +70,18 @@ function run_worker_cli() {
       docker-compose up -d worker-cli
     popd
   fi
+}
+
+function run_server() {
+  if array_contains options "--server" || array_contains options "--internal"; then
+      echo "Run server in the doсker"
+      pushd "${AI_HOME}/core/server"
+        ./script/build-image.sh server
+      popd
+      pushd "${AI_HOME}"
+        docker-compose up -d server
+      popd
+    fi
 }
 
 function init_dbs() {
@@ -133,6 +147,7 @@ function main() {
   create_logs_folder
   setup_infrastructure
   run_worker_cli
+  run_server
   init_dbs
   run_db_migrations
 }
