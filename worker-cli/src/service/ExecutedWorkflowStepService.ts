@@ -6,6 +6,7 @@ import ExecutedWorkflowStepRepository from '../repository/data/ExecutedWorkflowS
 import { WorkflowStepRow } from '../repository/model/WorkflowStep';
 import { ExecutedWorkflowStepRow } from '../repository/model/ExecutedWorkflowStep';
 import { StepExecutionStatus } from '../enum/StepExecutionStatus';
+import { StepType } from '../enum/StepType';
 
 export default class ExecutedWorkflowStepService {
 
@@ -37,6 +38,10 @@ export default class ExecutedWorkflowStepService {
       data: {}
     }
     await this.executedWorkflowStepRepository.createStepExecution(executedWorkflowStepRow);
+  }
+
+  public async updateStepExecutionWithUserData(executedWorkflowId: number, stepType: StepType, clientResponse: string) {
+    await this.executedWorkflowStepRepository.updateStepExecutionWithUserData(executedWorkflowId, stepType, clientResponse);
   }
 
 }
