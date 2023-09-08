@@ -44,16 +44,16 @@ export default class WorkflowExecutionFacade {
     let nextExecutor = this.workflowStepExecutor.getExecutor(nextStep.type);
 
     console.log(`Running workflow ${JSON.stringify(workflow)} with ${workflowSteps.length} steps. Next step ${nextStep?.type}`);
-    while (await nextExecutor.execute(message)) {
-      nextStep = await this.executedWorkflowStepService.getNextStep(workflowName, workflowSteps);
+    while (await nextExecutor.execute(workflowExecution.id!, nextStep, message)) {
+      nextStep = await this.executedWorkflowStepService.getNextStep(workflowExecution.id, workflowSteps);
       nextExecutor = this.workflowStepExecutor.getExecutor(nextStep.type);
       console.log(`Running workflow ${JSON.stringify(workflow)} with ${workflowSteps.length} steps. Next step ${nextStep?.type}`);
     }
 
-    console.log(`Running workflow ${JSON.stringify(workflow)} with ${workflowSteps.length} steps. Next step ${nextStep?.type}`);
-
     if (nextStep.type === workflowSteps[workflowSteps.length - 1].type) {
       console.log(`Workflow ${JSON.stringify(workflow)} finished`);
+    } else {
+      console.log(`Workflow ${JSON.stringify(workflow)} on pause. Waiting for user input`);
     }
   }
 

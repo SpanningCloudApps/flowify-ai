@@ -31,7 +31,7 @@ export default class AskFullNameStepExecutor implements StepExecutor {
     await this.queueService.publishStepDataRequest(JSON.stringify(clientRequest));
     await this.executedWorkflowStepService.createStepExecution(executedWorkflowId, workflowStep);
     await this.executedWorkflowService.updateExecutedWorkflowStep(executedWorkflowId, workflowStep.type);
-    return Promise.resolve(true);
+    return Promise.resolve(false);
   }
 
 }
