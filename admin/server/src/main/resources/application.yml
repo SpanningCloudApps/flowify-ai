@@ -34,6 +34,22 @@ spring:
     default-property-inclusion: non_null
     deserialization:
       fail-on-unknown-properties: false
+  datasource:
+    username: ${AI_INDEX_DB_USERNAME:dev}
+    password: ${AI_INDEX_DB_PASSWORD:dev}
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${SAS_METRICS_DB_HOST:localhost}:${SAS_METRICS_DB_PORT:7432}/${SAS_METRICS_DB_NAME:index}
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      data-source-properties:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+      minimum-idle: 2
+      idle-timeout: 30000
+      pool-name: activity-service-api-pool
+      connection-timeout: 30000
   security:
     oauth2:
       client:

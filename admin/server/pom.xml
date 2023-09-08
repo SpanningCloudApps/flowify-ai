@@ -43,7 +43,7 @@
     <org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
     <lombok-mapstruct.version>0.2.0</lombok-mapstruct.version>
     <io.jsonwebtoken.version>0.11.5</io.jsonwebtoken.version>
-    <org.postgresql.version>42.5.3</org.postgresql.version>
+    <org.postgresql.version>42.6.0</org.postgresql.version>
     <feign.httpclient>11.10</feign.httpclient>
     <skipStaticAnalyse>false</skipStaticAnalyse>
   </properties>
@@ -108,6 +108,12 @@
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-oauth2-jose</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>${org.postgresql.version}</version>
     </dependency>
 
     <dependency>
