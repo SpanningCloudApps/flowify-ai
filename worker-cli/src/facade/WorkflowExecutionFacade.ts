@@ -34,7 +34,8 @@ export default class WorkflowExecutionFacade {
     this.queueService = queueService;
   }
 
-  public async startWorkflow(message: any) {
+  public processWorkflow = async (message: any) => {
+    console.log(message);
     const { workflowId, workflowExecutionId } = message;
     const workflow: any = await this.workflowService.getWorkflow(workflowId);
     const workflowSteps: any[] = await this.workflowStepService.getWorkflowSteps(workflowId);
@@ -56,7 +57,7 @@ export default class WorkflowExecutionFacade {
     }
   }
 
-  public async handleStepResultReceived(message: any) {
+  public handleStepResultReceived = async (message: any) => {
 
   }
 
