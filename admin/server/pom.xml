@@ -389,8 +389,8 @@
             <id>validate</id>
             <phase>validate</phase>
             <configuration>
-              <configLocation>${SCAR_HOME}/codequality/new-checkstyle.xml</configLocation>
-              <suppressionsLocation>${SCAR_HOME}/codequality/checkstyle-suppressions.xml</suppressionsLocation>
+              <configLocation>${AI_HOME}/codequality/new-checkstyle.xml</configLocation>
+              <suppressionsLocation>${AI_HOME}/codequality/checkstyle-suppressions.xml</suppressionsLocation>
               <suppressionsFileExpression>checkstyle.suppressions.file</suppressionsFileExpression>
               <consoleOutput>true</consoleOutput>
               <failsOnError>true</failsOnError>
@@ -420,7 +420,7 @@
           <failOnViolation>true</failOnViolation>
           <includeTests>true</includeTests>
           <rulesets>
-            <ruleset>${SCAR_HOME}/codequality/pmd-ruleset.xml</ruleset>
+            <ruleset>${AI_HOME}/codequality/pmd-ruleset.xml</ruleset>
           </rulesets>
           <excludeRoots>
             <excludeRoot>target/generated-sources</excludeRoot>

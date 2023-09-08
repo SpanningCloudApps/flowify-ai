@@ -41,4 +41,4 @@ export const getUserMenu = (
   );
 };
 
-export const headerId = 'scarmin_header_container';
+export const headerId = 'ai_header_container';

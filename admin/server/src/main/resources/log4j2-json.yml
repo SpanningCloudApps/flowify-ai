@@ -23,7 +23,7 @@ Configuration:
 
   Loggers:
     AsyncRoot:
-      level: ${env:SCAR_LOG_LEVEL:-info}
+      level: ${env:AI_LOG_LEVEL:-info}
       AppenderRef:
         - ref: Console
         - ref: Syslog
