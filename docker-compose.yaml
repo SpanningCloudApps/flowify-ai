@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  timescale-ai:
+    image: timescale/timescaledb:latest-pg14
+    container_name: timescale-ai
+    restart: always
+    environment:
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'postgres'
+      POSTGRES_INITDB_ARGS: '--auth=trust --auth-host=md5 --auth-local=trust'
+    ports:
+      - '7432:5432'
