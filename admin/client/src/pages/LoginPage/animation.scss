@@ -1,0 +1,94 @@
+/*!
+ * Copyright (C) 2022 Spanning Cloud Apps.  All rights reserved.
+ */
+
+@function multiple-box-shadow ($n) {
+  $value: '#{random(100)}vw #{random(100)}vh #FFF';
+  @for $i from 2 through $n {
+    $value: '#{$value} , #{random(100)}vw #{random(100)}vh #FFF'
+  }
+  @return unquote($value)
+}
+
+$stars-shadow-small: multiple-box-shadow(700);
+$stars-shadow-medium: multiple-box-shadow(200);
+$stars-shadow-large: multiple-box-shadow(100);
+
+.admin-login-page-container {
+  .stars {
+    &-small {
+      width: 1px;
+      height: 1px;
+      background: transparent;
+      box-shadow: $stars-shadow-small;
+      animation: alp-stars 5s linear infinite;
+      -webkit-transform: translateZ(0);
+      -moz-transform: translateZ(0);
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: -100vw;
+        width: 1px;
+        height: 1px;
+        background: transparent;
+        box-shadow: $stars-shadow-small;
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+      }
+    }
+
+    &-middle {
+      width: 2px;
+      height: 2px;
+      background: transparent;
+      box-shadow: $stars-shadow-medium;
+      animation: alp-stars 10s linear infinite;
+      -webkit-transform: translateZ(0);
+      -moz-transform: translateZ(0);
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: -100vw;
+        width: 2px;
+        height: 2px;
+        background: transparent;
+        box-shadow: $stars-shadow-medium;
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+      }
+    }
+
+    &-large {
+      width: 3px;
+      height: 3px;
+      background: transparent;
+      box-shadow: $stars-shadow-large;
+      animation: alp-stars 15s linear infinite;
+      -webkit-transform: translateZ(0);
+      -moz-transform: translateZ(0);
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: -100vw;
+        width: 3px;
+        height: 3px;
+        background: transparent;
+        box-shadow: $stars-shadow-large;
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+      }
+    }
+  }
+}
+
+@keyframes alp-stars {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}

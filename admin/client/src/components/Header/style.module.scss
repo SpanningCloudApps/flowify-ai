@@ -1,0 +1,83 @@
+/*
+ * Copyright (C) 2021 Spanning Cloud Apps.  All rights reserved
+ */
+@import '../../constants/constants-styles.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 30px 0 15px;
+  background: transparent;
+  height: 60px;
+  gap: 16px;
+
+  &__regImage {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 45px;
+      box-shadow: 0 0 10px 5px hsl(0deg 0% 100% / 20%);
+    }
+  }
+
+  &__userInfo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+  }
+}
+
+.userInfo {
+  &__wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    span {
+      color: $clr-super-light;
+    }
+  }
+
+  &__dropdownWrap {
+    color: black;
+    padding: 5px 0;
+    cursor: default;
+    display: flex;
+    gap: 10px;
+  }
+
+  &__rowTitle {
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 12px;
+    padding: 0;
+    margin: 0 0 5px;
+  }
+
+  &__icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+  }
+
+  &__dropdownIcon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  &__btnLogout {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: 20px;
+
+    &_text {
+      padding-left: 2px;
+      font-size: 14px;
+    }
+  }
+}

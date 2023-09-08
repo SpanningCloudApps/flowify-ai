@@ -1,6 +1,8 @@
 {
   "aws": {
     "region": "us-east-1",
+    "accessKey": "",
+    "secretKey": "",
     "sqs": {
       "prefix": "dev",
       "pollIntervalMillis": 5000,
@@ -13,6 +15,15 @@
     },
     "localstack": {
       "endpoint": "http://localhost:8666"
+    }
+  },
+  "sql": {
+    "database": {
+      "user": "postgres",
+      "pass": "postgres",
+      "host": "localhost",
+      "port": 7432,
+      "db": "index"
     }
   }
 }

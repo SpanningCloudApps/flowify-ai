@@ -1,4 +1,58 @@
 {
+  "aws": {
+    "region": "us-east-1",
+    "sqs": {
+      "prefix": "dev",
+      "pollIntervalMillis": 5000,
+      "messageVisibilityTimeoutSeconds": 4,
+      "messageVisibilityUpdateIntervalSeconds": 2,
+      "awsAccessKey": "",
+      "awsSecretKey": "",
+      "default": {
+        "waitTimeSecs": 20,
+        /* 14 days */
+        "retentionPeriodSecs": 1209600,
+        "deadLetter": {
+          "maxReceives": 5,
+          /* 14 days */
+          "retentionPeriodSecs": 1209600
+        }
+      },
+      "queues": {
+        "workflowRequestQueue": {
+          "name": "workflow_requests",
+          "waitTimeSecs": 20,
+          "deadLetter": {
+            "enabled": false
+          }
+        },
+        "workflowResultQueue": {
+          "name": "workflow_results",
+          "waitTimeSecs": 20,
+          "deadLetter": {
+            "enabled": false
+          }
+        },
+        "workflowStepInteractionRequestQueue": {
+          "name": "workflow_step_interaction_request",
+          "waitTimeSecs": 20,
+          "deadLetter": {
+            "enabled": false
+          }
+        },
+        "workflowStepInteractionResultQueue": {
+          "name": "workflow_step_interaction_result",
+          "waitTimeSecs": 20,
+          "deadLetter": {
+            "enabled": false
+          }
+        }
+      }
+    },
+    "localstack": {
+      "endpoint": "http://localhost:8666"
+    }
+  },
   "server": {
     "ports": {
       "http": 3300
@@ -7,5 +61,14 @@
   },
   "swagger": {
     "enabled": true
+  },
+  "sql": {
+    "indexdb": {
+      "user": "postgres",
+      "pass": "postgres",
+      "host": "localhost",
+      "port": "7432",
+      "db": "index"
+    }
   }
 }

@@ -3,14 +3,18 @@
  */
 
 import { WorkflowType } from '../enum/WorkflowType';
+import WorkflowRepository from '../repository/data/WorkflowRepository';
 
 export default class WorkflowService {
 
-  public async getWorkflow(workflowId: WorkflowType) {
-    return {
-      id: workflowId,
-      description: 'Add new user to MS AD'
-    };
+  private readonly workflowRepository: WorkflowRepository;
+
+  constructor(workflowRepository: WorkflowRepository) {
+    this.workflowRepository = workflowRepository;
+  }
+
+  public async getWorkflow(workflowName: WorkflowType) {
+    return await this.workflowRepository.getWorkflow(workflowName);
   }
 
 }

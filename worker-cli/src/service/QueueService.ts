@@ -9,6 +9,7 @@ import {
   GetQueueUrlCommandOutput,
   ReceiveMessageCommand,
   ReceiveMessageCommandOutput,
+  SendMessageCommand,
   SQSClient
 } from '@aws-sdk/client-sqs';
 
@@ -60,7 +61,7 @@ export default class QueueService {
         const command = new ReceiveMessageCommand({ QueueUrl: this.workflowRequestQueue });
         const messages: ReceiveMessageCommandOutput = await this.sqsClient.send(command);
         if (messages?.Messages?.length) {
-          const message = messages.Messages[0]
+          const message = messages.Messages[0];
           await handler(JSON.parse(message.Body as string));
           const deleteCommand = new DeleteMessageCommand({
             QueueUrl: this.workflowRequestQueue,
@@ -86,10 +87,10 @@ export default class QueueService {
         const command = new ReceiveMessageCommand({ QueueUrl: this.workflowStepInteractionResultQueue });
         const messages: ReceiveMessageCommandOutput = await this.sqsClient.send(command);
         if (messages?.Messages?.length) {
-          const message = messages.Messages[0]
+          const message = messages.Messages[0];
           await handler(JSON.parse(message.Body as string));
           const deleteCommand = new DeleteMessageCommand({
-            QueueUrl: this.workflowRequestQueue,
+            QueueUrl: this.workflowStepInteractionResultQueue,
             ReceiptHandle: message.ReceiptHandle
           });
           await this.sqsClient.send(deleteCommand);
@@ -101,7 +102,15 @@ export default class QueueService {
   }
 
   public async publishStepDataRequest(data: any) {
-    console.log(`Publish message to the queue ${this.workflowStepInteractionResultQueue} data ${JSON.stringify(data)}`);
+    console.log(`Publish message to the queue ${this.workflowStepInteractionRequestQueue} data ${JSON.stringify(data)}`);
+    try {
+      const command = new SendMessageCommand({
+        QueueUrl: this.workflowStepInteractionRequestQueue,
+        MessageBody: data
+      });
+      await this.sqsClient.send(command);
+    } catch (e) {
+      console.error(`Failed to read message from the queue`, e);
+    }
   }
-
 }

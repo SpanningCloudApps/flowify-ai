@@ -9,23 +9,21 @@ import ExecutedWorkflowStepService from '../service/ExecutedWorkflowStepService'
 import AskFullNameStepExecutor from './steps/AskFullNameStepExecutor';
 import AskCreateDateStepExecutor from './steps/AskCreateDateStepExecutor';
 import CreateMicrosoftActiveDirectoryUser from './steps/CreateMicrosoftActiveDirectoryUser';
+import QueueService from '../service/QueueService';
 
 export default class WorkflowStepExecutor {
 
-  private readonly executedWorkflowService: ExecutedWorkflowService;
-  private readonly executedWorkflowStepService: ExecutedWorkflowStepService;
   private readonly executors: Record<StepType, StepExecutor>;
 
   constructor(
     executedWorkflowService: ExecutedWorkflowService,
-    executedWorkflowStepService: ExecutedWorkflowStepService
+    executedWorkflowStepService: ExecutedWorkflowStepService,
+    queueService: QueueService
   ) {
-    this.executedWorkflowService = executedWorkflowService;
-    this.executedWorkflowStepService = executedWorkflowStepService;
     this.executors = {
-      [StepType.ASK_FOR_FULL_NAME]: new AskFullNameStepExecutor(this.executedWorkflowService),
-      [StepType.ASK_ABOUT_THE_DATE]: new AskCreateDateStepExecutor(this.executedWorkflowService),
-      [StepType.CREATE_AD_USER]: new CreateMicrosoftActiveDirectoryUser(this.executedWorkflowService, this.executedWorkflowStepService)
+      [StepType.ASK_FOR_FULL_NAME]: new AskFullNameStepExecutor(executedWorkflowService, executedWorkflowStepService, queueService),
+      [StepType.ASK_ABOUT_THE_DATE]: new AskCreateDateStepExecutor(executedWorkflowService, executedWorkflowStepService, queueService),
+      [StepType.CREATE_AD_USER]: new CreateMicrosoftActiveDirectoryUser(executedWorkflowService, executedWorkflowStepService, queueService)
     };
   }
 

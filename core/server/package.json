@@ -12,7 +12,9 @@
     "start:dev": "TZ=UTC NODE_CONFIG_DIR=config ts-node --transpile-only ./src/api.ts"
   },
   "devDependencies": {
+    "@aws-sdk/types": "3.408.0",
     "@types/config": "3.3.0",
+    "@types/pg": "8.10.2",
     "@types/uuid": "9.0.3",
     "ts-node": "10.9.1",
     "tsconfig-paths": "4.2.0",
@@ -20,12 +22,16 @@
     "typescript": "5.1.6"
   },
   "dependencies": {
+    "@aws-sdk/client-sqs": "3.408.0",
     "@fastify/static": "6.11.0",
     "@fastify/swagger": "8.10.0",
     "config": "3.3.9",
-    "dayjs": "1.11.9",
+    "moment": "2.29.4",
     "fastify": "4.22.2",
+    "sql": "0.78.0",
+    "pg": "8.11.3",
     "uuid": "9.0.0",
-    "winston": "3.10.0"
+    "winston": "3.10.0",
+    "exponential-backoff": "3.1.1"
   }
 }
