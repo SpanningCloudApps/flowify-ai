@@ -18,7 +18,7 @@ export default class ExecutedWorkflowRepository {
     this.pgConnection = `postgres://${conf.user}:${conf.pass}@${conf.host}:${conf.port}/${conf.db}`;
   }
 
-  public getOrCreateExecutedWorkflow = async (workflow: WorkflowRow, firstStep: StepType, workflowExecutionId?: number): Promise<ExecutedWorkflowRow> => {
+  public getOrCreateExecutedWorkflow = async (workflow: WorkflowRow, firstStep: StepType, actor?: string, workflowExecutionId?: number): Promise<ExecutedWorkflowRow> => {
     if (workflowExecutionId) {
       const query = ExecutedWorkflow.select(ExecutedWorkflow.star())
         .from(ExecutedWorkflow)
@@ -34,7 +34,9 @@ export default class ExecutedWorkflowRepository {
       workflow_name: workflow.name,
       status: WorkflowStatus.RUNNING,
       step: firstStep,
-      data: {}
+      data: {
+        actor
+      }
     })
       .returning('*')
       .toQuery();
