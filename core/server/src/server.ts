@@ -3,10 +3,14 @@ import config from 'config';
 import fastifySwagger from '@fastify/swagger';
 import fastify, { FastifyError, FastifyInstance, FastifyReply, FastifyRequest, FastifyServerOptions } from 'fastify';
 import { getLogger } from './logger/logger';
+import { addApiRoutes } from './mapping/AiApiRoutesMapping';
 
-const initServer = (): Promise<FastifyInstance> => {
+const initServer = async (): Promise<FastifyInstance> => {
   const logger = getLogger();
   const swaggerEnabled: boolean = config.has('swagger.enabled') && config.get<boolean>('swagger.enabled');
+  const afterCreated = async (server: FastifyInstance): Promise<void> => {
+    await addApiRoutes(server);
+  };
   const errorHandler = (error: FastifyError, request: FastifyRequest, reply: FastifyReply): FastifyReply => {
     logger.error(`Failed to execute request. Url=[${request.url}], body=[${JSON.stringify(request.body)})].`, error);
     if (error?.statusCode === 400) {
@@ -54,6 +58,7 @@ const initServer = (): Promise<FastifyInstance> => {
     });
   }
 
+  await afterCreated(server);
   return server;
 };
 
