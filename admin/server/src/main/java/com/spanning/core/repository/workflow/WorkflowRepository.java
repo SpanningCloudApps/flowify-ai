@@ -6,7 +6,6 @@ package com.spanning.core.repository.workflow;
 
 import java.util.List;
 
-import com.spanning.core.dto.response.ticket.ClassificationResult;
 import com.spanning.core.dto.response.workflow.Workflow;
 import org.springframework.data.jdbc.repository.query.Modifying;
 import org.springframework.data.jdbc.repository.query.Query;
@@ -15,7 +14,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface WorkflowRepository extends CrudRepository<ClassificationResult, Object> {
+public interface WorkflowRepository extends CrudRepository<Workflow, Object> {
 
   @Modifying
   @Query("DELETE from workflow WHERE id = :id")

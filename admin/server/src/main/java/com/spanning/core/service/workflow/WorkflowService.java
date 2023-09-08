@@ -6,6 +6,7 @@ package com.spanning.core.service.workflow;
 
 import java.util.List;
 
+import com.spanning.core.dto.request.workflow.CreateParams;
 import com.spanning.core.dto.request.workflow.SearchParams;
 import com.spanning.core.dto.response.workflow.Workflow;
 import com.spanning.core.repository.workflow.WorkflowRepository;
@@ -29,5 +30,14 @@ public class WorkflowService {
 
   public void delete(final long id) {
     workflowRepository.delete(id);
+  }
+
+  public Workflow create(final CreateParams createParams) {
+    return workflowRepository.save(
+      Workflow.builder()
+        .name(createParams.getName())
+        .description(createParams.getDescription())
+        .build()
+    );
   }
 }

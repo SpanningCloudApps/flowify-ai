@@ -6,7 +6,9 @@ package com.spanning.api.controller.workflow;
 
 import javax.validation.Valid;
 
+import com.spanning.api.dto.request.workflow.CreateWorkflowsRequestDto;
 import com.spanning.api.dto.request.workflow.SearchWorkflowsRequestDto;
+import com.spanning.api.dto.response.workflow.WorkflowResponseDto;
 import com.spanning.api.dto.response.workflow.WorkflowsResponseDto;
 import com.spanning.api.facade.workflow.WorkflowFacade;
 import lombok.RequiredArgsConstructor;
@@ -29,12 +31,20 @@ public class WorkflowController {
 
   private final WorkflowFacade workflowFacade;
 
-  @PostMapping
+  @PostMapping("/search")
   public WorkflowsResponseDto search(
     @Valid @RequestBody final SearchWorkflowsRequestDto requestDto
   ) {
     log.info(String.valueOf(requestDto));
     return workflowFacade.search(requestDto);
+  }
+
+  @PostMapping()
+  public WorkflowResponseDto create(
+    @Valid @RequestBody final CreateWorkflowsRequestDto requestDto
+  ) {
+    log.info("Create workflow [{}]", requestDto);
+    return workflowFacade.create(requestDto);
   }
 
   @DeleteMapping("/{id}")

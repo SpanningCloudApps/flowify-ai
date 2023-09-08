@@ -7,11 +7,12 @@ package com.spanning.api.converter.workflow;
 import java.util.List;
 import java.util.Optional;
 
-import com.spanning.api.dto.request.ticket.SearchTicketsRequestDto;
+import com.spanning.api.dto.request.workflow.CreateWorkflowsRequestDto;
 import com.spanning.api.dto.request.workflow.SearchWorkflowsRequestDto;
 import com.spanning.api.dto.request.workflow.SearchWorkflowsRequestDto.Search;
 import com.spanning.api.dto.response.workflow.WorkflowResponseDto;
 import com.spanning.api.dto.response.workflow.WorkflowsResponseDto;
+import com.spanning.core.dto.request.workflow.CreateParams;
 import com.spanning.core.dto.request.workflow.SearchParams;
 import com.spanning.core.dto.response.workflow.Workflow;
 import org.apache.commons.lang3.StringUtils;
@@ -24,6 +25,8 @@ public interface WorkflowConverter {
 
 
   WorkflowResponseDto convertToResponseDto(final Workflow workflow);
+
+  CreateParams convert(final CreateWorkflowsRequestDto request);
 
   default WorkflowsResponseDto convert(final List<Workflow> workflows) {
     return WorkflowsResponseDto.builder()

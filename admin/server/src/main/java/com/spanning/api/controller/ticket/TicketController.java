@@ -29,7 +29,7 @@ public class TicketController {
 
   private final TicketFacade ticketFacade;
 
-  @PostMapping
+  @PostMapping("/search")
   public TicketsResponseDto search(
     @Valid @RequestBody final SearchTicketsRequestDto requestDto
   ) {
