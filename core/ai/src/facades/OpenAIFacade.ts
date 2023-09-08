@@ -79,7 +79,7 @@ class OpenAIFacade {
 
     const proceededVariants = recognizedOption ? [...processedResponses, recognizedOption] : [...processedResponses, responses[0]];
     const estimatedValue = proceededVariants.reduce((sum, response) => sum + (1 / (response.index+1)), 0);
-    const probability = 1 / estimatedValue;
+    const probability = recognizedOption ? (1 / (recognizedOption.index+1)) / estimatedValue : 1 / estimatedValue;
 
     return {
       probability: probability * 100,
