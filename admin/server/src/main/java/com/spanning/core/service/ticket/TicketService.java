@@ -18,7 +18,7 @@ public class TicketService {
   public List<TicketResponseDto> getAll() {
     return List.of(
       TicketResponseDto.builder()
-      .id(1L)
+      .id(2L)
         .input("{\"some\":\"data\"}")
         .data("[{\"WORKFLOW\": \"NAME1\", \"probability\":12.333209},"
           + " {\"WORKFLOW\": \"NAME2\", \"probability\":22.333209}]")
@@ -26,7 +26,7 @@ public class TicketService {
         .probability(95.333209f)
       .build(),
       TicketResponseDto.builder()
-        .id(2L)
+        .id(1L)
         .input("{\"some2\":\"data2\"}")
         .data("[{\"WORKFLOW\": \"NAME4\", \"probability\":12.333209},"
           + " {\"WORKFLOW\": \"NAME5\", \"probability\":22.333209}]")

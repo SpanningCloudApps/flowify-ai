@@ -7,6 +7,7 @@ package com.spanning.api.controller.ticket;
 import java.util.List;
 
 import com.spanning.api.dto.response.ticket.TicketResponseDto;
+import com.spanning.api.dto.response.ticket.TicketsResponseDto;
 import com.spanning.api.facade.ticket.TicketFacade;
 import com.spanning.api.facade.workflow.WorkflowFacade;
 import com.spanning.config.security.UserContext;
@@ -26,8 +27,10 @@ public class TicketController {
   private final TicketFacade ticketFacade;
 
   @GetMapping
-  public List<TicketResponseDto> getAll() {
-    return ticketFacade.getAll();
+  public TicketsResponseDto getAll() {
+    return TicketsResponseDto.builder()
+      .tickets(ticketFacade.getAll())
+      .build();
   }
 
 }
