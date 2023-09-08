@@ -1,0 +1,22 @@
+/*
+ * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
+ */
+
+.custom-infinite-scroll-component {
+  width: 100%;
+  overflow: auto;
+}
+
+.custom-infinite-scroll-component .infinite-scroll-component {
+  overflow: unset !important;
+}
+
+.custom-infinite-scroll-component .infinity-inner-table .ant-table-thead th.ant-table-column-has-sorters:hover {
+  background: #FAFAFA;
+}
+
+.custom-infinite-scroll-component .infinity-inner-table .ant-table-thead {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
