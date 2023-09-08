@@ -2,10 +2,11 @@
  * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
  */
 import { define } from 'sql';
+import { WorkflowType } from '../../enum/WorkflowType';
 
 export interface WorkflowRow {
   id: number;
-  name: string;
+  name: WorkflowType;
   description: string;
   data: Record<string, any>;
   created_at: Date;

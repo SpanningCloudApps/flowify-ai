@@ -36,21 +36,21 @@ export default class WorkflowExecutionFacade {
 
   public processWorkflow = async (message: any) => {
     console.log(message);
-    const { workflowId, workflowExecutionId } = message;
-    const workflow: any = await this.workflowService.getWorkflow(workflowId);
-    const workflowSteps: any[] = await this.workflowStepService.getWorkflowSteps(workflowId);
-    const workflowExecution = await this.executedWorkflowService.getExecutedWorkflow(workflowExecutionId);
+    const { workflowName, workflowExecutionId } = message;
+    const workflow: any = await this.workflowService.getWorkflow(workflowName);
+    const workflowSteps: any[] = await this.workflowStepService.getWorkflowSteps(workflowName);
+    const workflowExecution = await this.executedWorkflowService.getOrCreateExecutedWorkflow(workflow, workflowSteps[0].type, workflowExecutionId);
     let nextStep = await this.executedWorkflowStepService.getNextStep(workflowExecution.id, workflowSteps);
     let nextExecutor = this.workflowStepExecutor.getExecutor(nextStep.type);
 
-    console.log(`Running workflow ${JSON.stringify(workflow)} with ${workflowSteps.length} steps. Next step ${nextStep}`);
+    console.log(`Running workflow ${JSON.stringify(workflow)} with ${workflowSteps.length} steps. Next step ${nextStep?.type}`);
     while (await nextExecutor.execute(message)) {
-      nextStep = await this.executedWorkflowStepService.getNextStep(workflowId, workflowSteps);
+      nextStep = await this.executedWorkflowStepService.getNextStep(workflowName, workflowSteps);
       nextExecutor = this.workflowStepExecutor.getExecutor(nextStep.type);
-      console.log(`Running workflow ${JSON.stringify(workflow)} with ${workflowSteps.length} steps. Next step ${nextStep}`);
+      console.log(`Running workflow ${JSON.stringify(workflow)} with ${workflowSteps.length} steps. Next step ${nextStep?.type}`);
     }
 
-    console.log(`Running workflow ${JSON.stringify(workflow)} with ${workflowSteps.length} steps. Next step ${nextStep}`);
+    console.log(`Running workflow ${JSON.stringify(workflow)} with ${workflowSteps.length} steps. Next step ${nextStep?.type}`);
 
     if (nextStep.type === workflowSteps[workflowSteps.length - 1].type) {
       console.log(`Workflow ${JSON.stringify(workflow)} finished`);

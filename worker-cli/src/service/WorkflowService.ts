@@ -13,8 +13,8 @@ export default class WorkflowService {
     this.workflowRepository = workflowRepository;
   }
 
-  public async getWorkflow(workflowId: WorkflowType) {
-    return await this.workflowRepository.getWorkflow(workflowId);
+  public async getWorkflow(workflowName: WorkflowType) {
+    return await this.workflowRepository.getWorkflow(workflowName);
   }
 
 }

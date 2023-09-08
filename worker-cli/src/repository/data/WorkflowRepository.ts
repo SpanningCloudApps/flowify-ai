@@ -16,10 +16,10 @@ export default class WorkflowRepository {
     this.pgConnection = `postgres://${conf.user}:${conf.pass}@${conf.host}:${conf.port}/${conf.db}`;
   }
 
-  public getWorkflow = async (workflowId: WorkflowType) => {
+  public getWorkflow = async (workflowName: WorkflowType) => {
     const query = Workflow.select(Workflow.star())
       .from(Workflow)
-      .where(Workflow.name.equals(workflowId))
+      .where(Workflow.name.equals(workflowName))
       .toQuery();
 
     const connection = Database.ofConnection(this.pgConnection).connect();

@@ -3,11 +3,10 @@
  */
 
 import config from 'config';
-import { WorkflowType } from '../../enum/WorkflowType';
+import { ExecutedWorkflowStep, ExecutedWorkflowStepRow } from '../model/ExecutedWorkflowStep';
 import { Database } from '../Database';
-import { WorkflowStep } from '../model/WorkflowStep';
 
-export default class WorkflowStepRepository {
+export default class ExecutedWorkflowStepRepository {
 
   private readonly pgConnection: string;
 
@@ -16,11 +15,10 @@ export default class WorkflowStepRepository {
     this.pgConnection = `postgres://${conf.user}:${conf.pass}@${conf.host}:${conf.port}/${conf.db}`;
   }
 
-  public getWorkflowSteps = async (workflowName: WorkflowType) => {
-    const query = WorkflowStep.select(WorkflowStep.star())
-      .from(WorkflowStep)
-      .where(WorkflowStep.workflow_id.equals(workflowName))
-      .order(WorkflowStep.ordinal)
+  public getExecutedSteps = async (executedWorkflowId: number): Promise<Array<ExecutedWorkflowStepRow>> => {
+    const query = ExecutedWorkflowStep.select(ExecutedWorkflowStep.star())
+      .from(ExecutedWorkflowStep)
+      .where(ExecutedWorkflowStep?.workflow_execution_id?.equals(executedWorkflowId))
       .toQuery();
 
     const connection = Database.ofConnection(this.pgConnection).connect();
