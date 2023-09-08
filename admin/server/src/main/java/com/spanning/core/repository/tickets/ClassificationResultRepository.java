@@ -23,7 +23,7 @@ public interface ClassificationResultRepository extends CrudRepository<Classific
     @Param("workflowName") final String workflowName
   );
   @Query("""
-     SELECT id, input, workflow_name, probability, data, created_at FROM classification_result AS c
+     SELECT id, cast(input as varchar), workflow_name, probability, cast(data as varchar), created_at FROM classification_result AS c
          WHERE (:pageToken IS NULL OR id < :pageToken)
        AND ((:title IS NULL AND :description IS NULL AND :createdBy IS NULL AND :workflowName IS NULL)
          OR (:title IS NOT NULL AND c.input->>'title' ILIKE CONCAT('%', :title, '%'))
@@ -37,6 +37,7 @@ public interface ClassificationResultRepository extends CrudRepository<Classific
     @Param("description") final String description,
     @Param("createdBy") final String createdBy,
     @Param("workflowName") final String workflowName,
+    @Param("isClassified") final Boolean isClassified,
     @Param("pageToken") final Long pageToken,
     @Param("limit") final Long limit
   );

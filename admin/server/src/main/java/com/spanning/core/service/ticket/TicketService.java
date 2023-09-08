@@ -26,6 +26,7 @@ public class TicketService {
       searchParams.getDescription(),
       searchParams.getCreatedBy(),
       searchParams.getWorkflowName(),
+      searchParams.getIsClassified(),
       searchParams.getPageToken(),
       searchParams.getLimit()
     );
