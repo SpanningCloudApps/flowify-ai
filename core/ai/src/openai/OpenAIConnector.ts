@@ -49,7 +49,7 @@ export class OpenAIConnector {
         model: this.model,
         max_tokens: this.maxTokens,
         temperature: this.temperature,
-        n: 10
+        n: this.responseDistribution
       });
 
       return completion.choices as AIResponse[];
