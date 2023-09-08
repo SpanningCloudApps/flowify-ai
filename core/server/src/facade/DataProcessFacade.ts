@@ -26,7 +26,12 @@ export class DataProcessFacade {
     };
     logger.info(`Data to store: ${JSON.stringify(dataStorageData)}`);
     await dataStorageService.store(dataStorageData);
-    await classificationProcessorService.store();
+    const classificationResult = {
+      workflowName: classificationData.workflowName,
+      actor: body.createdBy
+    };
+    logger.info(`Data to initiate workflow: ${JSON.stringify(classificationResult)}`);
+    await classificationProcessorService.publishClassificationResult(classificationResult);
   }
 }
 

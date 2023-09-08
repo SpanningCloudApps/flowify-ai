@@ -25,6 +25,7 @@ export class ClassifierService {
   }
 
   public async classify(data: Record<string, unknown>): Promise<ClassificationData> {
+    // TODO: Integrate with NIKITA!
     logger.info(`Data to process: ${JSON.stringify(data)}`);
     // return {
     //   workflowName: 'TEST',
