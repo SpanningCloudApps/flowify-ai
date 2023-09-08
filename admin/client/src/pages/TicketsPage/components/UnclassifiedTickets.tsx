@@ -103,7 +103,7 @@ const UnclassifiedTickets: FC = () => {
             </div>
           </Col>
         </Row>
-        {/*<ClassifyDrawer />*/}
+        <ClassifyDrawer />
       </Card>
   );
 };

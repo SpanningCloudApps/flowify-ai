@@ -25,7 +25,7 @@ const en = {
   TIMEOUT_REQUEST_ERROR: 'Oops! Something went wrong. Please try again in few minutes or if problem persists - contact support',
   NOTIFICATION_SUBJECT_CLASSIFIED_TICKETS_LIST: 'Get list of classified tickets',
   NOTIFICATION_SUBJECT_UNCLASSIFIED_TICKETS_LIST: 'Get list of unclassified tickets',
-
+  NOTIFICATION_SUBJECT_USER: '',
   TABLE_CLASSIFIED_TICKETS_TITLE: 'Classified Tickets',
   TABLE_UNCLASSIFIED_TICKETS_TITLE: 'Unclassified Tickets',
   TABLE_TICKETS_SEARCH_PLACEHOLDER: 'Search...',

@@ -119,7 +119,6 @@ const ClassifyDrawer: FC = () => {
       </Row>}
       <Form.Item>
         <Button
-            disabled={isFormInvalid()}
             type="primary"
             htmlType="submit"
         >
