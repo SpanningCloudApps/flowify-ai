@@ -9,6 +9,9 @@ import QueueService from '../../service/QueueService';
 import { WorkflowStepRow } from '../../repository/model/WorkflowStep';
 import { ExecutedWorkflowRow } from '../../repository/model/ExecutedWorkflow';
 import { StepType } from '../../enum/StepType';
+import { getLogger } from '../../logger/logger';
+
+const logger = getLogger()
 
 export default class CreateMicrosoftActiveDirectoryUser implements StepExecutor {
 
@@ -34,7 +37,7 @@ export default class CreateMicrosoftActiveDirectoryUser implements StepExecutor 
 
     await this.executedWorkflowStepService.createStepExecution(executedWorkflow.id!, workflowStep);
     await this.executedWorkflowService.updateExecutedWorkflowStep(executedWorkflow.id!, workflowStep.type);
-    console.log(`Microsoft AD user has been created! Name ${fullName}. Date ${date}`);
+    logger.info(`Microsoft AD user has been created! Name ${fullName}. Date ${date}`);
     await this.executedWorkflowStepService.updateStepExecutionWithUserData(executedWorkflow.id!, workflowStep.type, 'COMPLETED');
     await this.executedWorkflowService.completeExecutedWorkflow(executedWorkflow.id!);
     return Promise.resolve(false);
