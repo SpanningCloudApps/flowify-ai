@@ -3,14 +3,12 @@ import config from 'config';
 import fastifySwagger from '@fastify/swagger';
 import fastify, { FastifyError, FastifyInstance, FastifyReply, FastifyRequest, FastifyServerOptions } from 'fastify';
 import { getLogger } from './logger/logger';
-import { addApiRoutes } from './mapping/AiApiRoutesMapping';
 import { addDataRoute } from './mapping/DataRoutesMapping';
 
 const initServer = async (): Promise<FastifyInstance> => {
   const logger = getLogger();
   const swaggerEnabled: boolean = config.has('swagger.enabled') && config.get<boolean>('swagger.enabled');
   const afterCreated = async (server: FastifyInstance): Promise<void> => {
-    await addApiRoutes(server);
     await addDataRoute(server);
   };
   const errorHandler = (error: FastifyError, request: FastifyRequest, reply: FastifyReply): FastifyReply => {
