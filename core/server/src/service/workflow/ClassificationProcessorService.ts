@@ -4,6 +4,12 @@ import { webSocketService } from '../socket/WebSocketService';
 
 export interface ClassificationResultMessage {
   workflowName: string;
+  actor: string;
+}
+
+export interface ClientInteractionMessage {
+  workflowExecutionId: string;
+  actor: string;
 }
 
 export class ClassificationProcessorService {
@@ -14,11 +20,11 @@ export class ClassificationProcessorService {
   }
 
   public async publishClassificationResult(data: Record<string, unknown>) {
-    await queueService.publishClassificationResult({ workflowName: data.workflowName });
+    await queueService.publishClassificationResult({ workflowName: data.workflowName, actor: data.actor });
   }
 
   public async publishClientInteraction(data: Record<string, unknown>) {
-    await queueService.publishClientInteraction({});
+    await queueService.publishClientInteraction({ workflowExecutionId: data.workflowExecutionId, actor: data.actor });
   }
 
   public async retrieveWorkflowResult() {

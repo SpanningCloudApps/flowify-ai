@@ -1,7 +1,7 @@
 import config from 'config';
 
 import { getLogger } from '../../logger/logger';
-import { ClassificationResultMessage } from '/ClassificationProcessorService';
+import { ClassificationResultMessage, ClientInteractionMessage } from '/ClassificationProcessorService';
 import { DefaultQueueConfig, QueueConfig } from './queue/SQSQueueConfigProvider';
 import { SqsMessage, SQSMessageProvider, SqsPollQueueStats } from './queue/SQSMessageProvider';
 
@@ -48,7 +48,7 @@ export class QueueService {
     await this.sqs.sendMessage(queueOpts, data);
   }
 
-  public async publishClientInteraction(data: ClassificationResultMessage) {
+  public async publishClientInteraction(data: ClientInteractionMessage) {
     logger.info(`Publish message to the queue ${this.workflowStepInteractionResultQueue} data ${JSON.stringify(data)}`);
 
     const queueOpts = {
