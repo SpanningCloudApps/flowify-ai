@@ -3,6 +3,7 @@
     "region": "us-east-1",
     "sqs": {
       "prefix": "dev",
+      "pollIntervalMillis": 5000,
       "queues": {
         "workflowRequestQueue": "workflow_requests",
         "workflowResultQueue": "workflow_results",

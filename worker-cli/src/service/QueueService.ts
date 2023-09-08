@@ -2,72 +2,89 @@
  * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
  */
 import config from 'config';
-import { SQSClient, CreateQueueCommand } from '@aws-sdk/client-sqs';
+import {
+  CreateQueueCommand,
+  GetQueueUrlCommand,
+  GetQueueUrlCommandOutput,
+  ReceiveMessageCommand,
+  ReceiveMessageCommandOutput,
+  SQSClient
+} from '@aws-sdk/client-sqs';
 
 export default class QueueService {
 
-  private readonly workflowRequestQueue: string;
-  private readonly workflowResultQueue: string;
-  private readonly workflowStepInteractionRequestQueue: string;
-  private readonly workflowStepInteractionResultQueue: string;
+  private workflowRequestQueue: string = '';
+  private workflowResultQueue: string = '';
+  private workflowStepInteractionRequestQueue: string = '';
+  private workflowStepInteractionResultQueue: string = '';
+  private readonly pollingInterval: number;
+
   private readonly sqsClient: SQSClient;
 
   constructor() {
-    const prefix = config.get('aws.sqs.prefix');
-    this.workflowRequestQueue = `${prefix}_${config.get('aws.sqs.queues.workflowRequestQueue')}`;
-    this.workflowResultQueue = `${prefix}_${config.get('aws.sqs.queues.workflowResultQueue')}`;
-    this.workflowStepInteractionRequestQueue = `${prefix}_${config.get('aws.sqs.queues.workflowStepInteractionRequestQueue')}`;
-    this.workflowStepInteractionResultQueue = `${prefix}_${config.get('aws.sqs.queues.workflowStepInteractionResultQueue')}`;
+    this.pollingInterval = config.get('aws.sqs.pollIntervalMillis');
 
     const region: string = config.get('aws.region');
-    const endpoint: string = config.get('aws.localstack.endpoint')
+    const endpoint: string = config.get('aws.localstack.endpoint');
     this.sqsClient = new SQSClient({ region, endpoint });
   }
 
   public async initialize_queues() {
-    try {
-      console.log(`Creating queue ${this.workflowRequestQueue}`);
-      const command = new CreateQueueCommand({ QueueName: this.workflowRequestQueue });
-      await this.sqsClient.send(command);
-    } catch(e) {
-      console.error(`Failed ot create queue`, e);
-    }
-
-    try {
-      console.log(`Creating queue ${this.workflowResultQueue}`);
-      const command = new CreateQueueCommand({ QueueName: this.workflowResultQueue });
-      await this.sqsClient.send(command);
-    } catch(e) {
-      console.error(`Failed ot create queue`, e);
-    }
-
-    try {
-      console.log(`Creating queue ${this.workflowStepInteractionRequestQueue}`);
-      const command = new CreateQueueCommand({ QueueName: this.workflowStepInteractionRequestQueue });
-      await this.sqsClient.send(command);
-    } catch(e) {
-      console.error(`Failed ot create queue`, e);
-    }
-
-    try {
-      console.log(`Creating queue ${this.workflowStepInteractionResultQueue}`);
-      const command = new CreateQueueCommand({ QueueName: this.workflowStepInteractionResultQueue });
-      await this.sqsClient.send(command);
-    } catch(e) {
-      console.error(`Failed ot create queue`, e);
-    }
+    const prefix = config.get('aws.sqs.prefix');
+    this.workflowRequestQueue = await this.initQueue(`${prefix}_${config.get('aws.sqs.queues.workflowRequestQueue')}`);
+    this.workflowResultQueue = await this.initQueue(`${prefix}_${config.get('aws.sqs.queues.workflowResultQueue')}`);
+    this.workflowStepInteractionRequestQueue = await this.initQueue(`${prefix}_${config.get('aws.sqs.queues.workflowStepInteractionRequestQueue')}`);
+    this.workflowStepInteractionResultQueue = await this.initQueue(`${prefix}_${config.get('aws.sqs.queues.workflowStepInteractionResultQueue')}`);
   }
 
-  public async subscribeToWorkflows() {
+  private async initQueue(queueName: string): Promise<string> {
+    try {
+      console.log(`Creating queue ${queueName}`);
+      const createCommand = new CreateQueueCommand({ QueueName: queueName });
+      await this.sqsClient.send(createCommand);
+    } catch (e) {
+      console.error(`Failed ot create queue`, e);
+    }
+
+    const getCommand = new GetQueueUrlCommand({ QueueName: queueName });
+    let result: GetQueueUrlCommandOutput = await this.sqsClient.send(getCommand);
+    return result.QueueUrl!;
+  }
+
+  public async subscribeToWorkflows(handler: (message: any) => Promise<void>) {
     console.log(`Subscribed to workflows ${this.workflowRequestQueue}`);
+    return setInterval(async () => {
+      try {
+        console.log(`Polling for messages from ${this.workflowRequestQueue}`);
+        const command = new ReceiveMessageCommand({ QueueUrl: this.workflowRequestQueue });
+        const message: ReceiveMessageCommandOutput = await this.sqsClient.send(command);
+        if (message?.Messages?.length) {
+          await handler(message.Messages[0]);
+        }
+      } catch (e) {
+        console.error(`Failed to read message from the queue`);
+      }
+    }, this.pollingInterval);
   }
 
   public async publishWorkflowResult(data: any) {
     console.log(`Publish message to the queue ${this.workflowResultQueue} data ${JSON.stringify(data)}`);
   }
 
-  public async subscribeToStepResults() {
-    console.log(`Subscribed to step results for the queue ${this.workflowStepInteractionRequestQueue}`);
+  public async subscribeToStepResults(handler: (message: any) => Promise<void>) {
+    console.log(`Subscribed to step results ${this.workflowStepInteractionResultQueue}`);
+    return setInterval(async () => {
+      try {
+        console.log(`Polling for messages from ${this.workflowStepInteractionResultQueue}`);
+        const command = new ReceiveMessageCommand({ QueueUrl: this.workflowStepInteractionResultQueue });
+        const message: ReceiveMessageCommandOutput = await this.sqsClient.send(command);
+        if (message?.Messages?.length) {
+          await handler(message.Messages[0]);
+        }
+      } catch (e) {
+        console.error(`Failed to read message from the queue`);
+      }
+    }, this.pollingInterval);
   }
 
   public async publishStepDataRequest(data: any) {
