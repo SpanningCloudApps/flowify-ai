@@ -11,10 +11,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.spanning.api.dto.request.ticket.SearchTicketsRequestDto;
 import com.spanning.api.dto.request.ticket.SearchTicketsRequestDto.Search;
+import com.spanning.api.dto.request.ticket.UpdateTicketsRequestDto;
 import com.spanning.api.dto.response.ticket.TicketInput;
 import com.spanning.api.dto.response.ticket.TicketResponseDto;
 import com.spanning.api.dto.response.ticket.TicketsResponseDto;
 import com.spanning.core.dto.request.ticket.SearchParams;
+import com.spanning.core.dto.request.ticket.UpdateParams;
 import com.spanning.core.dto.response.ticket.ClassificationResult;
 import org.apache.commons.lang3.StringUtils;
 import org.mapstruct.Mapper;
@@ -48,6 +50,7 @@ public interface TicketConverter {
       .build();
   }
 
+  UpdateParams convert(final UpdateTicketsRequestDto request);
 
 
   default SearchParams convert(final SearchTicketsRequestDto requestDto) {

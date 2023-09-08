@@ -20,6 +20,7 @@ public interface WorkflowRepository extends CrudRepository<ClassificationResult,
   @Modifying
   @Query("DELETE from workflow WHERE id = :id")
   void delete(@Param("id") final long id);
+
   @Query("""
      SELECT id, cast(data as varchar), description, name, created_at FROM workflow AS w
          WHERE (:pageToken IS NULL OR id < :pageToken)

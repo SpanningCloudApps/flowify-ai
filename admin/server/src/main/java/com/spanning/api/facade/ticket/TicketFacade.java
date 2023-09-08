@@ -8,8 +8,10 @@ import java.util.List;
 
 import com.spanning.api.converter.ticket.TicketConverter;
 import com.spanning.api.dto.request.ticket.SearchTicketsRequestDto;
+import com.spanning.api.dto.request.ticket.UpdateTicketsRequestDto;
 import com.spanning.api.dto.response.ticket.TicketsResponseDto;
 import com.spanning.core.dto.request.ticket.SearchParams;
+import com.spanning.core.dto.request.ticket.UpdateParams;
 import com.spanning.core.dto.response.ticket.ClassificationResult;
 import com.spanning.core.service.ticket.TicketService;
 import lombok.AllArgsConstructor;
@@ -28,5 +30,10 @@ public class TicketFacade {
     final SearchParams searchParams = ticketConverter.convert(requestDto);
     final List<ClassificationResult> classificationResults = ticketService.search(searchParams);
     return ticketConverter.convert(classificationResults);
+  }
+
+  public void update(final UpdateTicketsRequestDto requestDto) {
+    final UpdateParams updateParams = ticketConverter.convert(requestDto);
+    ticketService.update(updateParams);
   }
 }
