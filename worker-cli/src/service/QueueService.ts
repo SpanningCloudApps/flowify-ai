@@ -31,7 +31,14 @@ export default class QueueService {
 
     const region: string = config.get('aws.region');
     const endpoint: string = config.get('aws.localstack.endpoint');
-    this.sqsClient = new SQSClient({ region, endpoint });
+    this.sqsClient = new SQSClient({
+      region,
+      endpoint,
+      credentials: {
+        accessKeyId: config.get('aws.accessKey'),
+        secretAccessKey: config.get('aws.secretKey')
+      }
+    });
   }
 
   public async initialize_queues() {
