@@ -17,11 +17,14 @@
     "/oclif.manifest.json"
   ],
   "dependencies": {
+    "@aws-sdk/client-sqs": "^3.408.0",
     "@oclif/core": "^2",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^3.4.0"
+    "@oclif/plugin-plugins": "^3.4.0",
+    "config": "^3.3.9"
   },
   "devDependencies": {
+    "@types/config": "^3.3.1",
     "@types/node": "^16.18.47",
     "oclif": "^3.14.0",
     "shx": "^0.3.3",
