@@ -37,7 +37,7 @@
     <apache.maven-enforcer-plugin.version>1.4.1</apache.maven-enforcer-plugin.version>
     <apache.commons-lang3.version>3.13.0</apache.commons-lang3.version>
     <apache.commons-collections4.version>4.4</apache.commons-collections4.version>
-    <org.yaml.snakeyaml.versions>1.33</org.yaml.snakeyaml.versions>
+    <org.yaml.snakeyaml.versions>2.0</org.yaml.snakeyaml.versions>
     <log4j2.version>2.20.0</log4j2.version>
     <com.jackson.version>2.14.2</com.jackson.version>
     <org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
