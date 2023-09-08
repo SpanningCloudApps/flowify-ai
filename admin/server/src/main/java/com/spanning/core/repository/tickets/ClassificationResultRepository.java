@@ -16,9 +16,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ClassificationResultRepository extends CrudRepository<ClassificationResult, Object> {
 
-  @Query("")
-  List<ClassificationResult> get();
-
   @Modifying
   @Query("UPDATE classification_result SET workflow_name = :workflowName WHERE id = :id")
   void updateWorkflowName(
