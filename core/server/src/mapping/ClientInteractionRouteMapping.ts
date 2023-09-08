@@ -15,7 +15,7 @@ const clientInteractionRoute = async (server: FastifyInstance): Promise<void> =>
       return readFileSync(path.join(__dirname, '../../websocket_page/chat.html'));
     });
 
-    server.get('/chat',
+    app.get('/chat',
       { websocket: true },
       (connection) => {
         const { socket } = connection;
