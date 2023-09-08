@@ -30,3 +30,9 @@ services:
   worker-cli:
     image: worker-cli:latest
     container_name: worker-cli
+    
+  server:
+    image: server:latest
+    container_name: server
+    ports:
+      - '3300:3300'

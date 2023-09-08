@@ -3,12 +3,13 @@ import path from 'path';
 
 import { FastifyInstance } from 'fastify';
 import { getLogger } from '../logger/logger';
+import { WebSocketEventType, webSocketManager } from '../socket/WebSocketManager';
 
 const logger = getLogger();
 
-const history = [];
-
 const clientInteractionRoute = async (server: FastifyInstance): Promise<void> => {
+  const websocketServer = server.websocketServer;
+  webSocketManager.init(websocketServer);
   await server.register((app, _, done) => {
     app.get('/', async (request, reply) => {
       reply.type('text/html');
@@ -20,34 +21,22 @@ const clientInteractionRoute = async (server: FastifyInstance): Promise<void> =>
       (connection) => {
         const { socket } = connection;
 
-        history.map(msg => socket.push(msg));
-
-        socket.on('message', function (message) {
+        socket.on('message', async message => {
           try {
             const json = JSON.parse(message.toString());
             switch (json.type) {
               case 'message': {
-                const messageEvent = JSON.stringify({
-                  type: 'accepted',
-                  data: `${new Date().toISOString()}: ${json.data}`
-                });
-
-                const websocketServer = server.websocketServer;
-                logger.info('broadcasting to all clients', websocketServer.clients.size);
-                for (const client of websocketServer.clients) {
-                  client.send(messageEvent);
-                }
-
-                history.push(messageEvent);
+                logger.info(`broadcasting to all clients. Data ${json.data}`);
+                await webSocketManager.process(json.data);
               }
                 break;
 
               default:
-                sendMessage({ type: 'reject', data: 'wrong type' });
+                sendMessage({ type: WebSocketEventType.REJECT, data: 'wrong type' });
                 break;
             }
           } catch (error) {
-            sendMessage({ type: 'error', data: error.message });
+            sendMessage({ type: WebSocketEventType.ERROR, data: error.message });
           }
         });
 
