@@ -1,7 +1,10 @@
 {
   "ai": {
     "openai": {
-      "apiKey": "POPEN_AI_API_KEY"
+      "apiKey": "POPEN_AI_API_KEY",
+      "maxTokens": 1024,
+      "model": "gpt-3.5-turbo",
+      "temperature": 0.3
     },
     "server": {
       "host": "0.0.0.0",

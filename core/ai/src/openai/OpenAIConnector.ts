@@ -14,20 +14,35 @@ export class OpenAIConnector {
 
   private openAIClient: OpenAI;
 
+  private readonly maxTokens: number;
+  private readonly model: string;
+  private readonly temperature: number;
+
   constructor() {
+    this.maxTokens = config.get<number>('ai.openai.maxTokens');
+    this.model = config.get<string>('ai.openai.model');
+    this.temperature = config.get<number>('ai.openai.temperature');
+
     const apiKey = config.get<string>('ai.openai.apiKey');
     this.openAIClient = new OpenAI({ apiKey });
   }
 
-  public async execute() {
-    const completion = await this.openAIClient.chat.completions.create({
-      messages: [{ role: 'user', content: 'Pooper test run' }],
-      model: 'gpt-3.5-turbo',
-    });
+  public async execute(requestContent: string) {
+    try {
+      const completion = await this.openAIClient.chat.completions.create({
+        messages: [{ role: 'user', content: requestContent }],
+        model: this.model,
+        max_tokens: this.maxTokens,
+        temperature: this.temperature
+      });
 
-    console.log('FULL: ', completion);
+      console.log('FULL: ', completion);
 
-    return completion.choices;
+      return completion.choices;
+    } catch (err) {
+      console.error(`Failed to analyze request with prompt: ${requestContent}`, err);
+      throw err;
+    }
   }
 }
 
