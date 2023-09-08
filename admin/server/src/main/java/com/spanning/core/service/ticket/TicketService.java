@@ -8,6 +8,7 @@ import java.util.List;
 
 import com.spanning.api.dto.response.ticket.TicketResponseDto;
 import com.spanning.core.dto.request.ticket.SearchParams;
+import com.spanning.core.dto.request.ticket.UpdateParams;
 import com.spanning.core.dto.response.ticket.ClassificationResult;
 import com.spanning.core.repository.tickets.ClassificationResultRepository;
 import lombok.RequiredArgsConstructor;
@@ -32,4 +33,7 @@ public class TicketService {
     );
   }
 
+  public void update(final UpdateParams updateParams) {
+    classificationResultRepository.updateWorkflowName(updateParams.getId(), updateParams.getWorkflowName());
+  }
 }

@@ -7,6 +7,7 @@ package com.spanning.api.controller.ticket;
 import javax.validation.Valid;
 
 import com.spanning.api.dto.request.ticket.SearchTicketsRequestDto;
+import com.spanning.api.dto.request.ticket.UpdateTicketsRequestDto;
 import com.spanning.api.dto.response.ticket.TicketsResponseDto;
 import com.spanning.api.facade.ticket.TicketFacade;
 import lombok.RequiredArgsConstructor;
@@ -37,8 +38,9 @@ public class TicketController {
   }
 
   @PutMapping("/{id}")
-  public void update(@Valid @RequestBody final SearchTicketsRequestDto requestDto) {
-
+  public void update(@Valid @RequestBody final UpdateTicketsRequestDto requestDto) {
+    log.info("Update ticket [{}]", requestDto);
+    ticketFacade.update(requestDto);
   }
 
 }

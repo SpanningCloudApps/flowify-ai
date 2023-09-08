@@ -1,0 +1,29 @@
+{
+  "name": "ai-connector",
+  "version": "1.0.0",
+  "description": "AI connector",
+  "main": "AIConnector.ts",
+  "scripts": {
+    "start": "TZ=UTC ts-node --transpile-only ./src/AIConnector.ts",
+    "validate": "tsc && eslint -c .eslintrc.json 'src/**/*.ts'",
+    "test": "NODE_CONFIG_DIR=config NODE_ENV=development jest",
+    "default": "npm run validate && npm run test",
+    "ci": "npm run default"
+  },
+  "dependencies": {
+    "config": "3.3.9",
+    "fastify": "4.22.2",
+    "openai": "4.5.0",
+    "moment": "2.29.4"
+  },
+  "devDependencies": {
+    "@types/config": "3.3.0",
+    "@types/node": "18.11.9",
+    "ts-node": "10.9.1",
+    "tsconfig-paths": "4.2.0",
+    "tslib": "2.6.2",
+    "typescript": "5.1.6"
+  },
+  "author": "",
+  "license": "ISC"
+}
