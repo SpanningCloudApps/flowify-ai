@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
- */
-
 package com.kaseya.db.config;
 
 import com.kaseya.db.migration.FlywayMigration;
