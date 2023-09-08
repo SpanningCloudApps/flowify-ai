@@ -4,6 +4,7 @@
 import config from 'config';
 import {
   CreateQueueCommand,
+  DeleteMessageCommand,
   GetQueueUrlCommand,
   GetQueueUrlCommandOutput,
   ReceiveMessageCommand,
@@ -57,12 +58,18 @@ export default class QueueService {
       try {
         console.log(`Polling for messages from ${this.workflowRequestQueue}`);
         const command = new ReceiveMessageCommand({ QueueUrl: this.workflowRequestQueue });
-        const message: ReceiveMessageCommandOutput = await this.sqsClient.send(command);
-        if (message?.Messages?.length) {
-          await handler(message.Messages[0]);
+        const messages: ReceiveMessageCommandOutput = await this.sqsClient.send(command);
+        if (messages?.Messages?.length) {
+          const message = messages.Messages[0]
+          await handler(JSON.parse(message.Body as string));
+          const deleteCommand = new DeleteMessageCommand({
+            QueueUrl: this.workflowRequestQueue,
+            ReceiptHandle: message.ReceiptHandle
+          });
+          await this.sqsClient.send(deleteCommand);
         }
       } catch (e) {
-        console.error(`Failed to read message from the queue`);
+        console.error(`Failed to read message from the queue`, e);
       }
     }, this.pollingInterval);
   }
@@ -77,12 +84,18 @@ export default class QueueService {
       try {
         console.log(`Polling for messages from ${this.workflowStepInteractionResultQueue}`);
         const command = new ReceiveMessageCommand({ QueueUrl: this.workflowStepInteractionResultQueue });
-        const message: ReceiveMessageCommandOutput = await this.sqsClient.send(command);
-        if (message?.Messages?.length) {
-          await handler(message.Messages[0]);
+        const messages: ReceiveMessageCommandOutput = await this.sqsClient.send(command);
+        if (messages?.Messages?.length) {
+          const message = messages.Messages[0]
+          await handler(JSON.parse(message.Body as string));
+          const deleteCommand = new DeleteMessageCommand({
+            QueueUrl: this.workflowRequestQueue,
+            ReceiptHandle: message.ReceiptHandle
+          });
+          await this.sqsClient.send(deleteCommand);
         }
       } catch (e) {
-        console.error(`Failed to read message from the queue`);
+        console.error(`Failed to read message from the queue`, e);
       }
     }, this.pollingInterval);
   }
