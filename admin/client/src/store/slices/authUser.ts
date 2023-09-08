@@ -32,7 +32,7 @@ export const authUserStore = create<any>(set => ({
       const newError = error as AxiosError;
       showErrorNotification({
         error: newError,
-        subject: intl.formatMessage({ id: 'NOTIFICATION_SUBJECT_SCARMIN_USER' })
+        subject: intl.formatMessage({ id: 'NOTIFICATION_SUBJECT_USER' })
       });
       set({ user: null });
     } finally {

@@ -21,6 +21,10 @@ export const isJsonString = (string: string | null): boolean => {
   return true;
 };
 
+export const truncFloatNumber = (num: number, fractionDigits: number): number => {
+  return parseFloat((Math.floor(num * 10 ** fractionDigits) / 10 ** fractionDigits).toFixed(fractionDigits));
+};
+
 export const isAbortedByUser = (error: AxiosError): boolean => {
   return error.message === CANCEL_REQUEST_MESSAGE;
 };

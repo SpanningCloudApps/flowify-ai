@@ -54,13 +54,14 @@
   }
 
   &__logo {
-    width: 65px;
+    width: 40px;
+    margin-right: 5px;
   }
 
   &__title {
     margin-bottom: 0;
     margin-top: 0;
-    width: 45%;
+    width: 60%;
     font-size: 18px;
     color: $clr-super-light;
   }

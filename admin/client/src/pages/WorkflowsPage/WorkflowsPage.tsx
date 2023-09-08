@@ -10,7 +10,7 @@ const WorkflowsPage: FC = () => {
   const { formatMessage } = useIntl();
 
   return (
-    <PageContainer title={formatMessage({ id: 'CLASSIFIERS' })} />
+    <PageContainer title={formatMessage({ id: 'Workflows' })} />
   );
 };
 
