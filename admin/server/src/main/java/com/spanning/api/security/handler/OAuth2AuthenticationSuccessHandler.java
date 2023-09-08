@@ -36,7 +36,7 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
   ) {
     this.tokenProvider = jwtTokenProvider;
     this.cookieRepository = cookieRepository;
-    this.redirectUrl = proxyUrl + "/admin";
+    this.redirectUrl = proxyUrl + "/";
     this.expiration = expiration;
   }
 
