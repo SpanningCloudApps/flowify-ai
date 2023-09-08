@@ -5,8 +5,8 @@ import {
   CreateQueueCommand,
   DeleteMessageCommand,
   GetQueueUrlCommand,
-  PurgeQueueCommand,
   ReceiveMessageCommand,
+  SendMessageCommand,
   SetQueueAttributesCommand
 } from '@aws-sdk/client-sqs';
 import SQSDeadLetterProvider from '/SQSDeadLetterProvider';
@@ -36,7 +36,7 @@ export type QueueUrlResponse = {
   QueueUrl: string;
 }
 
-export class SQSMessageReceiver {
+export class SQSMessageProvider {
 
   private queueUrls = new Map();
   private readonly sqs;
@@ -48,7 +48,7 @@ export class SQSMessageReceiver {
   }
 
   public static of(settings: AwsSettings) {
-    return new SQSMessageReceiver(settings);
+    return new SQSMessageProvider(settings);
   }
 
   public cleanCacheQueueUrlsInfo() {
@@ -235,25 +235,6 @@ export class SQSMessageReceiver {
   }
 
   /**
-   * Deletes the messages in a queue specified by the QueueURL parameter.
-   * - Messages sent to the queue before you call PurgeQueue might be received but are deleted within the next minute.
-   * - Messages sent to the queue after you call PurgeQueue might be deleted while the queue is being purged.
-   *
-   * @param opts - The queue configuration.
-   * @returns {Promise} - An empty promise.
-   */
-  public async purge(
-    opts: {
-      sqsPrefix: string;
-      defaultConfig: DefaultQueueConfig;
-      originalConfig: QueueConfig;
-    }
-  ) {
-    const data = await this.getQueueUrl(opts);
-    await this.sqs.send(new PurgeQueueCommand({ QueueUrl: data.QueueUrl }));
-  }
-
-  /**
    * Updates the visibility timeout for an SQS message.
    *
    * @param opts - The queue configuration.
@@ -375,4 +356,20 @@ export class SQSMessageReceiver {
       waitOnMessage();
     });
   }
+
+  public async sendMessage(
+    opts: {
+      sqsPrefix: string;
+      defaultConfig: DefaultQueueConfig;
+      originalConfig: QueueConfig;
+    },
+    message: string
+  ) {
+    const data: QueueUrlResponse = await this.getQueueUrl(opts);
+    return this.sqs.send(new SendMessageCommand({
+      QueueUrl: data.QueueUrl,
+      MessageBody: JSON.stringify(message)
+    }));
+  }
+
 }

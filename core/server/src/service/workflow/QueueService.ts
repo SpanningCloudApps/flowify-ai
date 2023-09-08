@@ -1,29 +1,20 @@
 import config from 'config';
 
-import {
-  CreateQueueCommand,
-  DeleteMessageCommand,
-  GetQueueUrlCommand,
-  GetQueueUrlCommandOutput,
-  ReceiveMessageCommand,
-  ReceiveMessageCommandOutput,
-  SQSClient
-} from '@aws-sdk/client-sqs';
-
 import { getLogger } from '../../logger/logger';
-import { ClassificationResultData } from './ClassificationProcessorService';
+import { ClassificationResultMessage } from '/ClassificationProcessorService';
+import { DefaultQueueConfig, QueueConfig } from './queue/SQSQueueConfigProvider';
+import { SqsMessage, SQSMessageProvider, SqsPollQueueStats } from './queue/SQSMessageProvider';
 
 const logger = getLogger();
 
 export class QueueService {
 
-  private workflowRequestQueue: string = '';
-  private workflowResultQueue: string = '';
-  private workflowStepInteractionRequestQueue: string = '';
-  private workflowStepInteractionResultQueue: string = '';
-  private readonly pollingInterval: number;
+  private readonly workflowRequestQueue: string = '';
+  private readonly workflowResultQueue: string = '';
+  private readonly workflowStepInteractionRequestQueue: string = '';
+  private readonly workflowStepInteractionResultQueue: string = '';
 
-  private readonly sqsClient: SQSClient;
+  private readonly sqs: SQSMessageProvider;
 
   private static _instance = new QueueService();
 
@@ -32,92 +23,76 @@ export class QueueService {
   }
 
   constructor() {
-    this.pollingInterval = config.get('aws.sqs.pollIntervalMillis');
-
-    const region: string = config.get('aws.region');
-    const endpoint: string = config.get('aws.localstack.endpoint');
-    this.sqsClient = new SQSClient({ region, endpoint });
+    this.sqs = SQSMessageProvider.of({
+      accessKeyId: config.get('aws.awsAccessKey'),
+      secretAccessKey: config.get('aws.awsSecretKey'),
+      region: config.get('aws.region'),
+      endpoint: config.has('aws.localstack.endpoint') ? config.get('aws.localstack.endpoint') : undefined,
+      maxRetries: undefined
+    });
+    this.workflowRequestQueue = 'workflowRequestQueue';
+    this.workflowResultQueue = 'workflowResultQueue';
+    this.workflowStepInteractionRequestQueue = 'workflowStepInteractionRequestQueue';
+    this.workflowStepInteractionResultQueue = 'workflowStepInteractionResultQueue';
   }
 
-  public async initializeQueues() {
-    const prefix = config.get('aws.sqs.prefix');
-    this.workflowRequestQueue = await this.initQueue(`${prefix}_${config.get('aws.sqs.queues.workflowRequestQueue')}`);
-    this.workflowResultQueue = await this.initQueue(`${prefix}_${config.get('aws.sqs.queues.workflowResultQueue')}`);
-    this.workflowStepInteractionRequestQueue = await this.initQueue(`${prefix}_${config.get('aws.sqs.queues.workflowStepInteractionRequestQueue')}`);
-    this.workflowStepInteractionResultQueue = await this.initQueue(`${prefix}_${config.get('aws.sqs.queues.workflowStepInteractionResultQueue')}`);
+  public async publishClassificationResult(data: ClassificationResultMessage) {
+    logger.info(`Publish message to the queue ${this.workflowRequestQueue} data ${JSON.stringify(data)}`);
+
+    const queueOpts = {
+      sqsPrefix: config.get('sqs.prefix') as string,
+      defaultConfig: config.get('sqs.default') as DefaultQueueConfig,
+      originalConfig: config.get(`sqs.queues.${this.workflowRequestQueue}`) as QueueConfig
+    };
+
+    await this.sqs.sendMessage(queueOpts, data);
   }
 
-  private async initQueue(queueName: string): Promise<string> {
-    try {
-      logger.info(`Creating queue ${queueName}`);
-      const createCommand = new CreateQueueCommand({ QueueName: queueName });
-      await this.sqsClient.send(createCommand);
-    } catch (e) {
-      logger.error(`Failed ot create queue`, e);
-    }
-
-    const getCommand = new GetQueueUrlCommand({ QueueName: queueName });
-    let result: GetQueueUrlCommandOutput = await this.sqsClient.send(getCommand);
-    return result.QueueUrl!;
-  }
-
-  public async subscribeToWorkflows(handler: (message: any) => Promise<void>) {
-    logger.info(`Subscribed to workflows ${this.workflowRequestQueue}`);
-    return setInterval(async () => {
-      try {
-        logger.info(`Polling for messages from ${this.workflowRequestQueue}`);
-        const command = new ReceiveMessageCommand({ QueueUrl: this.workflowRequestQueue });
-        const messages: ReceiveMessageCommandOutput = await this.sqsClient.send(command);
-        if (messages?.Messages?.length) {
-          const message = messages.Messages[0];
-          await handler(JSON.parse(message.Body as string));
-          const deleteCommand = new DeleteMessageCommand({
-            QueueUrl: this.workflowRequestQueue,
-            ReceiptHandle: message.ReceiptHandle
-          });
-          await this.sqsClient.send(deleteCommand);
-        }
-      } catch (e) {
-        logger.error(`Failed to read message from the queue`, e);
-      }
-    }, this.pollingInterval);
-  }
-
-  public async publishClassifier(data: ClassificationResultData) {
-    logger.info(`Publish message to the queue ${this.workflowResultQueue} data ${JSON.stringify(data)}`);
-  }
-
-  public async subscribeToStepResults(handler: (message: any) => Promise<void>) {
-    logger.info(`Subscribed to step results ${this.workflowStepInteractionResultQueue}`);
-    return setInterval(async () => {
-      try {
-        logger.info(`Polling for messages from ${this.workflowStepInteractionResultQueue}`);
-        const command = new ReceiveMessageCommand({ QueueUrl: this.workflowStepInteractionResultQueue });
-        const messages: ReceiveMessageCommandOutput = await this.sqsClient.send(command);
-        if (messages?.Messages?.length) {
-          const message = messages.Messages[0];
-          await handler(JSON.parse(message.Body as string));
-          const deleteCommand = new DeleteMessageCommand({
-            QueueUrl: this.workflowRequestQueue,
-            ReceiptHandle: message.ReceiptHandle
-          });
-          await this.sqsClient.send(deleteCommand);
-        }
-      } catch (e) {
-        logger.error(`Failed to read message from the queue`, e);
-      }
-    }, this.pollingInterval);
-  }
-
-  public async publishStepDataRequest(data: any) {
+  public async publishClientInteraction(data: ClassificationResultMessage) {
     logger.info(`Publish message to the queue ${this.workflowStepInteractionResultQueue} data ${JSON.stringify(data)}`);
+
+    const queueOpts = {
+      sqsPrefix: config.get('sqs.prefix') as string,
+      defaultConfig: config.get('sqs.default') as DefaultQueueConfig,
+      originalConfig: config.get(`sqs.queues.${this.workflowStepInteractionResultQueue}`) as QueueConfig
+    };
+
+    await this.sqs.sendMessage(queueOpts, data);
+  }
+
+  public async retrieveWorkflowResult(processMessage: (sqsMessage: SqsMessage, progress: SqsPollQueueStats) => any) {
+    logger.info(`Poll message from the queue ${this.workflowResultQueue}`);
+
+    const queueOpts = {
+      sqsPrefix: config.get('sqs.prefix') as string,
+      defaultConfig: config.get('sqs.default') as DefaultQueueConfig,
+      originalConfig: config.get(`sqs.queues.${this.workflowResultQueue}`) as QueueConfig
+    };
+    const data = {
+      visibilityTimeout: config.get('sqs.messageVisibilityTimeoutSeconds') as number,
+      visibilityUpdateInterval: config.get('sqs.messageVisibilityUpdateIntervalSeconds') as number * 1000,
+      stopPolling: () => false
+    };
+
+    await this.sqs.pollQueueWithVisibility(queueOpts, processMessage, data);
+  }
+
+  public async retrieveClientInteractionWorkflowResult(processMessage: (sqsMessage: SqsMessage, progress: SqsPollQueueStats) => any) {
+    logger.info(`Poll message from the queue ${this.workflowStepInteractionResultQueue}`);
+
+    const queueOpts = {
+      sqsPrefix: config.get('sqs.prefix') as string,
+      defaultConfig: config.get('sqs.default') as DefaultQueueConfig,
+      originalConfig: config.get(`sqs.queues.${this.workflowStepInteractionResultQueue}`) as QueueConfig
+    };
+    const data = {
+      visibilityTimeout: config.get('sqs.messageVisibilityTimeoutSeconds') as number,
+      visibilityUpdateInterval: config.get('sqs.messageVisibilityUpdateIntervalSeconds') as number * 1000,
+      stopPolling: () => false
+    };
+
+    await this.sqs.pollQueueWithVisibility(queueOpts, processMessage, data);
   }
 }
 
 export const queueService = QueueService.instance;
-
-
-// "workflowRequestQueue": "workflow_requests", - PUSH CLASSIFIER
-//   "workflowResultQueue": "workflow_results", - SUBSCRIBE FOR SUCCESS/FAI:ED RESULT TO USER
-//   "workflowStepInteractionRequestQueue": "workflow_step_interaction_request", - SUBSCRIBE FOR USER DATA ADDITIONAL
-//   "workflowStepInteractionResultQueue": "workflow_step_interaction_result" - PUSH USER DATA ADDITIONAL
