@@ -2,16 +2,21 @@
  * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
  */
 
-import { WorkflowType } from '../enum/WorkflowType';
-import { StepType } from '../enum/StepType';
+import ExecutedWorkflowStepRepository from '../repository/data/ExecutedWorkflowStepRepository';
 
 export default class ExecutedWorkflowStepService {
 
-  public async getNextStep(workflowId: WorkflowType, workflowSteps: any[]) {
-    return {
-      workflowId,
-      type: StepType.ASK_ABOUT_THE_DATE
-    }
+  private readonly executedWorkflowRepository: ExecutedWorkflowStepRepository;
+
+  constructor(executedWorkflowRepository: ExecutedWorkflowStepRepository) {
+    this.executedWorkflowRepository = executedWorkflowRepository;
+  }
+
+  public async getNextStep(executedWorkflowId: number, workflowSteps: any[]) {
+    const executedSteps = await this.executedWorkflowRepository.getExecutedSteps(executedWorkflowId);
+    const executedTypes = executedSteps.map(step => step.type);
+    const remainingSteps = workflowSteps.filter(step => !executedTypes.includes(step.type));
+    return remainingSteps[0];
   }
 
 }

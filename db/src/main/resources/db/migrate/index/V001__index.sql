@@ -51,6 +51,7 @@ CREATE TABLE IF NOT EXISTS workflow_step_execution
     workflow_step_id      BIGINT    NOT NULL,
     workflow_execution_id BIGINT    NOT NULL,
     status                VARCHAR   NOT NULL,
+    type                  VARCHAR   NOT NULL,
     data                  JSONB     NOT NULL default '{}',
     created_at            TIMESTAMP NOT NULL default NOW()
 );
