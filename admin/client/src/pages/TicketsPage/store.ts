@@ -11,10 +11,12 @@ import { intl } from '../../intl';
 
 export const initialState: any = {
   classifiedTickets: [],
+  classifiedSearch: '',
   isClassifiedDataLoading: true,
   hasMoreClassified: true,
 
   unclassifiedTickets: [],
+  unclassifiedSearch: '',
   isUnclassifiedDataLoading: true,
   hasMoreUnclassified: true,
 
@@ -35,14 +37,14 @@ export const useTicketsStore = create<any>((set, get) => ({
         : {};
     const reqParams = {
       ...additionalParams,
-      search: { all: query },
+      search: { all: query || '' },
       isClassified: true,
       limit: PAGE_ENTITIES_LIMIT
     };
     try {
       set({ isClassifiedDataLoading: true });
       const resp: any = await ticketService.getTickets({
-        params: reqParams,
+        data: reqParams,
         signal: get().controller.signal
       });
       const newTickets = resp?.tickets ?? [];
@@ -50,7 +52,7 @@ export const useTicketsStore = create<any>((set, get) => ({
         classifiedTickets: [...tickets, ...newTickets ?? []],
         hasMoreClassified: newTickets.length === PAGE_ENTITIES_LIMIT,
         isClassifiedDataLoading: false
-      });
+      });∂
     } catch (error) {
       set({ isClassifiedDataLoading: false });
       const newError = error as AxiosError;
@@ -69,14 +71,14 @@ export const useTicketsStore = create<any>((set, get) => ({
         : {};
     const reqParams = {
       ...additionalParams,
-      search: { all: query },
+      search: { all: query || '' },
       isClassified: false,
       limit: PAGE_ENTITIES_LIMIT
     };
     try {
       set({ isUnclassifiedDataLoading: true });
       const resp: any = await ticketService.getTickets({
-        params: reqParams,
+        data: reqParams,
         signal: get().controller.signal
       });
       const newTickets = resp?.tickets ?? [];
@@ -85,6 +87,31 @@ export const useTicketsStore = create<any>((set, get) => ({
         hasMoreUnclassified: newTickets.length === PAGE_ENTITIES_LIMIT,
         isUnclassifiedDataLoading: false
       });
+    } catch (error) {
+      set({ isUnclassifiedDataLoading: false });
+      const newError = error as AxiosError;
+      showErrorNotification({
+        error: newError,
+        subject: intl.formatMessage({ id: 'NOTIFICATION_SUBJECT_UNCLASSIFIED_TICKETS_LIST' })
+      });
+    }
+  },
+
+  updateTicket: async (props: any): Promise<void> => {
+    const { workflowName, description, id } = props;
+    const reqParams = {
+      workflowName,
+      description,
+      id
+    };
+    try {
+      set({ isUnclassifiedDataLoading: true });
+      await ticketService.updateTicket({
+        data: reqParams,
+        signal: get().controller.signal
+      });
+      get().getClassifiedTickets({});
+      get().getUnclassifiedTickets({});
     } catch (error) {
       set({ isUnclassifiedDataLoading: false });
       const newError = error as AxiosError;

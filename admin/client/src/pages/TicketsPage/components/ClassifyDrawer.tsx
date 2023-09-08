@@ -11,6 +11,7 @@ import { useTicketsStore } from '../store';
 const ClassifyDrawer: FC = () => {
   const [form] = Form.useForm();
   const { formatMessage } = useIntl();
+  const updateTicket = useTicketsStore(state => state.updateTicket);
   const toggleClassifier = useTicketsStore(state => state.toggleClassifier);
   const openClassifier = useTicketsStore(state => state.openClassifier);
   const selectedTicket = useTicketsStore(state => state.selectedTicket);
@@ -22,9 +23,10 @@ const ClassifyDrawer: FC = () => {
 
   useEffect(() => {
     getWorkflows();
-  }, [])
+  }, []);
 
   const onTypeChange = useCallback((e: any) => {
+    form.resetFields();
     setType(e.target.value);
   }, []);
 
@@ -32,8 +34,12 @@ const ClassifyDrawer: FC = () => {
     toggleClassifier({}, false);
   }, []);
 
+  const onSubmit = useCallback((values: any) => {
+    updateTicket();
+  }, []);
+
   return <Drawer
-      title={formatMessage({ id: 'TICKET_DRAWER_TITLE' }, { type: selectedTicket.title.toLowerCase() })}
+      title={formatMessage({ id: 'TICKET_DRAWER_TITLE' }, { type: selectedTicket.title?.toLowerCase() || '' })}
       placement="right"
       width={300}
       onClose={onClose}
@@ -51,14 +57,19 @@ const ClassifyDrawer: FC = () => {
           wrapperCol={{ span: 12 }}
           requiredMark
           layout="horizontal"
-        // onFieldsChange={onChange}
           initialValues={selectedTicket}
-        // onFinish={onSubmit}
+          onFinish={onSubmit}
     >
       {type === 'PREDEFINED' && <Row gutter={24}>
         <Col xs={24}>
           <Form.Item name="workflowName"
                      valuePropName="workflowName"
+                     rules={[
+                       {
+                         required: true,
+                         message: formatMessage({ id: 'FIELD_IS_REQUIRED' })
+                       }
+                     ]}
                      label={formatMessage({ id: 'DRAWER_TICKET_LABEL_WORKFLOW' })}>
             <Select loading={workflowsLoading}>
               {workflows.map(workflow => (
@@ -75,7 +86,7 @@ const ClassifyDrawer: FC = () => {
             <Form.Item
               label={formatMessage({ id: 'DRAWER_TICKET_LABEL_WORKFLOW_NAME' })}
               shouldUpdate
-              name="requestedBy"
+              name="workflowName"
               rules={[
                 {
                   required: true,
@@ -83,7 +94,7 @@ const ClassifyDrawer: FC = () => {
                 }
               ]}
             >
-              <Input placeholder={formatMessage({ id: '' })} />
+              <Input placeholder={formatMessage({ id: 'DRAWER_TICKET_LABEL_WORKFLOW_NAME_PLACEHOLDER' })} />
             </Form.Item>
           </Col>
         </Row>
@@ -92,7 +103,7 @@ const ClassifyDrawer: FC = () => {
             <Form.Item
               label={formatMessage({ id: 'DRAWER_TICKET_LABEL_WORKFLOW_DESCRIPTION' })}
               shouldUpdate
-              name="requestedBy"
+              name="description"
               rules={[
                 {
                   required: true,
@@ -100,7 +111,7 @@ const ClassifyDrawer: FC = () => {
                 }
               ]}
             >
-              <Input placeholder={formatMessage({ id: '' })} />
+              <Input placeholder={formatMessage({ id: 'DRAWER_TICKET_LABEL_WORKFLOW_DESCRIPTION_PLACEHOLDER' })} />
             </Form.Item>
           </Col>
         </Row>
