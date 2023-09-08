@@ -28,7 +28,7 @@ export default class AskCreateDateStepExecutor implements StepExecutor {
   public async execute(executedWorkflow: ExecutedWorkflowRow, workflowStep: WorkflowStepRow, message: any): Promise<boolean> {
     if (message.type !== workflowStep.type || !message.clientResponse) {
       const clientRequest = {
-        question: 'Could you provide me a date when user should be added?',
+        result: 'Could you provide me a date when user should be added?',
         workflowExecutionId: executedWorkflow.id!,
         type: workflowStep.type,
         actor: executedWorkflow.data?.actor
