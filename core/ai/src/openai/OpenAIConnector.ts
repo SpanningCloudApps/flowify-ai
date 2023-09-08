@@ -31,13 +31,13 @@ export class OpenAIConnector {
     this.maxTokens = config.get<number>('ai.openai.maxTokens');
     this.model = config.get<string>('ai.openai.model');
     this.temperature = config.get<number>('ai.openai.temperature');
-    this.responseDistribution = config.get<number>('ai.openai.responseDistribution');
+    this.responseDistribution = config.get<number>('ai.recognition.responseDistribution');
 
     const apiKey = config.get<string>('ai.openai.apiKey');
     this.openAIClient = new OpenAI({ apiKey });
   }
 
-  public async execute(requestContent: string, maxTokens?: number, temperature?: number): Promise<AIResponse[]> {
+  public async executeWithContext(requestContent: string): Promise<AIResponse[]> {
     try {
       const context = await this.prepareContext();
 
@@ -47,14 +47,26 @@ export class OpenAIConnector {
           { role: 'assistant', content: requestContent }
         ],
         model: this.model,
-        max_tokens: maxTokens ?? this.maxTokens,
-        temperature: temperature ?? this.temperature,
+        max_tokens: this.maxTokens,
+        temperature: this.temperature,
         n: 10
       });
 
       return completion.choices as AIResponse[];
     } catch (err) {
       console.error(`Failed to analyze request with prompt: ${requestContent}`, err);
+      throw err;
+    }
+  }
+
+  public async reinforcementLearn(reinforcement: string): Promise<void> {
+    try {
+      await this.openAIClient.chat.completions.create({
+        messages: [{ role: 'user', content: reinforcement }],
+        model: this.model
+      });
+    } catch (err) {
+      console.error(`Failed to reinforce model: ${reinforcement}`, err);
       throw err;
     }
   }

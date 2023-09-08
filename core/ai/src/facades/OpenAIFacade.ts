@@ -24,8 +24,16 @@ class OpenAIFacade {
       ticketPrompt = `${ticketPrompt}. Additional helpful information: ${ticket.additionalInfo.join(', ')}.`
     }
 
-    const responses = await openAIConnector.execute(ticketPrompt);
+    const responses = await openAIConnector.executeWithContext(ticketPrompt);
     return this.parseResponses(responses);
+  }
+
+  public async reinforcementLearn(prompt: string): Promise<void> {
+    if (prompt) {
+      await openAIConnector.reinforcementLearn(prompt);
+    } else {
+      await openAIConnector.reinforcementLearn('Please try once again');
+    }
   }
 
   private parseResponses(responses: AIResponse[]): CategorizationResult {
@@ -33,6 +41,7 @@ class OpenAIFacade {
     const tokenMatchingThreshold = config.get<number>('ai.recognition.tokenMatchingThreshold');
 
     let definedValue = '';
+    let probableTokens;
     const messages = responses.map((response) => response.message.content);
     const definedCase = messages
       .filter((message, index) => {
@@ -50,17 +59,30 @@ class OpenAIFacade {
       }
     }
 
-    const probableTokens = responses[0].message.content.split(' ');
+    const recognizedOption = responses.find(response =>
+      response.message.content.includes('can be applied to')
+      || response.message.content.includes('request aligns with the workflow')
+      || response.message.content.includes('matches with the workflow')
+      || response.message.content.includes('the most suitable workflow')
+    );
+    if (recognizedOption) {
+      probableTokens = recognizedOption.message.content.split(' ');
+    } else {
+      probableTokens = responses[0].message.content.split(' ');
+    }
+
     const processedResponses = responses.filter(response => {
       const value = response.message.content.split(' ')
         .filter(token => probableTokens.includes(token)).length / probableTokens.length;
       return value < tokenMatchingThreshold;
     });
 
-    const estimatedValue = [...processedResponses, responses[0]].reduce((sum, response) => sum + (1 / (response.index+1)), 0);
+    const proceededVariants = recognizedOption ? [...processedResponses, recognizedOption] : [...processedResponses, responses[0]];
+    const estimatedValue = proceededVariants.reduce((sum, response) => sum + (1 / (response.index+1)), 0);
+    const probability = 1 / estimatedValue;
 
     return {
-      probability: 1 / estimatedValue,
+      probability: probability * 100,
       content: responses[0].message.content
     }
   }
