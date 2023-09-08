@@ -6,6 +6,8 @@ package com.spanning.api.controller.workflow;
 
 import java.util.List;
 
+import com.spanning.api.dto.response.workflow.WorkflowResponseDto;
+import com.spanning.api.dto.response.workflow.WorkflowsResponseDto;
 import com.spanning.api.facade.workflow.WorkflowFacade;
 import com.spanning.config.security.UserContext;
 import lombok.RequiredArgsConstructor;
@@ -21,13 +23,14 @@ import org.springframework.web.bind.annotation.RestController;
 @Validated
 public class WorkflowController {
 
-  private final UserContext userContext;
-
   private final WorkflowFacade workflowFacade;
 
   @GetMapping
-  public List<Object> getAll() {
-    return workflowFacade.getAll();
+  public WorkflowsResponseDto getAll() {
+    return
+      WorkflowsResponseDto.builder()
+        .workflows(workflowFacade.getAll())
+        .build();
   }
 
 }

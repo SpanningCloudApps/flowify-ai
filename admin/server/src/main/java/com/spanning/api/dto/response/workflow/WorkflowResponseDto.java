@@ -16,12 +16,11 @@ import lombok.ToString;
 @EqualsAndHashCode
 @Builder
 @ToString
-public class TicketResponseDto {
+public class WorkflowResponseDto {
 
   private final long id;
-  private final String input;
-  private final float probability;
-  private final String workflowName;
+  private final String name;
+  private final String description;
   private final String data;
 
 }
