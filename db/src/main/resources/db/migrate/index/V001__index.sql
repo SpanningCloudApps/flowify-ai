@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS workflow
 CREATE TABLE IF NOT EXISTS workflow_step
 (
     id          BIGSERIAL NOT NULL,
-    workflow_id BIGINT    NOT NULL,
+    workflow_id VARCHAR    NOT NULL,
     description VARCHAR   NOT NULL,
     title       VARCHAR   NOT NULL,
     type        VARCHAR   NOT NULL,

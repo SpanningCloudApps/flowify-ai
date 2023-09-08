@@ -3,25 +3,18 @@
  */
 
 import { WorkflowType } from '../enum/WorkflowType';
-import { StepType } from '../enum/StepType';
+import WorkflowStepRepository from '../repository/data/WorkflowStepRepository';
 
 export default class WorkflowStepService {
 
+  private readonly workflowStepRepository: WorkflowStepRepository;
+
+  constructor(workflowStepRepository: WorkflowStepRepository) {
+    this.workflowStepRepository = workflowStepRepository;
+  }
+
   public async getWorkflowSteps(workflowId: WorkflowType): Promise<any[]> {
-    return [
-      {
-        workflowId,
-        type: StepType.ASK_FOR_FULL_NAME
-      },
-      {
-        workflowId,
-        type: StepType.ASK_ABOUT_THE_DATE
-      },
-      {
-        workflowId,
-        type: StepType.CREATE_AD_USER
-      }
-    ];
+    return await this.workflowStepRepository.getWorkflowSteps(workflowId);
   }
 
 }

@@ -14,5 +14,14 @@
     "localstack": {
       "endpoint": "http://localhost:8666"
     }
+  },
+  "sql": {
+    "database": {
+      "user": "postgres",
+      "pass": "postgres",
+      "host": "localhost",
+      "port": 7432,
+      "db": "index"
+    }
   }
 }

@@ -10,6 +10,8 @@ import WorkflowStepService from '../service/WorkflowStepService';
 import ExecutedWorkflowStepService from '../service/ExecutedWorkflowStepService';
 import WorkflowStepExecutor from '../executor/WorkflowStepExecutor';
 import ExecutedWorkflowService from '../service/ExecutedWorkflowService';
+import WorkflowRepository from '../repository/data/WorkflowRepository';
+import WorkflowStepRepository from '../repository/data/WorkflowStepRepository';
 
 export default class WorkflowListenerCommand extends Command {
   static description = 'Listen to workflow execution';
@@ -18,8 +20,11 @@ export default class WorkflowListenerCommand extends Command {
     const queueService = new QueueService();
     await queueService.initialize_queues();
 
-    const workflowService = new WorkflowService();
-    const workflowStepService = new WorkflowStepService();
+    const workflowRepository = new WorkflowRepository();
+    const workflowStepRepository = new WorkflowStepRepository();
+
+    const workflowService = new WorkflowService(workflowRepository);
+    const workflowStepService = new WorkflowStepService(workflowStepRepository);
     const executedWorkflowService = new ExecutedWorkflowService();
     const executedWorkflowStepService = new ExecutedWorkflowStepService();
     const workflowStepExecutor = new WorkflowStepExecutor(executedWorkflowService, executedWorkflowStepService);
