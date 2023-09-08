@@ -14,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,10 +29,16 @@ public class TicketController {
   private final TicketFacade ticketFacade;
 
   @PostMapping
-  public TicketsResponseDto getAll(
-    @Valid @RequestBody final SearchTicketsRequestDto requestDto) {
+  public TicketsResponseDto search(
+    @Valid @RequestBody final SearchTicketsRequestDto requestDto
+  ) {
     log.info(String.valueOf(requestDto));
     return ticketFacade.search(requestDto);
+  }
+
+  @PutMapping("/{id}")
+  public void update(@Valid @RequestBody final SearchTicketsRequestDto requestDto) {
+
   }
 
 }
