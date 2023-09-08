@@ -4,38 +4,31 @@
 
 import { AxiosResponse } from 'axios';
 import axios from '../config/axiosConfig';
-import { PAGE_ENTITIES_LIMIT } from '../constants/constants';
 import { API_GATEWAY } from '../constants/urls';
 
 const service = {
   async getWorkflows({
-                       params,
+                       data,
                        signal
                      }: any): Promise<any> {
-    const reqParams = {
-      query: params.query,
-      pageToken: params.pageToken,
-      limit: PAGE_ENTITIES_LIMIT
-    };
-    const resp: AxiosResponse<any> = await axios.get(
-        `${API_GATEWAY}/api/workflows`, { params: reqParams, signal }
+    const resp: AxiosResponse<any> = await axios.post(
+        `${API_GATEWAY}/api/workflows`, data, { signal }
     );
     return resp.data;
   },
 
-  async addWorkflow({ domainId, domainName, signal }: any): Promise<any> {
+  async addWorkflow({ workflowId, data, signal }: any): Promise<any> {
     const resp: AxiosResponse<any> = await axios.post(
-        `${API_GATEWAY}/api/domains/${domainId.toString()}/sync-to-salesforce`,
-        { domainName },
+        `${API_GATEWAY}/api/workflows/${workflowId.toString()}`,
+        data,
         { signal }
     );
     return resp.data;
   },
 
-  async deleteWorkflow({ domainId, data, signal }: any): Promise<void> {
+  async deleteWorkflow({ domainId, signal }: any): Promise<void> {
     await axios.delete(
-        `${API_GATEWAY}/api/domains/${domainId.toString()}`,
-        data,
+        `${API_GATEWAY}/api/workflows/${domainId.toString()}`,
         { signal }
     );
   }

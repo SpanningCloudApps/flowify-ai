@@ -18,6 +18,9 @@ export const initialState: any = {
   isUnclassifiedDataLoading: true,
   hasMoreUnclassified: true,
 
+  openClassifier: false,
+  selectedTicket: {},
+
   controller: new AbortController()
 };
 
@@ -32,7 +35,8 @@ export const useTicketsStore = create<any>((set, get) => ({
         : {};
     const reqParams = {
       ...additionalParams,
-      query,
+      search: { all: query },
+      isClassified: true,
       limit: PAGE_ENTITIES_LIMIT
     };
     try {
@@ -65,7 +69,8 @@ export const useTicketsStore = create<any>((set, get) => ({
         : {};
     const reqParams = {
       ...additionalParams,
-      query,
+      search: { all: query },
+      isClassified: false,
       limit: PAGE_ENTITIES_LIMIT
     };
     try {
@@ -99,6 +104,13 @@ export const useTicketsStore = create<any>((set, get) => ({
   clearUnclassifiedTickets: () => {
     set({
       unclassifiedTickets: []
+    });
+  },
+
+  toggleClassifier: (selectedTicket: any, open: boolean) => {
+    set({
+      openClassifier: open,
+      selectedTicket
     });
   },
 

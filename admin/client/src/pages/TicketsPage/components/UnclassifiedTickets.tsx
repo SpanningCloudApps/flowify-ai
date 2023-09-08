@@ -8,12 +8,13 @@
 import { FC, useCallback, useEffect, useRef, useState } from 'react';
 import { Card, Col, Input, Row, Space, Table } from 'antd';
 import { isJsonString } from '../../../utils/helper';
-import { unclassifiedTicketsColumns } from '../helpers';
+import { getUnclassifiedTicketsColumns } from '../helpers';
 import InfinityScroll from 'react-infinite-scroll-component';
 
 import { useIntl } from 'react-intl';
 import style from '../style.module.scss';
 import { useTicketsStore } from '../store';
+import ClassifyDrawer from './ClassifyDrawer';
 
 const UnclassifiedTickets: FC = () => {
   const { formatMessage } = useIntl();
@@ -22,6 +23,7 @@ const UnclassifiedTickets: FC = () => {
   const unclassifiedTickets = useTicketsStore(state => state.unclassifiedTickets);
   const isUnclassifiedDataLoading = useTicketsStore(state => state.isUnclassifiedDataLoading);
   const hasMoreUnclassified = useTicketsStore(state => state.hasMoreUnclassified);
+  const toggleClassifier = useTicketsStore(state => state.toggleClassifier);
 
   const [query, setQuery] = useState('');
   const queryRef = useRef<any>(null);
@@ -46,6 +48,11 @@ const UnclassifiedTickets: FC = () => {
         : rowForView.data;
     delete rowForView.id;
     return <pre>{JSON.stringify(rowForView, null, 2)}</pre>;
+  }, []);
+
+  const openDrawer = useCallback(ticket => e => {
+    e.stopPropagation();
+    toggleClassifier(ticket, true);
   }, []);
 
   return (
@@ -84,7 +91,7 @@ const UnclassifiedTickets: FC = () => {
                     size="small"
                     dataSource={unclassifiedTickets}
                     pagination={false}
-                    columns={unclassifiedTicketsColumns}
+                    columns={getUnclassifiedTicketsColumns(openDrawer)}
                     expandable={{
                       expandedRowRender: renderExpandedRow,
                       expandRowByClick: true,
@@ -96,6 +103,7 @@ const UnclassifiedTickets: FC = () => {
             </div>
           </Col>
         </Row>
+        {/*<ClassifyDrawer />*/}
       </Card>
   );
 };

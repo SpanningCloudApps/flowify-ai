@@ -9,24 +9,19 @@ import { API_GATEWAY } from '../constants/urls';
 
 const service = {
   async getTickets({
-                    params,
-                    signal
-                  }: any): Promise<any> {
-    const reqParams = {
-      query: params.query,
-      pageToken: params.pageToken,
-      limit: PAGE_ENTITIES_LIMIT
-    };
+                     params,
+                     signal
+                   }: any): Promise<any> {
     const resp: AxiosResponse<any> = await axios.get(
-        `${API_GATEWAY}/api/tickets`, { params: reqParams, signal }
+        `${API_GATEWAY}/api/tickets`, { params, signal }
     );
     return resp.data;
   },
 
-  async classifyTicket({ ticketId, ticketClassification, signal }: any): Promise<any> {
+  async classifyTicket({ ticketId, data, signal }: any): Promise<any> {
     const resp: AxiosResponse<any> = await axios.post(
         `${API_GATEWAY}/api/tickets/${ticketId.toString()}/classify`,
-        { ticketClassification },
+        data,
         { signal }
     );
     return resp.data;

@@ -2,12 +2,12 @@
  * Copyright (C) 2022 Spanning Cloud Apps.  All rights reserved.
  */
 import { CheckCircleOutlined, ExclamationCircleOutlined } from '@ant-design/icons';
-import { Typography, Tag } from 'antd';
+import { Typography, Tag, Button } from 'antd';
 import { ColumnsType } from 'antd/lib/table';
 import { intl } from '../../intl';
 import { truncFloatNumber } from '../../utils/helper';
 
-export const classifiedTicketsColumns: ColumnsType<any> = [
+export const getClassifiedTicketsColumns = (): ColumnsType<any> => [
   {
     title: intl.formatMessage({ id: 'TABLE_TICKETS_COLUMN_ID' }),
     dataIndex: 'id',
@@ -53,7 +53,7 @@ export const classifiedTicketsColumns: ColumnsType<any> = [
   }
 ];
 
-export const unclassifiedTicketsColumns: ColumnsType<any> = [
+export const getUnclassifiedTicketsColumns = (openDrawer): ColumnsType<any> => [
   {
     title: intl.formatMessage({ id: 'TABLE_TICKETS_COLUMN_ID' }),
     dataIndex: 'id',
@@ -102,9 +102,9 @@ export const unclassifiedTicketsColumns: ColumnsType<any> = [
     ellipsis: true,
     align: 'center',
     render(data: any): JSX.Element {
-      return <Typography.Text style={{ color: '#1890ff' }}>
+      return <Button type={'link'} onClick={openDrawer(data)}>
         Classify
-      </Typography.Text>;
+      </Button>;
     }
   }
 ];

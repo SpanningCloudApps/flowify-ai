@@ -8,7 +8,7 @@
 import { FC, useCallback, useEffect, useRef, useState } from 'react';
 import { Card, Col, Input, Row, Space, Table } from 'antd';
 import { isJsonString } from '../../../utils/helper';
-import { classifiedTicketsColumns } from '../helpers';
+import { getClassifiedTicketsColumns } from '../helpers';
 import InfinityScroll from 'react-infinite-scroll-component';
 
 import { useIntl } from 'react-intl';
@@ -84,7 +84,7 @@ const ClassifiedTickets: FC = () => {
                     size="small"
                     dataSource={classifiedTickets}
                     pagination={false}
-                    columns={classifiedTicketsColumns}
+                    columns={getClassifiedTicketsColumns()}
                     expandable={{
                       expandedRowRender: renderExpandedRow,
                       expandRowByClick: true,
