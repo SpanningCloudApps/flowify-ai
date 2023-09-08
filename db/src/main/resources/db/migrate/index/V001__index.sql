@@ -51,11 +51,11 @@ CREATE TABLE IF NOT EXISTS workflow_step_execution
 INSERT INTO workflow (name, description)
 VALUES ('ADD_USER', 'Adds new user to microsoft active directory');
 INSERT INTO workflow_step (workflow_id, description, title, type, ordinal)
-VALUES (1, 'Ask customer for user fullname', 'Ask customer for user fullname', 'ASK_FOR_FULL_NAME', 1);
+VALUES ('ADD_USER', 'Ask customer for user fullname', 'Ask customer for user fullname', 'ASK_FOR_FULL_NAME', 1);
 INSERT INTO workflow_step (workflow_id, description, title, type, ordinal)
-VALUES (1, 'Ask customer for create date', 'Ask customer for create date', 'ASK_ABOUT_THE_DATE', 2);
+VALUES ('ADD_USER', 'Ask customer for create date', 'Ask customer for create date', 'ASK_ABOUT_THE_DATE', 2);
 INSERT INTO workflow_step (workflow_id, description, title, type, ordinal)
-VALUES (1, 'Create user base on previous data', 'Create user base on previous data', 'CREATE_AD_USER', 3);
+VALUES ('ADD_USER', 'Create user base on previous data', 'Create user base on previous data', 'CREATE_AD_USER', 3);
 
 
 

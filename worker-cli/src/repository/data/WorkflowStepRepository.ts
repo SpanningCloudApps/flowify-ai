@@ -4,7 +4,6 @@
 
 import config from 'config';
 import { WorkflowType } from '../../enum/WorkflowType';
-import { Workflow } from '../model/Workflow';
 import { Database } from '../Database';
 import { WorkflowStep } from '../model/WorkflowStep';
 
@@ -18,7 +17,7 @@ export default class WorkflowStepRepository {
   }
 
   public getWorkflowSteps = async (workflowId: WorkflowType) => {
-    const query = WorkflowStep.select(Workflow.star())
+    const query = WorkflowStep.select(WorkflowStep.star())
       .from(WorkflowStep)
       .where(WorkflowStep.workflow_id.equals(workflowId))
       .order(WorkflowStep.ordinal)
@@ -26,7 +25,7 @@ export default class WorkflowStepRepository {
 
     const connection = Database.ofConnection(this.pgConnection).connect();
     const result = await connection.query(query.text, query.values);
-    return result.rows[0];
+    return result.rows;
   };
 
 }
