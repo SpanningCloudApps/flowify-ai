@@ -1,0 +1,11 @@
+{
+  "server": {
+    "ports": {
+      "http": 3300
+    },
+    "host": "0.0.0.0"
+  },
+  "swagger": {
+    "enabled": true
+  }
+}

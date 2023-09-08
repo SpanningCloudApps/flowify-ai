@@ -1,0 +1,7 @@
+sql:
+  databases:
+    index:
+      1:
+        username: ${AI_INDEX_DB_USERNAME:${AI_INDEX_1_DB_USERNAME:dev}}
+        password: ${AI_INDEX_DB_PASSWORD:${AI_INDEX_1_DB_PASSWORD:dev}}
+        url: jdbc:postgresql://${AI_INDEX_1_DB_HOST:localhost}:${AI_INDEX_1_DB_PORT:7432}/${AI_INDEX_1_DB_NAME:index}
