@@ -1,0 +1,7 @@
+server:
+  port: 35090
+management:
+  server:
+    port: 9110
+logging:
+  config: '${AI_HOME:}/admin/server/src/main/resources/log4j2.yml'

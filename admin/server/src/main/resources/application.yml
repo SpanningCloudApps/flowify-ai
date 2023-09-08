@@ -1,0 +1,67 @@
+management:
+  server:
+    port: 9108
+  endpoints:
+    web:
+      base-path: /meta
+      exposure:
+        include: health, info, metrics
+
+# Actuator info configuration
+info:
+  app:
+    name: '@project.name@'
+    description:  '@project.description@'
+    version: '@project.version@'
+  env:
+    java:
+      vendor: ${java.specification.vendor}
+      vm-name: ${java.vm.name}
+      runtime-version: ${java.runtime.version}
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    default-property-inclusion: non_null
+    deserialization:
+      fail-on-unknown-properties: false
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            provider: google
+            client-id: ${GOOGLE_OAUTH_CLIENT:249399094641-77r7tgqeh6nh37jb0te9hh5co1ehr0if.apps.googleusercontent.com}
+            client-secret: ${GOOGLE_OAUTH_SECRET:3UUN8Bi5_uFVgW9JpVv4pWbG}
+
+logging:
+  config: '${AI_HOME:}/admin/server/src/main/resources/log4j2-json.yml'
+
+proxy:
+  admin-ui:
+    url: http://localhost:3000
+
+security:
+  hosted-domain: spanning.com
+  csrf:
+    cookie:
+      domain: ${AG_CSRF_COOKIE_DOMAIN:localhost}
+  token:
+    secret: ${AG_JWT_SECRET:3CXhf?pu):l)xjX=8?yQq^.I;4Xl8OV$.aCR#RU\<tqv4[qzU>.fMnI]1'.n=kH}
+    expiration: 86400
+  roles:
+    admin:
+      - ruslan.zianevich@spanning.com
+    prodSupport:
+      - ruslan.zianevich@spanning.com
+    readonly:
+      -
