@@ -10,7 +10,6 @@ const start = async (): Promise<void> => {
   const host: string = config.get<string>('server.host');
 
   try {
-   const history = [];
     const server = await initServer();
     await server.listen({ port, host });
     logger.info(`Server had been started on port ${port}`);
