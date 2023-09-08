@@ -52,7 +52,7 @@ export const useTicketsStore = create<any>((set, get) => ({
         classifiedTickets: [...tickets, ...newTickets ?? []],
         hasMoreClassified: newTickets.length === PAGE_ENTITIES_LIMIT,
         isClassifiedDataLoading: false
-      });∂
+      });
     } catch (error) {
       set({ isClassifiedDataLoading: false });
       const newError = error as AxiosError;
