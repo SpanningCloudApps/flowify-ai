@@ -5,15 +5,22 @@
 import StepExecutor from '../StepExecutor';
 import ExecutedWorkflowService from '../../service/ExecutedWorkflowService';
 import ExecutedWorkflowStepService from '../../service/ExecutedWorkflowStepService';
+import QueueService from '../../service/QueueService';
 
 export default class AskCreateDateStepExecutor implements StepExecutor {
 
   private readonly executedWorkflowService: ExecutedWorkflowService;
+  private readonly executedWorkflowStepService: ExecutedWorkflowStepService;
+  private readonly queueService: QueueService;
 
   constructor(
-    executedWorkflowService: ExecutedWorkflowService
+    executedWorkflowService: ExecutedWorkflowService,
+    executedWorkflowStepService: ExecutedWorkflowStepService,
+    queueService: QueueService
   ) {
     this.executedWorkflowService = executedWorkflowService;
+    this.executedWorkflowStepService = executedWorkflowStepService;
+    this.queueService = queueService;
   }
 
   execute(message: any): Promise<boolean> {

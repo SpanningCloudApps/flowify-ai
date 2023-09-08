@@ -31,7 +31,7 @@ export default class WorkflowListenerCommand extends Command {
     const workflowStepService = new WorkflowStepService(workflowStepRepository);
     const executedWorkflowService = new ExecutedWorkflowService(executedWorkflowRepository);
     const executedWorkflowStepService = new ExecutedWorkflowStepService(executedWorkflowStepRepository);
-    const workflowStepExecutor = new WorkflowStepExecutor(executedWorkflowService, executedWorkflowStepService);
+    const workflowStepExecutor = new WorkflowStepExecutor(executedWorkflowService, executedWorkflowStepService, queueService);
 
     const workflowFacade = new WorkflowExecutionFacade(
       workflowService,
