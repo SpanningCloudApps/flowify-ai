@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  timescale-ai:
+    image: timescale/timescaledb:latest-pg14
+    container_name: timescale-ai
+    restart: always
+    environment:
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'postgres'
+      POSTGRES_INITDB_ARGS: '--auth=trust --auth-host=md5 --auth-local=trust'
+    ports:
+      - '7432:5432'
+  
+  localstack:
+    image: localstack/localstack:latest
+    container_name: localstack-ai
+    ports:
+      # Starting with version 0.11.0, all APIs are exposed via a single edge service,
+      # which is accessible on http://localhost:4566 by default
+      - '8666:4566'
+      - '8672:4572'
+    environment:
+      - SERVICES:sqs      # List other services if needed
+      - DEBUG=1
+      - DATA_DIR=/tmp/localstack/data
+      - DOCKER_HOST=unix:///var/run/docker.sock

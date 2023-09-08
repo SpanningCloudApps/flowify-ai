@@ -1,0 +1,17 @@
+{
+  "aws": {
+    "region": "us-east-1",
+    "sqs": {
+      "prefix": "dev",
+      "queues": {
+        "workflowRequestQueue": "workflow_requests",
+        "workflowResultQueue": "workflow_results",
+        "workflowStepInteractionRequestQueue": "workflow_step_interaction_request",
+        "workflowStepInteractionResultQueue": "workflow_step_interaction_result"
+      }
+    },
+    "localstack": {
+      "endpoint": "http://localhost:8666"
+    }
+  }
+}
