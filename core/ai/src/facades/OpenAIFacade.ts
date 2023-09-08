@@ -8,7 +8,7 @@ import { AIResponse, openAIConnector } from 'openai/OpenAIConnector';
 
 export interface CategorizationResult {
   probability: number;
-  content: string;
+  workflowName: string | null;
 }
 
 class OpenAIFacade {
@@ -37,34 +37,11 @@ class OpenAIFacade {
   }
 
   private parseResponses(responses: AIResponse[]): CategorizationResult {
-    const definedCaseThreshold = config.get<number>('ai.recognition.definedCaseThreshold');
     const tokenMatchingThreshold = config.get<number>('ai.recognition.tokenMatchingThreshold');
 
-    let definedValue = '';
     let probableTokens;
-    const messages = responses.map((response) => response.message.content);
-    const definedCase = messages
-      .filter((message, index) => {
-        if (messages.indexOf(message) !== index) {
-          definedValue = message;
-          return false;
-        }
-        return true;
-      }).length / responses.length < definedCaseThreshold;
 
-    if (definedCase) {
-      return {
-        probability: 1,
-        content: definedValue
-      }
-    }
-
-    const recognizedOption = responses.find(response =>
-      response.message.content.includes('can be applied to')
-      || response.message.content.includes('aligns with the workflow')
-      || response.message.content.includes('matches with the workflow')
-      || response.message.content.includes('the most suitable workflow')
-    );
+    const recognizedOption = responses.find(response => response.message.content.toLowerCase().indexOf('title: ') < 3);
     if (recognizedOption) {
       probableTokens = recognizedOption.message.content.split(' ');
     } else {
@@ -81,9 +58,21 @@ class OpenAIFacade {
     const estimatedValue = proceededVariants.reduce((sum, response) => sum + (1 / (response.index+1)), 0);
     const probability = recognizedOption ? (1 / (recognizedOption.index+1)) / estimatedValue : 1 / estimatedValue;
 
-    return {
-      probability: probability * 100,
-      content: responses[0].message.content
+    if (recognizedOption) {
+      return {
+        probability: probability * 100,
+        workflowName: recognizedOption.message.content.split('Title: ')[1]
+      }
+    } else if (probability === 1 && proceededVariants[0].message.content.includes('Unable to recognize')) {
+      return {
+        probability: 100,
+        workflowName: null
+      }
+    } else {
+      return {
+        probability: probability * 100,
+        workflowName: responses[0].message.content.split('Title: ')[1]
+      }
     }
   }
 }
