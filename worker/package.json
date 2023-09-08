@@ -25,8 +25,9 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "@oclif/core": "2.15.0"
+  },
   "oclif": {
     "bin": "worker-cli",
     "commands": "./lib/commands",
