@@ -31,9 +31,7 @@ public class TicketController {
   public TicketsResponseDto getAll(
     @Valid @RequestBody final SearchTicketsRequestDto requestDto) {
     log.info(String.valueOf(requestDto));
-    return TicketsResponseDto.builder()
-      .tickets(ticketFacade.getAll())
-      .build();
+    return ticketFacade.search(requestDto);
   }
 
 }
