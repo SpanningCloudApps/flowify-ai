@@ -44,4 +44,16 @@ export default class ExecutedWorkflowRepository {
     return result.rows[0];
   };
 
+  public async updateExecutedWorkflowStep(executedWorkflowId: number, stepType: StepType) {
+    const query = ExecutedWorkflow.update({
+      step: stepType
+    })
+      .where(ExecutedWorkflow.id?.equals(executedWorkflowId))
+      .returning('*')
+      .toQuery();
+
+    const connection = Database.ofConnection(this.pgConnection).connect();
+    await connection.query(query.text, query.values);
+  }
+
 }

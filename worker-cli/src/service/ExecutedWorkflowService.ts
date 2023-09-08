@@ -18,4 +18,8 @@ export default class ExecutedWorkflowService {
     return this.executedWorkflowRepository.getOrCreateExecutedWorkflow(workflow, firstStep, workflowExecutionId)
   }
 
+  public async updateExecutedWorkflowStep(executedWorkflowId: number, stepType: StepType) {
+    return this.executedWorkflowRepository.updateExecutedWorkflowStep(executedWorkflowId, stepType);
+  }
+
 }
