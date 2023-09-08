@@ -32,7 +32,7 @@ while getopts "c:p:h" opt; do
     esac
 done
 
-pushd $SCAR_HOME > /dev/null
+pushd $AI_HOME > /dev/null
 
 echo "Preparing migration for the next config=[${DB_CONFIG}] and profile=[${PROFILE}]..."
 

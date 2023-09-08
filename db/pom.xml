@@ -17,13 +17,13 @@
 
   <artifactId>db-migration</artifactId>
   <name>${project.artifactId}: ${project.description}</name>
-  <description>Scar Database Migration</description>
+  <description>Database Migration</description>
 
   <properties>
     <java.version>17</java.version>
-    <lombok.version>1.18.24</lombok.version>
-    <org.flywaydb.core.version>6.5.5</org.flywaydb.core.version>
-    <mysql.connector.java.version>8.0.30</mysql.connector.java.version>
+    <lombok.version>1.18.28</lombok.version>
+    <org.flywaydb.core.version>9.22.0</org.flywaydb.core.version>
+    <org.postgresql.version>42.6.0</org.postgresql.version>
   </properties>
 
   <dependencies>
@@ -51,15 +51,9 @@
       <version>${lombok.version}</version>
     </dependency>
     <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-      <version>${mysql.connector.java.version}</version>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
-      <scope>runtime</scope>
+      <version>${org.postgresql.version}</version>
     </dependency>
   </dependencies>
 
