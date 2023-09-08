@@ -4,6 +4,7 @@
 
 import { Command } from '@oclif/core';
 import QueueService from '../service/QueueService';
+import WorkflowFacade from '../facade/WorkflowFacade';
 
 export default class WorkflowListenerCommand extends Command {
   static description = 'Listen to workflow execution';
@@ -14,7 +15,9 @@ export default class WorkflowListenerCommand extends Command {
     const queueService = new QueueService();
     await queueService.initialize_queues();
 
-    queueService.subscribeToWorkflows();
-    queueService.subscribeToStepResults();
+    const workflowFacade = new WorkflowFacade();
+
+    queueService.subscribeToWorkflows(workflowFacade.startWorkflow);
+    queueService.subscribeToStepResults(workflowFacade.handleStepResultReceived);
   }
 }

@@ -2,7 +2,14 @@
  * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
  */
 import config from 'config';
-import { CreateQueueCommand, GetQueueUrlCommand, GetQueueUrlCommandOutput, SQSClient } from '@aws-sdk/client-sqs';
+import {
+  CreateQueueCommand,
+  GetQueueUrlCommand,
+  GetQueueUrlCommandOutput,
+  ReceiveMessageCommand,
+  ReceiveMessageCommandOutput,
+  SQSClient
+} from '@aws-sdk/client-sqs';
 
 export default class QueueService {
 
@@ -44,10 +51,19 @@ export default class QueueService {
     return result.QueueUrl!;
   }
 
-  public async subscribeToWorkflows() {
+  public async subscribeToWorkflows(handler: (message: any) => Promise<void>) {
     console.log(`Subscribed to workflows ${this.workflowRequestQueue}`);
     return setInterval(async () => {
-      console.log('Polling workflow requests queue');
+      try {
+        console.log(`Polling for messages from ${this.workflowRequestQueue}`);
+        const command = new ReceiveMessageCommand({ QueueUrl: this.workflowRequestQueue });
+        const message: ReceiveMessageCommandOutput = await this.sqsClient.send(command);
+        if (message?.Messages?.length) {
+          await handler(message.Messages[0]);
+        }
+      } catch (e) {
+        console.error(`Failed to read message from the queue`);
+      }
     }, this.pollingInterval);
   }
 
@@ -55,10 +71,19 @@ export default class QueueService {
     console.log(`Publish message to the queue ${this.workflowResultQueue} data ${JSON.stringify(data)}`);
   }
 
-  public async subscribeToStepResults() {
-    console.log(`Subscribed to workflows ${this.workflowRequestQueue}`);
+  public async subscribeToStepResults(handler: (message: any) => Promise<void>) {
+    console.log(`Subscribed to step results ${this.workflowStepInteractionResultQueue}`);
     return setInterval(async () => {
-      console.log('Polling step result queue');
+      try {
+        console.log(`Polling for messages from ${this.workflowStepInteractionResultQueue}`);
+        const command = new ReceiveMessageCommand({ QueueUrl: this.workflowStepInteractionResultQueue });
+        const message: ReceiveMessageCommandOutput = await this.sqsClient.send(command);
+        if (message?.Messages?.length) {
+          await handler(message.Messages[0]);
+        }
+      } catch (e) {
+        console.error(`Failed to read message from the queue`);
+      }
     }, this.pollingInterval);
   }
 
