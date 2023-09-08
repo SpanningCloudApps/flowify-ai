@@ -33,11 +33,6 @@ public class WorkflowService {
   }
 
   public Workflow create(final CreateParams createParams) {
-    return workflowRepository.save(
-      Workflow.builder()
-        .name(createParams.getName())
-        .description(createParams.getDescription())
-        .build()
-    );
+    return workflowRepository.create(createParams.getName(), createParams.getDescription());
   }
 }

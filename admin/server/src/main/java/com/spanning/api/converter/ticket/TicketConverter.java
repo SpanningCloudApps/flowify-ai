@@ -50,7 +50,7 @@ public interface TicketConverter {
       .build();
   }
 
-  UpdateParams convert(final UpdateTicketsRequestDto request);
+  UpdateParams convert(final Long id, final UpdateTicketsRequestDto request);
 
 
   default SearchParams convert(final SearchTicketsRequestDto requestDto) {

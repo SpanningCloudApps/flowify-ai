@@ -17,6 +17,7 @@ import com.spanning.core.dto.request.workflow.SearchParams;
 import com.spanning.core.dto.response.workflow.Workflow;
 import org.apache.commons.lang3.StringUtils;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
 @Mapper
 public interface WorkflowConverter {
@@ -26,6 +27,7 @@ public interface WorkflowConverter {
 
   WorkflowResponseDto convertToResponseDto(final Workflow workflow);
 
+  @Mapping(target = "name", source = "workflowName")
   CreateParams convert(final CreateWorkflowsRequestDto request);
 
   default WorkflowsResponseDto convert(final List<Workflow> workflows) {

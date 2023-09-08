@@ -14,6 +14,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -38,9 +39,11 @@ public class TicketController {
   }
 
   @PutMapping("/{id}")
-  public void update(@Valid @RequestBody final UpdateTicketsRequestDto requestDto) {
+  public void update(
+    @PathVariable("id") final Long id,
+    @Valid @RequestBody final UpdateTicketsRequestDto requestDto) {
     log.info("Update ticket [{}]", requestDto);
-    ticketFacade.update(requestDto);
+    ticketFacade.update(id, requestDto);
   }
 
 }

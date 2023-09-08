@@ -25,6 +25,7 @@ public interface ClassificationResultRepository extends CrudRepository<Classific
   @Query("""
      SELECT id, cast(input as varchar), workflow_name, probability, cast(data as varchar), created_at FROM classification_result AS c
          WHERE (:pageToken IS NULL OR id < :pageToken)
+       AND (:isClassified IS NULL OR CASE WHEN :isClassified THEN workflow_name != 'UNKNOWN' ELSE workflow_name = 'UNKNOWN' END)
        AND ((:title IS NULL AND :description IS NULL AND :createdBy IS NULL AND :workflowName IS NULL)
          OR (:title IS NOT NULL AND c.input->>'title' ILIKE CONCAT('%', :title, '%'))
          OR (:description IS NOT NULL AND c.input->>'description' ILIKE CONCAT('%', :description, '%'))
