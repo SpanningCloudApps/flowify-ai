@@ -26,11 +26,6 @@ const clientInteractionRoute = async (server: FastifyInstance): Promise<void> =>
             const json = JSON.parse(message.toString());
             switch (json.type) {
               case 'message': {
-                const messageEvent = JSON.stringify({
-                  type: 'accepted',
-                  data: `${new Date().toISOString()}: ${json.data}`
-                });
-
                 logger.info(`broadcasting to all clients. Data ${json.data}`);
                 await webSocketManager.process(json.data);
               }
