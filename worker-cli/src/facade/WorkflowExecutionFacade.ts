@@ -34,7 +34,7 @@ export default class WorkflowExecutionFacade {
     this.queueService = queueService;
   }
 
-  public async startWorkflow(message: any) {
+  public async processWorkflow(message: any) {
     const { workflowId, workflowExecutionId } = message;
     const workflow: any = await this.workflowService.getWorkflow(workflowId);
     const workflowSteps: any[] = await this.workflowStepService.getWorkflowSteps(workflowId);

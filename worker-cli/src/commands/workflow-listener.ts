@@ -33,7 +33,7 @@ export default class WorkflowListenerCommand extends Command {
       queueService
     );
 
-    queueService.subscribeToWorkflows(workflowFacade.startWorkflow);
+    queueService.subscribeToWorkflows(workflowFacade.processWorkflow);
     queueService.subscribeToStepResults(workflowFacade.handleStepResultReceived);
   }
 }
