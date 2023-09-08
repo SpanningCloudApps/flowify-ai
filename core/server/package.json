@@ -1,0 +1,35 @@
+{
+  "name": "Core: AI server",
+  "description": "Core: AI server",
+  "license": "MIT",
+  "homepage": "https://github.com/SpanningCloudApps/hackathon-ai/core/server",
+  "version": "1.0.0",
+  "engines": {
+    "node": "^18.0.0"
+  },
+  "scripts": {
+    "start": "TZ=UTC ts-node --transpile-only ./src/api.ts",
+    "start:dev": "TZ=UTC NODE_CONFIG_DIR=config ts-node --transpile-only ./src/api.ts"
+  },
+  "devDependencies": {
+    "@types/config": "3.3.0",
+    "@types/pg": "8.10.2",
+    "@types/uuid": "9.0.3",
+    "@types/slonik": "22.1.7",
+    "ts-node": "10.9.1",
+    "tsconfig-paths": "4.2.0",
+    "tslib": "2.6.2",
+    "typescript": "5.1.6"
+  },
+  "dependencies": {
+    "@fastify/static": "6.11.0",
+    "@fastify/swagger": "8.10.0",
+    "config": "3.3.9",
+    "moment": "2.29.4",
+    "fastify": "4.22.2",
+    "slonik": "34.1.0",
+    "pg": "8.11.3",
+    "uuid": "9.0.0",
+    "winston": "3.10.0"
+  }
+}

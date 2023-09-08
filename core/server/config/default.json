@@ -1,0 +1,20 @@
+{
+  "server": {
+    "ports": {
+      "http": 3300
+    },
+    "host": "0.0.0.0"
+  },
+  "swagger": {
+    "enabled": true
+  },
+  "sql": {
+    "indexdb": {
+      "user": "postgres",
+      "pass": "postgres",
+      "host": "localhost",
+      "port": "7432",
+      "db": "index"
+    }
+  }
+}
