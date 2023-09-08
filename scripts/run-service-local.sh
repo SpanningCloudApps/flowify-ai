@@ -3,6 +3,7 @@ set -e
 valid_options=(
   "--help"
   "--setup-infrastructure"
+  "--worker-cli"
   "--init-dbs"
   "--run-db-migrations"
   "--internal"
@@ -42,6 +43,7 @@ Options:
   --setup-infrastructure       Runs all the containers except tomcat, since on tomcat start all applications will be                           running, but databases doesn't have installed infrastructure
   --init-dbs                   TimescaleDB initialization. Creates dev user, all the necessary databases, applies migrations
   --run-db-migrations          Run timescaledb db migrations script.
+  --worker-cli                 Run worker-cli
   --internal                   Runs all the previous commands in appropriate order to setup full infrastructure
 EOF
 }
@@ -52,6 +54,18 @@ function setup_infrastructure() {
     echo "Run infrastructure in the doсker"
     pushd "${AI_HOME}"
       docker-compose up -d timescale-ai localstack-ai
+    popd
+  fi
+}
+
+function run_worker_cli() {
+  if array_contains options "--worker-cli" || array_contains options "--internal"; then
+    echo "Run worker-cli in the doсker"
+    pushd "${AI_HOME}/worker-cli"
+      ./script/build-image.sh worker-cli
+    popd
+    pushd "${AI_HOME}"
+      docker-compose up -d worker-cli
     popd
   fi
 }
@@ -118,6 +132,7 @@ function main() {
 
   create_logs_folder
   setup_infrastructure
+  run_worker_cli
   init_dbs
   run_db_migrations
 }
