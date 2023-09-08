@@ -36,15 +36,15 @@ export default class WorkflowExecutionFacade {
 
   public processWorkflow = async (message: any) => {
     console.log(message);
-    const { workflowName, workflowExecutionId } = message;
+    const { workflowName, actor, workflowExecutionId } = message;
     const workflow: any = await this.workflowService.getWorkflow(workflowName);
     const workflowSteps: any[] = await this.workflowStepService.getWorkflowSteps(workflowName);
-    const workflowExecution = await this.executedWorkflowService.getOrCreateExecutedWorkflow(workflow, workflowSteps[0].type, workflowExecutionId);
+    const workflowExecution = await this.executedWorkflowService.getOrCreateExecutedWorkflow(workflow, workflowSteps[0].type, actor, workflowExecutionId);
     let nextStep = await this.executedWorkflowStepService.getNextStep(workflowExecution.id, workflowSteps);
     let nextExecutor = this.workflowStepExecutor.getExecutor(nextStep.type);
 
     console.log(`Running workflow ${JSON.stringify(workflow)} with ${workflowSteps.length} steps. Next step ${nextStep?.type}`);
-    while (await nextExecutor.execute(workflowExecution.id!, nextStep, message)) {
+    while (await nextExecutor.execute(workflowExecution, nextStep, message)) {
       nextStep = await this.executedWorkflowStepService.getNextStep(workflowExecution.id, workflowSteps);
       nextExecutor = this.workflowStepExecutor.getExecutor(nextStep.type);
       console.log(`Running workflow ${JSON.stringify(workflow)} with ${workflowSteps.length} steps. Next step ${nextStep?.type}`);

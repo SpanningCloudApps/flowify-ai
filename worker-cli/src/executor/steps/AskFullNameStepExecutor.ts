@@ -7,6 +7,7 @@ import ExecutedWorkflowService from '../../service/ExecutedWorkflowService';
 import ExecutedWorkflowStepService from '../../service/ExecutedWorkflowStepService';
 import QueueService from '../../service/QueueService';
 import { WorkflowStepRow } from '../../repository/model/WorkflowStep';
+import { ExecutedWorkflowRow } from '../../repository/model/ExecutedWorkflow';
 
 export default class AskFullNameStepExecutor implements StepExecutor {
 
@@ -24,13 +25,14 @@ export default class AskFullNameStepExecutor implements StepExecutor {
     this.queueService = queueService;
   }
 
-  public execute = async (executedWorkflowId: number, workflowStep: WorkflowStepRow, message: any): Promise<boolean> => {
+  public execute = async (executedWorkflow: ExecutedWorkflowRow, workflowStep: WorkflowStepRow, message: any): Promise<boolean> => {
     const clientRequest = {
-      question: 'Could you provide me a full name of the user?'
+      question: 'Could you provide me a full name of the user?',
+      actor: executedWorkflow.data?.actor
     }
     await this.queueService.publishStepDataRequest(JSON.stringify(clientRequest));
-    await this.executedWorkflowStepService.createStepExecution(executedWorkflowId, workflowStep);
-    await this.executedWorkflowService.updateExecutedWorkflowStep(executedWorkflowId, workflowStep.type);
+    await this.executedWorkflowStepService.createStepExecution(executedWorkflow.id!, workflowStep);
+    await this.executedWorkflowService.updateExecutedWorkflowStep(executedWorkflow.id!, workflowStep.type);
     return Promise.resolve(false);
   }
 

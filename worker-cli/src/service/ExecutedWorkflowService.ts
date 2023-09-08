@@ -14,8 +14,8 @@ export default class ExecutedWorkflowService {
     this.executedWorkflowRepository = executedWorkflowRepository;
   }
 
-  public async getOrCreateExecutedWorkflow(workflow: WorkflowRow, firstStep: StepType, workflowExecutionId?: number): Promise<any> {
-    return this.executedWorkflowRepository.getOrCreateExecutedWorkflow(workflow, firstStep, workflowExecutionId)
+  public async getOrCreateExecutedWorkflow(workflow: WorkflowRow, firstStep: StepType, actor?: string, workflowExecutionId?: number): Promise<any> {
+    return this.executedWorkflowRepository.getOrCreateExecutedWorkflow(workflow, firstStep, actor, workflowExecutionId)
   }
 
   public async updateExecutedWorkflowStep(executedWorkflowId: number, stepType: StepType) {
