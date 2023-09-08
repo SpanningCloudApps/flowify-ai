@@ -9,6 +9,8 @@ export interface ClassificationResultMessage {
 
 export interface ClientInteractionMessage {
   workflowExecutionId: string;
+  type: string;
+  clientResponse: string;
   actor: string;
 }
 
@@ -24,7 +26,13 @@ export class ClassificationProcessorService {
   }
 
   public async publishClientInteraction(data: Record<string, unknown>) {
-    await queueService.publishClientInteraction({ workflowExecutionId: data.workflowExecutionId, actor: data.actor });
+    const clientInteraction = {
+      workflowExecutionId: data.workflowExecutionId,
+      type: data.type,
+      clientResponse: data.clientResponse,
+      actor: data.actor
+    };
+    await queueService.publishClientInteraction(clientInteraction);
   }
 
   public async retrieveWorkflowResult() {
@@ -34,28 +42,33 @@ export class ClassificationProcessorService {
       const data: unknown = JSON.parse(sqsMessage.Body!);
       const { actor } = data;
 
-      await webSocketService.publish(actor, data);
+      await webSocketService.publish(actor, { result: data.result });
     };
 
     await queueService.retrieveWorkflowResult(processMessage);
   }
 
-  public async retrieveClientInteractionWorkflowResult() {
+  public async retrieveClientInteractionWorkflowRequest() {
     const processMessage = async (sqsMessage: SqsMessage) => {
       // https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_Message.html
       // The body is not required property
       const data: unknown = JSON.parse(sqsMessage.Body!);
       const { actor } = data;
-
-      await webSocketService.publish(actor, data);
+      const workflowRequest = {
+        question: data.question,
+        workflowExecutionId: data.workflowExecutionId,
+        type: data.type,
+        actor: data.actor
+      };
+      await webSocketService.publish(actor, workflowRequest);
     };
 
-    await queueService.retrieveClientInteractionWorkflowResult(processMessage);
+    await queueService.retrieveClientInteractionWorkflowRequest(processMessage);
   }
 
   // DONT MAKE ASYNC. THIS IS INFINITY QUEUE POLLING
   public poll() {
-    this.retrieveClientInteractionWorkflowResult();
+    this.retrieveClientInteractionWorkflowRequest();
     this.retrieveWorkflowResult();
   }
 }

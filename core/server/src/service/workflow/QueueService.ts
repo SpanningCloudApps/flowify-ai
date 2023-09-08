@@ -77,7 +77,7 @@ export class QueueService {
     await this.sqs.pollQueueWithVisibility(queueOpts, processMessage, data);
   }
 
-  public async retrieveClientInteractionWorkflowResult(processMessage: (sqsMessage: SqsMessage, progress: SqsPollQueueStats) => any) {
+  public async retrieveClientInteractionWorkflowRequest(processMessage: (sqsMessage: SqsMessage, progress: SqsPollQueueStats) => any) {
     logger.info(`Poll message from the queue ${this.workflowStepInteractionRequestQueue}`);
 
     const queueOpts = {
