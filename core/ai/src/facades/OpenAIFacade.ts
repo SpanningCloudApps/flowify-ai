@@ -61,7 +61,7 @@ class OpenAIFacade {
 
     const recognizedOption = responses.find(response =>
       response.message.content.includes('can be applied to')
-      || response.message.content.includes('request aligns with the workflow')
+      || response.message.content.includes('aligns with the workflow')
       || response.message.content.includes('matches with the workflow')
       || response.message.content.includes('the most suitable workflow')
     );

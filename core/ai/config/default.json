@@ -7,7 +7,7 @@
       "temperature": 0.3
     },
     "recognition": {
-      "responseDistribution": 6,
+      "responseDistribution": 10,
       "definedCaseThreshold": 0.6,
       "tokenMatchingThreshold": 0.6
     },
