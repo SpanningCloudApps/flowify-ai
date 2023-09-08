@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Fastify WebSockets chat</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <script src="https://unpkg.com/react@latest/umd/react.development.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@latest/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@mui/material@latest/umd/material-ui.development.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/babel-standalone@latest/babel.min.js" crossorigin="anonymous"></script>
+  <!-- Fonts to support Material Design -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <!-- Icons to support Material Design -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+</head>
+
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  /**
+   * PLEASE DON'T BLAME ME FOR THIS ONE SINGLE HUGE FILE.
+   * The target of this file is for the purpose of learning WebSocket.
+   * It's not meant to be a production-ready solution.
+   * It's just a proof of concept.
+   *
+   * Thank you for your understanding.
+   */
+
+  const {
+    colors,
+    CssBaseline,
+    ThemeProvider,
+    Typography,
+    TextField,
+    TextareaAutosize,
+    Button,
+    Grid,
+    Container,
+    createTheme,
+    Box,
+    SvgIcon,
+    Link,
+  } = MaterialUI;
+
+  // Create a theme instance.
+  const theme = createTheme({
+    palette: {
+      primary: { main: '#556cd6', },
+      secondary: { main: '#19857b', },
+      error: { main: colors.red.A400, },
+    },
+  });
+
+  function WsConnection(props) {
+    React.useEffect(() => {
+      const ws = new WebSocket(props.url);
+
+      ws.onopen = () => {
+        console.log('WebSocket connection opened');
+        props.onOpen()
+        props.onChannelOpened(function (message) {
+          if (ws.readyState === 1) {
+            ws.send(message);
+          }
+        })
+      };
+
+      ws.onmessage = (event) => {
+        console.log('WebSocket message received:', event.data);
+        try {
+          const json = JSON.parse(event.data);
+          switch (json.type) {
+            case 'accepted':
+            case 'message':
+              props.onMessage(json)
+              break;
+          }
+        } catch (e) {
+          console.error('Invalid JSON: ', event.data);
+        }
+      };
+
+      ws.onclose = function (event) {
+        console.log('WebSocket connection closed', ws.readyState, event);
+        props.onClose()
+      };
+
+      ws.onerror = function (error) {
+        console.log('WebSocket error: ', error);
+        if (ws.readyState === 1) {  // open
+          props.onError(error)
+          ws.close(error);
+        }
+      };
+
+      return function cleanup() {
+        console.log('WebSocket connection cleanup');
+        // ws.close();
+      };
+    }, []);
+
+    return false
+  }
+
+  function App() {
+    const [connecting, setConnecting] = React.useState(true);
+    const [status, setStatus] = React.useState('');
+    const [messages, setMessages] = React.useState([]);
+    const [channel, setChannel] = React.useState(null)
+
+    function submitMessage(event) {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      const message = data.get('chat-message');
+      if (message && connecting === false && channel) {
+        channel(JSON.stringify({
+          type: 'message',
+          data: message,
+        }))
+      }
+    };
+
+    const displayMessage = React.useCallback(({ data }) => {
+      setMessages(prevState => [...prevState, data]);
+    }, [setMessages]);
+
+    const openChannel = React.useCallback((inChannel) => {
+      setChannel(() => { return inChannel })
+    }, [setChannel]);
+
+    return (
+      <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <Box
+          sx={{
+            marginTop: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <Typography component="h1" variant="h5">
+            Fastify WebSockets React Chat
+          </Typography>
+          <WsConnection
+            url="ws://localhost:3000/chat"
+            onOpen={() => setConnecting(false)}
+            onChannelOpened={openChannel}
+            onMessage={displayMessage}
+            onClose={() => { setConnecting(true); setStatus('Disconnected') }}
+            onError={(error) => { setConnecting(true); setStatus(error.message) }}
+          />
+          <Box component="form" onSubmit={submitMessage} noValidate sx={{ mt: 1 }}>
+            <TextareaAutosize
+              maxRows={12}
+              style={{ width: theme.spacing(60) }}
+              aria-label="maximum height"
+              placeholder="Chat messages will appear here"
+              value={messages.join('\n')}
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="chat-message"
+              label="Chat message"
+              type="chat-message"
+              id="chat-message"
+              autoComplete="current-chat-message"
+            />
+            <Button
+              type="submit"
+              fullWidth
+              disabled={connecting}
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              {connecting ? 'Connecting...' : 'Send'}
+            </Button>
+            <Grid container alignItems="center" justifyContent="center">
+              <Grid item>{status}</Grid>
+            </Grid>
+          </Box>
+        </Box>
+      </Container>
+    );
+  }
+
+  ReactDOM.render(
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>,
+    document.querySelector('#root'),
+  );
+</script>
+</body>
+
+</html>

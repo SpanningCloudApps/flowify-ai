@@ -1,7 +1,7 @@
 import config from 'config';
 
 import { getLogger } from '../../logger/logger';
-import { ClassificationResultMessage, ClientInteractionMessage } from '/ClassificationProcessorService';
+import { ClassificationResultMessage, ClientInteractionMessage } from './ClassificationProcessorService';
 import { DefaultQueueConfig, QueueConfig } from './queue/SQSQueueConfigProvider';
 import { SqsMessage, SQSMessageProvider, SqsPollQueueStats } from './queue/SQSMessageProvider';
 
@@ -24,8 +24,8 @@ export class QueueService {
 
   constructor() {
     this.sqs = SQSMessageProvider.of({
-      accessKeyId: config.get('aws.awsAccessKey'),
-      secretAccessKey: config.get('aws.awsSecretKey'),
+      accessKeyId: config.get('aws.accessKey'),
+      secretAccessKey: config.get('aws.secretKey'),
       region: config.get('aws.region'),
       endpoint: config.has('aws.localstack.endpoint') ? config.get('aws.localstack.endpoint') : undefined,
       maxRetries: undefined
@@ -40,9 +40,9 @@ export class QueueService {
     logger.info(`Publish message to the queue ${this.workflowRequestQueue} data ${JSON.stringify(data)}`);
 
     const queueOpts = {
-      sqsPrefix: config.get('sqs.prefix') as string,
-      defaultConfig: config.get('sqs.default') as DefaultQueueConfig,
-      originalConfig: config.get(`sqs.queues.${this.workflowRequestQueue}`) as QueueConfig
+      sqsPrefix: config.get('aws.sqs.prefix') as string,
+      defaultConfig: config.get('aws.sqs.default') as DefaultQueueConfig,
+      originalConfig: config.get(`aws.sqs.queues.${this.workflowRequestQueue}`) as QueueConfig
     };
 
     await this.sqs.sendMessage(queueOpts, data);
@@ -52,9 +52,9 @@ export class QueueService {
     logger.info(`Publish message to the queue ${this.workflowStepInteractionResultQueue} data ${JSON.stringify(data)}`);
 
     const queueOpts = {
-      sqsPrefix: config.get('sqs.prefix') as string,
-      defaultConfig: config.get('sqs.default') as DefaultQueueConfig,
-      originalConfig: config.get(`sqs.queues.${this.workflowStepInteractionResultQueue}`) as QueueConfig
+      sqsPrefix: config.get('aws.sqs.prefix') as string,
+      defaultConfig: config.get('aws.sqs.default') as DefaultQueueConfig,
+      originalConfig: config.get(`aws.sqs.queues.${this.workflowStepInteractionResultQueue}`) as QueueConfig
     };
 
     await this.sqs.sendMessage(queueOpts, data);
@@ -64,13 +64,13 @@ export class QueueService {
     logger.info(`Poll message from the queue ${this.workflowResultQueue}`);
 
     const queueOpts = {
-      sqsPrefix: config.get('sqs.prefix') as string,
-      defaultConfig: config.get('sqs.default') as DefaultQueueConfig,
-      originalConfig: config.get(`sqs.queues.${this.workflowResultQueue}`) as QueueConfig
+      sqsPrefix: config.get('aws.sqs.prefix') as string,
+      defaultConfig: config.get('aws.sqs.default') as DefaultQueueConfig,
+      originalConfig: config.get(`aws.sqs.queues.${this.workflowResultQueue}`) as QueueConfig
     };
     const data = {
-      visibilityTimeout: config.get('sqs.messageVisibilityTimeoutSeconds') as number,
-      visibilityUpdateInterval: config.get('sqs.messageVisibilityUpdateIntervalSeconds') as number * 1000,
+      visibilityTimeout: config.get('aws.sqs.messageVisibilityTimeoutSeconds') as number,
+      visibilityUpdateInterval: config.get('aws.sqs.messageVisibilityUpdateIntervalSeconds') as number * 1000,
       stopPolling: () => false
     };
 
@@ -81,13 +81,13 @@ export class QueueService {
     logger.info(`Poll message from the queue ${this.workflowStepInteractionRequestQueue}`);
 
     const queueOpts = {
-      sqsPrefix: config.get('sqs.prefix') as string,
-      defaultConfig: config.get('sqs.default') as DefaultQueueConfig,
-      originalConfig: config.get(`sqs.queues.${this.workflowStepInteractionRequestQueue}`) as QueueConfig
+      sqsPrefix: config.get('aws.sqs.prefix') as string,
+      defaultConfig: config.get('aws.sqs.default') as DefaultQueueConfig,
+      originalConfig: config.get(`aws.sqs.queues.${this.workflowStepInteractionRequestQueue}`) as QueueConfig
     };
     const data = {
-      visibilityTimeout: config.get('sqs.messageVisibilityTimeoutSeconds') as number,
-      visibilityUpdateInterval: config.get('sqs.messageVisibilityUpdateIntervalSeconds') as number * 1000,
+      visibilityTimeout: config.get('aws.sqs.messageVisibilityTimeoutSeconds') as number,
+      visibilityUpdateInterval: config.get('aws.sqs.messageVisibilityUpdateIntervalSeconds') as number * 1000,
       stopPolling: () => false
     };
 

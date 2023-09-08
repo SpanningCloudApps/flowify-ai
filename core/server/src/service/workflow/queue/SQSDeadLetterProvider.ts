@@ -1,5 +1,5 @@
-import { DefaultQueueConfig, QueueConfig, SQSQueueConfigProvider } from '/SQSQueueConfigProvider';
-import { AwsClientFactory, AwsSettings } from '/AwsClientFactory';
+import { DefaultQueueConfig, QueueConfig, SQSQueueConfigProvider } from './SQSQueueConfigProvider';
+import { AwsClientFactory, AwsSettings } from './AwsClientFactory';
 import { CreateQueueCommand, GetQueueAttributesCommand, GetQueueUrlCommand } from '@aws-sdk/client-sqs';
 
 export default class SQSDeadLetterProvider {

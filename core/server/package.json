@@ -26,12 +26,13 @@
     "@fastify/static": "6.11.0",
     "@fastify/swagger": "8.10.0",
     "config": "3.3.9",
-    "moment": "2.29.4",
+    "exponential-backoff": "3.1.1",
     "fastify": "4.22.2",
-    "sql": "0.78.0",
+    "@fastify/websocket": "8.2.0",
+    "moment": "2.29.4",
     "pg": "8.11.3",
+    "sql": "0.78.0",
     "uuid": "9.0.0",
-    "winston": "3.10.0",
-    "exponential-backoff": "3.1.1"
+    "winston": "3.10.0"
   }
 }
