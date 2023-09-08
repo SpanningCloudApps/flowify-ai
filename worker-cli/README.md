@@ -10,12 +10,13 @@ oclif example Hello World CLI
 <!-- toc -->
 * [Usage](#usage)
 * [Commands](#commands)
+* 
 <!-- tocstop -->
+
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g worker-cli
-$ worker-cli COMMAND
+$ ./bin/run COMMAND
 running command...
 $ worker-cli (--version)
 worker-cli/0.0.0 darwin-x64 node-v18.12.1
@@ -59,10 +60,10 @@ DESCRIPTION
 
 EXAMPLES
   $ oex hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
+  hello friend from oclif! (./src/commands/hello/workflow-listener.ts)
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/hackathon-ai/worker-cli/blob/v0.0.0/dist/commands/hello/index.ts)_
+_See code: [dist/commands/hello/workflow-listener.ts](https://github.com/hackathon-ai/worker-cli/blob/v0.0.0/dist/commands/hello/index.ts)_
 
 ## `worker-cli hello world`
 
