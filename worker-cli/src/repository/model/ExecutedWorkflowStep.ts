@@ -14,8 +14,8 @@ export interface ExecutedWorkflowStepRow {
   created_at: Date;
 }
 
-export const ExecutedWorkflowStep = define<'workflow_step', ExecutedWorkflowStepRow>({
-  name: 'workflow_step',
+export const ExecutedWorkflowStep = define<'workflow_step_execution', ExecutedWorkflowStepRow>({
+  name: 'workflow_step_execution',
   schema: '',
   columns: {
     id: { dataType: 'integer' },
