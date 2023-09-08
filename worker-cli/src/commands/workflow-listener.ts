@@ -8,6 +8,7 @@ import WorkflowExecutionFacade from '../facade/WorkflowExecutionFacade';
 import WorkflowService from '../service/WorkflowService';
 import WorkflowStepService from '../service/WorkflowStepService';
 import ExecutedWorkflowStepService from '../service/ExecutedWorkflowStepService';
+import WorkflowStepExecutor from '../executor/WorkflowStepExecutor';
 
 export default class WorkflowListenerCommand extends Command {
   static description = 'Listen to workflow execution';
@@ -19,8 +20,15 @@ export default class WorkflowListenerCommand extends Command {
     const workflowService = new WorkflowService();
     const workflowStepService = new WorkflowStepService();
     const executedWorkflowStepService = new ExecutedWorkflowStepService();
+    const workflowStepExecutor = new WorkflowStepExecutor();
 
-    const workflowFacade = new WorkflowExecutionFacade(workflowService, workflowStepService, executedWorkflowStepService, queueService);
+    const workflowFacade = new WorkflowExecutionFacade(
+      workflowService,
+      workflowStepService,
+      executedWorkflowStepService,
+      workflowStepExecutor,
+      queueService
+    );
 
     queueService.subscribeToWorkflows(workflowFacade.startWorkflow);
     queueService.subscribeToStepResults(workflowFacade.handleStepResultReceived);

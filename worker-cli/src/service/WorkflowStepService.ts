@@ -3,6 +3,7 @@
  */
 
 import { WorkflowType } from '../enum/WorkflowType';
+import { StepType } from '../enum/StepType';
 
 export default class WorkflowStepService {
 
@@ -10,15 +11,15 @@ export default class WorkflowStepService {
     return [
       {
         workflowId,
-        type: 'ASK_FOR_FULL_NAME'
+        type: StepType.ASK_FOR_FULL_NAME
       },
       {
         workflowId,
-        type: 'ASK_ABOUT_THE_DATE'
+        type: StepType.ASK_ABOUT_THE_DATE
       },
       {
         workflowId,
-        type: 'CREATE_AD_USER'
+        type: StepType.CREATE_AD_USER
       }
     ];
   }

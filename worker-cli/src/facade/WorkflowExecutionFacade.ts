@@ -6,6 +6,7 @@ import QueueService from '../service/QueueService';
 import WorkflowService from '../service/WorkflowService';
 import WorkflowStepService from '../service/WorkflowStepService';
 import ExecutedWorkflowStepService from '../service/ExecutedWorkflowStepService';
+import WorkflowStepExecutor from '../executor/WorkflowStepExecutor';
 
 export default class WorkflowExecutionFacade {
 
@@ -13,16 +14,19 @@ export default class WorkflowExecutionFacade {
   private readonly workflowService: WorkflowService;
   private readonly workflowStepService: WorkflowStepService;
   private readonly executedWorkflowStepService: ExecutedWorkflowStepService;
+  private readonly workflowStepExecutor: WorkflowStepExecutor;
 
   constructor(
     workflowService: WorkflowService,
     workflowStepService: WorkflowStepService,
     executedWorkflowStepService: ExecutedWorkflowStepService,
+    workflowStepExecutor: WorkflowStepExecutor,
     queueService: QueueService
   ) {
     this.workflowService = workflowService;
     this.workflowStepService = workflowStepService;
     this.executedWorkflowStepService = executedWorkflowStepService;
+    this.workflowStepExecutor = workflowStepExecutor;
     this.queueService = queueService;
   }
 
@@ -30,7 +34,16 @@ export default class WorkflowExecutionFacade {
     const { workflowId } = message;
     const workflow: any = await this.workflowService.getWorkflow(workflowId);
     const workflowSteps: any[] = await this.workflowStepService.getWorkflowSteps(workflowId);
-    const nextStep = await this.executedWorkflowStepService.getNextStep(workflowId, workflowSteps);
+
+    let nextStep = await this.executedWorkflowStepService.getNextStep(workflowId, workflowSteps);
+    let nextExecutor = this.workflowStepExecutor.getExecutor(nextStep.type);
+
+    console.log(`Running workflow ${JSON.stringify(workflow)} with ${workflowSteps.length} steps. Next step ${nextStep}`);
+    while (await nextExecutor.execute(message)) {
+      nextStep = await this.executedWorkflowStepService.getNextStep(workflowId, workflowSteps);
+      nextExecutor = this.workflowStepExecutor.getExecutor(nextStep.type);
+      console.log(`Running workflow ${JSON.stringify(workflow)} with ${workflowSteps.length} steps. Next step ${nextStep}`);
+    }
 
     console.log(`Running workflow ${JSON.stringify(workflow)} with ${workflowSteps.length} steps. Next step ${nextStep}`);
   }
