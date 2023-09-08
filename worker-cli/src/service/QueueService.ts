@@ -61,7 +61,7 @@ export default class QueueService {
         const messages: ReceiveMessageCommandOutput = await this.sqsClient.send(command);
         if (messages?.Messages?.length) {
           const message = messages.Messages[0]
-          await handler(message.Body);
+          await handler(JSON.parse(message.Body as string));
           const deleteCommand = new DeleteMessageCommand({
             QueueUrl: this.workflowRequestQueue,
             ReceiptHandle: message.ReceiptHandle
@@ -69,7 +69,7 @@ export default class QueueService {
           await this.sqsClient.send(deleteCommand);
         }
       } catch (e) {
-        console.error(`Failed to read message from the queue`);
+        console.error(`Failed to read message from the queue`, e);
       }
     }, this.pollingInterval);
   }
@@ -87,7 +87,7 @@ export default class QueueService {
         const messages: ReceiveMessageCommandOutput = await this.sqsClient.send(command);
         if (messages?.Messages?.length) {
           const message = messages.Messages[0]
-          await handler(message.Body);
+          await handler(JSON.parse(message.Body as string));
           const deleteCommand = new DeleteMessageCommand({
             QueueUrl: this.workflowRequestQueue,
             ReceiptHandle: message.ReceiptHandle
@@ -95,7 +95,7 @@ export default class QueueService {
           await this.sqsClient.send(deleteCommand);
         }
       } catch (e) {
-        console.error(`Failed to read message from the queue`);
+        console.error(`Failed to read message from the queue`, e);
       }
     }, this.pollingInterval);
   }
