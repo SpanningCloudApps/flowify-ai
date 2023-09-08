@@ -1,0 +1,28 @@
+/*!
+ * Copyright (C) 2022 Spanning Cloud Apps.  All rights reserved.
+ */
+
+
+.page {
+  &__wrap {
+    padding: 10px 15px 14px;
+    height: calc(100vh - 60px);
+    overflow: scroll;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 1em;
+  }
+
+  &__backButton {
+    font-size: 20px;
+    margin-right: .25em;
+  }
+
+  &__title {
+    font-size: 14px;
+  }
+}

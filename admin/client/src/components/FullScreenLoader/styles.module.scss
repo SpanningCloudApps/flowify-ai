@@ -1,0 +1,14 @@
+/*
+ * Copyright (C) 2021 Spanning Cloud Apps.  All rights reserved
+ */
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+
+  :global(.ant-spin-dot-item) {
+    background-color: #BF6068;
+  }
+}
