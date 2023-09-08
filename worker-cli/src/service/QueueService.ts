@@ -12,6 +12,9 @@ import {
   SendMessageCommand,
   SQSClient
 } from '@aws-sdk/client-sqs';
+import { getLogger } from '../logger/logger';
+
+const logger = getLogger()
 
 export default class QueueService {
 
@@ -41,11 +44,11 @@ export default class QueueService {
 
   private async initQueue(queueName: string): Promise<string> {
     try {
-      console.log(`Creating queue ${queueName}`);
+      logger.info(`Creating queue ${queueName}`);
       const createCommand = new CreateQueueCommand({ QueueName: queueName });
       await this.sqsClient.send(createCommand);
     } catch (e) {
-      console.error(`Failed ot create queue`, e);
+      logger.info(`Failed ot create queue`, e);
     }
 
     const getCommand = new GetQueueUrlCommand({ QueueName: queueName });
@@ -54,10 +57,10 @@ export default class QueueService {
   }
 
   public async subscribeToWorkflows(handler: (message: any) => Promise<void>) {
-    console.log(`Subscribed to workflows ${this.workflowRequestQueue}`);
+    logger.info(`Subscribed to workflows ${this.workflowRequestQueue}`);
     return setInterval(async () => {
       try {
-        console.log(`Polling for messages from ${this.workflowRequestQueue}`);
+        logger.info(`Polling for messages from ${this.workflowRequestQueue}`);
         const command = new ReceiveMessageCommand({ QueueUrl: this.workflowRequestQueue });
         const messages: ReceiveMessageCommandOutput = await this.sqsClient.send(command);
         if (messages?.Messages?.length) {
@@ -70,13 +73,13 @@ export default class QueueService {
           await this.sqsClient.send(deleteCommand);
         }
       } catch (e) {
-        console.error(`Failed to read message from the queue`, e);
+        logger.error(`Failed to read message from the queue`, e);
       }
     }, this.pollingInterval);
   }
 
   public async publishWorkflowResult(data: any) {
-    console.log(`Publish message to the queue ${this.workflowResultQueue} data ${JSON.stringify(data)}`);
+    logger.info(`Publish message to the queue ${this.workflowResultQueue} data ${JSON.stringify(data)}`);
     try {
       const command = new SendMessageCommand({
         QueueUrl: this.workflowResultQueue,
@@ -84,15 +87,15 @@ export default class QueueService {
       });
       await this.sqsClient.send(command);
     } catch (e) {
-      console.error(`Failed to read message from the queue`, e);
+      logger.error(`Failed to read message from the queue`, e);
     }
   }
 
   public async subscribeToStepResults(handler: (message: any) => Promise<void>) {
-    console.log(`Subscribed to step results ${this.workflowStepInteractionResultQueue}`);
+    logger.info(`Subscribed to step results ${this.workflowStepInteractionResultQueue}`);
     return setInterval(async () => {
       try {
-        console.log(`Polling for messages from ${this.workflowStepInteractionResultQueue}`);
+        logger.info(`Polling for messages from ${this.workflowStepInteractionResultQueue}`);
         const command = new ReceiveMessageCommand({ QueueUrl: this.workflowStepInteractionResultQueue });
         const messages: ReceiveMessageCommandOutput = await this.sqsClient.send(command);
         if (messages?.Messages?.length) {
@@ -105,13 +108,13 @@ export default class QueueService {
           await this.sqsClient.send(deleteCommand);
         }
       } catch (e) {
-        console.error(`Failed to read message from the queue`, e);
+        logger.error(`Failed to read message from the queue`, e);
       }
     }, this.pollingInterval);
   }
 
   public async publishStepDataRequest(data: any) {
-    console.log(`Publish message to the queue ${this.workflowStepInteractionRequestQueue} data ${JSON.stringify(data)}`);
+    logger.info(`Publish message to the queue ${this.workflowStepInteractionRequestQueue} data ${JSON.stringify(data)}`);
     try {
       const command = new SendMessageCommand({
         QueueUrl: this.workflowStepInteractionRequestQueue,
@@ -119,7 +122,7 @@ export default class QueueService {
       });
       await this.sqsClient.send(command);
     } catch (e) {
-      console.error(`Failed to read message from the queue`, e);
+      logger.error(`Failed to read message from the queue`, e);
     }
   }
 }
