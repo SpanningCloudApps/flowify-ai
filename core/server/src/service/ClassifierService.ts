@@ -16,7 +16,6 @@ export class ClassifierService {
   public async classify(data: Record<string, unknown>) {
     logger.info(`Data to process: ${JSON.stringify(data)}`);
   }
-
 }
 
 export const classifierService = ClassifierService.instance;

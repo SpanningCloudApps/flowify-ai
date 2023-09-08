@@ -33,15 +33,12 @@ export class DataStorageRepostory {
     return this._instance;
   }
 
-  public async save(data: Record<string, unknown>) {
-    const query = knex(this.tableName);
-
-    query.in;
-
-    const connection = Database.ofConnection(this.pgConnectionUri).connect();
-    const result = await connection.query(query.text, query.values);
-    return result?.rows[0] || null;
-  }
+  // public async save(data: Record<string, unknown>) {
+  //
+  //   const connection = Database.ofConnection(this.pgConnectionUri).connect();
+  //   const result = await connection.query(query.text, query.values);
+  //   return result?.rows[0] || null;
+  // }
 }
 
 export const dataStorageService = DataStorageRepostory.instance;
