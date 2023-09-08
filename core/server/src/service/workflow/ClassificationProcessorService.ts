@@ -48,7 +48,7 @@ export class ClassificationProcessorService {
   }
 
   // DONT MAKE ASYNC. THIS IS INFINITY QUEUE POLLING
-  public infinityPoll() {
+  public poll() {
     this.retrieveClientInteractionWorkflowResult();
     this.retrieveWorkflowResult();
   }
