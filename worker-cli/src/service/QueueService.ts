@@ -77,6 +77,15 @@ export default class QueueService {
 
   public async publishWorkflowResult(data: any) {
     console.log(`Publish message to the queue ${this.workflowResultQueue} data ${JSON.stringify(data)}`);
+    try {
+      const command = new SendMessageCommand({
+        QueueUrl: this.workflowResultQueue,
+        MessageBody: data
+      });
+      await this.sqsClient.send(command);
+    } catch (e) {
+      console.error(`Failed to read message from the queue`, e);
+    }
   }
 
   public async subscribeToStepResults(handler: (message: any) => Promise<void>) {
