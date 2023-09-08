@@ -13,7 +13,7 @@ export class DataProcessFacade {
     return this._instance;
   }
 
-  public async process(body: DataProcessBodyDto) {
+  public async initiate(body: DataProcessBodyDto) {
     logger.info(`Data to process: ${JSON.stringify(body)}`);
     const classificationData = await classifierService.classify(body);
     const dataStorageData = {
@@ -32,6 +32,10 @@ export class DataProcessFacade {
     };
     logger.info(`Data to initiate workflow: ${JSON.stringify(classificationResult)}`);
     await classificationProcessorService.publishClassificationResult(classificationResult);
+  }
+
+  public async process(data: Record<string, unknown>) {
+    await classificationProcessorService.publishClientInteraction(data);
   }
 }
 

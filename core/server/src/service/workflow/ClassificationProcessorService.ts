@@ -1,6 +1,6 @@
 import { queueService } from './QueueService';
 import { SqsMessage } from './queue/SQSMessageProvider';
-import { webSocketService } from '../socket/WebSocketService';
+import { webSocketManager } from '../../socket/WebSocketManager';
 
 export interface ClassificationResultMessage {
   workflowName: string;
@@ -42,7 +42,7 @@ export class ClassificationProcessorService {
       const data: unknown = JSON.parse(sqsMessage.Body!);
       const { actor } = data;
 
-      await webSocketService.publish(actor, { result: data.result });
+      await webSocketManager.publish(actor, { result: data.result });
     };
 
     await queueService.retrieveWorkflowResult(processMessage);
@@ -55,12 +55,12 @@ export class ClassificationProcessorService {
       const data: unknown = JSON.parse(sqsMessage.Body!);
       const { actor } = data;
       const workflowRequest = {
-        question: data.question,
+        result: data.result,
         workflowExecutionId: data.workflowExecutionId,
         type: data.type,
         actor: data.actor
       };
-      await webSocketService.publish(actor, workflowRequest);
+      await webSocketManager.publish(actor, workflowRequest);
     };
 
     await queueService.retrieveClientInteractionWorkflowRequest(processMessage);

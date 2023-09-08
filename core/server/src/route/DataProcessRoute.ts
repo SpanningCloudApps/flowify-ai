@@ -11,7 +11,7 @@ export class DataProcessRoute {
     res: FastifyReply
   ): FastifyReply {
     try {
-      await dataProcessFacade.process(req.body);
+      await dataProcessFacade.initiate(req.body);
       return res.status(204).send('done');
     } catch (err) {
       const message = `Failed data process: ${req.body}`;
