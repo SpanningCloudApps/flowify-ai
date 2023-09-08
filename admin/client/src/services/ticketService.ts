@@ -18,15 +18,15 @@ const service = {
       limit: PAGE_ENTITIES_LIMIT
     };
     const resp: AxiosResponse<any> = await axios.get(
-        `${API_GATEWAY}/api/domains`, { params: reqParams, signal }
+        `${API_GATEWAY}/api/tickets`, { params: reqParams, signal }
     );
     return resp.data;
   },
 
-  async classifyIssue({ issueId, issueClassification, signal }: any): Promise<any> {
+  async classifyTicket({ ticketId, ticketClassification, signal }: any): Promise<any> {
     const resp: AxiosResponse<any> = await axios.post(
-        `${API_GATEWAY}/api/tickets/${issueId.toString()}/classify`,
-        { issueClassification },
+        `${API_GATEWAY}/api/tickets/${ticketId.toString()}/classify`,
+        { ticketClassification },
         { signal }
     );
     return resp.data;

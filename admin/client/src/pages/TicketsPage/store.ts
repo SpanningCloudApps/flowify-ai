@@ -4,52 +4,102 @@
 import { create } from 'zustand';
 import { AxiosError } from 'axios';
 
-import issueService from '../../services/issueService';
+import ticketService from '../../services/ticketService';
 import { PAGE_ENTITIES_LIMIT } from '../../constants/constants';
 import { showErrorNotification } from '../../components/Notification';
 import { intl } from '../../intl';
 
 export const initialState: any = {
-  tickets: [],
-  isDataLoading: false,
-  hasMore: true,
+  classifiedTickets: [],
+  isClassifiedDataLoading: true,
+  hasMoreClassified: true,
+
+  unclassifiedTickets: [],
+  isUnclassifiedDataLoading: true,
+  hasMoreUnclassified: true,
+
   controller: new AbortController()
 };
 
 export const useTicketsStore = create<any>((set, get) => ({
   ...initialState,
 
-  getTickets: async (props: any): Promise<void> => {
+  getClassifiedTickets: async (props: any): Promise<void> => {
     const { query } = props;
-    const tickets = get().tickets;
+    const tickets = get().classifiedTickets;
     const additionalParams = tickets?.length > 0
-      ? { pageToken: tickets[tickets.length - 1].id }
-      : {};
-    const reqParams = { ...additionalParams, query };
+        ? { pageToken: tickets[tickets.length - 1].id }
+        : {};
+    const reqParams = {
+      ...additionalParams,
+      query,
+      limit: PAGE_ENTITIES_LIMIT
+    };
     try {
-      set({ isDataLoading: true });
-      const resp: any = await issueService.getTickets({
+      set({ isClassifiedDataLoading: true });
+      const resp: any = await ticketService.getTickets({
         params: reqParams,
         signal: get().controller.signal
       });
       const newTickets = resp?.tickets ?? [];
       set({
-        tickets: [...tickets, ...newTickets ?? []],
-        hasMore: newTickets.length === PAGE_ENTITIES_LIMIT,
-        isDataLoading: false
+        classifiedTickets: [...tickets, ...newTickets ?? []],
+        hasMoreClassified: newTickets.length === PAGE_ENTITIES_LIMIT,
+        isClassifiedDataLoading: false
       });
     } catch (error) {
-      set({ isDataLoading: false });
+      set({ isClassifiedDataLoading: false });
       const newError = error as AxiosError;
       showErrorNotification({
         error: newError,
-        subject: intl.formatMessage({ id: 'NOTIFICATION_SUBJECT_DOMAINS_LIST' })
+        subject: intl.formatMessage({ id: 'NOTIFICATION_SUBJECT_CLASSIFIED_TICKETS_LIST' })
       });
     }
   },
 
-  clearTickets: () => {
-    set({ tickets: [] });
+  getUnclassifiedTickets: async (props: any): Promise<void> => {
+    const { query } = props;
+    const tickets = get().unclassifiedTickets;
+    const additionalParams = tickets?.length > 0
+        ? { pageToken: tickets[tickets.length - 1].id }
+        : {};
+    const reqParams = {
+      ...additionalParams,
+      query,
+      limit: PAGE_ENTITIES_LIMIT
+    };
+    try {
+      set({ isUnclassifiedDataLoading: true });
+      const resp: any = await ticketService.getTickets({
+        params: reqParams,
+        signal: get().controller.signal
+      });
+      const newTickets = resp?.tickets ?? [];
+      set({
+        unclassifiedTickets: [...tickets, ...newTickets ?? []],
+        hasMoreUnclassified: newTickets.length === PAGE_ENTITIES_LIMIT,
+        isUnclassifiedDataLoading: false
+      });
+    } catch (error) {
+      set({ isUnclassifiedDataLoading: false });
+      const newError = error as AxiosError;
+      showErrorNotification({
+        error: newError,
+        subject: intl.formatMessage({ id: 'NOTIFICATION_SUBJECT_UNCLASSIFIED_TICKETS_LIST' })
+      });
+    }
+  },
+
+  clearClassifiedTickets: () => {
+    set({
+      classifiedTickets: []
+    });
+  },
+
+  clearUnclassifiedTickets: () => {
+    set({
+      unclassifiedTickets: []
+    });
   },
 
   resetStore: () => {
