@@ -19,7 +19,10 @@ public class TicketService {
     return List.of(
       TicketResponseDto.builder()
       .id(2L)
-        .input("{\"some\":\"data\"}")
+        .title("SGC-123 Add user superuper@domain.com")
+        .description("A great product description always talks about the buyer first and then articulate the specifications. It also addresses its target audience directly using the pronoun YOU.")
+        .createdBy("RomanRomanov@email.com")
+        .additionalInfo(List.of("item1", "item2"))
         .data("[{\"WORKFLOW\": \"NAME1\", \"probability\":12.333209},"
           + " {\"WORKFLOW\": \"NAME2\", \"probability\":22.333209}]")
         .workflowName("SELECTED_WORKFLOW")
@@ -27,10 +30,13 @@ public class TicketService {
       .build(),
       TicketResponseDto.builder()
         .id(1L)
-        .input("{\"some2\":\"data2\"}")
+        .title("SGC-456 Please re-index contacts")
+        .description("If you don’t keep a laser-targeted audience in focus, then your product description will turn out to be wishy-washy. And in the end, you would be addressing no one at all.")
+        .createdBy("Hari@email.com")
+        .additionalInfo(List.of("item12", "searchItem"))
         .data("[{\"WORKFLOW\": \"NAME4\", \"probability\":12.333209},"
           + " {\"WORKFLOW\": \"NAME5\", \"probability\":22.333209}]")
-        .workflowName("SELECTED_WORKFLOW")
+        .workflowName("SELECTED_WORKFLOW2")
         .probability(95.333209f)
         .build()
       );
