@@ -5,7 +5,7 @@
 import config from 'config';
 import { WorkflowType } from '../../enum/WorkflowType';
 import { Database } from '../Database';
-import { WorkflowStep } from '../model/WorkflowStep';
+import { WorkflowStep, WorkflowStepRow } from '../model/WorkflowStep';
 
 export default class WorkflowStepRepository {
 
@@ -16,10 +16,10 @@ export default class WorkflowStepRepository {
     this.pgConnection = `postgres://${conf.user}:${conf.pass}@${conf.host}:${conf.port}/${conf.db}`;
   }
 
-  public getWorkflowSteps = async (workflowId: WorkflowType) => {
+  public getWorkflowSteps = async (workflowName: WorkflowType): Promise<Array<WorkflowStepRow>> => {
     const query = WorkflowStep.select(WorkflowStep.star())
       .from(WorkflowStep)
-      .where(WorkflowStep.workflow_id.equals(workflowId))
+      .where(WorkflowStep.workflow_id.equals(workflowName))
       .order(WorkflowStep.ordinal)
       .toQuery();
 

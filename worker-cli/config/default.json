@@ -1,6 +1,8 @@
 {
   "aws": {
     "region": "us-east-1",
+    "accessKey": "",
+    "secretKey": "",
     "sqs": {
       "prefix": "dev",
       "pollIntervalMillis": 5000,
