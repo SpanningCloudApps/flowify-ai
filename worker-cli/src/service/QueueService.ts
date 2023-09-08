@@ -85,7 +85,7 @@ export default class QueueService {
     }, this.pollingInterval);
   }
 
-  public async publishWorkflowResult(data: any) {
+  public async publishWorkflowResult(data: string) {
     logger.info(`Publish message to the queue ${this.workflowResultQueue} data ${JSON.stringify(data)}`);
     try {
       const command = new SendMessageCommand({
@@ -120,7 +120,7 @@ export default class QueueService {
     }, this.pollingInterval);
   }
 
-  public async publishStepDataRequest(data: any) {
+  public async publishStepDataRequest(data: string) {
     logger.info(`Publish message to the queue ${this.workflowStepInteractionRequestQueue} data ${JSON.stringify(data)}`);
     try {
       const command = new SendMessageCommand({

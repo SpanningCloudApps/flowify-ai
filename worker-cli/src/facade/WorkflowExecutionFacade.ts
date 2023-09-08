@@ -84,7 +84,7 @@ export default class WorkflowExecutionFacade {
 
     if (nextStep.type === workflowSteps[workflowSteps.length - 1].type) {
       logger.info(`Workflow ${JSON.stringify(workflow)} finished`);
-      this.queueService.publishWorkflowResult({ result: 'COMPLETED' });
+      await this.queueService.publishWorkflowResult(JSON.stringify({ result: 'COMPLETED' }));
     } else {
       logger.info(`Workflow ${JSON.stringify(workflow)} on pause. Step ${nextStep.type} Waiting for user input`);
     }

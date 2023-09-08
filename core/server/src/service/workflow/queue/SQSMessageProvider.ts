@@ -98,7 +98,7 @@ export class SQSMessageProvider {
       this.queueUrls.set(queueConfig.name, data);
       return data;
     } catch (e) {
-      if (e.code === 'QueueAlreadyExists') {
+      if (e.name === 'QueueNameExists') {
         return await this.getQueueIfAlreadyExists(opts);
       }
       throw e;
@@ -202,7 +202,7 @@ export class SQSMessageProvider {
         logger.debug({ messageBody }, `Received SQS message. MessageId=[${message?.MessageId}]`);
       } catch (err) {
         logger.error({ message }, 'Queue contained invalid message body.');
-        throw err;
+        return undefined;
       }
     } else {
       logger.debug(`No message found after waiting for ${waitTimeSeconds} seconds`);
