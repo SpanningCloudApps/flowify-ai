@@ -1,0 +1,11 @@
+{
+  "ai": {
+    "openai": {
+      "apiKey": "POPEN_AI_API_KEY"
+    },
+    "server": {
+      "host": "0.0.0.0",
+      "port": "3080"
+    }
+  }
+}
