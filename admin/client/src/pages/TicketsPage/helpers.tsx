@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2022 Spanning Cloud Apps.  All rights reserved.
- */
 import { Typography, Tag, Button } from 'antd';
 import { ColumnsType } from 'antd/lib/table';
 import { intl } from '../../intl';

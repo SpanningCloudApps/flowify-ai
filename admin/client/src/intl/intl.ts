@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2021 Spanning Cloud Apps.  All rights reserved.
- */
 import { createIntlCache, createIntl } from 'react-intl';
 import flatten from 'flat';
 import enLocalData from '../resources/en';

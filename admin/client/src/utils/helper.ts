@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2022 Spanning Cloud Apps.  All rights reserved.
- */
-
 import { AxiosError } from 'axios';
 import { intl } from '../intl';
 import { CANCEL_REQUEST_MESSAGE } from '../constants/constants';

@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
- */
-
 import { StepType } from '../enum/StepType';
 import StepExecutor from './StepExecutor';
 import ExecutedWorkflowService from '../service/ExecutedWorkflowService';

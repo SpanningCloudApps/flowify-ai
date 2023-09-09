@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved
- */
 import { intl } from '../../intl';
 import { WORKFLOWS, TICKETS } from '../../constants/urls';
 

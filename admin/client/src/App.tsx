@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2021 Spanning Cloud Apps.  All rights reserved
- */
 import { FC, useEffect } from 'react';
 import { Redirect, Route, Switch, useLocation } from 'react-router-dom';
 import { notification } from 'antd';

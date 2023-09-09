@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
- */
-
 package com.spanning.api.facade.ticket;
 
 import java.util.List;

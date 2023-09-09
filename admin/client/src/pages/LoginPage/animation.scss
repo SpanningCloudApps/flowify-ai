@@ -1,7 +1,3 @@
-/*!
- * Copyright (C) 2022 Spanning Cloud Apps.  All rights reserved.
- */
-
 @function multiple-box-shadow ($n) {
   $value: '#{random(100)}vw #{random(100)}vh #FFF';
   @for $i from 2 through $n {

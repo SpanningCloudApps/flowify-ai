@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
- */
-
 import { Command } from '@oclif/core';
 import QueueService from '../service/QueueService';
 import WorkflowExecutionFacade from '../facade/WorkflowExecutionFacade';

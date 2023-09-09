@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2022 Spanning Cloud Apps.  All rights reserved.
- */
-
 package com.spanning.api.filter;
 
 import java.io.IOException;
@@ -28,7 +24,7 @@ public class CorrelationFilter implements Filter {
     final FilterChain chain
   ) throws IOException, ServletException {
     final HttpServletRequest httpRequest = (HttpServletRequest) request;
-    Optional.ofNullable(httpRequest.getHeader(Correlation.X_SPANNING_CORRELATION_ID_HEADER))
+    Optional.ofNullable(httpRequest.getHeader(Correlation.X_CORRELATION_ID_HEADER))
       .filter(StringUtils::isNotBlank)
       .map(Correlation::setCorrelationId)
       .orElseGet(Correlation::setRandomCorrelationId);

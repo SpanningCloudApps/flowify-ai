@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2022 Spanning Cloud Apps.  All rights reserved.
- */
-
 import { isJsonString } from '../utils/helper';
 
 class CacheServiceClass {

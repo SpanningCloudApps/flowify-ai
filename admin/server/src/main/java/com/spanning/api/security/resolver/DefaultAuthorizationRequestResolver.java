@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2022 Spanning Cloud Apps.  All rights reserved.
- */
-
 package com.spanning.api.security.resolver;
 
 import java.util.LinkedHashMap;

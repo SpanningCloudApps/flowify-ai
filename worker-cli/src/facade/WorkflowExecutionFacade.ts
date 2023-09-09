@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
- */
-
 import QueueService from '../service/QueueService';
 import WorkflowService from '../service/WorkflowService';
 import WorkflowStepService from '../service/WorkflowStepService';

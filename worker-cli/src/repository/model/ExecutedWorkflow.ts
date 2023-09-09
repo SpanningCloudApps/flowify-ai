@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
- */
 import { define } from 'sql';
 import { WorkflowType } from '../../enum/WorkflowType';
 import { WorkflowStatus } from '../../enum/WorkflowStatus';

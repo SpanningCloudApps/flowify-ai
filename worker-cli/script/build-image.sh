@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-#
-# Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
-#
-
 set -e
 
 export DEFAULT_WORKER_IMAGE_NAME=worker-cli

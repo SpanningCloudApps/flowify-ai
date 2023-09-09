@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved
- */
 import { notification, Space, Typography } from 'antd';
 import { intl } from '../../intl';
 import { CheckOutlined, CopyOutlined } from '@ant-design/icons';

@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
- */
-
 import ExecutedWorkflowRepository from '../repository/data/ExecutedWorkflowRepository';
 import { WorkflowRow } from '../repository/model/Workflow';
 import { StepType } from '../enum/StepType';

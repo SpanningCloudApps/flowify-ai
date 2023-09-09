@@ -8,7 +8,7 @@ Configuration:
       name: Console
       target: SYSTEM_OUT
       JsonTemplateLayout:
-        eventTemplateUri: "classpath:SpanningJsonEventLayoutV1.json"
+        eventTemplateUri: "classpath:JsonEventLayoutV1.json"
     Syslog:
       - name: Syslog
         appName: api-gatewaye.log
@@ -19,7 +19,7 @@ Configuration:
         facility: LOCAL7
         newLine: true
         SyslogJsonTemplateLayout:
-          eventTemplateUri: classpath:SpanningJsonEventLayoutV1.json
+          eventTemplateUri: classpath:JsonEventLayoutV1.json
 
   Loggers:
     AsyncRoot:

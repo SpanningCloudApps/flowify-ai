@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
- */
-
 import { Button, Col, Drawer, Form, Input, Row } from 'antd';
 import { FC, useCallback } from 'react';
 import { useIntl } from 'react-intl';

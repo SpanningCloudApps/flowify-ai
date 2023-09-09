@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
- */
-
 package com.spanning.api.controller.ticket;
 
 import javax.validation.Valid;

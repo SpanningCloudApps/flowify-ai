@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2022 Spanning Cloud Apps.  All rights reserved.
- */
-
 package com.spanning.api.corellation;
 
 import java.util.Optional;
@@ -15,7 +11,7 @@ public class Correlation {
 
   public static final String CORRELATION_ID_KEY = "correlationId";
   public static final String UNKNOWN_VALUE = "????????";
-  public static final String X_SPANNING_CORRELATION_ID_HEADER = "x-spanning-correlationid";
+  public static final String X_CORRELATION_ID_HEADER = "x-correlationid";
 
   private static final String SEED_STRING = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
   private static final Random RANDOM = new Random();

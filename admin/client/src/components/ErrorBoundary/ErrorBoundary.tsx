@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2022 Spanning Cloud Apps.  All rights reserved.
- */
-
 import React, { Component, ReactNode } from 'react';
 import { DefaultFallback } from './components/DefaultFallback';
 

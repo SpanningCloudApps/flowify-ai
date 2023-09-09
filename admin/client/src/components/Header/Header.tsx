@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2021 Spanning Cloud Apps.  All rights reserved
- */
 import { FC, useCallback } from 'react';
 import { Dropdown, Layout, Typography } from 'antd';
 import { UserOutlined } from '@ant-design/icons';

@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2022 Spanning Cloud Apps.  All rights reserved.
- */
-
 import React from 'react';
 import { Result } from 'antd';
 import { useIntl } from 'react-intl';

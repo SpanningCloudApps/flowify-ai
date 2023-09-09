@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
- */
 import { FC, useEffect } from 'react';
 
 import { useIntl } from 'react-intl';

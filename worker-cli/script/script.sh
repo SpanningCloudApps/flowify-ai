@@ -1,12 +1,6 @@
 #!/bin/bash
-#
-# Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
-#
 
 set -e
-
-export DEFAULT_STABMIN_CLIENT_IMAGE_NAME="stabmin-client"
-export DEFAULT_STABMIN_CLIENT_IMAGE_TAG="latest"
 
 valid_options=(
   "--start-wf"

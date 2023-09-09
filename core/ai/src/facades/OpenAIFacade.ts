@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
- */
-
 import config from 'config';
 import { TicketDto } from 'dto/Ticket';
 import { AIResponse, openAIConnector } from 'openai/OpenAIConnector';

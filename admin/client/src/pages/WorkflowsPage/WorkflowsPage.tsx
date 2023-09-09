@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2021 Spanning Cloud Apps.  All rights reserved
- */
 import { Button, Card, Col, Input, Row, Space, Table } from 'antd';
 import { FC, useCallback, useEffect, useRef, useState } from 'react';
 import InfinityScroll from 'react-infinite-scroll-component';

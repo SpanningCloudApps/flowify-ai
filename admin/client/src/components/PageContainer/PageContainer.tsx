@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2022 Spanning Cloud Apps.  All rights reserved.
- */
-
 import React, { FC, useCallback } from 'react';
 import { useHistory } from 'react-router';
 import { Tooltip, Typography } from 'antd';

@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2022 Spanning Cloud Apps.  All rights reserved.
- */
-
 import { FC, useCallback } from 'react';
 import { Button, Space, Tooltip, Typography } from 'antd';
 import { LeftCircleOutlined } from '@ant-design/icons';

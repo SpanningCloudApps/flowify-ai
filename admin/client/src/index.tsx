@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2021 Spanning Cloud Apps.  All rights reserved
- */
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { ConfigProvider } from 'antd';

@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
- */
-
 import React, { FC } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { Table, TableProps } from 'antd';

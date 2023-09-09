@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
- */
-
 import { WorkflowType } from '../enum/WorkflowType';
 import WorkflowRepository from '../repository/data/WorkflowRepository';
 

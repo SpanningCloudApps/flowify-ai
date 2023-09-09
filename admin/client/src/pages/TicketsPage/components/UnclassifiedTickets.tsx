@@ -1,10 +1,3 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
- */
-
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
- */
 import { FC, useCallback, useEffect, useState } from 'react';
 import { Card, Col, Input, Row, Space, Table } from 'antd';
 import { isJsonString } from '../../../utils/helper';

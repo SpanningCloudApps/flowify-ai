@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2022 Spanning Cloud Apps.  All rights reserved.
- */
-
 import { AxiosResponse } from 'axios';
 import axios from '../config/axiosConfig';
 import { API_GATEWAY } from '../constants/urls';

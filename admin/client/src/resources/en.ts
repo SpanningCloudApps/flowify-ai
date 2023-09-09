@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved
- */
-
 const en = {
   POOPER_AI: 'Pooper AI',
   LOGIN_BUTTON: 'Login',
