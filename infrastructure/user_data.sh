@@ -26,4 +26,5 @@ git clone https://github.com/SpanningCloudApps/hackathon-ai.git
 
 echo "export AI_HOME=~/hackathon-ai" >> .bash_profile
 source .bash_profile
+cd ${AI_HOME}
 ./scripts/run-service-local.sh --internal

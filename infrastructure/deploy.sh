@@ -4,9 +4,9 @@ vpc_id="vpc-0d00b3f577c4e3bf9"
 ssh_port=22
 key_pair_name="FlowifyKeyPair"
 ami_id="ami-01c647eace872fc02"
-instance_type="t2.micro"
+instance_type="t2.medium"
 subnet_id="subnet-056d6c9dbb2b8f49b"
-instance_name="FlowifyInstance"
+instance_name="FlowifyInstance1"
 security_group_id="sg-0624ca135de0d8548"
 
 function run_ec2() {
