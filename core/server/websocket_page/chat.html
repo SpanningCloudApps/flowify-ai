@@ -126,6 +126,7 @@
 
     function startChat(event) {
       event.preventDefault();
+      handleNext();
       if (email && ticketTitle && connecting === false && channel) {
         channel(JSON.stringify({
           type: 'start',
@@ -136,7 +137,6 @@
             additionalInfo: []
           }
         }));
-        handleNext();
       }
     }
 
@@ -181,20 +181,6 @@
           <Typography component="h1" variant="h5">
             FLOWIFY.CO
           </Typography>
-          <WsConnection
-            url="ws://localhost:3300/ecosystem/api/clients/chat"
-            onOpen={() => setConnecting(false)}
-            onChannelOpened={openChannel}
-            onMessage={displayMessage}
-            onClose={() => {
-              setConnecting(true);
-              setStatus('Disconnected');
-            }}
-            onError={(error) => {
-              setConnecting(true);
-              setStatus(error.message);
-            }}
-          />
 
           <Stepper activeStep={activeStep} alternativeLabel>
             <Step key="UserInfo">
@@ -259,11 +245,10 @@
                 <Button
                   type="submit"
                   fullWidth
-                  disabled={connecting}
                   variant="contained"
                   sx={{ mt: 3, mb: 2 }}
                 >
-                  {connecting ? 'Connecting...' : 'Start'}
+                  Start
                 </Button>
               )}
             </Box>
@@ -271,6 +256,20 @@
 
           {activeStep === 2 && (
             <Box component="form" onSubmit={submitMessage} noValidate sx={{ mt: 1 }}>
+              <WsConnection
+                url="ws://localhost:3300/ecosystem/api/clients/chat"
+                onOpen={() => setConnecting(false)}
+                onChannelOpened={openChannel}
+                onMessage={displayMessage}
+                onClose={() => {
+                  setConnecting(true);
+                  setStatus('Disconnected');
+                }}
+                onError={(error) => {
+                  setConnecting(true);
+                  setStatus(error.message);
+                }}
+              />
               <TextareaAutosize
                 minRows={12}
                 maxRows={22}
