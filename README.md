@@ -24,9 +24,12 @@ Open to [CONTRIBUTING](.github/CONTRIBUTING.md)
 - [Flowify ChatBot](core/client/README.md)
 
 #### Client Chat Bot UI
-  ![client_1_step.png](docs/img/client_1_step.png)
-  ![client_2_step.png](docs/img/client_2_step.png)
-  ![client_chat_bot.png](docs/img/client_chat_bot.png)
+
+![client_1_step.png](docs/img/client_1_step.png)
+![client_2_step.png](docs/img/client_2_step.png)
+![client_chat_bot.png](docs/img/client_chat_bot.png)
+
+![client_site_flow.mp4](docs/videos/client_site_flow.mp4)
 
 ## Administration Panel
 
@@ -37,6 +40,8 @@ Open to [CONTRIBUTING](.github/CONTRIBUTING.md)
 
 ![admin_tickets_page.png](docs/img/admin_tickets_page.png)
 ![admin_classify_ticket.png](docs/img/admin_classify_ticket.png)
+
+![admin_site_flow.mp4](docs/videos/admin_site_flow.mp4)
 
 ## Database Migration Tool
 
