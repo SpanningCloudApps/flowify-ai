@@ -36,4 +36,12 @@ public interface WorkflowRepository extends CrudRepository<Workflow, Object> {
     VALUES (:name, :description) returning id, cast(data as varchar), description, name, created_at
     """)
   Workflow create(final String name, final String description);
+
+  @Query("""
+     SELECT id, cast(data as varchar), description, name, created_at FROM workflow AS w
+         WHERE  id = :id;
+     """)
+  Workflow get(
+    @Param("id") final Long id
+  );
 }

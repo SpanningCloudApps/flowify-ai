@@ -28,6 +28,10 @@ public class WorkflowService {
     );
   }
 
+  public Workflow get(final long id) {
+    return workflowRepository.get(id);
+  }
+
   public void delete(final long id) {
     workflowRepository.delete(id);
   }
