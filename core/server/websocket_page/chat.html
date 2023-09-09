@@ -293,6 +293,8 @@
       setWorkflow(null);
       setMessages([]);
       setActiveStep(1);
+      setTicketTitle('');
+      setTicketDescription('');
     });
 
     function handleNext() {
@@ -330,7 +332,7 @@
             }}
           >
             <Typography className="title-container" component="h1" variant="h5">
-              Chat Bot
+              {activeStep > 1 ? 'Chat Bot' : 'Setup Connection'}
             </Typography>
 
             <WsConnection
