@@ -4,3 +4,12 @@ export interface DataProcessBodyDto {
   description: string;
   additionalInfo?: string[];
 }
+
+export interface DataPrepareBodyDto {
+  actor: string;
+  workflowName: string;
+}
+
+export interface DataStorageDto {
+  workflowName: string;
+}

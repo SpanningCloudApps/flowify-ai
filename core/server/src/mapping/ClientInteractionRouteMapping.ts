@@ -23,15 +23,18 @@ const clientInteractionRoute = async (server: FastifyInstance): Promise<void> =>
           try {
             const json = JSON.parse(message.toString());
             switch (json.type) {
-              case 'start':
-                await webSocketManager.start(json.actor, json.data, socket);
+              case 'initiate':
+                await webSocketManager.initiate(json.actor, json.data, socket);
                 break;
-              case 'message':
+              case 'start':
+                await webSocketManager.start(json.actor, json.data);
+                break;
+              case 'process':
                 await webSocketManager.process(json.actor, json.data);
                 break;
 
               default:
-                sendMessage({ type: WebSocketEventType.REJECT, data: 'wrong type' });
+                sendMessage({ type: WebSocketEventType.REJECT, data: 'NOT SUPPORTED' });
                 break;
             }
           } catch (error) {

@@ -44,6 +44,41 @@ export class WebSocketManager {
     }
   }
 
+  public async initiate(actor: string, clientData: {
+    title: string;
+    description: string;
+    additionalInfo?: string[]
+  }, client: unknown) {
+    this.initClient(client, actor);
+    logger.info(`WEBSOCKET INITIATED = [${actor}] receive = ${JSON.stringify(clientData)}`);
+    const data = {
+      createdBy: actor,
+      title: clientData.title,
+      description: clientData.description || '',
+      additionalInfo: clientData.additionalInfo
+    };
+    const initializedData = await dataProcessFacade.initiate(data);
+    const event = {
+      type: WebSocketEventType.ACCEPTED,
+      data: {
+        workflowName: initializedData.workflowName
+      }
+    };
+    const recipientConnection = this.connectedClients[actor];
+    if (recipientConnection) {
+      recipientConnection.send(JSON.stringify(event));
+    }
+  }
+
+  public async start(actor: string, clientData: { workflowName: string; }) {
+    logger.info(`WEBSOCKET START = [${actor}] receive = ${JSON.stringify(clientData)}`);
+    const data = {
+      actor,
+      workflowName: clientData.workflowName
+    };
+    await dataProcessFacade.start(data);
+  }
+
   public async process(actor: string, clientData: Record<string, unknown>) {
     logger.info(`WEBSOCKET CONTINUE = [${actor}] receive = ${JSON.stringify(clientData)}`);
     const data = {
@@ -53,18 +88,6 @@ export class WebSocketManager {
       type: clientData.responseType
     };
     await dataProcessFacade.process(data);
-  }
-
-  public async start(actor: string, clientData: Record<string, unknown>, client: unknown) {
-    this.initClient(client, actor);
-    logger.info(`WEBSOCKET START = [${actor}] receive = ${JSON.stringify(clientData)}`);
-    const data = {
-      createdBy: actor,
-      title: clientData.title,
-      description: clientData.description,
-      additionalInfo: clientData.additionalInfo
-    };
-    await dataProcessFacade.initiate(data);
   }
 }
 
