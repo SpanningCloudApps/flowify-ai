@@ -86,7 +86,7 @@ function run_server() {
 
 function init_dbs() {
   if array_contains options "--init-dbs" || array_contains options "--internal"; then
-    while ! docker logs timescale-ai 2>&1 | grep "/var/run/postgresql/.s.PGSQL.5432"; do
+    while ! docker logs timescale-ai 2>&1 | grep "PostgreSQL init process complete; ready for start up"; do
       echo "Waiting for timescaledb"
       sleep 2
     done
@@ -105,7 +105,7 @@ function init_dbs() {
 function run_db_migrations() {
   if array_contains options "--run-db-migrations" && ! array_contains options "--init-dbs"; then
     echo "Run DB migrations"
-    while ! docker logs timescale-ai 2>&1 | grep "/var/run/postgresql/.s.PGSQL.5432"; do
+    while ! docker logs timescale-ai 2>&1 | grep "PostgreSQL init process complete; ready for start up"; do
         echo "Waiting for timescaledb"
         sleep 2
     done
@@ -146,10 +146,10 @@ function main() {
 
   create_logs_folder
   setup_infrastructure
-  run_worker_cli
-  run_server
   init_dbs
   run_db_migrations
+  run_worker_cli
+  run_server
 }
 
 main "${@}"
