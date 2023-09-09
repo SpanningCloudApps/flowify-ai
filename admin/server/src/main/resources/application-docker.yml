@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    username: dev
+    password: dev
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://timescale-ai:5432/index
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            provider: google
+            client-id: 249399094641-77r7tgqeh6nh37jb0te9hh5co1ehr0if.apps.googleusercontent.com
+            client-secret: 3UUN8Bi5_uFVgW9JpVv4pWbG
+
+logging:
+  config: 'classpath:log4j2-json.yml'
+
+security:
+  csrf:
+    cookie:
+      domain: localhost
+  token:
+    secret: 3CXhf?pu):l)xjX=8?yQq^.I;4Xl8OV$.aCR#RU\<tqv4[qzU>.fMnI]1'.n=kH
+    expiration: 86400

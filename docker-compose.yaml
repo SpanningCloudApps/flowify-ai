@@ -44,3 +44,11 @@ services:
       - API_GATEWAY_URL=http://localhost:35090
     ports:
       - '3000:8080'
+
+  admin-server:
+    image: ai-admin-server:latest
+    container_name: admin-server
+    environment:
+      - JAVA_TOOL_OPTIONS=-Dspring.profiles.active=docker
+    ports:
+      - '35090:8080'
