@@ -812,7 +812,7 @@ export const Footer20DataSource = {
     children: [
       {
         name: 'GitHub',
-        href: 'https://github.com/SpanningCloudApps/hackathon-ai',
+        href: 'https://github.com/SpanningCloudApps/flowify-ai',
         className: 'links-weibo',
         children: github
       }
