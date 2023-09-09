@@ -1,3 +1,4 @@
 # Authors
 
-Alina Glumova
+- **server**: Alina Glumova
+- **ai**: Nikita Gurets

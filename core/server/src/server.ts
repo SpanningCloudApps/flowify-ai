@@ -61,7 +61,6 @@ const initServer = async (): Promise<FastifyInstance> => {
     });
   }
 
-  // Register client interactive interaction socket
   server.register(websocket, {
     clientTracking: true
   });
