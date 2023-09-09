@@ -40,7 +40,7 @@ export class WebSocketManager {
 
     const recipientConnection = this.connectedClients[actor];
     if (recipientConnection) {
-      recipientConnection.send(event);
+      recipientConnection.send(JSON.stringify(event));
     }
   }
 
