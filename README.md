@@ -52,7 +52,7 @@ Open to [CONTRIBUTING](.github/CONTRIBUTING.md)
 
 # Billing Model
 
-[Billing Model](BILLIING_MODEL.md)
+[Billing Model](BILLING_MODEL.md)
 
 ### Migration
 
