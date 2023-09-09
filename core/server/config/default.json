@@ -70,5 +70,49 @@
       "port": "7432",
       "db": "index"
     }
+  },
+  "ai": {
+    "openai": {
+      "apiKey": "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",
+      "maxTokens": 1024,
+      "model": "gpt-3.5-turbo",
+      "temperature": 0.3
+    },
+    "recognition": {
+      "responseDistribution": 10,
+      "definedCaseThreshold": 0.6,
+      "tokenMatchingThreshold": 0.6
+    },
+    "tickets": [
+      {
+        "createdBy": "CEO X0XL0B",
+        "title": "Reset Password",
+        "description": "A user is requesting a password reset due to forgotten credentials."
+      },
+      {
+        "title": "User Added",
+        "description": "A new user has been added to the system.",
+        "createdBy": "CEO X0XL0B"
+      },
+      {
+        "title": "Remove User",
+        "description": "A request to remove a user account from the system.",
+        "createdBy": "CEO X0XL0B"
+      },
+      {
+        "title": "Slow Internet",
+        "description": "Report of slow internet connectivity issues.",
+        "createdBy": "CEO X0XL0B"
+      },
+      {
+        "title": "App Downtime",
+        "description": "Notification of application downtime or unavailability.",
+        "createdBy": "CEO X0XL0B"
+      }
+    ],
+    "server": {
+      "host": "0.0.0.0",
+      "port": "3080"
+    }
   }
 }
