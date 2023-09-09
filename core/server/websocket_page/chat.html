@@ -64,7 +64,7 @@
           const json = JSON.parse(event.data);
           switch (json.type) {
             case 'accepted':
-            case 'message':
+            case 'process':
               props.onMessage(json);
               break;
           }
@@ -112,15 +112,25 @@
       const data = new FormData(event.currentTarget);
       const message = data.get('chat-message');
       if (message && connecting === false && channel) {
-        channel(JSON.stringify({
-          type: 'message',
-          actor: email,
-          data: {
-            response: message,
-            workflowExecutionId: workflow.workflowExecutionId,
-            responseType: workflow.responseType
-          }
-        }));
+        if (message.toLowerCase().includes('yes') && workflow?.workflowName && !workflow?.workflowExecutionId) {
+          channel(JSON.stringify({
+            type: 'start',
+            actor: email,
+            data: {
+              workflowName: workflow.workflowName
+            }
+          }));
+        } else {
+          channel(JSON.stringify({
+            type: 'process',
+            actor: email,
+            data: {
+              response: message,
+              workflowExecutionId: workflow.workflowExecutionId,
+              responseType: workflow.responseType
+            }
+          }));
+        }
       }
     }
 
@@ -129,7 +139,7 @@
       handleNext();
       if (email && ticketTitle && connecting === false && channel) {
         channel(JSON.stringify({
-          type: 'start',
+          type: 'initiate',
           actor: email,
           data: {
             title: ticketTitle,
@@ -142,7 +152,17 @@
 
     const displayMessage = React.useCallback(({ data }) => {
       setWorkflow(data);
-      setMessages(prevState => [...prevState, data.response]);
+      let response = data.response;
+      if (!response) {
+        if (data.workflowName !== 'UNKNOWN') {
+          response = `Flowify AI has identified your workflow as "${data.workflowName}."`
+            + 'Would you like it to be processed using automation? [yes/no]';
+        } else {
+          response = 'Flowify AI was unable to classify your workflow at this time.'
+            + ' Please try again later, and we will gain a better understanding soon. :)';
+        }
+      }
+      setMessages(prevState => [...prevState, response]);
     }, [setMessages]);
 
     const openChannel = React.useCallback((inChannel) => {
