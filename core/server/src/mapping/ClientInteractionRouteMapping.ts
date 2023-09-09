@@ -8,8 +8,6 @@ import { WebSocketEventType, webSocketManager } from '../socket/WebSocketManager
 const logger = getLogger();
 
 const clientInteractionRoute = async (server: FastifyInstance): Promise<void> => {
-  const websocketServer = server.websocketServer;
-  webSocketManager.init(websocketServer);
   await server.register((app, _, done) => {
     app.get('/', async (request, reply) => {
       reply.type('text/html');
@@ -26,7 +24,7 @@ const clientInteractionRoute = async (server: FastifyInstance): Promise<void> =>
             const json = JSON.parse(message.toString());
             switch (json.type) {
               case 'start':
-                await webSocketManager.start(json.actor, json.data);
+                await webSocketManager.start(json.actor, json.data, socket);
                 break;
               case 'message':
                 await webSocketManager.process(json.actor, json.data);

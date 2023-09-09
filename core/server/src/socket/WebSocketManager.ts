@@ -1,6 +1,5 @@
 import { getLogger } from '../logger/logger';
 import { dataProcessFacade } from '../facade/DataProcessFacade';
-import WebSocket from 'ws';
 
 const logger = getLogger();
 
@@ -13,27 +12,18 @@ export enum WebSocketEventType {
 export class WebSocketManager {
   private static _instance = new WebSocketManager();
 
-  private websocketServer: WebSocket.Server | null = null;
-
-  private readonly connectedClients = new Set();
+  private readonly connectedClients = {};
 
   static get instance(): WebSocketManager {
     return this._instance;
   }
 
-  public init(websocketServer) {
-    if (!this.websocketServer) {
-      this.websocketServer = websocketServer;
-      if (this.websocketServer) {
-        this.websocketServer
-          .on('connection', client => {
-            this.connectedClients.add(client);
-          })
-          .on('close', client => {
-            this.connectedClients.delete(client);
-          });
-      }
-    }
+  public initClient(client, actor) {
+    this.connectedClients[actor] = client;
+    client
+      .on('close', () => {
+        delete this.connectedClients[actor];
+      });
   }
 
   public async publish(actor: string, data: Record<string, unknown>) {
@@ -48,8 +38,9 @@ export class WebSocketManager {
       }
     };
 
-    for (const client of this.websocketServer.clients) {
-      client.send(event);
+    const recipientConnection = this.connectedClients[actor];
+    if (recipientConnection) {
+      recipientConnection.send(event);
     }
   }
 
@@ -64,7 +55,8 @@ export class WebSocketManager {
     await dataProcessFacade.process(data);
   }
 
-  public async start(actor: string, clientData: Record<string, unknown>) {
+  public async start(actor: string, clientData: Record<string, unknown>, client: unknown) {
+    this.initClient(client, actor);
     logger.info(`WEBSOCKET START = [${actor}] receive = ${JSON.stringify(clientData)}`);
     const data = {
       createdBy: actor,
