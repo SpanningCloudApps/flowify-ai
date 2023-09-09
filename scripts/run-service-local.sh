@@ -6,6 +6,7 @@ valid_options=(
   "--worker-cli"
   "--server"
   "--admin-client"
+  "--admin-server"
   "--init-dbs"
   "--run-db-migrations"
   "--internal"
@@ -48,6 +49,7 @@ Options:
   --worker-cli                 Run worker-cli
   --server                     Run server
   --admin-client               Run admin client
+  --admin-server               Run admin server
   --internal                   Runs all the previous commands in appropriate order to setup full infrastructure
 EOF
 }
@@ -94,6 +96,18 @@ function run_admin_client() {
     popd
     pushd "${AI_HOME}"
       docker-compose up -d admin-client
+    popd
+  fi
+}
+
+function run_admin_server() {
+  if array_contains options "--admin-server" || array_contains options "--internal"; then
+    echo "Run admin-server in the doсker"
+    pushd "${AI_HOME}/admin/server"
+      ./mvnw clean package
+    popd
+    pushd "${AI_HOME}"
+      docker-compose up -d admin-server
     popd
   fi
 }
@@ -165,6 +179,7 @@ function main() {
   run_worker_cli
   run_server
   run_admin_client
+  run_admin_server
 }
 
 main "${@}"
