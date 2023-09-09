@@ -8,6 +8,53 @@ instance_type="t2.medium"
 subnet_id="subnet-056d6c9dbb2b8f49b"
 instance_name="FlowifyInstance1"
 security_group_id="sg-0624ca135de0d8548"
+bucket_name="flowify-ai"
+
+valid_options=(
+  "--help"
+  "--deploy-landing"
+  "--create-s3"
+  "--cleanup-ec2"
+  "--run-ec2"
+)
+
+function array_contains() {
+  local array="$1[@]"
+  local seeking=$2
+  local in=1
+  for element in "${!array}"; do
+    if [[ $seeking == $element* ]]; then
+      return 0
+    fi
+  done
+  return 1
+}
+
+function check_options_are_valid() {
+  for option in "${options[@]}"; do
+    if ! array_contains valid_options ${option}; then
+      echo "Command does not contain option: ${option}"
+      get_help_message
+      exit
+    fi
+  done
+}
+
+function get_help_message() {
+  cat <<EOF
+Usage:
+  ./run-service-local.sh - prepare the local environment.
+  ./run-service-local.sh [options]
+
+Options:
+  --help                       Prints this message
+
+  --deploy-landing             Deploys frontend landing page
+  --create-s3                  Creates s3 bucket that server frontend
+  --run-ec2                    Creates ec2 instance and runs our service
+  --cleanup-ec2                Removes created ec2 instance
+EOF
+}
 
 function run_ec2() {
   pushd "${AI_HOME}/infrastructure"
@@ -47,14 +94,6 @@ function run_ec2() {
   popd
 }
 
-function pull_code() {
-  echo 'Pulling code'
-}
-
-function run_services() {
-  echo 'Running services'
-}
-
 function cleanup() {
   # Terminate the EC2 instance
   instance_id=$(aws ec2 describe-instances \
@@ -78,11 +117,76 @@ function cleanup() {
   echo "Cleanup completed."
 }
 
+function create_s3() {
+
+  # Create the S3 bucket
+  aws s3api create-bucket \
+      --bucket $bucket_name \
+      --profile flowify
+
+  # Enable public access for the bucket
+  aws s3api put-public-access-block \
+      --bucket $bucket_name \
+      --public-access-block-configuration "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false" \
+      --profile flowify
+
+  # Set the bucket policy to make it public
+  cat <<EOF > bucket-policy.json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::$bucket_name/*"
+        }
+    ]
+}
+EOF
+
+  # Apply the bucket policy to make the bucket public
+  aws s3api put-bucket-policy \
+      --bucket $bucket_name \
+      --policy file://bucket-policy.json \
+      --profile flowify
+
+  # Optionally, configure the bucket for static website hosting
+  aws s3 website s3://$bucket_name/ --index-document index.html --profile flowify
+
+  # Display the S3 bucket URL
+  echo "S3 Bucket URL: http://$bucket_name.s3-website-us-east-1.amazonaws.com"
+
+  # Clean up the temporary bucket policy file
+  rm bucket-policy.json
+}
+
+function deploy_landing() {
+  pushd "${AI_HOME}/landing"
+    npm install
+    npm run build
+    aws s3 sync "${AI_HOME}/landing/dist" s3://${bucket_name} --profile flowify
+  popd
+}
+
 function main() {
-  run_ec2
-#  pull_code
-#  run_services
-#  cleanup
+  options=("$@")
+  if array_contains options "--run-ec2"; then
+    run_ec2
+  fi
+
+  if array_contains options "--cleanup-ec2"; then
+    cleanup
+  fi
+
+  if array_contains options "--create-s3"; then
+    create_s3
+  fi
+
+  if array_contains options "--deploy-landing"; then
+    deploy_landing
+  fi
 }
 
 main "${@}"
