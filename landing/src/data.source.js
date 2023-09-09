@@ -19,34 +19,42 @@ export const ROADMAP_LINK = 'roadmap';
 export const OUR_TEAM_LINK = 'our-team';
 
 const product1 = {
-  title: 'Client',
+  title: 'AI-driven Workflow',
   imageLink: 'https://gw.alipayobjects.com/mdn/rms_ae7ad9/afts/img/A*OnyWT4Nsxy0AAAAAAAAAAABjARQnAQ',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum sapien a velit sodales, vitae interdum risus finibus. Morbi feugiat dui nec nisi hendrerit, id finibus diam dictum. Suspendisse potenti. Etiam quis gravida mi.',
-  subTitle: 'Generated 5 paragraphs',
-  buttonText: 'Let\'s Try',
-  buttonLink: '#'
+  content: "Are you ready to streamline your data processing activities and work smarter, not harder? Flowify is here to transform the way you handle workflows with its powerful and intuitive AI-driven workflows. It serves as the central hub for managing data processing activities, ensuring a seamless and organized workflow. With Flowify, you\'re not just managing workflows; you\'re optimizing them for peak efficiency. Embrace the future of AI-driven workflow management and elevate your data processing to new heights.",
+  subTitle: 'When Flowify works hard...',
+  buttonText: 'To be delivered soon...',
+  buttonLink: '#',
+  buttonDisabled: true
 };
 
 const product2 = {
-  title: 'Admin',
+  title: 'Administration Panel',
   imageLink: 'https://gw.alipayobjects.com/mdn/rms_ae7ad9/afts/img/A*OnyWT4Nsxy0AAAAAAAAAAABjARQnAQ',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum sapien a velit sodales, vitae interdum risus finibus. Morbi feugiat dui nec nisi hendrerit, id finibus diam dictum. Suspendisse potenti. Etiam quis gravida mi.',
-  subTitle: 'Generated 5 paragraphs',
-  buttonText: 'Let\'s Try',
-  buttonLink: '#'
+  content: 'Our intuitive web-based admin console makes ticket workflow management a piece of cake. No more headaches or hassles; just a smooth, streamlined process.'
+    + 'The Data Workflow Admin Web Console is your secret weapon for simplifying data management. It\'s designed to empower administrators like you with a suite of tools to create, update, and monitor data workflows effortlessly.'
+    + 'With Flowify, you\'ll never miss a beat. Keep your data handling organized and efficient, ensuring that every issue is addressed promptly.',
+  subTitle: '... you work smart',
+  buttonText: 'To be delivered soon...',
+  buttonLink: '#',
+  buttonDisabled: true
 };
 
 const demoSection = {
   title: 'Demo',
   subTitle: 'Check 18+ video how xoxol fuck CEO',
-  videoLink: 'https://os.alipayobjects.com/rmsportal/EejaUGsyExkXyXr.mp4',
-  videoPreview: 'https://zos.alipayobjects.com/rmsportal/HZgzhugQZkqUwBVeNyfz.jpg'
+  video1Link: 'https://os.alipayobjects.com/rmsportal/EejaUGsyExkXyXr.mp4',
+  video2Link: 'https://os.alipayobjects.com/rmsportal/EejaUGsyExkXyXr.mp4',
+  video1Preview: 'https://zos.alipayobjects.com/rmsportal/HZgzhugQZkqUwBVeNyfz.jpg',
+  video2Preview: 'https://zos.alipayobjects.com/rmsportal/HZgzhugQZkqUwBVeNyfz.jpg',
+  video1Title: 'Client Application',
+  video2Title: 'Admin Application'
 };
 
 const aboutUsSection = {
-  title: 'About Us',
-  content: 'We super cool team of poooper enginners',
-  smallContent: 'We work smart!'
+  title: 'Effortless Data Workflow Management',
+  content: 'Welcome to Flowify, where data management becomes a breeze with our user-friendly administration panel.',
+  smallContent: 'Say goodbye to the complexities of data workflows and hello to seamless, efficient operations.'
 };
 
 const featuresSection = {
@@ -75,7 +83,7 @@ const featuresSection = {
   feature6: {
     title: 'Feature 6',
     content: 'Some content of Feature 6. Some info about this super puper coool features.'
-  },
+  }
 };
 
 const roadmapSection = {
@@ -174,7 +182,7 @@ export const Banner00DataSource = {
   },
   content: {
     className: 'banner0-content',
-    children: 'Smart Workflow-Driven Classification System '
+    children: 'AI-driven Workflow Classification System '
   },
   button: {
     className: 'banner0-button',
@@ -214,6 +222,7 @@ export const Pricing00DataSource = {
         children: {
           href: product1.buttonLink,
           type: 'primary',
+          disabled: product1.buttonDisabled,
           children: product1.buttonText
         }
       }
@@ -251,6 +260,7 @@ export const Pricing01DataSource = {
         children: {
           href: product2.buttonLink,
           type: 'primary',
+          disabled: product1.buttonDisabled,
           children: product2.buttonText
         }
       }
@@ -277,11 +287,36 @@ export const Content40DataSource = {
       }
     ]
   },
-  video: {
+  video1Title: {
+    children: [
+      {
+        name: 'content',
+        className: 'title-content content4-title-content',
+        children: demoSection.video1Title
+      }
+    ]
+  },
+  video1: {
     className: 'content4-video',
     children: {
-      video: demoSection.videoLink,
-      image: demoSection.videoPreview
+      video: demoSection.video1Link,
+      image: demoSection.video1Preview
+    }
+  },
+  video2Title: {
+    children: [
+      {
+        name: 'content',
+        className: 'title-content content4-title-content',
+        children: demoSection.video2Title
+      }
+    ]
+  },
+  video2: {
+    className: 'content4-video',
+    children: {
+      video: demoSection.video2Link,
+      image: demoSection.video2Preview
     }
   }
 };
