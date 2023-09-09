@@ -1,14 +1,17 @@
 package com.spanning.core.service.workflow;
 
-import java.util.List;
-
 import com.spanning.core.dto.request.workflow.CreateParams;
 import com.spanning.core.dto.request.workflow.SearchParams;
 import com.spanning.core.dto.response.workflow.Workflow;
 import com.spanning.core.repository.workflow.WorkflowRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
+import org.springframework.web.server.ResponseStatusException;
+
+import java.util.List;
+import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
@@ -33,6 +36,17 @@ public class WorkflowService {
   }
 
   public Workflow create(final CreateParams createParams) {
+    final boolean ieAlreadyExist = Optional.of(createParams)
+      .map(CreateParams::getName)
+      .map(workflowRepository::getByName)
+      .isPresent();
+
+    if (ieAlreadyExist) {
+      throw new ResponseStatusException(
+        HttpStatus.BAD_REQUEST,
+        "Workflow=[" + createParams.getName() + "] already exists"
+      );
+    }
     return workflowRepository.create(createParams.getName(), createParams.getDescription());
   }
 }

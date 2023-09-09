@@ -120,7 +120,7 @@ export const useTicketsStore = create<any>((set, get) => ({
       const newError = error as AxiosError;
       showErrorNotification({
         error: newError,
-        subject: intl.formatMessage({ id: 'NOTIFICATION_SUBJECT_UNCLASSIFIED_TICKETS_LIST' })
+        subject: intl.formatMessage({ id: 'LINKING_TICKET' })
       });
     }
   },

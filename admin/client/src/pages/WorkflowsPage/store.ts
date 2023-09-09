@@ -4,6 +4,7 @@ import { AxiosError } from 'axios';
 import workflowsService from '../../services/workflowsService';
 import { PAGE_ENTITIES_LIMIT } from '../../constants/constants';
 import { showErrorNotification } from '../../components/Notification';
+import {intl} from "../../intl";
 
 export const initialState: any = {
   workflows: [],
@@ -86,7 +87,7 @@ export const useWorkflowsStore = create<any>((set, get) => ({
       const newError = error as AxiosError;
       showErrorNotification({
         error: newError,
-        subject: 'Delete Workflow'
+        subject:  intl.formatMessage({ id: 'NOTIFICATION_SUBJECT_DELETING_WORKFLOW' })
       });
     }
   },
