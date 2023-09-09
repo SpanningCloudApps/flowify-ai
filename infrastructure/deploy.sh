@@ -78,11 +78,66 @@ function cleanup() {
   echo "Cleanup completed."
 }
 
+function create_s3() {
+
+  # Create the S3 bucket
+  aws s3api create-bucket \
+      --bucket $bucket_name \
+      --profile flowify
+
+  # Enable public access for the bucket
+  aws s3api put-public-access-block \
+      --bucket $bucket_name \
+      --public-access-block-configuration "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false" \
+      --profile flowify
+
+  # Set the bucket policy to make it public
+  cat <<EOF > bucket-policy.json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::$bucket_name/*"
+        }
+    ]
+}
+EOF
+
+  # Apply the bucket policy to make the bucket public
+  aws s3api put-bucket-policy \
+      --bucket $bucket_name \
+      --policy file://bucket-policy.json \
+      --profile flowify
+
+  # Optionally, configure the bucket for static website hosting
+  aws s3 website s3://$bucket_name/ --index-document index.html --profile flowify
+
+  # Display the S3 bucket URL
+  echo "S3 Bucket URL: http://$bucket_name.s3-website-us-east-1.amazonaws.com"
+
+  # Clean up the temporary bucket policy file
+  rm bucket-policy.json
+}
+
+function deploy_landing() {
+  pushd "${AI_HOME}/landing"
+    npm install
+    npm run build
+    aws s3 sync "${AI_HOME}/landing/dist" s3://${bucket_name} --profile flowify
+  popd
+}
+
 function main() {
-  run_ec2
+#  run_ec2
 #  pull_code
 #  run_services
 #  cleanup
+  create_s3
+  deploy_landing
 }
 
 main "${@}"
