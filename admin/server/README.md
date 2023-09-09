@@ -1,18 +1,72 @@
-# Admin Server
+# Admin Web Console Server
 
-**Admin Server is a server for Admin UI.**
+**Admin Server is a server for Admin web console UI.**
 
 ## Maintainers
 
 - [Ruslan Zianevich](https://github.com/ruslanzianevich)
 
-## Run Locally
-Before start need to set **AI_HOME** env to absolute path of hackathon AI project.
+The Admin Web Console Server is the backend component that powers the admin web console for managing ticket workflows.
 
-````shell
-cd admin/server
-../mvnw clean spring-boot:run -Dspring-boot.run.profiles=dev
-````
+## Table of Contents
+
+- [About](#about)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Running the Server](#running-the-server)
+  - [Running Locally](#running-locally)
+  - [Running in Docker](#running-in-docker)
+- [Usage](#usage)
+- [Environment Variables](#environment-variables)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+
+## About
+
+The Admin Server is a backend component designed for the Admin web console UI. It provides functionality for managing ticket workflows.
+
+## Getting Started
+
+To set up and run the Admin Web Console Server, follow these instructions:
+
+### Prerequisites
+Before you begin, ensure you have set the **AI_HOME** environment variable to the absolute path of the `hackathon AI` project.
+
+Up postgresql db using script from root project folder ():
+```bash
+cd ${AI_HOME}
+./scripts/run-service-local --db-init
+```
+
+Use the following command to build the project:
+
+```shell
+${AI_HOME}/admin/server
+./mwnw clean package
+```
+
+## Running the Server
+
+### Running Locally
+
+To run the server locally, execute the following commands:
+
+```shell
+cd ${AI_HOME}/admin/server
+./mvnw clean spring-boot:run -Dspring-boot.run.profiles=dev
+```
+
+### Running in Docker
+
+To run the server in a Docker container, use the following command:
+
+```bash
+cd ${AI_HOME}
+./scripts/run-service-local --admin-server
+```
+
 
 ## Environment Variables
 <table>
