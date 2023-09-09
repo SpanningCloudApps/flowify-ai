@@ -38,19 +38,14 @@ export class ClassifierService {
 
     const result = await openAIFacade.categorize(classificationData);
 
-    if (result?.workflowName) {
-      return {
-        highProbability: result.probability || 0,
-        workflowName: result.workflowName,
-        allClassifications: []
-      };
-    } else {
-      return {
-        workflowName: Workflow.UNKNOWN,
-        highProbability: 0,
-        allClassifications: []
-      };
-    }
+    return {
+      workflowName: result.workflowName || Workflow.UNKNOWN,
+      highProbability: result.probability || 0,
+      allClassifications: result.allClassifications.map(c => ({
+        workflowName: c.workflowName || Workflow.UNKNOWN,
+        probability: c.probability || 0
+      }))
+    };
   }
 }
 

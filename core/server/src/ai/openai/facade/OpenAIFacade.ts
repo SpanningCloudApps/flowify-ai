@@ -46,7 +46,7 @@ class OpenAIFacade implements Connector {
 
     const processedResponses = responses.filter(response => {
       const value = response.message.content.split(' ')
-        .filter(token => probableTokens.includes(token)).length / probableTokens.length;
+          .filter(token => probableTokens.includes(token)).length / probableTokens.length;
       return value < tokenMatchingThreshold;
     });
 
@@ -57,17 +57,20 @@ class OpenAIFacade implements Connector {
     if (recognizedOption) {
       return {
         probability: probability * 100,
-        workflowName: recognizedOption.message.content.split('Title: ')[1]
+        workflowName: recognizedOption.message.content.split('Title: ')[1],
+        allClassifications: []
       };
     } else if (probability === 1 && proceededVariants[0].message.content.includes('Unable to recognize')) {
       return {
         probability: 100,
-        workflowName: null
+        workflowName: null,
+        allClassifications: []
       };
     } else {
       return {
         probability: probability * 100,
-        workflowName: responses[0].message.content.split('Title: ')[1]
+        workflowName: responses[0].message.content.split('Title: ')[1],
+        allClassifications: []
       };
     }
   }

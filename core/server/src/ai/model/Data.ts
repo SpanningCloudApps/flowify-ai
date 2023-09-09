@@ -9,7 +9,13 @@ export interface Data {
   additionalInfo?: string[];
 }
 
-export interface CategorizationResult {
-  probability: number;
+export interface ClassificationData {
   workflowName: string | null;
+  probability: number;
+}
+
+export interface CategorizationResult {
+  workflowName: string | null;
+  probability: number;
+  allClassifications: ClassificationData[];
 }
