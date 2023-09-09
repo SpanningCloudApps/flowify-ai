@@ -28,8 +28,9 @@ public interface TicketConverter {
 
   List<TicketResponseDto> convertAll(final List<ClassificationResult> classificationResults);
 
-  default TicketResponseDto convertToResponseDto(final ClassificationResult classificationResult)
-    throws JsonProcessingException {
+  default TicketResponseDto convertToResponseDto(
+    final ClassificationResult classificationResult
+  ) throws JsonProcessingException {
     final TicketInput input = MAPPER.readValue(classificationResult.getInput(), TicketInput.class);
 
     return TicketResponseDto.builder()

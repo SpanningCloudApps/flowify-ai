@@ -6,7 +6,6 @@ package com.spanning.core.service.ticket;
 
 import java.util.List;
 
-import com.spanning.api.dto.response.ticket.TicketResponseDto;
 import com.spanning.core.dto.request.ticket.SearchParams;
 import com.spanning.core.dto.request.ticket.UpdateParams;
 import com.spanning.core.dto.response.ticket.ClassificationResult;
