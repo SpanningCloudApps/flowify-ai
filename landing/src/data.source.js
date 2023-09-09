@@ -4,6 +4,11 @@
 
 import flowify from './assets/img/flowify.png';
 import github from './assets/img/github.png';
+
+import admin_example from './assets/img/admin_example.png';
+import admin_video_preview from './assets/img/admin_site_flow_preview.jpeg';
+import admin_video from './assets/video/admin_site_flow.mp4';
+
 import photo_anton from './assets/img/team/anton_b.jpeg';
 import photo_evgenij from './assets/img/team/evgenij_u.jpeg';
 import photo_ruslan from './assets/img/team/ruslan_z.jpeg';
@@ -30,7 +35,7 @@ const product1 = {
 
 const product2 = {
   title: 'Administration Panel',
-  imageLink: 'https://gw.alipayobjects.com/mdn/rms_ae7ad9/afts/img/A*OnyWT4Nsxy0AAAAAAAAAAABjARQnAQ',
+  imageLink: admin_example,
   content: 'Our intuitive web-based admin console makes ticket workflow management a piece of cake. No more headaches or hassles; just a smooth, streamlined process.'
     + 'The Data Workflow Admin Web Console is your secret weapon for simplifying data management. It\'s designed to empower administrators like you with a suite of tools to create, update, and monitor data workflows effortlessly.'
     + 'With Flowify, you\'ll never miss a beat. Keep your data handling organized and efficient, ensuring that every issue is addressed promptly.',
@@ -44,9 +49,9 @@ const demoSection = {
   title: 'Demo',
   subTitle: 'Check 18+ video how xoxol fuck CEO',
   video1Link: 'https://os.alipayobjects.com/rmsportal/EejaUGsyExkXyXr.mp4',
-  video2Link: 'https://os.alipayobjects.com/rmsportal/EejaUGsyExkXyXr.mp4',
+  video2Link: admin_video,
   video1Preview: 'https://zos.alipayobjects.com/rmsportal/HZgzhugQZkqUwBVeNyfz.jpg',
-  video2Preview: 'https://zos.alipayobjects.com/rmsportal/HZgzhugQZkqUwBVeNyfz.jpg',
+  video2Preview: admin_video_preview,
   video1Title: 'Client Application',
   video2Title: 'Admin Application'
 };
