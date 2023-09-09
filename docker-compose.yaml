@@ -20,17 +20,17 @@ services:
       - '8666:4566'
       - '8672:4572'
     environment:
-      - SERVICES:sqs      # List other services if needed
+      - SERVICES:sqs
       - DEBUG=1
       - AWS_ACCESS_KEY_ID=123
       - AWS_SECRET_ACCESS_KEY=123
       - DATA_DIR=/tmp/localstack/data
       - DOCKER_HOST=unix:///var/run/docker.sock
-        
+
   worker-cli:
     image: worker-cli:latest
     container_name: worker-cli
-    
+
   server:
     image: server:latest
     container_name: server

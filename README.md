@@ -4,12 +4,12 @@
 
 # Authors
 
-- **client:** Anton Bachykin
-- **server:** Ruslan Zianevich
+- **admin/client:** Anton Bachykin
+- **admin/server:** Ruslan Zianevich
 - **worker**: Andrei Kozel
 - **ai**: Nikita Gurets
-- **client**: Anton Bachykin
-- **server**: Alina Glumova
+- **core/client**: Anton Bachykin
+- **core/server**: Alina Glumova
 
 
 # High Level architecture
