@@ -51,8 +51,8 @@ const product2 = {
 };
 
 const demoSection = {
-  title: 'Demo',
-  subTitle: 'Check 18+ video how xoxol fuck CEO',
+  title: 'A Demo of AI-driven Workflow Management',
+  subTitle: 'Relax with a cup of coffee while Flowify handles the work for you.',
   video1Link: client_video,
   video2Link: admin_video,
   video1Preview: client_video_preview,
