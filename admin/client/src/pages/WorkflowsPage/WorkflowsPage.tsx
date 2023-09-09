@@ -31,7 +31,7 @@ const WorkflowsPage: FC = () => {
 
   const handleScrollChange = useCallback(() => {
     const pageToken = workflows?.length && workflows[workflows.length - 1].id;
-    workflows({ pageToken, query });
+    getWorkflows({ pageToken, query });
   }, [query, workflows]);
 
   const handleWorkflow = useCallback(() => {
