@@ -11,6 +11,8 @@
     "ci": "npm run default"
   },
   "dependencies": {
+    "@tensorflow/tfjs": "4.10.0",
+    "@tensorflow-models/qna": "1.0.2",
     "config": "3.3.9",
     "fastify": "4.22.2",
     "openai": "4.5.0",

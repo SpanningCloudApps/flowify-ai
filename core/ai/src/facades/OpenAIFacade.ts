@@ -5,6 +5,10 @@ import { AIResponse, openAIConnector } from 'openai/OpenAIConnector';
 export interface CategorizationResult {
   probability: number;
   workflowName: string | null;
+  allClassifications: {
+    probability: number;
+    workflowName: string | null;
+  }[];
 }
 
 class OpenAIFacade {
@@ -32,6 +36,11 @@ class OpenAIFacade {
     }
   }
 
+  private calculateProbability(proceededVariants, recognizedOption): number {
+    const estimatedValue = proceededVariants.reduce((sum, response) => sum + (1 / (response.index+1)), 0);
+    return recognizedOption ? (1 / (recognizedOption.index+1)) / estimatedValue : 1 / estimatedValue;
+  }
+
   private parseResponses(responses: AIResponse[]): CategorizationResult {
     const tokenMatchingThreshold = config.get<number>('ai.recognition.tokenMatchingThreshold');
 
@@ -51,23 +60,30 @@ class OpenAIFacade {
     });
 
     const proceededVariants = recognizedOption ? [...processedResponses, recognizedOption] : [...processedResponses, responses[0]];
-    const estimatedValue = proceededVariants.reduce((sum, response) => sum + (1 / (response.index+1)), 0);
-    const probability = recognizedOption ? (1 / (recognizedOption.index+1)) / estimatedValue : 1 / estimatedValue;
+
+    const probability = this.calculateProbability(proceededVariants, recognizedOption);
+    const allClassifications = processedResponses.map(response => ({
+      probability: this.calculateProbability(proceededVariants, response),
+      workflowName: response.message.content.split('Title: ')[1]
+    }));
 
     if (recognizedOption) {
       return {
         probability: probability * 100,
-        workflowName: recognizedOption.message.content.split('Title: ')[1]
+        workflowName: recognizedOption.message.content.split('Title: ')[1],
+        allClassifications
       }
     } else if (probability === 1 && proceededVariants[0].message.content.includes('Unable to recognize')) {
       return {
         probability: 100,
-        workflowName: null
+        workflowName: null,
+        allClassifications
       }
     } else {
       return {
         probability: probability * 100,
-        workflowName: responses[0].message.content.split('Title: ')[1]
+        workflowName: responses[0].message.content.split('Title: ')[1],
+        allClassifications
       }
     }
   }
