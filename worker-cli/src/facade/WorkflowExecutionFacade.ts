@@ -41,7 +41,11 @@ export default class WorkflowExecutionFacade {
     const workflowSteps: any[] = await this.workflowStepService.getWorkflowSteps(workflowName);
 
     if (!workflowSteps.length) {
-      logger.info(`Workflow doesn't has steps. Workflow=${workflowName}`);
+      await this.queueService.publishWorkflowResult(JSON.stringify({
+        result: `Workflow ${workflowName} that was received is unrecognized, I coudn't do anything, but in future this workflow might be implemented`,
+        actor
+      }));
+      logger.info(`Workflow doesn't have steps. Workflow=${workflowName}`);
       return;
     }
 

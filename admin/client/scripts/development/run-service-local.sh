@@ -5,7 +5,8 @@ set -e
 options=( "$@" )
 
 valid_options=(
-  "--skip-image-build"
+  "--build-image"
+  "--run-image"
   "--help"
 )
 
@@ -36,14 +37,16 @@ main () {
   # Removes hackathon-admin-ui container if exists
   stop_and_remove_if_exists hackathon-admin-ui
 
-  if ! array_contains options "--skip-image-build"; then
+  if array_contains options "--build-image"; then
 
     docker build -t ${IMAGE_NAME}:${IMAGE_TAG} \
         --build-arg CODEARTIFACT_AUTH_TOKEN=${CODEARTIFACT_AUTH_TOKEN} .
 
   fi
 
-  docker-compose up -d hackathon-admin-ui
+  if array_contains options "--run-image"; then
+    docker-compose up -d hackathon-admin-ui
+  fi
 
   popd
 }
@@ -99,7 +102,8 @@ Usage:
   ./scripts/development/run-service-local.sh [options] - To run only dependent services(hackathon-admin-ui).
 Options:
   --help                        Show usage with available options. Has no effect if combined with other options.
-  --skip-image-build            Skips image build.
+  --build-image                 Skips image build.
+  --run-image                   Run image.
 If you want to run hackathon-admin-ui in docker you should use:
   ./scripts/development/run-service-local.sh
 EOF

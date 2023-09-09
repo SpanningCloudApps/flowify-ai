@@ -1,4 +1,6 @@
 import { getLogger } from '../logger/logger';
+import { openAIFacade } from '../ai/openai/facade/OpenAIFacade';
+import { DataProcessBodyDto } from '../dto/DataDto';
 
 const logger = getLogger();
 
@@ -24,21 +26,25 @@ export class ClassifierService {
     return this._instance;
   }
 
-  public async classify(data: Record<string, unknown>): Promise<ClassificationData> {
-    // TODO: Integrate with NIKITA!
-    logger.info(`Data to classify: ${JSON.stringify(data)}`);
-    // return {
-    //   workflowName: 'TEST',
-    //   highProbability: 89.8,
-    //   allClassifications: [{ workflowName: 'TEST', probability: '89.8' }, { workflowName: 'TEST2', probability: '69.3' }]
-    // };
+  public async classify(data: DataProcessBodyDto): Promise<ClassificationData> {
+    const classificationData = {
+      createdBy: data.createdBy,
+      title: data.title,
+      description: data.description,
+      additionalInfo: data.additionalInfo
+    };
+
+    logger.info(`Data to classify: ${JSON.stringify(classificationData)}`);
+
+    const result = await openAIFacade.categorize(classificationData);
+
     return {
-      workflowName: Workflow.UNKNOWN,
-      highProbability: 0,
-      allClassifications: [{ workflowName: 'TEST', probability: '89.8' }, {
-        workflowName: 'TEST2',
-        probability: '69.3'
-      }]
+      workflowName: result.workflowName || Workflow.UNKNOWN,
+      highProbability: result.probability || 0,
+      allClassifications: result.allClassifications.map(c => ({
+        workflowName: c.workflowName || Workflow.UNKNOWN,
+        probability: c.probability || 0
+      }))
     };
   }
 }

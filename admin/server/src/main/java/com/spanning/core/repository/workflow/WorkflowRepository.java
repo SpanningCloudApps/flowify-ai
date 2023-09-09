@@ -19,10 +19,14 @@ public interface WorkflowRepository extends CrudRepository<Workflow, Object> {
   @Query("""
      SELECT id, cast(data as varchar), description, name, created_at FROM workflow AS w
          WHERE (:pageToken IS NULL OR id < :pageToken)
-       AND (:workflowName IS NULL OR ( w.name ILIKE CONCAT('%', :workflowName, '%'))) ORDER by id DESC LIMIT :limit;
+         AND ((:workflowName IS NULL AND :description IS NULL )
+         OR (:workflowName IS NOT NULL AND w.name ILIKE CONCAT('%', :workflowName, '%'))
+         OR (:description IS NOT NULL AND w.description ILIKE CONCAT('%', :description, '%')))
+       ORDER by id DESC LIMIT :limit;
      """)
   List<Workflow> search(
     @Param("workflowName") final String workflowName,
+    @Param("description") final String description,
     @Param("pageToken") final Long pageToken,
     @Param("limit") final Long limit
   );
@@ -34,10 +38,16 @@ public interface WorkflowRepository extends CrudRepository<Workflow, Object> {
   Workflow create(final String name, final String description);
 
   @Query("""
-     SELECT id, cast(data as varchar), description, name, created_at FROM workflow AS w
-         WHERE  id = :id;
-     """)
+    SELECT id, cast(data as varchar), description, name, created_at FROM workflow AS w
+        WHERE  id = :id;
+    """)
   Workflow get(
     @Param("id") final Long id
   );
+
+  @Query("""
+    SELECT id, cast(data as varchar), description, name, created_at FROM workflow AS w
+        WHERE  name = :workflowName;
+    """)
+  Workflow getByName(@Param("workflowName") final String workflowName);
 }
