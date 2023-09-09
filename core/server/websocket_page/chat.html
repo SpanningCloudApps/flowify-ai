@@ -141,8 +141,8 @@
     }
 
     const displayMessage = React.useCallback(({ data }) => {
-      setWorkflow(data.data);
-      setMessages(prevState => [...prevState, data.data.response]);
+      setWorkflow(data);
+      setMessages(prevState => [...prevState, data.response]);
     }, [setMessages]);
 
     const openChannel = React.useCallback((inChannel) => {
