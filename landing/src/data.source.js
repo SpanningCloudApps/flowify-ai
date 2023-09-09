@@ -24,7 +24,8 @@ const product1 = {
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum sapien a velit sodales, vitae interdum risus finibus. Morbi feugiat dui nec nisi hendrerit, id finibus diam dictum. Suspendisse potenti. Etiam quis gravida mi.',
   subTitle: 'Generated 5 paragraphs',
   buttonText: 'Let\'s Try',
-  buttonLink: '#'
+  buttonLink: '#',
+  buttonDisabled: true
 };
 
 const product2 = {
@@ -33,14 +34,19 @@ const product2 = {
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum sapien a velit sodales, vitae interdum risus finibus. Morbi feugiat dui nec nisi hendrerit, id finibus diam dictum. Suspendisse potenti. Etiam quis gravida mi.',
   subTitle: 'Generated 5 paragraphs',
   buttonText: 'Let\'s Try',
-  buttonLink: '#'
+  buttonLink: '#',
+  buttonDisabled: true
 };
 
 const demoSection = {
   title: 'Demo',
   subTitle: 'Check 18+ video how xoxol fuck CEO',
-  videoLink: 'https://os.alipayobjects.com/rmsportal/EejaUGsyExkXyXr.mp4',
-  videoPreview: 'https://zos.alipayobjects.com/rmsportal/HZgzhugQZkqUwBVeNyfz.jpg'
+  video1Link: 'https://os.alipayobjects.com/rmsportal/EejaUGsyExkXyXr.mp4',
+  video2Link: 'https://os.alipayobjects.com/rmsportal/EejaUGsyExkXyXr.mp4',
+  video1Preview: 'https://zos.alipayobjects.com/rmsportal/HZgzhugQZkqUwBVeNyfz.jpg',
+  video2Preview: 'https://zos.alipayobjects.com/rmsportal/HZgzhugQZkqUwBVeNyfz.jpg',
+  video1Title: 'Client Application',
+  video2Title: 'Admin Application'
 };
 
 const aboutUsSection = {
@@ -75,7 +81,7 @@ const featuresSection = {
   feature6: {
     title: 'Feature 6',
     content: 'Some content of Feature 6. Some info about this super puper coool features.'
-  },
+  }
 };
 
 const roadmapSection = {
@@ -214,6 +220,7 @@ export const Pricing00DataSource = {
         children: {
           href: product1.buttonLink,
           type: 'primary',
+          disabled: product1.buttonDisabled,
           children: product1.buttonText
         }
       }
@@ -251,6 +258,7 @@ export const Pricing01DataSource = {
         children: {
           href: product2.buttonLink,
           type: 'primary',
+          disabled: product1.buttonDisabled,
           children: product2.buttonText
         }
       }
@@ -277,11 +285,36 @@ export const Content40DataSource = {
       }
     ]
   },
-  video: {
+  video1Title: {
+    children: [
+      {
+        name: 'content',
+        className: 'title-content content4-title-content',
+        children: demoSection.video1Title
+      }
+    ]
+  },
+  video1: {
     className: 'content4-video',
     children: {
-      video: demoSection.videoLink,
-      image: demoSection.videoPreview
+      video: demoSection.video1Link,
+      image: demoSection.video1Preview
+    }
+  },
+  video2Title: {
+    children: [
+      {
+        name: 'content',
+        className: 'title-content content4-title-content',
+        children: demoSection.video2Title
+      }
+    ]
+  },
+  video2: {
+    className: 'content4-video',
+    children: {
+      video: demoSection.video2Link,
+      image: demoSection.video2Preview
     }
   }
 };
