@@ -48,8 +48,8 @@
         "createdBy": "CEO X0XL0B"
       },
       {
-        "title": "APP_DOWNTIME",
-        "description": "Notification of application downtime or unavailability.",
+        "title": "GRANT_ACCESS",
+        "description": "Grant user access to all relevant client portals.",
         "createdBy": "CEO X0XL0B"
       }
     ],
