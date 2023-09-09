@@ -1,13 +1,13 @@
 package com.spanning.core.repository.workflow;
 
-import java.util.List;
-
 import com.spanning.core.dto.response.workflow.Workflow;
 import org.springframework.data.jdbc.repository.query.Modifying;
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 public interface WorkflowRepository extends CrudRepository<Workflow, Object> {
@@ -34,10 +34,16 @@ public interface WorkflowRepository extends CrudRepository<Workflow, Object> {
   Workflow create(final String name, final String description);
 
   @Query("""
-     SELECT id, cast(data as varchar), description, name, created_at FROM workflow AS w
-         WHERE  id = :id;
-     """)
+    SELECT id, cast(data as varchar), description, name, created_at FROM workflow AS w
+        WHERE  id = :id;
+    """)
   Workflow get(
     @Param("id") final Long id
   );
+
+  @Query("""
+    SELECT id, cast(data as varchar), description, name, created_at FROM workflow AS w
+        WHERE  name = :workflowName;
+    """)
+  Workflow getByName(@Param("workflowName") final String workflowName);
 }

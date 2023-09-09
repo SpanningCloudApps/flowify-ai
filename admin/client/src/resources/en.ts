@@ -18,6 +18,8 @@ const en = {
   EMAIL_DROPDOWN_TITLE: 'Email',
   HEADER_LOGOUT: 'Log Out',
   SUBMIT: 'Submit',
+  NOTIFICATION_SUBJECT_DELETING_WORKFLOW: 'Deleting Workflow',
+  NOTIFICATION_SUBJECT_LINKING_TICKET: 'Linking ticket',
   TIMEOUT_REQUEST_ERROR: 'Oops! Something went wrong. Please try again in few minutes or if problem persists - contact support',
   NOTIFICATION_SUBJECT_CLASSIFIED_TICKETS_LIST: 'Get list of classified tickets',
   NOTIFICATION_SUBJECT_UNCLASSIFIED_TICKETS_LIST: 'Get list of unclassified tickets',

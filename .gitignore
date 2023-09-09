@@ -88,6 +88,7 @@ out
 /dist/
 /nbdist/
 /.nb-gradle/
+/worker-cli/dist
 
 ### Eclipse ###
 .metadata
