@@ -51,6 +51,2796 @@
         "title": "GRANT_ACCESS",
         "description": "Grant user access to all relevant client portals.",
         "createdBy": "CEO X0XL0B"
+      },
+      {
+        "createdBy": "John Doe",
+        "title": "RESET_PASSWORD",
+        "description": "A user has requested a password reset due to forgotten credentials."
+      },
+      {
+        "createdBy": "Jane Smith",
+        "title": "ADD_USER",
+        "description": "A new user has been welcomed and added to the system."
+      },
+      {
+        "createdBy": "Mike Johnson",
+        "title": "REMOVE_USER",
+        "description": "A user account has been deactivated and removed from the system."
+      },
+      {
+        "createdBy": "Sarah Brown",
+        "title": "SLOW_INTERNET",
+        "description": "Reports indicate that internet connectivity is experiencing slowness."
+      },
+      {
+        "createdBy": "David Wilson",
+        "title": "APP_DOWNTIME",
+        "description": "The application is temporarily unavailable due to maintenance."
+      },
+      {
+        "createdBy": "Emily Davis",
+        "title": "LOW_DISK_SPACE",
+        "description": "A device is running out of storage space, requiring attention."
+      },
+      {
+        "createdBy": "Mark Anderson",
+        "title": "ASSIGN_M365",
+        "description": "User has been assigned an appropriate M365 license for enhanced productivity."
+      },
+      {
+        "createdBy": "Linda Miller",
+        "title": "GRANT_ACCESS",
+        "description": "User access has been granted to all relevant client portals."
+      },
+      {
+        "createdBy": "Alice Johnson",
+        "title": "RESET_PASSWORD",
+        "description": "A user has requested a password reset due to forgotten credentials."
+      },
+      {
+        "createdBy": "Bob Smith",
+        "title": "ADD_USER",
+        "description": "A new user has been welcomed and added to the system."
+      },
+      {
+        "createdBy": "Carol Davis",
+        "title": "REMOVE_USER",
+        "description": "A user account has been deactivated and removed from the system."
+      },
+      {
+        "createdBy": "David Wilson",
+        "title": "SLOW_INTERNET",
+        "description": "Reports indicate that internet connectivity is experiencing slowness."
+      },
+      {
+        "createdBy": "Eva Brown",
+        "title": "APP_DOWNTIME",
+        "description": "The application is temporarily unavailable due to maintenance."
+      },
+      {
+        "createdBy": "Frank Miller",
+        "title": "LOW_DISK_SPACE",
+        "description": "A device is running out of storage space, requiring attention."
+      },
+      {
+        "createdBy": "Grace Anderson",
+        "title": "ASSIGN_M365",
+        "description": "User has been assigned an appropriate M365 license for enhanced productivity."
+      },
+      {
+        "createdBy": "Helen Davis",
+        "title": "GRANT_ACCESS",
+        "description": "User access has been granted to all relevant client portals."
+      },
+      {
+        "createdBy": "Michael Smith",
+        "title": "RESET_PASSWORD",
+        "description": "A user has requested a password reset due to forgotten credentials."
+      },
+      {
+        "createdBy": "Jennifer Johnson",
+        "title": "ADD_USER",
+        "description": "A new team member has been added to the system."
+      },
+      {
+        "createdBy": "Matthew Davis",
+        "title": "REMOVE_USER",
+        "description": "A user account has been removed from the system."
+      },
+      {
+        "createdBy": "Olivia Wilson",
+        "title": "SLOW_INTERNET",
+        "description": "Users have reported slow internet connectivity."
+      },
+      {
+        "createdBy": "William Brown",
+        "title": "APP_DOWNTIME",
+        "description": "The application is undergoing scheduled maintenance."
+      },
+      {
+        "createdBy": "Sophia Miller",
+        "title": "LOW_DISK_SPACE",
+        "description": "Insufficient disk space has been detected on a device."
+      },
+      {
+        "createdBy": "Daniel Anderson",
+        "title": "ASSIGN_M365",
+        "description": "A user has been granted access to Microsoft 365 services."
+      },
+      {
+        "createdBy": "Emily Davis",
+        "title": "GRANT_ACCESS",
+        "description": "Access privileges have been extended to a new user."
+      },
+      {
+        "createdBy": "Sarah Mitchell",
+        "title": "RESET_PASSWORD",
+        "description": "A user has requested a password reset due to forgotten credentials."
+      },
+      {
+        "createdBy": "James Anderson",
+        "title": "ADD_USER",
+        "description": "A new team member has been welcomed into the system."
+      },
+      {
+        "createdBy": "Linda Roberts",
+        "title": "REMOVE_USER",
+        "description": "A user account has been deleted from the system."
+      },
+      {
+        "createdBy": "Robert Thompson",
+        "title": "SLOW_INTERNET",
+        "description": "Users are facing sluggish internet connectivity issues."
+      },
+      {
+        "createdBy": "Amanda White",
+        "title": "APP_DOWNTIME",
+        "description": "The application is down for essential maintenance."
+      },
+      {
+        "createdBy": "John Parker",
+        "title": "LOW_DISK_SPACE",
+        "description": "Insufficient disk space detected on a critical device."
+      },
+      {
+        "createdBy": "Mary Johnson",
+        "title": "ASSIGN_M365",
+        "description": "User has been provisioned with an M365 license for enhanced productivity."
+      },
+      {
+        "createdBy": "Kevin Davis",
+        "title": "GRANT_ACCESS",
+        "description": "New user access privileges have been granted to client portals."
+      },
+      {
+        "createdBy": "Ella Mitchell",
+        "title": "APP_DOWNTIME",
+        "description": "The application is temporarily unavailable for maintenance."
+      },
+      {
+        "createdBy": "Joseph Clark",
+        "title": "LOW_DISK_SPACE",
+        "description": "Device is running low on disk space and requires attention."
+      },
+      {
+        "createdBy": "Emma Lewis",
+        "title": "ASSIGN_M365",
+        "description": "User has been assigned an M365 license for enhanced productivity."
+      },
+      {
+        "createdBy": "William Turner",
+        "title": "GRANT_ACCESS",
+        "description": "User access privileges have been extended to multiple client portals."
+      },
+      {
+        "createdBy": "Grace Scott",
+        "title": "RESET_PASSWORD",
+        "description": "A password reset has been requested due to a forgotten password."
+      },
+      {
+        "createdBy": "Henry Baker",
+        "title": "ADD_USER",
+        "description": "A new team member has been onboarded into the system."
+      },
+      {
+        "createdBy": "Olivia Green",
+        "title": "REMOVE_USER",
+        "description": "A user account has been deactivated and removed from the system."
+      },
+      {
+        "createdBy": "Benjamin Reed",
+        "title": "SLOW_INTERNET",
+        "description": "There are reports of slow internet connectivity issues."
+      },
+      {
+        "createdBy": "Charlotte Parker",
+        "title": "APP_DOWNTIME",
+        "description": "The application is temporarily down for essential maintenance."
+      },
+      {
+        "createdBy": "Samuel Allen",
+        "title": "LOW_DISK_SPACE",
+        "description": "Critical device is running out of disk space, requiring immediate attention."
+      },
+      {
+        "createdBy": "Sophia Carter",
+        "title": "ASSIGN_M365",
+        "description": "A user has been granted access to Microsoft 365 services."
+      },
+      {
+        "createdBy": "Alexander Mitchell",
+        "title": "GRANT_ACCESS",
+        "description": "Access privileges have been granted to a new user for various client portals."
+      },
+      {
+        "createdBy": "Ava Lee",
+        "title": "RESET_PASSWORD",
+        "description": "A user has requested a password reset due to forgotten login credentials."
+      },
+      {
+        "createdBy": "Jack Wright",
+        "title": "ADD_USER",
+        "description": "A new team member has been added to the system for enhanced collaboration."
+      },
+      {
+        "createdBy": "Mia Robinson",
+        "title": "REMOVE_USER",
+        "description": "A user account has been removed from the system as per security protocols."
+      },
+      {
+        "createdBy": "Liam Adams",
+        "title": "SLOW_INTERNET",
+        "description": "Users are experiencing delays in internet connectivity."
+      },
+      {
+        "createdBy": "Emily Scott",
+        "title": "APP_DOWNTIME",
+        "description": "The application is temporarily unavailable for scheduled maintenance."
+      },
+      {
+        "createdBy": "Lucas Green",
+        "title": "LOW_DISK_SPACE",
+        "description": "A device is running low on disk space and requires immediate attention."
+      },
+      {
+        "createdBy": "Grace Hall",
+        "title": "ASSIGN_M365",
+        "description": "A user has been provisioned with an M365 license to boost productivity."
+      },
+      {
+        "createdBy": "William Turner",
+        "title": "GRANT_ACCESS",
+        "description": "User access privileges have been extended for client portal access."
+      },
+      {
+        "createdBy": "Olivia Baker",
+        "title": "RESET_PASSWORD",
+        "description": "A user has initiated a password reset due to login issues."
+      },
+      {
+        "createdBy": "Henry Wilson",
+        "title": "ADD_USER",
+        "description": "A new member has joined the team and been added to the system."
+      },
+      {
+        "createdBy": "Emily White",
+        "title": "REMOVE_USER",
+        "description": "A user account has been removed from the system as per security measures."
+      },
+      {
+        "createdBy": "Lucas Davis",
+        "title": "SLOW_INTERNET",
+        "description": "Users have reported internet connectivity issues, causing delays."
+      },
+      {
+        "createdBy": "Emma Anderson",
+        "title": "APP_DOWNTIME",
+        "description": "The application is temporarily unavailable for scheduled maintenance."
+      },
+      {
+        "createdBy": "Liam Thompson",
+        "title": "LOW_DISK_SPACE",
+        "description": "A device is running low on storage space and requires attention."
+      },
+      {
+        "createdBy": "Ava Parker",
+        "title": "ASSIGN_M365",
+        "description": "A user has been assigned an M365 license for improved productivity."
+      },
+      {
+        "createdBy": "Jack Mitchell",
+        "title": "GRANT_ACCESS",
+        "description": "User access privileges have been extended for client portal access."
+      },
+      {
+        "createdBy": "Sophia Lewis",
+        "title": "RESET_PASSWORD",
+        "description": "A user has requested a password reset due to forgotten login credentials."
+      },
+      {
+        "createdBy": "Alexander Reed",
+        "title": "ADD_USER",
+        "description": "A new team member has been added to the system for enhanced collaboration."
+      },
+      {
+        "createdBy": "Nora Carter",
+        "title": "REMOVE_USER",
+        "description": "In accordance with our security protocols, a user account has been deactivated and permanently removed from the system. This action was taken as a precautionary measure to safeguard sensitive data and ensure the integrity of our system. The user in question had requested the removal of their account due to personal reasons, and after verifying their identity, we have completed the process. We want to reassure our users that their data is of utmost importance to us, and we take every step to protect it. If you have any concerns or questions, please do not hesitate to contact our support team for further assistance."
+      },
+      {
+        "createdBy": "Leo Adams",
+        "title": "SLOW_INTERNET",
+        "description": "Recently, our users have been facing connectivity issues that have resulted in slow internet speeds. This issue has been reported across multiple locations and devices, and we are actively investigating the root cause. Our network team is working diligently to identify and resolve the problem to ensure a smooth and uninterrupted online experience for all users. We understand the frustration that slow internet can cause, especially in today's digital age, and we apologize for any inconvenience this may have caused. Rest assured, we are committed to delivering a fast and reliable internet connection, and we appreciate your patience as we work to resolve this issue."
+      },
+      {
+        "createdBy": "Ella Turner",
+        "title": "APP_DOWNTIME",
+        "description": "Our application will experience a scheduled downtime to perform essential maintenance work. This planned downtime is necessary to ensure the continued reliability and security of our services. During this maintenance window, the application will be temporarily unavailable, and users may experience interruption in access. We apologize for any inconvenience this may cause and appreciate your understanding as we work to enhance your experience with our application. Our technical team will be working diligently to complete the maintenance as quickly as possible, and we will strive to minimize the disruption. Thank you for your cooperation, and we look forward to providing you with an improved and more robust application after the maintenance is completed."
+      },
+      {
+        "createdBy": "Daniel Green",
+        "title": "LOW_DISK_SPACE",
+        "description": "Attention all users, it has come to our attention that a critical device within our infrastructure is running critically low on available disk space. This situation requires immediate action to prevent potential data loss and system instability. Our IT department is actively addressing this issue by identifying and removing unnecessary files and optimizing storage allocation. We understand the importance of data integrity and system performance and are committed to resolving this matter swiftly. In the meantime, we kindly request all users to minimize data storage activities on this affected device. If you encounter any unusual issues or have concerns related to this matter, please contact our IT support team for assistance."
+      },
+      {
+        "createdBy": "Grace Scott",
+        "title": "ASSIGN_M365",
+        "description": "We are pleased to inform you that a user within our organization has been granted access to Microsoft 365 services. This is a significant step toward enhancing productivity and collaboration within our team. Microsoft 365 offers a wide range of powerful tools and features that will empower our user to work more efficiently and effectively. With access to applications like Word, Excel, PowerPoint, and Teams, our team member will be better equipped to handle their tasks and projects. We believe that this addition will contribute to our overall success and growth. If you have any questions or require assistance with Microsoft 365, please do not hesitate to reach out to our IT support team."
+      },
+      {
+        "createdBy": "James White",
+        "title": "GRANT_ACCESS",
+        "description": "We are excited to announce that user access privileges have been extended to various client portals, offering our team a broader range of resources and opportunities for collaboration. This strategic decision aligns with our commitment to enhancing the user experience and promoting seamless interactions with our partners and clients. With access to these portals, our team members can now conveniently access important information, documents, and tools required for their roles. We believe that this development will significantly benefit our organization and contribute to our ongoing success. We look forward to maximizing the potential of this expanded access and fostering stronger relationships with our valued clients."
+      },
+      {
+        "createdBy": "Liam Baker",
+        "title": "RESET_PASSWORD",
+        "description": "In response to a user's request for a password reset, we have initiated the necessary steps to assist them in regaining access to their account. Password reset requests are common in today's digital landscape, often arising from various circumstances such as forgotten passwords or security concerns. Our top priority is to ensure a secure and user-friendly experience for our users. To proceed with the password reset process, we have sent an email to the registered email address of the user containing further instructions. Please check your email, including spam or junk folders, for this message. If you encounter any issues or have additional questions, our support team is available to assist you promptly."
+      },
+      {
+        "createdBy": "Olivia Wilson",
+        "title": "ADD_USER",
+        "description": "We are pleased to announce the addition of a new team member to our organization. This valuable addition represents a significant step forward in our commitment to growth and excellence. Our new team member, [User's Name], brings a wealth of experience and expertise to our team, which will undoubtedly contribute to our success. As they integrate into our organization, we encourage all team members to extend a warm welcome and offer support as needed. We believe that this new addition will further strengthen our team and our ability to meet and exceed our goals."
+      },
+      {
+        "createdBy": "Benjamin Thompson",
+        "title": "REMOVE_USER",
+        "description": "Following standard security measures and user request, a user account has been removed from our system. Account removals are part of our commitment to safeguarding data and ensuring the integrity of our systems. We want to assure our users that this action was taken in accordance with our security protocols and with the user's explicit consent. We understand the importance of data privacy and security, and we take every precaution to protect it. If you have any concerns or require further information, please do not hesitate to contact our support team, who will be happy to assist you."
+      },
+      {
+        "createdBy": "Eva Robinson",
+        "title": "SLOW_INTERNET",
+        "description": "In recent days, we have received reports of users experiencing delays in internet connectivity, resulting in slower data transfer rates and potential interruptions in online activities. Our technical team is actively investigating this issue to identify the root causes and implement appropriate solutions. We understand the frustration that slow internet speeds can cause, especially in a digital era where connectivity is essential. Rest assured, we are committed to delivering a fast and reliable internet connection to our users. We appreciate your patience and cooperation as we work diligently to resolve this issue and provide you with a smoother online experience."
+      },
+      {
+        "createdBy": "Charlotte Parker",
+        "title": "APP_DOWNTIME",
+        "description": "Our application will undergo a scheduled downtime to implement crucial updates and optimizations. During this time, access to the application will be temporarily restricted to ensure a smooth transition. We understand the inconvenience this may cause and appreciate your patience. Our technical team will work diligently to complete the maintenance promptly, and we anticipate improved performance and user experience following the update."
+      },
+      {
+        "createdBy": "Samuel Allen",
+        "title": "LOW_DISK_SPACE",
+        "description": "Urgent notice: One of our core devices is critically low on disk space, posing a risk to data integrity and system stability. Our IT team is actively addressing the situation by optimizing storage allocation and removing unnecessary files. We request all users to minimize data storage activities on this affected device temporarily. Your cooperation is crucial, and we are committed to resolving this matter swiftly."
+      },
+      {
+        "createdBy": "Sophia Lewis",
+        "title": "ASSIGN_M365",
+        "description": "Exciting news! A team member has gained access to Microsoft 365 services, enabling them to harness powerful tools for enhanced productivity. Microsoft 365 offers applications like Word, Excel, and Teams, providing valuable resources for streamlined collaboration and efficient work. This addition reflects our commitment to empowering our team members."
+      },
+      {
+        "createdBy": "Alexander Reed",
+        "title": "GRANT_ACCESS",
+        "description": "We are thrilled to extend user access privileges to a range of client portals, strengthening our partnerships and enhancing collaboration opportunities. This development aligns with our dedication to delivering outstanding user experiences. Our team looks forward to maximizing the potential of this expanded access."
+      },
+      {
+        "createdBy": "Nora Carter",
+        "title": "RESET_PASSWORD",
+        "description": "Responding to a user's request for a password reset, we have initiated steps to assist in regaining account access. Password reset requests are common, often arising from forgotten passwords or security concerns. Our priority is to ensure a secure and user-friendly experience. Instructions for the password reset process have been emailed to the registered address. For assistance or questions, our support team is available."
+      },
+      {
+        "createdBy": "Leo Adams",
+        "title": "ADD_USER",
+        "description": "We are excited to introduce a new team member to our organization, reinforcing our commitment to growth and excellence. [User's Name] brings valuable experience and expertise that will contribute to our success. As they integrate into our organization, we encourage a warm welcome from all team members."
+      },
+      {
+        "createdBy": "Ella Turner",
+        "title": "REMOVE_USER",
+        "description": "Following security protocols and user request, a user account has been removed from our system. Account removals are part of our commitment to data security and system integrity. This action aligns with user consent and data protection measures. For concerns or information, contact our support team."
+      },
+      {
+        "createdBy": "Daniel Green",
+        "title": "SLOW_INTERNET",
+        "description": "Recent reports indicate users experiencing delays in internet connectivity, affecting data transfer rates and online activities. Our technical team is actively investigating the issue to identify root causes and implement solutions. We are committed to delivering a fast and reliable internet connection. Your patience and cooperation are valued as we work to provide a smoother online experience."
+      },
+      {
+        "createdBy": "Grace Scott",
+        "title": "APP_DOWNTIME",
+        "description": "Our application will undergo a brief scheduled downtime to implement crucial updates and optimizations. During this time, access to the application will be temporarily restricted to ensure a smooth transition. We understand the inconvenience this may cause and appreciate your patience. Our technical team will work diligently to complete the maintenance promptly, and we anticipate improved performance and user experience following the update."
+      },
+      {
+        "createdBy": "William Turner",
+        "title": "ASSIGN_M365",
+        "description": "We are delighted to announce that one of our esteemed team members has been granted access to Microsoft 365 services, marking a significant milestone in our commitment to productivity and collaboration. With Microsoft 365, our team member gains access to an array of powerful tools, including Word, Excel, and Teams, facilitating enhanced productivity and streamlined communication. We are confident that this addition will positively impact our organization's success."
+      },
+      {
+        "createdBy": "Nora Baker",
+        "title": "GRANT_ACCESS",
+        "description": "We are excited to expand user access privileges to a range of client portals, fostering closer collaboration with our clients and partners. This strategic move aligns with our dedication to enhancing user experiences and strengthening relationships. The extended access allows our team members to conveniently access critical information, documents, and tools, ultimately benefiting our organization's growth and success."
+      },
+      {
+        "createdBy": "Leo Davis",
+        "title": "RESET_PASSWORD",
+        "description": "In response to a user's request for a password reset, we have initiated the necessary steps to assist in regaining account access. Password reset requests are common, often arising from forgotten passwords or security concerns. Our priority is to ensure a secure and user-friendly experience. Instructions for the password reset process have been emailed to the registered address. For assistance or questions, our support team is available."
+      },
+      {
+        "createdBy": "Ella Thompson",
+        "title": "ADD_USER",
+        "description": "We are thrilled to introduce a new team member to our organization, reaffirming our commitment to growth and excellence. [User's Name] brings valuable experience and expertise that will contribute to our success. As they integrate into our organization, we encourage a warm welcome from all team members."
+      },
+      {
+        "createdBy": "Sophia Reed",
+        "title": "REMOVE_USER",
+        "description": "Following security protocols and user request, a user account has been removed from our system. Account removals are part of our commitment to data security and system integrity. This action aligns with user consent and data protection measures. For concerns or information, contact our support team."
+      },
+      {
+        "createdBy": "Alexander Carter",
+        "title": "SLOW_INTERNET",
+        "description": "Recent reports indicate users experiencing delays in internet connectivity, affecting data transfer rates and online activities. Our technical team is actively investigating the issue to identify root causes and implement solutions. We are committed to delivering a fast and reliable internet connection. Your patience and cooperation are valued as we work to provide a smoother online experience."
+      },
+      {
+        "createdBy": "Ava Mitchell",
+        "title": "APP_DOWNTIME",
+        "description": "Our application will undergo a brief scheduled downtime to implement crucial updates and optimizations. During this time, access to the application will be temporarily restricted to ensure a smooth transition. We understand the inconvenience this may cause and appreciate your patience. Our technical team will work diligently to complete the maintenance promptly, and we anticipate improved performance and user experience following the update."
+      },
+      {
+        "createdBy": "Jack Adams",
+        "title": "LOW_DISK_SPACE",
+        "description": "Urgent notice: One of our core devices is critically low on disk space, posing a risk to data integrity and system stability. Our IT team is actively addressing the situation by optimizing storage allocation and removing unnecessary files. We request all users to minimize data storage activities on this affected device temporarily. Your cooperation is crucial, and we are committed to resolving this matter swiftly."
+      },
+      {
+        "createdBy": "Liam Turner",
+        "title": "ASSIGN_M365",
+        "description": "We are delighted to announce that one of our esteemed team members has been granted access to Microsoft 365 services, marking a significant milestone in our commitment to productivity and collaboration. With Microsoft 365, our team member gains access to an array of powerful tools, including Word, Excel, and Teams, facilitating enhanced productivity and streamlined communication. We are confident that this addition will positively impact our organization's success."
+      },
+      {
+        "createdBy": "Olivia Baker",
+        "title": "GRANT_ACCESS",
+        "description": "We are excited to expand user access privileges to a range of client portals, fostering closer collaboration with our clients and partners. This strategic move aligns with our dedication to enhancing user experiences and strengthening relationships. The extended access allows our team members to conveniently access critical information, documents, and tools, ultimately benefiting our organization's growth and success."
+      },
+      {
+        "createdBy": "Henry Wilson",
+        "title": "RESET_PASSWORD",
+        "description": "In response to a user's request for a password reset, we have initiated the necessary steps to assist in regaining account access. Password reset requests are common, often arising from forgotten passwords or security concerns. Our priority is to ensure a secure and user-friendly experience. Instructions for the password reset process have been emailed to the registered address. For assistance or questions, our support team is available."
+      },
+      {
+        "createdBy": "Emily White",
+        "title": "ADD_USER",
+        "description": "We are thrilled to introduce a new team member to our organization, reaffirming our commitment to growth and excellence. [User's Name] brings valuable experience and expertise that will contribute to our success. As they integrate into our organization, we encourage a warm welcome from all team members."
+      },
+      {
+        "createdBy": "Lucas Davis",
+        "title": "REMOVE_USER",
+        "description": "Following security protocols and user request, a user account has been removed from our system. Account removals are part of our commitment to data security and system integrity. This action aligns with user consent and data protection measures. For concerns or information, contact our support team."
+      },
+      {
+        "createdBy": "Emma Anderson",
+        "title": "SLOW_INTERNET",
+        "description": "Recent reports indicate users experiencing delays in internet connectivity, affecting data transfer rates and online activities. Our technical team is actively investigating the issue to identify root causes and implement solutions. We are committed to delivering a fast and reliable internet connection. Your patience and cooperation are valued as we work to provide a smoother online experience."
+      },
+      {
+        "createdBy": "Liam Thompson",
+        "title": "APP_DOWNTIME",
+        "description": "Our application will undergo a brief scheduled downtime to implement crucial updates and optimizations. During this time, access to the application will be temporarily restricted to ensure a smooth transition. We understand the inconvenience this may cause and appreciate your patience. Our technical team will work diligently to complete the maintenance promptly, and we anticipate improved performance and user experience following the update."
+      },
+      {
+        "createdBy": "Ava Parker",
+        "title": "LOW_DISK_SPACE",
+        "description": "Urgent notice: One of our core devices is critically low on disk space, posing a risk to data integrity and system stability. Our IT team is actively addressing the situation by optimizing storage allocation and removing unnecessary files. We request all users to minimize data storage activities on this affected device temporarily. Your cooperation is crucial, and we are committed to resolving this matter swiftly."
+      },
+      {
+        "createdBy": "Jack Mitchell",
+        "title": "ASSIGN_M365",
+        "description": "We are delighted to announce that one of our esteemed team members has been granted access to Microsoft 365 services, marking a significant milestone in our commitment to productivity and collaboration. With Microsoft 365, our team member gains access to an array of powerful tools, including Word, Excel, and Teams, facilitating enhanced productivity and streamlined communication. We are confident that this addition will positively impact our organization's success."
+      },
+      {
+        "createdBy": "Sophia Lewis",
+        "title": "GRANT_ACCESS",
+        "description": "We are excited to expand user access privileges to a range of client portals, fostering closer collaboration with our clients and partners. This strategic move aligns with our dedication to enhancing user experiences and strengthening relationships. The extended access allows our team members to conveniently access critical information, documents, and tools, ultimately benefiting our organization's growth and success."
+      },
+      {
+        "createdBy": "Nora Carter",
+        "title": "RESET_PASSWORD",
+        "description": "In response to a user's request for a password reset, we have initiated the necessary steps to assist in regaining account access. Password reset requests are common, often arising from forgotten passwords or security concerns. Our priority is to ensure a secure and user-friendly experience. Instructions for the password reset process have been emailed to the registered address. For assistance or questions, our support team is available."
+      },
+      {
+        "createdBy": "Leo Adams",
+        "title": "ADD_USER",
+        "description": "We are thrilled to introduce a new team member to our organization, reaffirming our commitment to growth and excellence. [User's Name] brings valuable experience and expertise that will contribute to our success. As they integrate into our organization, we encourage a warm welcome from all team members."
+      },
+      {
+        "createdBy": "Henry Wilson",
+        "title": "RESET_PASSWORD",
+        "description": "To facilitate a user's account recovery, we have initiated the necessary steps to assist in regaining access. Password reset requests are common, often arising from forgotten passwords or security concerns. Our top priority is to ensure a secure and user-friendly experience. Detailed instructions for the password reset process have been sent to the registered email address. Should you encounter any issues or have questions, our dedicated support team is readily available to provide assistance."
+      },
+      {
+        "createdBy": "Emily White",
+        "title": "ADD_USER",
+        "description": "We are excited to introduce a new team member to our organization, reaffirming our commitment to growth and excellence. [User's Name] joins our team with valuable experience and expertise that will undoubtedly contribute to our success. As they integrate into our organization, we encourage a warm welcome from all team members to ensure a smooth and productive onboarding experience."
+      },
+      {
+        "createdBy": "Lucas Davis",
+        "title": "REMOVE_USER",
+        "description": "In adherence to our established security protocols and user request, a user account has been securely removed from our system. Account removals are part of our unwavering commitment to data security and system integrity. We want to emphasize that this action is taken with the full consent and cooperation of the user, in line with our stringent data protection measures. If you have any questions or require additional information, please do not hesitate to reach out to our dedicated support team."
+      },
+      {
+        "createdBy": "Emma Anderson",
+        "title": "SLOW_INTERNET",
+        "description": "Recent user reports have highlighted delays in internet connectivity, impacting data transfer rates and online activities. Our technical team is actively investigating the issue to pinpoint the root causes and implement effective solutions. Rest assured, we are dedicated to delivering a fast and reliable internet connection to enhance your online experience. We sincerely appreciate your patience and cooperation as we work diligently to resolve this issue."
+      },
+      {
+        "createdBy": "Liam Thompson",
+        "title": "APP_DOWNTIME",
+        "description": "Our application is scheduled for a brief downtime period to implement essential updates and optimizations. During this scheduled maintenance, access to the application will be temporarily restricted to ensure a seamless transition. We understand that this may cause inconvenience and greatly appreciate your patience. Our technical team is committed to completing the maintenance promptly, with the expectation of improved performance and a better user experience following the update."
+      },
+      {
+        "createdBy": "Ava Parker",
+        "title": "LOW_DISK_SPACE",
+        "description": "Urgent attention is required as one of our core devices faces a critical shortage of available disk space, posing a significant risk to data integrity and system stability. Our IT team is actively addressing this situation by optimizing storage allocation and removing redundant files. In the interim, we kindly request that all users minimize data storage activities on this affected device. Your cooperation is vital, and we are determined to resolve this matter swiftly."
+      },
+      {
+        "createdBy": "Jack Mitchell",
+        "title": "ASSIGN_M365",
+        "description": "We are thrilled to announce that one of our distinguished team members has been granted access to the comprehensive suite of Microsoft 365 services. This marks a significant milestone in our commitment to productivity and collaboration. With Microsoft 365, our team member gains access to a wide range of powerful tools, including Word, Excel, and Teams, to enhance productivity and streamline communication. We have every confidence that this addition will positively impact the success of our organization."
+      },
+      {
+        "createdBy": "Sophia Lewis",
+        "title": "GRANT_ACCESS",
+        "description": "We are excited to extend user access privileges to a variety of client portals, further strengthening our partnerships and enhancing collaboration opportunities. This strategic decision aligns with our dedication to enhancing user experiences and cultivating robust relationships with our valued clients and partners. The expanded access allows our team members to conveniently retrieve critical information, access important documents, and utilize essential tools, ultimately contributing to the growth and success of our organization."
+      },
+      {
+        "createdBy": "Nora Carter",
+        "title": "RESET_PASSWORD",
+        "description": "To facilitate a user's account recovery, we have initiated the necessary steps to assist in regaining access. Password reset requests are common, often arising from forgotten passwords or security concerns. Our top priority is to ensure a secure and user-friendly experience. Detailed instructions for the password reset process have been sent to the registered email address. Should you encounter any issues or have questions, our dedicated support team is readily available to provide assistance."
+      },
+      {
+        "createdBy": "Leo Adams",
+        "title": "ADD_USER",
+        "description": "We are excited to introduce a new team member to our organization, reaffirming our commitment to growth and excellence. [User's Name] joins our team with valuable experience and expertise that will undoubtedly contribute to our success. As they integrate into our organization, we encourage a warm welcome from all team members to ensure a smooth and productive onboarding experience."
+      },
+      {
+        "createdBy": "Henry Turner",
+        "title": "REMOVE_USER",
+        "description": "In accordance with our established security measures and upon request, a user account has been securely removed from our system. User account removals are a vital part of our commitment to data security and maintaining system integrity. We emphasize that this action is taken with the full consent and cooperation of the user and is executed in line with our rigorous data protection protocols. If you have any questions or need further information, our dedicated support team is available to assist."
+      },
+      {
+        "createdBy": "Emily Davis",
+        "title": "SLOW_INTERNET",
+        "description": "We have recently received reports of users encountering sluggish internet connectivity, resulting in reduced data transfer speeds and potential disruptions in online activities. Our technical team is actively investigating this issue to identify underlying causes and implement effective solutions. We are unwavering in our commitment to providing a fast and reliable internet connection to all users. We genuinely appreciate your patience and cooperation as we work diligently to resolve this issue and enhance your online experience."
+      },
+      {
+        "createdBy": "Lucas Mitchell",
+        "title": "APP_DOWNTIME",
+        "description": "Our application is scheduled for a brief period of downtime to facilitate essential updates and optimizations. During this scheduled maintenance, access to the application will be temporarily restricted to ensure a smooth transition. We understand that this may cause some inconvenience and greatly appreciate your patience. Our technical team is fully dedicated to completing the maintenance swiftly, with the expectation of improved performance and an enhanced user experience following the update."
+      },
+      {
+        "createdBy": "Emma Wilson",
+        "title": "LOW_DISK_SPACE",
+        "description": "An urgent situation has arisen as one of our core devices is critically low on available disk space. This poses a significant risk to data integrity and the stability of our systems. Our IT team is actively addressing this issue by optimizing storage allocation and removing redundant files. We kindly request that all users minimize their data storage activities on this affected device until the situation is resolved. Your cooperation is invaluable, and we are committed to resolving this matter promptly."
+      },
+      {
+        "createdBy": "Liam Carter",
+        "title": "ASSIGN_M365",
+        "description": "We are thrilled to announce that one of our esteemed team members has been granted access to the comprehensive suite of Microsoft 365 services. This marks a significant milestone in our dedication to productivity and collaboration. With Microsoft 365, our team member gains access to a wide range of powerful tools, including Word, Excel, and Teams, to enhance productivity and streamline communication. We have every confidence that this addition will positively impact the success of our organization."
+      },
+      {
+        "createdBy": "Olivia Turner",
+        "title": "GRANT_ACCESS",
+        "description": "We are excited to expand user access privileges to a variety of client portals, further strengthening our partnerships and enhancing collaboration opportunities. This strategic decision aligns with our dedication to enhancing user experiences and cultivating robust relationships with our valued clients and partners. The expanded access allows our team members to conveniently retrieve critical information, access important documents, and utilize essential tools, ultimately contributing to the growth and success of our organization."
+      },
+      {
+        "createdBy": "William Parker",
+        "title": "RESET_PASSWORD",
+        "description": "To facilitate a user's account recovery, we have initiated the necessary steps to assist in regaining access. Password reset requests are common, often arising from forgotten passwords or security concerns. Our top priority is to ensure a secure and user-friendly experience. Detailed instructions for the password reset process have been sent to the registered email address. Should you encounter any issues or have questions, our dedicated support team is readily available to provide assistance."
+      },
+      {
+        "createdBy": "Nora Mitchell",
+        "title": "ADD_USER",
+        "description": "We are excited to introduce a new team member to our organization, reaffirming our commitment to growth and excellence. [User's Name] joins our team with valuable experience and expertise that will undoubtedly contribute to our success. As they integrate into our organization, we encourage a warm welcome from all team members to ensure a smooth and productive onboarding experience."
+      },
+      {
+        "createdBy": "Leo Davis",
+        "title": "REMOVE_USER",
+        "description": "In accordance with our established security measures and upon request, a user account has been securely removed from our system. User account removals are a vital part of our commitment to data security and maintaining system integrity. We emphasize that this action is taken with the full consent and cooperation of the user and is executed in line with our rigorous data protection protocols. If you have any questions or need further information, our dedicated support team is available to assist."
+      },
+      {
+        "createdBy": "Ella Baker",
+        "title": "SLOW_INTERNET",
+        "description": "We have recently received reports of users encountering sluggish internet connectivity, resulting in reduced data transfer speeds and potential disruptions in online activities. Our technical team is actively investigating this issue to identify underlying causes and implement effective solutions. We are unwavering in our commitment to providing a fast and reliable internet connection to all users. We genuinely appreciate your patience and cooperation as we work diligently to resolve this issue and enhance your online experience."
+      },
+      {
+        "createdBy": "Sophia Adams",
+        "title": "APP_DOWNTIME",
+        "description": "Our application is scheduled for a brief period of downtime to facilitate essential updates and optimizations. During this scheduled maintenance, access to the application will be temporarily restricted to ensure a smooth transition. We understand that this may cause some inconvenience and greatly appreciate your patience. Our technical team is fully dedicated to completing the maintenance swiftly, with the expectation of improved performance and an enhanced user experience following the update."
+      },
+      {
+        "createdBy": "Alexander Turner",
+        "title": "LOW_DISK_SPACE",
+        "description": "An urgent situation has arisen as one of our core devices is critically low on available disk space. This poses a significant risk to data integrity and the stability of our systems. Our IT team is actively addressing this issue by optimizing storage allocation and removing redundant files. We kindly request that all users minimize their data storage activities on this affected device until the situation is resolved. Your cooperation is invaluable, and we are committed to resolving this matter promptly."
+      },
+      {
+        "createdBy": "Ava Parker",
+        "title": "ASSIGN_M365",
+        "description": "We are thrilled to announce that one of our esteemed team members has been granted access to the comprehensive suite of Microsoft 365 services. This marks a significant milestone in our dedication to productivity and collaboration. With Microsoft 365, our team member gains access to a wide range of powerful tools, including Word, Excel, and Teams, to enhance productivity and streamline communication. We have every confidence that this addition will positively impact the success of our organization."
+      },
+      {
+        "createdBy": "Jack Mitchell",
+        "title": "GRANT_ACCESS",
+        "description": "We are excited to expand user access privileges to a variety of client portals, further strengthening our partnerships and enhancing collaboration opportunities. This strategic decision aligns with our dedication to enhancing user experiences and cultivating robust relationships with our valued clients and partners. The expanded access allows our team members to conveniently retrieve critical information, access important documents, and utilize essential tools, ultimately contributing to the growth and success of our organization."
+      },
+      {
+        "createdBy": "Nora Carter",
+        "title": "RESET_PASSWORD",
+        "description": "To facilitate a user's account recovery, we have initiated the necessary steps to assist in regaining access. Password reset requests are common, often arising from forgotten passwords or security concerns. Our top priority is to ensure a secure and user-friendly experience. Detailed instructions for the password reset process have been sent to the registered email address. Should you encounter any issues or have questions, our dedicated support team is readily available to provide assistance."
+      },
+      {
+        "createdBy": "Leo Adams",
+        "title": "ADD_USER",
+        "description": "We are excited to introduce a new team member to our organization, reaffirming our commitment to growth and excellence. [User's Name] joins our team with valuable experience and expertise that will undoubtedly contribute to our success. As they integrate into our organization, we encourage a warm welcome from all team members to ensure a smooth and productive onboarding experience."
+      },
+      {
+        "createdBy": "Ella Turner",
+        "title": "REMOVE_USER",
+        "description": "In accordance with our established security measures and upon request, a user account has been securely removed from our system. User account removals are a vital part of our commitment to data security and maintaining system integrity. We emphasize that this action is taken with the full consent and cooperation of the user and is executed in line with our rigorous data protection protocols. If you have any questions or need further information, our dedicated support team is available to assist."
+      },
+      {
+        "createdBy": "Daniel Green",
+        "title": "SLOW_INTERNET",
+        "description": "We have recently received reports of users encountering sluggish internet connectivity, resulting in reduced data transfer speeds and potential disruptions in online activities. Our technical team is actively investigating this issue to identify underlying causes and implement effective solutions. We are unwavering in our commitment to providing a fast and reliable internet connection to all users. We genuinely appreciate your patience and cooperation as we work diligently to resolve this issue and enhance your online experience."
+      },
+      {
+        "createdBy": "Grace Scott",
+        "title": "APP_DOWNTIME",
+        "description": "Our application is scheduled for a brief period of downtime to facilitate essential updates and optimizations. During this scheduled maintenance, access to the application will be temporarily restricted to ensure a smooth transition. We understand that this may cause some inconvenience and greatly appreciate your patience. Our technical team is fully dedicated to completing the maintenance swiftly, with the expectation of improved performance and an enhanced user experience following the update."
+      },
+      {
+        "createdBy": "William Turner",
+        "title": "LOW_DISK_SPACE",
+        "description": "An urgent situation has arisen as one of our core devices is critically low on available disk space. This poses a significant risk to data integrity and the stability of our systems. Our IT team is actively addressing this issue by optimizing storage allocation and removing redundant files. We kindly request that all users minimize their data storage activities on this affected device until the situation is resolved. Your cooperation is invaluable, and we are committed to resolving this matter promptly."
+      },
+      {
+        "createdBy": "Nora Baker",
+        "title": "ASSIGN_M365",
+        "description": "We are delighted to announce that one of our dedicated team members has been granted access to the comprehensive suite of Microsoft 365 services, marking a significant step forward in our commitment to productivity and collaboration. With Microsoft 365, our team member now has access to a wide array of powerful tools, including Word, Excel, and Teams, which will undoubtedly enhance their productivity and streamline communication. We have full confidence that this addition will significantly contribute to our organization's success."
+      },
+      {
+        "createdBy": "Leo Davis",
+        "title": "GRANT_ACCESS",
+        "description": "We are excited to expand user access privileges to a variety of client portals, further strengthening our partnerships and enhancing collaboration opportunities. This strategic decision aligns with our dedication to enhancing user experiences and cultivating robust relationships with our valued clients and partners. The extended access empowers our team members to conveniently access critical information, important documents, and essential tools, ultimately benefiting our organization's growth and success."
+      },
+      {
+        "createdBy": "Ella Turner",
+        "title": "RESET_PASSWORD",
+        "description": "In response to a user's request for a password reset, we have initiated the necessary steps to assist in regaining account access. Password reset requests are common and often stem from forgotten passwords or security concerns. Our top priority is to ensure a secure and user-friendly experience. Detailed instructions for the password reset process have been sent to the registered email address. If you encounter any issues or have questions, our dedicated support team is readily available to provide assistance."
+      },
+      {
+        "createdBy": "Daniel Green",
+        "title": "ADD_USER",
+        "description": "We are thrilled to introduce a new team member to our organization, reaffirming our commitment to growth and excellence. [User's Name] joins our team with valuable experience and expertise that will undoubtedly contribute to our success. As they integrate into our organization, we encourage a warm welcome from all team members to ensure a smooth and productive onboarding experience."
+      },
+      {
+        "createdBy": "Grace Scott",
+        "title": "REMOVE_USER",
+        "description": "Following our established security protocols and upon user request, a user account has been securely removed from our system. Account removals are an integral part of our commitment to data security and maintaining system integrity. This action is taken with the full consent and cooperation of the user and aligns with our stringent data protection measures. If you have any questions or need further information, please do not hesitate to reach out to our dedicated support team."
+      },
+      {
+        "createdBy": "William Turner",
+        "title": "SLOW_INTERNET",
+        "description": "Recent reports have indicated users experiencing delays in internet connectivity, impacting data transfer rates and online activities. Our technical team is actively investigating the issue to identify root causes and implement solutions. We are steadfast in delivering a fast and reliable internet connection. Your patience and cooperation are valued as we work to provide a smoother online experience."
+      },
+      {
+        "createdBy": "Nora Mitchell",
+        "title": "APP_DOWNTIME",
+        "description": "Our application is scheduled for a brief downtime period to implement essential updates and optimizations. During this time, access to the application will be temporarily restricted to ensure a smooth transition. We understand the inconvenience this may cause and appreciate your patience. Our technical team will work diligently to complete the maintenance promptly, and we anticipate improved performance and user experience following the update."
+      },
+      {
+        "createdBy": "Leo Adams",
+        "title": "LOW_DISK_SPACE",
+        "description": "Urgent notice: One of our core devices is critically low on disk space, posing a risk to data integrity and system stability. Our IT team is actively addressing the situation by optimizing storage allocation and removing unnecessary files. We request all users to minimize data storage activities on this affected device temporarily. Your cooperation is crucial, and we are committed to resolving this matter swiftly."
+      },
+      {
+        "createdBy": "Ava Turner",
+        "title": "ASSIGN_M365",
+        "description": "We are delighted to announce that one of our dedicated team members has been granted access to the comprehensive suite of Microsoft 365 services, marking a significant step forward in our commitment to productivity and collaboration. With Microsoft 365, our team member now has access to a wide array of powerful tools, including Word, Excel, and Teams, which will undoubtedly enhance their productivity and streamline communication. We have full confidence that this addition will significantly contribute to our organization's success."
+      },
+      {
+        "createdBy": "Sophia Green",
+        "title": "GRANT_ACCESS",
+        "description": "We are excited to extend user access privileges to a variety of client portals, further strengthening our partnerships and enhancing collaboration opportunities. This strategic decision aligns with our dedication to enhancing user experiences and cultivating robust relationships with our valued clients and partners. The extended access empowers our team members to conveniently access critical information, important documents, and essential tools, ultimately benefiting our organization's growth and success."
+      },
+      {
+        "createdBy": "Henry Baker",
+        "title": "RESET_PASSWORD",
+        "description": "We have received a user's request for a password reset, and we are actively assisting in regaining account access. Such requests are common and are often due to forgotten passwords or security concerns. Our top priority is to ensure a secure and user-friendly experience. Detailed instructions for the password reset process have been dispatched to the registered email address. If you encounter any issues or have questions, our dedicated support team is readily available to provide assistance."
+      },
+      {
+        "createdBy": "Emily Davis",
+        "title": "ADD_USER",
+        "description": "We are delighted to introduce a new team member to our organization, reaffirming our commitment to growth and excellence. [User's Name] joins our team with valuable experience and expertise that will undoubtedly contribute to our success. As they integrate into our organization, we encourage a warm welcome from all team members to ensure a smooth and productive onboarding experience."
+      },
+      {
+        "createdBy": "Lucas Turner",
+        "title": "REMOVE_USER",
+        "description": "In accordance with our established security measures and upon user request, a user account has been securely removed from our system. Account removals are an integral part of our commitment to data security and maintaining system integrity. This action is taken with the full consent and cooperation of the user and aligns with our stringent data protection measures. If you have any questions or need further information, please do not hesitate to reach out to our dedicated support team."
+      },
+      {
+        "createdBy": "Emma Scott",
+        "title": "SLOW_INTERNET",
+        "description": "Recent reports have indicated users experiencing delays in internet connectivity, impacting data transfer rates and online activities. Our technical team is actively investigating the issue to identify root causes and implement solutions. We are steadfast in delivering a fast and reliable internet connection. Your patience and cooperation are valued as we work to provide a smoother online experience."
+      },
+      {
+        "createdBy": "Liam Baker",
+        "title": "APP_DOWNTIME",
+        "description": "Our application is scheduled for a brief downtime period to implement essential updates and optimizations. During this time, access to the application will be temporarily restricted to ensure a smooth transition. We understand the inconvenience this may cause and appreciate your patience. Our technical team will work diligently to complete the maintenance promptly, and we anticipate improved performance and user experience following the update."
+      },
+      {
+        "createdBy": "Ava Mitchell",
+        "title": "LOW_DISK_SPACE",
+        "description": "Urgent notice: One of our core devices is critically low on disk space, posing a risk to data integrity and system stability. Our IT team is actively addressing the situation by optimizing storage allocation and removing unnecessary files. We request all users to minimize data storage activities on this affected device temporarily. Your cooperation is crucial, and we are committed to resolving this matter swiftly."
+      },
+      {
+        "createdBy": "Jack Turner",
+        "title": "ASSIGN_M365",
+        "description": "We are delighted to announce that one of our dedicated team members has been granted access to the comprehensive suite of Microsoft 365 services, marking a significant step forward in our commitment to productivity and collaboration. With Microsoft 365, our team member now has access to a wide array of powerful tools, including Word, Excel, and Teams, which will undoubtedly enhance their productivity and streamline communication. We have full confidence that this addition will significantly contribute to our organization's success."
+      },
+      {
+        "createdBy": "Sophia Davis",
+        "title": "GRANT_ACCESS",
+        "description": "We are excited to extend user access privileges to a variety of client portals, further strengthening our partnerships and enhancing collaboration opportunities. This strategic decision aligns with our dedication to enhancing user experiences and cultivating robust relationships with our valued clients and partners. The extended access empowers our team members to conveniently access critical information, important documents, and essential tools, ultimately benefiting our organization's growth and success."
+      },
+      {
+        "createdBy": "Nora Turner",
+        "title": "RESET_PASSWORD",
+        "description": "We have received a user's request for a password reset, and we are actively assisting in regaining account access. Such requests are common and are often due to forgotten passwords or security concerns. Our top priority is to ensure a secure and user-friendly experience. Detailed instructions for the password reset process have been dispatched to the registered email address. If you encounter any issues or have questions, our dedicated support team is readily available to provide assistance."
+      },
+      {
+        "createdBy": "Leo Baker",
+        "title": "ADD_USER",
+        "description": "We are delighted to introduce a new team member to our organization, reaffirming our commitment to growth and excellence. [User's Name] joins our team with valuable experience and expertise that will undoubtedly contribute to our success. As they integrate into our organization, we encourage a warm welcome from all team members to ensure a smooth and productive onboarding experience."
+      },
+      {
+        "createdBy": "Olivia Turner",
+        "title": "REMOVE_USER",
+        "description": "In alignment with our stringent security measures and upon the request of the user, we have securely removed a user account from our system. User account removals are pivotal in upholding our commitment to data security and system integrity. It's important to note that this action is carried out with the full consent and cooperation of the user. If you have any inquiries or require further information, please do not hesitate to reach out to our dedicated support team."
+      },
+      {
+        "createdBy": "Mia Baker",
+        "title": "SLOW_INTERNET",
+        "description": "We have recently received reports of users encountering sluggish internet connectivity, leading to reduced data transfer speeds and potential disruptions in online activities. Our technical team is actively investigating this issue to identify underlying causes and implement effective solutions. Rest assured, our commitment to providing a fast and reliable internet connection remains unwavering. We genuinely appreciate your patience and cooperation as we work diligently to resolve this issue and enhance your online experience."
+      },
+      {
+        "createdBy": "Liam Turner",
+        "title": "APP_DOWNTIME",
+        "description": "Our application is scheduled for a brief period of downtime to facilitate essential updates and optimizations. During this scheduled maintenance, access to the application will be temporarily restricted to ensure a smooth transition. We understand that this may cause some inconvenience and greatly appreciate your patience. Our technical team is fully dedicated to completing the maintenance swiftly, with the expectation of improved performance and an enhanced user experience following the update."
+      },
+      {
+        "createdBy": "Emma Davis",
+        "title": "LOW_DISK_SPACE",
+        "description": "We urgently need to address a critical situation as one of our core devices is dangerously low on available disk space. This poses a significant risk to data integrity and the overall stability of our systems. Our IT team is taking immediate action by optimizing storage allocation and eliminating redundant files. We kindly request that all users minimize their data storage activities on this affected device until the situation is resolved. Your cooperation is invaluable, and we are fully committed to resolving this matter promptly."
+      },
+      {
+        "createdBy": "Ethan Turner",
+        "title": "ASSIGN_M365",
+        "description": "We are excited to announce that one of our esteemed team members has been granted access to the comprehensive suite of Microsoft 365 services. This represents a significant milestone in our commitment to productivity and collaboration. With Microsoft 365, our team member gains access to a wide range of powerful tools, including Word, Excel, and Teams, which will significantly boost productivity and streamline communication. We have every confidence that this addition will contribute to the success of our organization."
+      },
+      {
+        "createdBy": "Ava Mitchell",
+        "title": "GRANT_ACCESS",
+        "description": "We are thrilled to expand user access privileges to various client portals, further fortifying our partnerships and enhancing collaboration opportunities. This strategic move aligns with our dedication to enhancing user experiences and fostering robust relationships with our valued clients and partners. The expanded access empowers our team members to conveniently access critical information, important documents, and essential tools, ultimately contributing to the growth and success of our organization."
+      },
+      {
+        "createdBy": "Nora Turner",
+        "title": "RESET_PASSWORD",
+        "description": "We have received a user's request for a password reset, and we are actively assisting in regaining account access. Such requests are common and are often due to forgotten passwords or security concerns. Our top priority is to ensure a secure and user-friendly experience. Detailed instructions for the password reset process have been dispatched to the registered email address. If you encounter any issues or have questions, our dedicated support team is readily available to provide assistance."
+      },
+      {
+        "createdBy": "Leo Baker",
+        "title": "ADD_USER",
+        "description": "We are delighted to introduce a new team member to our organization, reaffirming our commitment to growth and excellence. [User's Name] joins our team with valuable experience and expertise that will undoubtedly contribute to our success. As they integrate into our organization, we encourage a warm welcome from all team members to ensure a smooth and productive onboarding experience."
+      },
+      {
+        "createdBy": "Sophia Davis",
+        "title": "REMOVE_USER",
+        "description": "In alignment with our stringent security measures and upon the request of the user, we have securely removed a user account from our system. User account removals are pivotal in upholding our commitment to data security and system integrity. It's important to note that this action is carried out with the full consent and cooperation of the user. If you have any inquiries or require further information, please do not hesitate to reach out to our dedicated support team."
+      },
+      {
+        "createdBy": "Ethan Turner",
+        "title": "SLOW_INTERNET",
+        "description": "We have recently received reports of users encountering sluggish internet connectivity, leading to reduced data transfer speeds and potential disruptions in online activities. Our technical team is actively investigating this issue to identify underlying causes and implement effective solutions. Rest assured, our commitment to providing a fast and reliable internet connection remains unwavering. We genuinely appreciate your patience and cooperation as we work diligently to resolve this issue and enhance your online experience."
+      },
+      {
+        "createdBy": "Henry Mitchell",
+        "title": "APP_DOWNTIME",
+        "description": "Our application is scheduled for a brief period of downtime to facilitate essential updates and optimizations. During this scheduled maintenance, access to the application will be temporarily restricted to ensure a smooth transition. We understand that this may cause some inconvenience and greatly appreciate your patience. Our technical team is fully dedicated to completing the maintenance swiftly, with the expectation of improved performance and an enhanced user experience following the update."
+      },
+      {
+        "createdBy": "Ella Davis",
+        "title": "LOW_DISK_SPACE",
+        "description": "We urgently need to address a critical situation as one of our core devices is dangerously low on available disk space. This poses a significant risk to data integrity and the overall stability of our systems. Our IT team is taking immediate action by optimizing storage allocation and eliminating redundant files. We kindly request that all users minimize their data storage activities on this affected device until the situation is resolved. Your cooperation is invaluable, and we are fully committed to resolving this matter promptly."
+      },
+      {
+        "createdBy": "Lucas Mitchell",
+        "title": "ASSIGN_M365",
+        "description": "We are excited to announce that one of our esteemed team members has been granted access to the comprehensive suite of Microsoft 365 services. This represents a significant milestone in our commitment to productivity and collaboration. With Microsoft 365, our team member gains access to a wide range of powerful tools, including Word, Excel, and Teams, which will significantly boost productivity and streamline communication. We have every confidence that this addition will contribute to the success of our organization."
+      },
+      {
+        "createdBy": "Emma Turner",
+        "title": "GRANT_ACCESS",
+        "description": "We are thrilled to expand user access privileges to various client portals, further fortifying our partnerships and enhancing collaboration opportunities. This strategic move aligns with our dedication to enhancing user experiences and fostering robust relationships with our valued clients and partners. The expanded access empowers our team members to conveniently access critical information, important documents, and essential tools, ultimately contributing to the growth and success of our organization."
+      },
+      {
+        "createdBy": "Liam Davis",
+        "title": "RESET_PASSWORD",
+        "description": "We have received a user's request for a password reset, and we are actively assisting in regaining account access. Such requests are common and are often due to forgotten passwords or security concerns. Our top priority is to ensure a secure and user-friendly experience. Detailed instructions for the password reset process have been dispatched to the registered email address. If you encounter any issues or have questions, our dedicated support team is readily available to provide assistance."
+      },
+      {
+        "createdBy": "Olivia Mitchell",
+        "title": "ADD_USER",
+        "description": "We are delighted to introduce a new team member to our organization, reaffirming our commitment to growth and excellence. [User's Name] joins our team with valuable experience and expertise that will undoubtedly contribute to our success. As they integrate into our organization, we encourage a warm welcome from all team members to ensure a smooth and productive onboarding experience."
+      },
+      {
+        "createdBy": "Mia Davis",
+        "title": "REMOVE_USER",
+        "description": "In alignment with our stringent security measures and upon the request of the user, we have securely removed a user account from our system. User account removals are pivotal in upholding our commitment to data security and system integrity. It's important to note that this action is carried out with the full consent and cooperation of the user. If you have any inquiries or require further information, please do not hesitate to reach out to our dedicated support team."
+      },
+      {
+        "createdBy": "Ethan Turner",
+        "title": "SLOW_INTERNET",
+        "description": "We have recently received reports of users encountering sluggish internet connectivity, leading to reduced data transfer speeds and potential disruptions in online activities. Our technical team is actively investigating this issue to identify underlying causes and implement effective solutions. Rest assured, our commitment to providing a fast and reliable internet connection remains unwavering. We genuinely appreciate your patience and cooperation as we work diligently to resolve this issue and enhance your online experience."
+      },
+      {
+        "createdBy": "Ava Mitchell",
+        "title": "APP_DOWNTIME",
+        "description": "Our application is scheduled for a brief period of downtime to facilitate essential updates and optimizations. During this scheduled maintenance, access to the application will be temporarily restricted to ensure a smooth transition. We understand that this may cause some inconvenience and greatly appreciate your patience. Our technical team is fully dedicated to completing the maintenance swiftly, with the expectation of improved performance and an enhanced user experience following the update."
+      },
+      {
+        "createdBy": "Nora Turner",
+        "title": "LOW_DISK_SPACE",
+        "description": "We urgently need to address a critical situation as one of our core devices is dangerously low on available disk space. This poses a significant risk to data integrity and the overall stability of our systems. Our IT team is taking immediate action by optimizing storage allocation and eliminating redundant files. We kindly request that all users minimize their data storage activities on this affected device until the situation is resolved. Your cooperation is invaluable, and we are fully committed to resolving this matter promptly."
+      },
+      {
+        "createdBy": "Henry Mitchell",
+        "title": "APP_DOWNTIME",
+        "description": "Our organization's flagship application is undergoing a brief period of scheduled downtime to implement crucial updates and optimizations. During this maintenance window, access to the application will be temporarily unavailable to ensure a seamless transition. We acknowledge the inconvenience this may cause and sincerely appreciate your patience. Our dedicated technical team is committed to swiftly completing the maintenance, with the expectation of improved performance and an enhanced user experience upon the update's completion."
+      },
+      {
+        "createdBy": "Ella Davis",
+        "title": "LOW_DISK_SPACE",
+        "description": "We find ourselves in an urgent situation as one of our core devices is dangerously low on available disk space. This poses a substantial risk to data integrity and the overall stability of our systems. Our IT experts are taking immediate action by optimizing storage allocation and eliminating redundant files. We kindly request all users to minimize their data storage activities on this affected device until the situation is resolved. Your cooperation is invaluable, and we are fully dedicated to resolving this matter promptly."
+      },
+      {
+        "createdBy": "Lucas Mitchell",
+        "title": "ASSIGN_M365",
+        "description": "We are delighted to announce that one of our esteemed team members has been granted access to the comprehensive suite of Microsoft 365 services. This represents a significant milestone in our commitment to productivity and collaboration. With Microsoft 365, our team member gains access to a wide range of powerful tools, including Word, Excel, and Teams, which will significantly boost productivity and streamline communication. We have every confidence that this addition will contribute to the success of our organization."
+      },
+      {
+        "createdBy": "Emma Turner",
+        "title": "GRANT_ACCESS",
+        "description": "We are thrilled to expand user access privileges to various client portals, further fortifying our partnerships and enhancing collaboration opportunities. This strategic move aligns with our dedication to enhancing user experiences and fostering robust relationships with our valued clients and partners. The expanded access empowers our team members to conveniently access critical information, important documents, and essential tools, ultimately contributing to the growth and success of our organization."
+      },
+      {
+        "createdBy": "Liam Davis",
+        "title": "RESET_PASSWORD",
+        "description": "In response to a user's request for a password reset, our team is actively assisting in regaining account access. Such requests are not uncommon and are often due to forgotten passwords or security concerns. Our top priority is to ensure a secure and user-friendly experience. Detailed instructions for the password reset process have been dispatched to the registered email address. If you encounter any issues or have questions, our dedicated support team is readily available to provide assistance."
+      },
+      {
+        "createdBy": "Olivia Mitchell",
+        "title": "ADD_USER",
+        "description": "We are delighted to introduce a new team member to our organization, reaffirming our commitment to growth and excellence. [User's Name] joins our team with valuable experience and expertise that will undoubtedly contribute to our success. As they integrate into our organization, we encourage a warm welcome from all team members to ensure a smooth and productive onboarding experience."
+      },
+      {
+        "createdBy": "Mia Davis",
+        "title": "REMOVE_USER",
+        "description": "In alignment with our stringent security measures and at the specific request of the user, we have securely removed a user account from our system. User account removals are pivotal in upholding our commitment to data security and system integrity. It's important to note that this action is carried out with the full consent and cooperation of the user. If you have any inquiries or require further information, please do not hesitate to reach out to our dedicated support team."
+      },
+      {
+        "createdBy": "Ethan Turner",
+        "title": "SLOW_INTERNET",
+        "description": "We have recently received reports of users encountering sluggish internet connectivity, resulting in reduced data transfer speeds and potential disruptions in online activities. Our technical team is actively investigating this issue to identify underlying causes and implement effective solutions. Rest assured, our commitment to providing a fast and reliable internet connection remains unwavering. We genuinely appreciate your patience and cooperation as we work diligently to resolve this issue and enhance your online experience."
+      },
+      {
+        "createdBy": "Ava Mitchell",
+        "title": "APP_DOWNTIME",
+        "description": "Our organization's flagship application is undergoing a brief period of scheduled downtime to implement crucial updates and optimizations. During this maintenance window, access to the application will be temporarily unavailable to ensure a seamless transition. We acknowledge the inconvenience this may cause and sincerely appreciate your patience. Our dedicated technical team is committed to swiftly completing the maintenance, with the expectation of improved performance and an enhanced user experience upon the update's completion."
+      },
+      {
+        "createdBy": "Nora Turner",
+        "title": "LOW_DISK_SPACE",
+        "description": "We find ourselves in an urgent situation as one of our core devices is dangerously low on available disk space. This poses a substantial risk to data integrity and the overall stability of our systems. Our IT experts are taking immediate action by optimizing storage allocation and eliminating redundant files. We kindly request all users to minimize their data storage activities on this affected device until the situation is resolved. Your cooperation is invaluable, and we are fully dedicated to resolving this matter promptly."
+      },
+      {
+        "createdBy": "Leo Mitchell",
+        "title": "REMOVE_USER",
+        "description": "In compliance with our rigorous security protocols and at the explicit request of the user, we have securely deleted a user account from our system. User account removals are a critical aspect of upholding our commitment to data security and system integrity. It's crucial to emphasize that this action is executed with the full consent and cooperation of the user. If you have any queries or require additional information, please do not hesitate to contact our dedicated support team."
+      },
+      {
+        "createdBy": "Sophia Turner",
+        "title": "SLOW_INTERNET",
+        "description": "We've recently received reports of users experiencing sluggish internet connectivity, leading to diminished data transfer speeds and potential interruptions in online activities. Our technical team is actively investigating this issue to pinpoint root causes and implement effective solutions. Rest assured, our dedication to delivering a fast and dependable internet connection remains resolute. We genuinely value your patience and collaboration as we diligently work to resolve this matter and enhance your online experience."
+      },
+      {
+        "createdBy": "Ella Davis",
+        "title": "APP_DOWNTIME",
+        "description": "Our flagship application is scheduled for brief downtime to facilitate essential updates and optimizations. During this maintenance period, access to the application will be temporarily restricted to ensure a seamless transition. We understand the potential inconvenience and sincerely appreciate your patience. Our dedicated technical team is fully committed to completing the maintenance swiftly, with the expectation of improved performance and an enhanced user experience following the update."
+      },
+      {
+        "createdBy": "Liam Turner",
+        "title": "LOW_DISK_SPACE",
+        "description": "We face an urgent situation as one of our core devices is perilously low on available disk space, posing a substantial risk to data integrity and system stability. Our IT specialists are taking immediate action by optimizing storage allocation and eliminating redundant files. We kindly request all users to minimize data storage activities on this affected device until we resolve the situation. Your cooperation is invaluable, and we are wholly dedicated to promptly resolving this matter."
+      },
+      {
+        "createdBy": "Olivia Mitchell",
+        "title": "ASSIGN_M365",
+        "description": "We are thrilled to announce that one of our esteemed team members has been granted access to the comprehensive suite of Microsoft 365 services. This milestone underscores our commitment to productivity and collaboration. With Microsoft 365, our team member gains access to a wide range of powerful tools, including Word, Excel, and Teams, which will significantly enhance productivity and streamline communication. We have every confidence that this addition will contribute to our organization's success."
+      },
+      {
+        "createdBy": "Mia Davis",
+        "title": "GRANT_ACCESS",
+        "description": "We are excited to extend user access privileges to various client portals, further fortifying our partnerships and fostering collaboration opportunities. This strategic step aligns with our dedication to enhancing user experiences and nurturing robust relationships with our valued clients and partners. The expanded access empowers our team members to conveniently access critical information, important documents, and essential tools, ultimately contributing to our organization's growth and success."
+      },
+      {
+        "createdBy": "Ethan Turner",
+        "title": "RESET_PASSWORD",
+        "description": "In response to a user's request for a password reset, our team is actively assisting in regaining account access. Such requests are a routine part of our service and typically arise due to forgotten passwords or security concerns. Our utmost priority is to ensure a secure and user-friendly experience. Comprehensive instructions for the password reset process have been dispatched to the registered email address. If you encounter any difficulties or have inquiries, our dedicated support team is available around the clock to provide assistance."
+      },
+      {
+        "createdBy": "Ava Mitchell",
+        "title": "ADD_USER",
+        "description": "We are excited to welcome a new team member to our organization, reinforcing our commitment to growth and excellence. [User's Name] brings valuable experience and expertise that will undoubtedly enhance our success. As they integrate into our organization, we encourage a warm welcome from all team members to ensure a smooth and productive onboarding experience."
+      },
+      {
+        "createdBy": "Nora Turner",
+        "title": "REMOVE_USER",
+        "description": "In compliance with our rigorous security protocols and at the explicit request of the user, we have securely deleted a user account from our system. User account removals are a critical aspect of upholding our commitment to data security and system integrity. It's crucial to emphasize that this action is executed with the full consent and cooperation of the user. If you have any queries or require additional information, please do not hesitate to contact our dedicated support team."
+      },
+      {
+        "createdBy": "Leo Mitchell",
+        "title": "SLOW_INTERNET",
+        "description": "We've recently received reports of users experiencing sluggish internet connectivity, leading to diminished data transfer speeds and potential interruptions in online activities. Our technical team is actively investigating this issue to pinpoint root causes and implement effective solutions. Rest assured, our dedication to delivering a fast and dependable internet connection remains resolute. We genuinely value your patience and collaboration as we diligently work to resolve this matter and enhance your online experience."
+      },
+      {
+        "createdBy": "Leo Mitchell",
+        "title": "REMOVE_USER",
+        "description": "In compliance with our rigorous security protocols and at the explicit request of the user, we have securely deleted a user account from our system. User account removals are a critical aspect of upholding our commitment to data security and system integrity. It's crucial to emphasize that this action is executed with the full consent and cooperation of the user. If you have any queries or require additional information, please do not hesitate to contact our dedicated support team."
+      },
+      {
+        "createdBy": "Sophia Turner",
+        "title": "SLOW_INTERNET",
+        "description": "We've recently received reports of users experiencing sluggish internet connectivity, leading to diminished data transfer speeds and potential interruptions in online activities. Our technical team is actively investigating this issue to pinpoint root causes and implement effective solutions. Rest assured, our dedication to delivering a fast and dependable internet connection remains resolute. We genuinely value your patience and collaboration as we diligently work to resolve this matter and enhance your online experience."
+      },
+      {
+        "createdBy": "Ella Davis",
+        "title": "APP_DOWNTIME",
+        "description": "Our flagship application is scheduled for brief downtime to facilitate essential updates and optimizations. During this maintenance period, access to the application will be temporarily restricted to ensure a seamless transition. We understand the potential inconvenience and sincerely appreciate your patience. Our dedicated technical team is fully committed to completing the maintenance swiftly, with the expectation of improved performance and an enhanced user experience following the update."
+      },
+      {
+        "createdBy": "Liam Turner",
+        "title": "LOW_DISK_SPACE",
+        "description": "We face an urgent situation as one of our core devices is perilously low on available disk space, posing a substantial risk to data integrity and system stability. Our IT specialists are taking immediate action by optimizing storage allocation and eliminating redundant files. We kindly request all users to minimize data storage activities on this affected device until we resolve the situation. Your cooperation is invaluable, and we are wholly dedicated to promptly resolving this matter."
+      },
+      {
+        "createdBy": "Olivia Mitchell",
+        "title": "ASSIGN_M365",
+        "description": "We are thrilled to announce that one of our esteemed team members has been granted access to the comprehensive suite of Microsoft 365 services. This milestone underscores our commitment to productivity and collaboration. With Microsoft 365, our team member gains access to a wide range of powerful tools, including Word, Excel, and Teams, which will significantly enhance productivity and streamline communication. We have every confidence that this addition will contribute to our organization's success."
+      },
+      {
+        "createdBy": "Mia Davis",
+        "title": "GRANT_ACCESS",
+        "description": "We are excited to extend user access privileges to various client portals, further fortifying our partnerships and fostering collaboration opportunities. This strategic step aligns with our dedication to enhancing user experiences and nurturing robust relationships with our valued clients and partners. The expanded access empowers our team members to conveniently access critical information, important documents, and essential tools, ultimately contributing to our organization's growth and success."
+      },
+      {
+        "createdBy": "Ethan Turner",
+        "title": "RESET_PASSWORD",
+        "description": "In response to a user's request for a password reset, our team is actively assisting in regaining account access. Such requests are a routine part of our service and typically arise due to forgotten passwords or security concerns. Our utmost priority is to ensure a secure and user-friendly experience. Comprehensive instructions for the password reset process have been dispatched to the registered email address. If you encounter any difficulties or have inquiries, our dedicated support team is available around the clock to provide assistance."
+      },
+      {
+        "createdBy": "Ava Mitchell",
+        "title": "ADD_USER",
+        "description": "We are excited to welcome a new team member to our organization, reinforcing our commitment to growth and excellence. [User's Name] brings valuable experience and expertise that will undoubtedly enhance our success. As they integrate into our organization, we encourage a warm welcome from all team members to ensure a smooth and productive onboarding experience."
+      },
+      {
+        "createdBy": "Nora Turner",
+        "title": "REMOVE_USER",
+        "description": "In compliance with our rigorous security protocols and at the explicit request of the user, we have securely deleted a user account from our system. User account removals are a critical aspect of upholding our commitment to data security and system integrity. It's crucial to emphasize that this action is executed with the full consent and cooperation of the user. If you have any queries or require additional information, please do not hesitate to contact our dedicated support team."
+      },
+      {
+        "createdBy": "Leo Mitchell",
+        "title": "SLOW_INTERNET",
+        "description": "We've recently received reports of users experiencing sluggish internet connectivity, leading to diminished data transfer speeds and potential interruptions in online activities. Our technical team is actively investigating this issue to pinpoint root causes and implement effective solutions. Rest assured, our dedication to delivering a fast and dependable internet connection remains resolute. We genuinely value your patience and collaboration as we diligently work to resolve this matter and enhance your online experience."
+      },
+      {
+        "createdBy": "Leo Mitchell",
+        "title": "REMOVE_USER",
+        "description": "In compliance with our rigorous security protocols and at the explicit request of the user, we have securely deleted a user account from our system. User account removals are a critical aspect of upholding our commitment to data security and system integrity. It's crucial to emphasize that this action is executed with the full consent and cooperation of the user. If you have any queries or require additional information, please do not hesitate to contact our dedicated support team."
+      },
+      {
+        "createdBy": "Sophia Turner",
+        "title": "SLOW_INTERNET",
+        "description": "We've recently received reports of users experiencing sluggish internet connectivity, leading to diminished data transfer speeds and potential interruptions in online activities. Our technical team is actively investigating this issue to pinpoint root causes and implement effective solutions. Rest assured, our dedication to delivering a fast and dependable internet connection remains resolute. We genuinely value your patience and collaboration as we diligently work to resolve this matter and enhance your online experience."
+      },
+      {
+        "createdBy": "Ella Davis",
+        "title": "APP_DOWNTIME",
+        "description": "Our flagship application is scheduled for brief downtime to facilitate essential updates and optimizations. During this maintenance period, access to the application will be temporarily restricted to ensure a seamless transition. We understand the potential inconvenience and sincerely appreciate your patience. Our dedicated technical team is fully committed to completing the maintenance swiftly, with the expectation of improved performance and an enhanced user experience following the update."
+      },
+      {
+        "createdBy": "Liam Turner",
+        "title": "LOW_DISK_SPACE",
+        "description": "We face an urgent situation as one of our core devices is perilously low on available disk space, posing a substantial risk to data integrity and system stability. Our IT specialists are taking immediate action by optimizing storage allocation and eliminating redundant files. We kindly request all users to minimize data storage activities on this affected device until we resolve the situation. Your cooperation is invaluable, and we are wholly dedicated to promptly resolving this matter."
+      },
+      {
+        "createdBy": "Olivia Mitchell",
+        "title": "ASSIGN_M365",
+        "description": "We are thrilled to announce that one of our esteemed team members has been granted access to the comprehensive suite of Microsoft 365 services. This milestone underscores our commitment to productivity and collaboration. With Microsoft 365, our team member gains access to a wide range of powerful tools, including Word, Excel, and Teams, which will significantly enhance productivity and streamline communication. We have every confidence that this addition will contribute to our organization's success."
+      },
+      {
+        "createdBy": "Mia Davis",
+        "title": "GRANT_ACCESS",
+        "description": "We are excited to extend user access privileges to various client portals, further fortifying our partnerships and fostering collaboration opportunities. This strategic step aligns with our dedication to enhancing user experiences and nurturing robust relationships with our valued clients and partners. The expanded access empowers our team members to conveniently access critical information, important documents, and essential tools, ultimately contributing to our organization's growth and success."
+      },
+      {
+        "createdBy": "Ethan Turner",
+        "title": "RESET_PASSWORD",
+        "description": "In response to a user's request for a password reset, our team is actively assisting in regaining account access. Such requests are a routine part of our service and typically arise due to forgotten passwords or security concerns. Our utmost priority is to ensure a secure and user-friendly experience. Comprehensive instructions for the password reset process have been dispatched to the registered email address. If you encounter any difficulties or have inquiries, our dedicated support team is available around the clock to provide assistance."
+      },
+      {
+        "createdBy": "Ava Mitchell",
+        "title": "ADD_USER",
+        "description": "We are excited to welcome a new team member to our organization, reinforcing our commitment to growth and excellence. [User's Name] brings valuable experience and expertise that will undoubtedly enhance our success. As they integrate into our organization, we encourage a warm welcome from all team members to ensure a smooth and productive onboarding experience."
+      },
+      {
+        "createdBy": "Nora Turner",
+        "title": "REMOVE_USER",
+        "description": "In compliance with our rigorous security protocols and at the explicit request of the user, we have securely deleted a user account from our system. User account removals are a critical aspect of upholding our commitment to data security and system integrity. It's crucial to emphasize that this action is executed with the full consent and cooperation of the user. If you have any queries or require additional information, please do not hesitate to contact our dedicated support team."
+      },
+      {
+        "createdBy": "Leo Mitchell",
+        "title": "SLOW_INTERNET",
+        "description": "We've recently received reports of users experiencing sluggish internet connectivity, leading to diminished data transfer speeds and potential interruptions in online activities. Our technical team is actively investigating this issue to pinpoint root causes and implement effective solutions. Rest assured, our dedication to delivering a fast and dependable internet connection remains resolute. We genuinely value your patience and collaboration as we diligently work to resolve this matter and enhance your online experience."
+      },
+      {
+        "createdBy": "Sophia Turner",
+        "title": "APP_DOWNTIME",
+        "description": "Our primary application is scheduled for a brief period of maintenance to implement essential updates and optimizations. During this scheduled downtime, access to the application will be temporarily suspended to ensure a smooth transition. We understand that this may cause some inconvenience and greatly appreciate your patience. Our dedicated technical team is fully committed to completing the maintenance swiftly, with the expectation of improved performance and an enhanced user experience after the update."
+      },
+      {
+        "createdBy": "Ella Davis",
+        "title": "LOW_DISK_SPACE",
+        "description": "We are currently facing an urgent situation as one of our core devices is critically low on available disk space. This poses a significant risk to data integrity and the overall stability of our systems. Our IT experts are taking immediate action by optimizing storage allocation and eliminating redundant files. We kindly request that all users minimize their data storage activities on this affected device until the situation is resolved. Your cooperation is invaluable, and we are fully dedicated to resolving this matter promptly."
+      },
+      {
+        "createdBy": "Lucas Mitchell",
+        "title": "ASSIGN_M365",
+        "description": "We are pleased to announce that one of our valued team members has been granted access to the comprehensive suite of Microsoft 365 services. This marks a significant milestone in our commitment to productivity and collaboration. With Microsoft 365, our team member gains access to a wide range of powerful tools, including Word, Excel, and Teams, which will significantly enhance productivity and streamline communication. We have every confidence that this addition will contribute to our organization's success."
+      },
+      {
+        "createdBy": "Emma Turner",
+        "title": "GRANT_ACCESS",
+        "description": "We are excited to expand user access privileges to various client portals, further strengthening our partnerships and fostering collaboration opportunities. This strategic move aligns with our dedication to enhancing user experiences and nurturing robust relationships with our valued clients and partners. The expanded access empowers our team members to conveniently access critical information, important documents, and essential tools, ultimately contributing to our organization's growth and success."
+      },
+      {
+        "createdBy": "Liam Davis",
+        "title": "RESET_PASSWORD",
+        "description": "In response to a user's request for a password reset, our team is actively assisting in regaining account access. Such requests are a routine part of our service and typically arise due to forgotten passwords or security concerns. Our utmost priority is to ensure a secure and user-friendly experience. Comprehensive instructions for the password reset process have been dispatched to the registered email address. If you encounter any difficulties or have inquiries, our dedicated support team is available around the clock to provide assistance."
+      },
+      {
+        "createdBy": "Olivia Mitchell",
+        "title": "ADD_USER",
+        "description": "We are thrilled to introduce a new team member to our organization, reaffirming our commitment to growth and excellence. [User's Name] brings valuable experience and expertise that will undoubtedly enhance our success. As they integrate into our organization, we encourage a warm welcome from all team members to ensure a smooth and productive onboarding experience."
+      },
+      {
+        "createdBy": "Mia Davis",
+        "title": "REMOVE_USER",
+        "description": "In compliance with our stringent security protocols and at the explicit request of the user, we have securely deleted a user account from our system. User account removals are a critical aspect of upholding our commitment to data security and system integrity. It's crucial to emphasize that this action is executed with the full consent and cooperation of the user. If you have any queries or require additional information, please do not hesitate to contact our dedicated support team."
+      },
+      {
+        "createdBy": "Ethan Turner",
+        "title": "SLOW_INTERNET",
+        "description": "We've recently received reports of users experiencing sluggish internet connectivity, leading to diminished data transfer speeds and potential interruptions in online activities. Our technical team is actively investigating this issue to pinpoint root causes and implement effective solutions. Rest assured, our dedication to delivering a fast and dependable internet connection remains resolute. We genuinely value your patience and collaboration as we diligently work to resolve this matter and enhance your online experience."
+      },
+      {
+        "createdBy": "Ava Mitchell",
+        "title": "APP_DOWNTIME",
+        "description": "Our primary application is scheduled for a brief period of maintenance to implement essential updates and optimizations. During this scheduled downtime, access to the application will be temporarily suspended to ensure a smooth transition. We understand that this may cause some inconvenience and greatly appreciate your patience. Our dedicated technical team is fully committed to completing the maintenance swiftly, with the expectation of improved performance and an enhanced user experience after the update."
+      },
+      {
+        "createdBy": "Nora Turner",
+        "title": "LOW_DISK_SPACE",
+        "description": "We are currently facing an urgent situation as one of our core devices is critically low on available disk space. This poses a significant risk to data integrity and the overall stability of our systems. Our IT experts are taking immediate action by optimizing storage allocation and eliminating redundant files. We kindly request that all users minimize their data storage activities on this affected device until the situation is resolved. Your cooperation is invaluable, and we are fully dedicated to resolving this matter promptly."
+      },
+      {
+        "createdBy": "Leo Mitchell",
+        "title": "RESET_PASSWORD",
+        "description": "In response to a user's request for a password reset, our team is actively assisting in regaining account access. Such requests are a routine part of our service and typically arise due to forgotten passwords or security concerns. Our utmost priority is to ensure a secure and user-friendly experience. Comprehensive instructions for the password reset process have been dispatched to the registered email address. If you encounter any difficulties or have inquiries, our dedicated support team is available around the clock to provide assistance."
+      },
+      {
+        "createdBy": "Sophia Turner",
+        "title": "ADD_USER",
+        "description": "We are excited to welcome a new team member to our organization, reinforcing our commitment to growth and excellence. [User's Name] brings valuable experience and expertise that will undoubtedly enhance our success. As they integrate into our organization, we encourage a warm welcome from all team members to ensure a smooth and productive onboarding experience."
+      },
+      {
+        "createdBy": "Ella Davis",
+        "title": "REMOVE_USER",
+        "description": "In compliance with our stringent security protocols and at the explicit request of the user, we have securely deleted a user account from our system. User account removals are a critical aspect of upholding our commitment to data security and system integrity. It's crucial to emphasize that this action is executed with the full consent and cooperation of the user. If you have any queries or require additional information, please do not hesitate to contact our dedicated support team."
+      },
+      {
+        "createdBy": "Liam Turner",
+        "title": "SLOW_INTERNET",
+        "description": "We've recently received reports of users experiencing sluggish internet connectivity, leading to diminished data transfer speeds and potential interruptions in online activities. Our technical team is actively investigating this issue to pinpoint root causes and implement effective solutions. Rest assured, our dedication to delivering a fast and dependable internet connection remains resolute. We genuinely value your patience and collaboration as we diligently work to resolve this matter and enhance your online experience."
+      },
+      {
+        "createdBy": "Olivia Mitchell",
+        "title": "APP_DOWNTIME",
+        "description": "Our primary application is scheduled for a brief period of maintenance to implement essential updates and optimizations. During this scheduled downtime, access to the application will be temporarily suspended to ensure a smooth transition. We understand that this may cause some inconvenience and greatly appreciate your patience. Our dedicated technical team is fully committed to completing the maintenance swiftly, with the expectation of improved performance and an enhanced user experience after the update."
+      },
+      {
+        "createdBy": "Mia Davis",
+        "title": "LOW_DISK_SPACE",
+        "description": "We are currently facing an urgent situation as one of our core devices is critically low on available disk space. This poses a significant risk to data integrity and the overall stability of our systems. Our IT experts are taking immediate action by optimizing storage allocation and eliminating redundant files. We kindly request that all users minimize their data storage activities on this affected device until the situation is resolved. Your cooperation is invaluable, and we are fully dedicated to resolving this matter promptly."
+      },
+      {
+        "createdBy": "Ethan Turner",
+        "title": "ASSIGN_M365",
+        "description": "We are pleased to announce that one of our valued team members has been granted access to the comprehensive suite of Microsoft 365 services. This marks a significant milestone in our commitment to productivity and collaboration. With Microsoft 365, our team member gains access to a wide range of powerful tools, including Word, Excel, and Teams, which will significantly enhance productivity and streamline communication. We have every confidence that this addition will contribute to our organization's success."
+      },
+      {
+        "createdBy": "Ava Mitchell",
+        "title": "GRANT_ACCESS",
+        "description": "We are excited to expand user access privileges to various client portals, further strengthening our partnerships and fostering collaboration opportunities. This strategic move aligns with our dedication to enhancing user experiences and nurturing robust relationships with our valued clients and partners. The expanded access empowers our team members to conveniently access critical information, important documents, and essential tools, ultimately contributing to our organization's growth and success."
+      },
+      {
+        "createdBy": "Nora Turner",
+        "title": "RESET_PASSWORD",
+        "description": "In response to a user's request for a password reset, our team is actively assisting in regaining account access. Such requests are a routine part of our service and typically arise due to forgotten passwords or security concerns. Our utmost priority is to ensure a secure and user-friendly experience. Comprehensive instructions for the password reset process have been dispatched to the registered email address. If you encounter any difficulties or have inquiries, our dedicated support team is available around the clock to provide assistance."
+      },
+      {
+        "createdBy": "Leo Mitchell",
+        "title": "ADD_USER",
+        "description": "We are excited to welcome a new team member to our organization, reinforcing our commitment to growth and excellence. [User's Name] brings valuable experience and expertise that will undoubtedly enhance our success. As they integrate into our organization, we encourage a warm welcome from all team members to ensure a smooth and productive onboarding experience."
+      },
+      {
+        "createdBy": "Leo Mitchell",
+        "title": "RESET_PASSWORD",
+        "description": "Our dedicated support team is actively assisting a user in regaining access to their account due to a password reset request. Such requests are common and often arise due to forgotten passwords or security concerns. Our top priority is ensuring a secure and user-friendly experience. Detailed instructions for the password reset process have been sent to the registered email address. If you encounter any issues or have questions, please do not hesitate to reach out to our support team."
+      },
+      {
+        "createdBy": "Sophia Turner",
+        "title": "ADD_USER",
+        "description": "We are delighted to welcome a new team member, [User's Name], to our organization. This addition underscores our commitment to growth and excellence. [User's Name] brings valuable experience and expertise that will undoubtedly contribute to our success. As they integrate into our organization, we encourage a warm welcome from all team members to ensure a smooth and productive onboarding experience."
+      },
+      {
+        "createdBy": "Ella Davis",
+        "title": "REMOVE_USER",
+        "description": "In compliance with our stringent security protocols and at the explicit request of the user, we have securely deleted a user account from our system. User account removals are a critical aspect of upholding our commitment to data security and system integrity. It's crucial to emphasize that this action is executed with the full consent and cooperation of the user. If you have any queries or require additional information, please do not hesitate to contact our dedicated support team."
+      },
+      {
+        "createdBy": "Liam Turner",
+        "title": "SLOW_INTERNET",
+        "description": "We have received recent reports of users experiencing sluggish internet connectivity, resulting in reduced data transfer speeds and potential disruptions in online activities. Our technical team is actively investigating this issue to identify underlying causes and implement effective solutions. Rest assured, our commitment to providing a fast and reliable internet connection remains unwavering. We genuinely appreciate your patience and cooperation as we work diligently to resolve this issue and enhance your online experience."
+      },
+      {
+        "createdBy": "Olivia Mitchell",
+        "title": "APP_DOWNTIME",
+        "description": "Our primary application is scheduled for a brief period of maintenance to implement essential updates and optimizations. During this scheduled downtime, access to the application will be temporarily suspended to ensure a smooth transition. We understand that this may cause some inconvenience and greatly appreciate your patience. Our dedicated technical team is fully committed to completing the maintenance swiftly, with the expectation of improved performance and an enhanced user experience after the update."
+      },
+      {
+        "createdBy": "Mia Davis",
+        "title": "LOW_DISK_SPACE",
+        "description": "We are currently facing an urgent situation as one of our core devices is critically low on available disk space. This poses a significant risk to data integrity and the overall stability of our systems. Our IT experts are taking immediate action by optimizing storage allocation and eliminating redundant files. We kindly request that all users minimize their data storage activities on this affected device until the situation is resolved. Your cooperation is invaluable, and we are fully dedicated to resolving this matter promptly."
+      },
+      {
+        "createdBy": "Ethan Turner",
+        "title": "ASSIGN_M365",
+        "description": "We are pleased to announce that one of our valued team members has been granted access to the comprehensive suite of Microsoft 365 services. This marks a significant milestone in our commitment to productivity and collaboration. With Microsoft 365, our team member gains access to a wide range of powerful tools, including Word, Excel, and Teams, which will significantly enhance productivity and streamline communication. We have every confidence that this addition will contribute to our organization's success."
+      },
+      {
+        "createdBy": "Ava Mitchell",
+        "title": "GRANT_ACCESS",
+        "description": "We are excited to expand user access privileges to various client portals, further strengthening our partnerships and fostering collaboration opportunities. This strategic move aligns with our dedication to enhancing user experiences and nurturing robust relationships with our valued clients and partners. The expanded access empowers our team members to conveniently access critical information, important documents, and essential tools, ultimately contributing to our organization's growth and success."
+      },
+      {
+        "createdBy": "Nora Turner",
+        "title": "RESET_PASSWORD",
+        "description": "Our dedicated support team is actively assisting a user in regaining access to their account due to a password reset request. Such requests are common and often arise due to forgotten passwords or security concerns. Our top priority is ensuring a secure and user-friendly experience. Detailed instructions for the password reset process have been sent to the registered email address. If you encounter any issues or have questions, please do not hesitate to reach out to our support team."
+      },
+      {
+        "createdBy": "Leo Mitchell",
+        "title": "ADD_USER",
+        "description": "We are delighted to welcome a new team member, [User's Name], to our organization. This addition underscores our commitment to growth and excellence. [User's Name] brings valuable experience and expertise that will undoubtedly contribute to our success. As they integrate into our organization, we encourage a warm welcome from all team members to ensure a smooth and productive onboarding experience."
+      },
+      {
+        "createdBy": "CEO X0XL0B",
+        "title": "RESET_PASSWORD",
+        "description": "A user is requesting a password reset due to forgotten credentials."
+      },
+      {
+        "title": "ADD_USER",
+        "description": "A new user has been added to the system.",
+        "createdBy": "CEO X0XL0B"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "A request to remove a user account from the system.",
+        "createdBy": "CEO X0XL0B"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Report of slow internet connectivity issues.",
+        "createdBy": "CEO X0XL0B"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "Notification of application downtime or unavailability.",
+        "createdBy": "CEO X0XL0B"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Notification of low disk space detected on device.",
+        "createdBy": "CEO X0XL0B"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "Assign the user an appropriate M365 license.",
+        "createdBy": "CEO X0XL0B"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "Grant user access to all relevant client portals.",
+        "createdBy": "CEO X0XL0B"
+      },
+      {
+        "createdBy": "Customer A",
+        "title": "RESET_PASSWORD",
+        "description": "I forgot my password and need a reset."
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new team member to add to the system.",
+        "createdBy": "Customer B"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Please remove a user account from our system.",
+        "createdBy": "Customer C"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Experiencing slow internet connectivity issues.",
+        "createdBy": "Customer D"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "We encountered application downtime. Please help.",
+        "createdBy": "Customer E"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Our device is running low on disk space.",
+        "createdBy": "Customer F"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "We need assistance in assigning M365 licenses.",
+        "createdBy": "Customer G"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "We require access to client portals. Please grant it.",
+        "createdBy": "Customer H"
+      },
+      {
+        "createdBy": "Customer I",
+        "title": "RESET_PASSWORD",
+        "description": "I can't access my account. Please reset my password."
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new team member joining. Please add them to our system.",
+        "createdBy": "Customer J"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "We no longer need access for a specific user. Please remove them.",
+        "createdBy": "Customer K"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our internet connection is extremely slow. Help us troubleshoot.",
+        "createdBy": "Customer L"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "We received a notification about application downtime. Please assist.",
+        "createdBy": "Customer M"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Our device is running out of storage space. Can you help us resolve it?",
+        "createdBy": "Customer N"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "We need M365 licenses assigned to our new users. Please provide assistance.",
+        "createdBy": "Customer O"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "We require access to specific client portals. Please grant us access.",
+        "createdBy": "Customer P"
+      },
+      {
+        "createdBy": "Customer Q",
+        "title": "RESET_PASSWORD",
+        "description": "I've forgotten my password and need it reset."
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new employee joining our team. Please add them to our system.",
+        "createdBy": "Customer R"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "We no longer require access for an employee. Please remove them from our system.",
+        "createdBy": "Customer S"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our internet connection is unusually slow. Please investigate and resolve.",
+        "createdBy": "Customer T"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "We've noticed our application is down. Can you assist in getting it back up?",
+        "createdBy": "Customer U"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Our device is running low on disk space. Help us free up storage.",
+        "createdBy": "Customer V"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "We've added new users and need M365 licenses assigned. Please help.",
+        "createdBy": "Customer W"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "We need access to certain client portals for our work. Please grant it.",
+        "createdBy": "Customer X"
+      },
+      {
+        "createdBy": "Customer Y",
+        "title": "RESET_PASSWORD",
+        "description": "We are unable to access our account due to a forgotten password. Please reset it."
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new team member starting today. Please add them to our system.",
+        "createdBy": "Customer Z"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "We no longer need access for a user. Please remove their account.",
+        "createdBy": "Customer AA"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our internet connection has been sluggish for days. Please investigate.",
+        "createdBy": "Customer AB"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "We've received an alert about application downtime. Can you assist?",
+        "createdBy": "Customer AC"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Our device is running out of storage. Help us optimize disk space.",
+        "createdBy": "Customer AD"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "We've hired new staff and need M365 licenses assigned. Please support us.",
+        "createdBy": "Customer AE"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "We require access to specific client portals for project work. Please grant us access.",
+        "createdBy": "Customer AF"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "We're locked out of our account due to password issues. Please reset it.",
+        "createdBy": "Customer AG"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "A new team member is joining us. Please add their account to our system.",
+        "createdBy": "Customer AH"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "We need to remove an employee's access. Please deactivate their account.",
+        "createdBy": "Customer AI"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our internet connection is barely functional. Can you help us resolve this?",
+        "createdBy": "Customer AJ"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "Our critical application is down. We need immediate assistance.",
+        "createdBy": "Customer AK"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Our device is running out of storage. Please help us clear space.",
+        "createdBy": "Customer AL"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "We've onboarded new team members. Please assign M365 licenses to them.",
+        "createdBy": "Customer AM"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "We require access to specific client portals for project collaboration. Please grant access.",
+        "createdBy": "Customer AN"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "Our account is locked, and we can't access it. Please reset the password.",
+        "createdBy": "Customer AO"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new hire. Please create an account for them in our system.",
+        "createdBy": "Customer AP"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "We need to terminate an employee's access. Please remove their account.",
+        "createdBy": "Customer AQ"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our internet is painfully slow. Can you improve our connection speed?",
+        "createdBy": "Customer AR"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "Our application is down, affecting our work. We need urgent assistance.",
+        "createdBy": "Customer AS"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Our device is running out of storage. Please help us optimize storage usage.",
+        "createdBy": "Customer AT"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "We've hired new employees and need to assign M365 licenses. Please assist.",
+        "createdBy": "Customer AU"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "We require access to specific client portals for a project. Please grant us access rights.",
+        "createdBy": "Customer AV"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "We've lost access to our account due to password issues. Please reset it.",
+        "createdBy": "Customer AW"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new team member starting soon. Please create their account.",
+        "createdBy": "Customer AX"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "We need to remove an employee's access. Please deactivate their account.",
+        "createdBy": "Customer AY"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our internet connection is painfully slow. Can you help us resolve this issue?",
+        "createdBy": "Customer AZ"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "Our application is down, causing disruptions. We need immediate assistance.",
+        "createdBy": "Customer BA"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Our device is running out of storage. Please help us clear disk space.",
+        "createdBy": "Customer BB"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "We've added new team members and need to assign M365 licenses. Please assist.",
+        "createdBy": "Customer BC"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "We require access to specific client portals for our project. Please grant us access.",
+        "createdBy": "Customer BD"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "We can't access our account due to password issues. Please reset it for us.",
+        "createdBy": "Customer BE"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new employee joining us. Please add their account to our system.",
+        "createdBy": "Customer BF"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "We need to remove an employee's access. Please deactivate their account.",
+        "createdBy": "Customer BG"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our internet is extremely slow. Can you help us improve the connection?",
+        "createdBy": "Customer BH"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "Our application is down, and it's affecting our business. We need immediate support.",
+        "createdBy": "Customer BI"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Our device is running out of storage. Can you help us optimize it?",
+        "createdBy": "Customer BJ"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "We've onboarded new staff and need to assign M365 licenses. Please assist.",
+        "createdBy": "Customer BK"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "We require access to specific client portals for our ongoing project. Please grant access rights.",
+        "createdBy": "Customer BL"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "We can't log in due to password issues. Please reset our account password.",
+        "createdBy": "Customer BM"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new hire joining soon. Please create their user account.",
+        "createdBy": "Customer BN"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "We need to revoke access for a departing employee. Please deactivate their account.",
+        "createdBy": "Customer BO"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our internet is unbearably slow. Can you help us improve it?",
+        "createdBy": "Customer BP"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "Our application is down, causing major disruptions. We need immediate assistance.",
+        "createdBy": "Customer BQ"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Our device has very little storage left. Can you assist in optimizing storage?",
+        "createdBy": "Customer BR"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "We've hired new employees and need M365 licenses assigned. Please provide support.",
+        "createdBy": "Customer BS"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "We require access to specific client portals for our project work. Please grant access rights.",
+        "createdBy": "Customer BT"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "We can't access our account due to password problems. Please reset it for us.",
+        "createdBy": "Customer BU"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new team member joining. Please add their account to our system.",
+        "createdBy": "Customer BV"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "We need to remove an employee's access. Please deactivate their account.",
+        "createdBy": "Customer BW"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our internet is extremely slow. Can you help us speed it up?",
+        "createdBy": "Customer BX"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "Our application is down, impacting our business. We need immediate support.",
+        "createdBy": "Customer BY"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Our device is running out of storage space. Can you optimize it for us?",
+        "createdBy": "Customer BZ"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "We've onboarded new staff and need M365 licenses assigned. Please assist.",
+        "createdBy": "Customer CA"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "We need access to specific client portals for our project. Please grant access rights.",
+        "createdBy": "Customer CB"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "We can't log in due to password issues. Please reset our account password.",
+        "createdBy": "Customer CC"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new employee joining soon. Please create their user account.",
+        "createdBy": "Customer CD"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "We need to revoke access for a departing employee. Please deactivate their account.",
+        "createdBy": "Customer CE"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our internet is unbearably slow. Can you help us improve it?",
+        "createdBy": "Customer CF"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "Our application is down, causing major disruptions. We need immediate assistance.",
+        "createdBy": "Customer CG"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Our device has very little storage left. Can you assist in optimizing storage?",
+        "createdBy": "Customer CH"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "We've hired new employees and need M365 licenses assigned. Please provide support.",
+        "createdBy": "Customer CI"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "We require access to specific client portals for our project work. Please grant access rights.",
+        "createdBy": "Customer CJ"
+      },
+      {
+        "createdBy": "Customer CK",
+        "title": "RESET_PASSWORD",
+        "description": "Experiencing login issues due to a forgotten password. Please reset it for us."
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new team member joining our organization. Kindly add their user account.",
+        "createdBy": "Customer CL"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Need to terminate access for a departing employee. Please deactivate their account.",
+        "createdBy": "Customer CM"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our internet connection has been slow for days, affecting our work. Help us speed it up.",
+        "createdBy": "Customer CN"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "Critical application is currently down, causing major disruptions. Urgent assistance required.",
+        "createdBy": "Customer CO"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Running out of storage space on our device. Request assistance to optimize storage.",
+        "createdBy": "Customer CP"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "Onboarding new staff, need M365 licenses assigned. Please provide support.",
+        "createdBy": "Customer CQ"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "Working on a project that requires access to specific client portals. Request access rights.",
+        "createdBy": "Customer CR"
+      },
+      {
+        "createdBy": "Customer CS",
+        "title": "RESET_PASSWORD",
+        "description": "Unable to access our account due to password issues. Please reset it for us."
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new team member starting soon. Please create their user account.",
+        "createdBy": "Customer CT"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Need to revoke access for an employee who is leaving. Please deactivate their account.",
+        "createdBy": "Customer CU"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our internet connection is extremely slow. Request assistance to improve speed.",
+        "createdBy": "Customer CV"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "Our application is down, impacting our business operations. Urgent support required.",
+        "createdBy": "Customer CW"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Running out of disk space on our device. Request assistance to optimize storage usage.",
+        "createdBy": "Customer CX"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "Hiring new employees, need M365 licenses assigned. Please provide assistance.",
+        "createdBy": "Customer CY"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "Engaged in a project that requires access to specific client portals. Request access rights.",
+        "createdBy": "Customer CZ"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "Locked out of our account due to password problems. Please reset our password.",
+        "createdBy": "Customer DA"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new team member joining. Please add their account to our system.",
+        "createdBy": "Customer DB"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Need to revoke access for an employee who is leaving. Please deactivate their account.",
+        "createdBy": "Customer DC"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our internet is painfully slow. Request assistance to improve connectivity speed.",
+        "createdBy": "Customer DD"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "Critical application is down, causing disruptions. Urgently need support to resolve this.",
+        "createdBy": "Customer DE"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Device is running out of storage space. Request assistance to optimize storage usage.",
+        "createdBy": "Customer DF"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "Onboarding new employees, need M365 licenses assigned. Please provide support.",
+        "createdBy": "Customer DG"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "Engaged in a project that requires access to specific client portals. Request access rights.",
+        "createdBy": "Customer DH"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "Can't access our account due to password issues. Please reset it for us.",
+        "createdBy": "Customer DI"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new team member starting soon. Please create their user account.",
+        "createdBy": "Customer DJ"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Need to revoke access for an employee who is leaving. Please deactivate their account.",
+        "createdBy": "Customer DK"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our internet is extremely slow. Request assistance to improve connectivity speed.",
+        "createdBy": "Customer DL"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "Critical application is down, causing major disruptions. Urgent support required.",
+        "createdBy": "Customer DM"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Device is running out of storage space. Request assistance to optimize storage usage.",
+        "createdBy": "Customer DN"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "Onboarding new employees, need M365 licenses assigned. Please provide support.",
+        "createdBy": "Customer DO"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "Engaged in a project that requires access to specific client portals. Request access rights.",
+        "createdBy": "Customer DP"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "Can't access our account due to password issues. Please reset it for us.",
+        "createdBy": "Customer DQ"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new team member starting soon. Please create their user account.",
+        "createdBy": "Customer DR"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Need to revoke access for an employee who is leaving. Please deactivate their account.",
+        "createdBy": "Customer DS"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our internet is painfully slow. Request assistance to improve connectivity speed.",
+        "createdBy": "Customer DT"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "Critical application is down, causing disruptions. Urgently need support to resolve this.",
+        "createdBy": "Customer DU"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Device is running out of storage space. Request assistance to optimize storage usage.",
+        "createdBy": "Customer DV"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "Onboarding new employees, need M365 licenses assigned. Please provide support.",
+        "createdBy": "Customer DW"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "Engaged in a project that requires access to specific client portals. Request access rights.",
+        "createdBy": "Customer DX"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "Can't access our account due to password issues. Please reset it for us.",
+        "createdBy": "Customer DY"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new team member starting soon. Please create their user account.",
+        "createdBy": "Customer DZ"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Need to revoke access for an employee who is leaving. Please deactivate their account.",
+        "createdBy": "Customer EA"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our internet is extremely slow. Request assistance to improve connectivity speed.",
+        "createdBy": "Customer EB"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "Critical application is down, causing major disruptions. Urgent support required.",
+        "createdBy": "Customer EC"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Device is running out of storage space. Request assistance to optimize storage usage.",
+        "createdBy": "Customer ED"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "Onboarding new employees, need M365 licenses assigned. Please provide support.",
+        "createdBy": "Customer EE"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "Engaged in a project that requires access to specific client portals. Request access rights.",
+        "createdBy": "Customer EF"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "Can't access our account due to password issues. Please reset it for us.",
+        "createdBy": "Customer EG"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new team member starting soon. Please create their user account.",
+        "createdBy": "Customer EH"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Need to revoke access for an employee who is leaving. Please deactivate their account.",
+        "createdBy": "Customer EI"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our internet is painfully slow. Request assistance to improve connectivity speed.",
+        "createdBy": "Customer EJ"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "Critical application is down, causing disruptions. Urgently need support to resolve this.",
+        "createdBy": "Customer EK"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Device is running out of storage space. Request assistance to optimize storage usage.",
+        "createdBy": "Customer EL"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "Onboarding new employees, need M365 licenses assigned. Please provide support.",
+        "createdBy": "Customer EM"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "Engaged in a project that requires access to specific client portals. Request access rights.",
+        "createdBy": "Customer EN"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "Can't access our account due to password issues. Please reset it for us.",
+        "createdBy": "Customer EO"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new team member starting soon. Please create their user account.",
+        "createdBy": "Customer EP"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Need to revoke access for an employee who is leaving. Please deactivate their account.",
+        "createdBy": "Customer EQ"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our internet is extremely slow. Request assistance to improve connectivity speed.",
+        "createdBy": "Customer ER"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "Critical application is down, causing major disruptions. Urgent support required.",
+        "createdBy": "Customer ES"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Device is running out of storage space. Request assistance to optimize storage usage.",
+        "createdBy": "Customer ET"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "Onboarding new employees, need M365 licenses assigned. Please provide support.",
+        "createdBy": "Customer EU"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "Engaged in a project that requires access to specific client portals. Request access rights.",
+        "createdBy": "Customer EV"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "Can't access our account due to password issues. Please reset it for us.",
+        "createdBy": "Customer EW"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new team member starting soon. Please create their user account.",
+        "createdBy": "Customer EX"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Need to revoke access for an employee who is leaving. Please deactivate their account.",
+        "createdBy": "Customer EY"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our internet is painfully slow. Request assistance to improve connectivity speed.",
+        "createdBy": "Customer EZ"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "Help! Can't log in. Need assistance ASAP.",
+        "createdBy": "Customer FA"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "New person needs access. Make it work!",
+        "createdBy": "Customer FB"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Employee leaving. Please do your thing.",
+        "createdBy": "Customer FC"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Internet slow. Fix it now!",
+        "createdBy": "Customer FD"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "App not working. Hurry!",
+        "createdBy": "Customer FE"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Not enough space. Help!",
+        "createdBy": "Customer FF"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "We got new people. Do your thing with licenses.",
+        "createdBy": "Customer FG"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "Need access. Make it happen.",
+        "createdBy": "Customer FH"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "Can't remember. Help!",
+        "createdBy": "Customer FI"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "Newbie incoming. Set them up!",
+        "createdBy": "Customer FJ"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Bye-bye user. Remove them.",
+        "createdBy": "Customer FK"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Internet turtle speed. Fix it!",
+        "createdBy": "Customer FL"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "App down. Send help!",
+        "createdBy": "Customer FM"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Storage full. Do your thing!",
+        "createdBy": "Customer FN"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "New team members. Sort out licenses.",
+        "createdBy": "Customer FO"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "Access denied. Grant it!",
+        "createdBy": "Customer FP"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "Password trouble. Fix it!",
+        "createdBy": "Customer FQ"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "New hire. Get them in!",
+        "createdBy": "Customer FR"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Employee leaving. Do your thing.",
+        "createdBy": "Customer FS"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Internet snail pace. Speed it up!",
+        "createdBy": "Customer FT"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "App not working. Help!",
+        "createdBy": "Customer FU"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Storage almost full. Fix it!",
+        "createdBy": "Customer FV"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "New folks. License them!",
+        "createdBy": "Customer FW"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "Access denied. Give it!",
+        "createdBy": "Customer FX"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "Lost login info. Help!",
+        "createdBy": "Customer FY"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "New team member. Account needed!",
+        "createdBy": "Customer FZ"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Employee gone. Deactivate their stuff.",
+        "createdBy": "Customer GA"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Internet is dragging. Fix it!",
+        "createdBy": "Customer GB"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "App is dead. Send help!",
+        "createdBy": "Customer GC"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Storage issues. Fix ASAP!",
+        "createdBy": "Customer GD"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "New recruits. Sort out licenses!",
+        "createdBy": "Customer GE"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "Access needed urgently. Provide it!",
+        "createdBy": "Customer GF"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "Can't log in. Help!",
+        "createdBy": "Customer GG"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "Adding a new team member. Account required!",
+        "createdBy": "Customer GH"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Employee leaving. Deactivate them!",
+        "createdBy": "Customer GI"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Internet is sluggish. Speed it up!",
+        "createdBy": "Customer GJ"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "App is down. Need assistance!",
+        "createdBy": "Customer GK"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Running out of storage. Fix it!",
+        "createdBy": "Customer GL"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "New employees. Assign M365 licenses!",
+        "createdBy": "Customer GM"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "Access denied. Provide access!",
+        "createdBy": "Customer GN"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "Password trouble. Fix it!",
+        "createdBy": "Customer GO"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "New hire. Create their account!",
+        "createdBy": "Customer GP"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Employee departing. Deactivate access!",
+        "createdBy": "Customer GQ"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Internet is crawling. Speed it up!",
+        "createdBy": "Customer GR"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "App down. Need urgent help!",
+        "createdBy": "Customer GS"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Almost out of storage. Fix it!",
+        "createdBy": "Customer GT"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "Onboarding. Assign M365 licenses!",
+        "createdBy": "Customer GU"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "Need access to client portals. Provide access rights!",
+        "createdBy": "Customer GV"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "Forgot password. Help!",
+        "createdBy": "Customer GW"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "New team member incoming. Create account!",
+        "createdBy": "Customer GX"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Employee leaving. Deactivate access!",
+        "createdBy": "Customer GY"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Internet is painfully slow. Speed it up!",
+        "createdBy": "Customer GZ"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "Lost login info. Help!",
+        "createdBy": "Customer FY"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "New team member. Account needed!",
+        "createdBy": "Customer FZ"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Employee gone. Deactivate their stuff.",
+        "createdBy": "Customer GA"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Internet is dragging. Fix it!",
+        "createdBy": "Customer GB"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "App is dead. Send help!",
+        "createdBy": "Customer GC"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Storage issues. Fix ASAP!",
+        "createdBy": "Customer GD"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "New recruits. Sort out licenses!",
+        "createdBy": "Customer GE"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "Access needed urgently. Provide it!",
+        "createdBy": "Customer GF"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "Can't log in. Help!",
+        "createdBy": "Customer GG"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "Adding a new team member. Account required!",
+        "createdBy": "Customer GH"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Employee leaving. Deactivate them!",
+        "createdBy": "Customer GI"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Internet is sluggish. Speed it up!",
+        "createdBy": "Customer GJ"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "App is down. Need assistance!",
+        "createdBy": "Customer GK"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Running out of storage. Fix it!",
+        "createdBy": "Customer GL"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "New employees. Assign M365 licenses!",
+        "createdBy": "Customer GM"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "Access denied. Provide access!",
+        "createdBy": "Customer GN"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "Password trouble. Fix it!",
+        "createdBy": "Customer GO"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "New hire. Create their account!",
+        "createdBy": "Customer GP"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Employee departing. Deactivate access!",
+        "createdBy": "Customer GQ"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Internet is crawling. Speed it up!",
+        "createdBy": "Customer GR"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "App down. Need urgent help!",
+        "createdBy": "Customer GS"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Almost out of storage. Fix it!",
+        "createdBy": "Customer GT"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "Onboarding. Assign M365 licenses!",
+        "createdBy": "Customer GU"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "Need access to client portals. Provide access rights!",
+        "createdBy": "Customer GV"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "Forgot password. Help!",
+        "createdBy": "Customer GW"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "New team member incoming. Create account!",
+        "createdBy": "Customer GX"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "Employee leaving. Deactivate access!",
+        "createdBy": "Customer GY"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Internet is painfully slow. Speed it up!",
+        "createdBy": "Customer GZ"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "I'm encountering an issue with my login credentials. I've forgotten my password and can't access my account. I need urgent assistance to reset my password so that I can regain access to my important files and applications. Please prioritize this request as it's affecting my work. Thank you!",
+        "createdBy": "Customer HA"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new team member joining our organization tomorrow, and we need to ensure that they have the necessary access and resources to start working smoothly from day one. This includes creating their user account, setting up their email, providing access to relevant client portals, and assigning the appropriate Microsoft 365 license. Your assistance in expediting this process would be greatly appreciated!",
+        "createdBy": "Customer HB"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "One of our employees is leaving the company, and we need to ensure a smooth offboarding process. This involves deactivating their user account, revoking access to our systems and client portals, and ensuring that they no longer have an active Microsoft 365 license. Please assist us in completing this offboarding procedure accurately and promptly.",
+        "createdBy": "Customer HC"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Our office has been experiencing persistent issues with our internet connection. The internet speed has been notably slow, and this is causing disruptions to our daily tasks and productivity. We rely on a stable and fast internet connection for various critical applications and communications. Please investigate and resolve the slow internet issue as soon as possible to minimize the impact on our operations.",
+        "createdBy": "Customer HD"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "We've encountered a critical problem with one of our essential business applications. The application is currently unavailable, and this is causing a significant disruption to our operations. As this application is integral to our daily tasks, any downtime results in productivity losses. We urgently require your assistance to identify and rectify the issue, so we can resume normal operations without delay.",
+        "createdBy": "Customer HE"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Our device is running low on storage space, and we're concerned about data loss and system performance. We need assistance in optimizing our storage usage, identifying unnecessary files, and possibly expanding our storage capacity if necessary. Ensuring that we have ample storage is crucial for our data retention and operational efficiency.",
+        "createdBy": "Customer HF"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "We're in the process of onboarding several new employees, and part of this process involves assigning Microsoft 365 licenses to them. It's important that these licenses are correctly allocated with the appropriate features and permissions to support their roles. We're looking for assistance in efficiently assigning these licenses to our new team members to ensure they have access to the necessary tools and services.",
+        "createdBy": "Customer HG"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "We are currently engaged in a critical project that requires access to specific client portals and databases. Access to these resources is essential for our team to complete their tasks effectively. We kindly request your support in granting our team the necessary access rights and permissions to these systems. Your prompt assistance in this matter is greatly appreciated!",
+        "createdBy": "Customer HH"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "I'm encountering an issue with my login credentials. I've forgotten my password and can't access my account. I need urgent assistance to reset my password so that I can regain access to my important files and applications. Please prioritize this request as it's affecting my work. Thank you!",
+        "createdBy": "Customer HA"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new team member joining our organization tomorrow, and we need to ensure that they have the necessary access and resources to start working smoothly from day one. This includes creating their user account, setting up their email, providing access to relevant client portals, and assigning the appropriate Microsoft 365 license. Your assistance in expediting this process would be greatly appreciated!",
+        "createdBy": "Customer HB"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "One of our employees is leaving the company, and it is imperative that their access to our systems and resources is terminated promptly. This includes deactivating their user account, revoking access to client portals, and ensuring that they no longer hold an active Microsoft 365 license. We kindly request your support in executing this offboarding process efficiently and accurately.",
+        "createdBy": "Customer HC"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Over the past week, we have been encountering persistent issues with our office's internet connection. The primary concern is the remarkably slow internet speed, which is significantly hampering our daily operations. Given that our work heavily relies on a stable and high-speed internet connection, this situation is causing considerable disruptions. We kindly request your immediate intervention to diagnose and rectify this issue to restore our productivity.",
+        "createdBy": "Customer HD"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "We've encountered a critical problem with one of our essential business applications. The application is currently unavailable, and this is causing a significant disruption to our operations. As this application is integral to our daily tasks, any downtime results in productivity losses. We urgently require your assistance to identify and rectify the issue, so we can resume normal operations without delay.",
+        "createdBy": "Customer HE"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Our device is running low on storage space, and we're concerned about data loss and system performance. We need assistance in optimizing our storage usage, identifying unnecessary files, and possibly expanding our storage capacity if necessary. Ensuring that we have ample storage is crucial for our data retention and operational efficiency.",
+        "createdBy": "Customer HF"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "We're in the process of onboarding several new employees, and part of this process involves assigning Microsoft 365 licenses to them. It's important that these licenses are correctly allocated with the appropriate features and permissions to support their roles. We're looking for assistance in efficiently assigning these licenses to our new team members to ensure they have access to the necessary tools and services.",
+        "createdBy": "Customer HG"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "We are currently engaged in a critical project that requires access to specific client portals and databases. Access to these resources is essential for our team to complete their tasks effectively. We kindly request your support in granting our team the necessary access rights and permissions to these systems. Your prompt assistance in this matter is greatly appreciated!",
+        "createdBy": "Customer HH"
+      },
+      {
+        "title": "RESET_PASSWORD",
+        "description": "I'm encountering an issue with my login credentials. I've forgotten my password and can't access my account. I need urgent assistance to reset my password so that I can regain access to my important files and applications. Please prioritize this request as it's affecting my work. Thank you!",
+        "createdBy": "Customer HA"
+      },
+      {
+        "title": "ADD_USER",
+        "description": "We have a new team member joining our organization tomorrow, and we need to ensure that they have the necessary access and resources to start working smoothly from day one. This includes creating their user account, setting up their email, providing access to relevant client portals, and assigning the appropriate Microsoft 365 license. Your assistance in expediting this process would be greatly appreciated!",
+        "createdBy": "Customer HB"
+      },
+      {
+        "title": "REMOVE_USER",
+        "description": "One of our employees is leaving the company, and it is imperative that their access to our systems and resources is terminated promptly. This includes deactivating their user account, revoking access to client portals, and ensuring that they no longer hold an active Microsoft 365 license. We kindly request your support in executing this offboarding process efficiently and accurately.",
+        "createdBy": "Customer HC"
+      },
+      {
+        "title": "SLOW_INTERNET",
+        "description": "Over the past week, we have been encountering persistent issues with our office's internet connection. The primary concern is the remarkably slow internet speed, which is significantly hampering our daily operations. Given that our work heavily relies on a stable and high-speed internet connection, this situation is causing considerable disruptions. We kindly request your immediate intervention to diagnose and rectify this issue to restore our productivity.",
+        "createdBy": "Customer HD"
+      },
+      {
+        "title": "APP_DOWNTIME",
+        "description": "We've encountered a critical problem with one of our essential business applications. The application is currently unavailable, and this is causing a significant disruption to our operations. As this application is integral to our daily tasks, any downtime results in productivity losses. We urgently require your assistance to identify and rectify the issue, so we can resume normal operations without delay.",
+        "createdBy": "Customer HE"
+      },
+      {
+        "title": "LOW_DISK_SPACE",
+        "description": "Our device is running low on storage space, and we're concerned about data loss and system performance. We need assistance in optimizing our storage usage, identifying unnecessary files, and possibly expanding our storage capacity if necessary. Ensuring that we have ample storage is crucial for our data retention and operational efficiency.",
+        "createdBy": "Customer HF"
+      },
+      {
+        "title": "ASSIGN_M365",
+        "description": "We're in the process of onboarding several new employees, and part of this process involves assigning Microsoft 365 licenses to them. It's important that these licenses are correctly allocated with the appropriate features and permissions to support their roles. We're looking for assistance in efficiently assigning these licenses to our new team members to ensure they have access to the necessary tools and services.",
+        "createdBy": "Customer HG"
+      },
+      {
+        "title": "GRANT_ACCESS",
+        "description": "We are currently engaged in a critical project that requires access to specific client portals and databases. Access to these resources is essential for our team to complete their tasks effectively. We kindly request your support in granting our team the necessary access rights and permissions to these systems. Your prompt assistance in this matter is greatly appreciated!",
+        "createdBy": "Customer HH"
+      },
+      {
+        "createdBy": "Customer A",
+        "title": "RESET_PASSWORD",
+        "description": "I forgot my password and need a reset."
+      },
+      {
+        "createdBy": "Customer B",
+        "title": "ADD_USER",
+        "description": "We have a new employee starting soon. Please create their account."
+      },
+      {
+        "createdBy": "Customer C",
+        "title": "REMOVE_USER",
+        "description": "An employee is leaving the company, and we need to deactivate their account."
+      },
+      {
+        "createdBy": "Customer D",
+        "title": "SLOW_INTERNET",
+        "description": "Our internet connection is very slow. Can you please help us speed it up?"
+      },
+      {
+        "createdBy": "Customer E",
+        "title": "APP_DOWNTIME",
+        "description": "One of our critical applications is down. We need urgent assistance to bring it back online."
+      },
+      {
+        "createdBy": "Customer F",
+        "title": "LOW_DISK_SPACE",
+        "description": "We have received a low disk space warning on our server. Please assist us in resolving this issue."
+      },
+      {
+        "createdBy": "Customer G",
+        "title": "ASSIGN_M365",
+        "description": "We have a new employee joining, and they need an M365 license assigned."
+      },
+      {
+        "createdBy": "Customer H",
+        "title": "GRANT_ACCESS",
+        "description": "We require access to specific client portals. Can you please grant us access rights?"
+      },
+      {
+        "createdBy": "Customer I",
+        "title": "RESET_PASSWORD",
+        "description": "I can't remember my password. Please assist me in resetting it."
+      },
+      {
+        "createdBy": "Customer J",
+        "title": "ADD_USER",
+        "description": "We have a new team member joining our department. Please set up their account."
+      },
+      {
+        "createdBy": "Customer K",
+        "title": "RESET_PASSWORD",
+        "description": "I am unable to access my account due to a password issue. Please help me reset it."
+      },
+      {
+        "createdBy": "Customer L",
+        "title": "SLOW_INTERNET",
+        "description": "Our internet connection has become extremely slow, affecting our work. Please address this issue promptly."
+      },
+      {
+        "createdBy": "Customer M",
+        "title": "APP_DOWNTIME",
+        "description": "Our critical application is currently experiencing downtime, causing disruptions. We need immediate assistance to resolve this."
+      },
+      {
+        "createdBy": "Customer N",
+        "title": "LOW_DISK_SPACE",
+        "description": "We have detected low disk space on our server, which is impacting our operations. Please help us address this concern."
+      },
+      {
+        "createdBy": "Customer O",
+        "title": "ASSIGN_M365",
+        "description": "We are onboarding new team members who require M365 licenses. Please assign licenses accordingly."
+      },
+      {
+        "createdBy": "Customer P",
+        "title": "GRANT_ACCESS",
+        "description": "We need access to specific client portals for project-related tasks. Can you provide the necessary access rights?"
+      },
+      {
+        "createdBy": "Customer Q",
+        "title": "RESET_PASSWORD",
+        "description": "I can't access my account due to password issues. Please assist with a password reset."
+      },
+      {
+        "createdBy": "Customer R",
+        "title": "ADD_USER",
+        "description": "We have a new team member joining next week. Please create their account in the system."
+      },
+      {
+        "createdBy": "Customer S",
+        "title": "REMOVE_USER",
+        "description": "We need to deactivate an employee's account as they are leaving our organization."
+      },
+      {
+        "createdBy": "Customer T",
+        "title": "SLOW_INTERNET",
+        "description": "Our internet connection has been sluggish for days. We require immediate assistance to resolve this."
+      },
+      {
+        "createdBy": "Customer U",
+        "title": "APP_DOWNTIME",
+        "description": "Our application is down, causing significant disruptions. Urgent intervention is needed."
+      },
+      {
+        "createdBy": "Customer V",
+        "title": "LOW_DISK_SPACE",
+        "description": "We've received a low disk space alert on our server. Please help us address this issue."
+      },
+      {
+        "createdBy": "Customer W",
+        "title": "ASSIGN_M365",
+        "description": "We have several new employees joining this month. Please assign M365 licenses to them."
+      },
+      {
+        "createdBy": "Customer X",
+        "title": "GRANT_ACCESS",
+        "description": "We require access to specific client portals to continue our work. Can you grant us access?"
+      },
+      {
+        "createdBy": "Customer Y",
+        "title": "RESET_PASSWORD",
+        "description": "I've forgotten my password and can't log in. Please assist with a password reset."
+      },
+      {
+        "createdBy": "Customer Z",
+        "title": "ADD_USER",
+        "description": "We have a new team member starting in two days. Please set up their account as soon as possible."
+      },
+      {
+        "createdBy": "Customer1",
+        "title": "RESET_PASSWORD",
+        "description": "I'm encountering issues accessing my account due to password problems. I've been locked out and need immediate assistance. I suspect that the issue might be related to a recent software update on my device. Could you please reset my password and ensure that my account is secure? Additionally, I would appreciate some guidance on how to avoid password-related issues in the future. Thank you!"
+      },
+      {
+        "createdBy": "Customer2",
+        "title": "ADD_USER",
+        "description": "We have a new employee joining our team next week, and we need to ensure that their onboarding process is smooth and efficient. This new team member will require access to various systems and applications, including email, project management tools, and document sharing platforms. To facilitate this process, we kindly request your assistance in creating their user account and configuring the necessary permissions. Please let us know if you require any specific details about the new employee to complete this task. Thank you for your support!"
+      },
+      {
+        "createdBy": "Customer3",
+        "title": "REMOVE_USER",
+        "description": "One of our team members has recently resigned, and we need to take the necessary steps to deactivate their access to our systems and applications. It's essential to maintain data security and prevent unauthorized access. Can you please assist us in deactivating this user account promptly? We appreciate your help in ensuring a smooth offboarding process. Thank you!"
+      },
+      {
+        "createdBy": "Customer4",
+        "title": "SLOW_INTERNET",
+        "description": "Over the past few days, our internet connection has been exceptionally slow, causing significant disruptions to our daily operations. This slowdown has been affecting our ability to communicate with clients, access critical online resources, and meet project deadlines. We urgently require your expertise to diagnose and resolve this issue. Please conduct a thorough analysis of our network and take necessary actions to optimize our internet speed. Your prompt response is greatly appreciated."
+      },
+      {
+        "createdBy": "Customer5",
+        "title": "APP_DOWNTIME",
+        "description": "Our business-critical application, which we heavily rely on for project management and collaboration, is currently experiencing unexpected downtime. This situation has resulted in work delays, missed deadlines, and customer dissatisfaction. We understand that technical issues can arise, but we need immediate assistance in resolving this matter and restoring access to the application. Please prioritize this request, and if possible, provide details on the cause of the downtime and steps taken to prevent future disruptions. Thank you for your prompt attention to this issue."
+      },
+      {
+        "createdBy": "Customer6",
+        "title": "LOW_DISK_SPACE",
+        "description": "We've received an alarming notification about critically low disk space on our server. This situation is concerning as it poses a significant risk to our data integrity and system performance. We are urgently seeking your expertise to assess the situation, identify the root causes of this issue, and implement immediate measures to free up disk space and optimize our storage resources. Additionally, we would appreciate recommendations on best practices to prevent such issues in the future. Thank you for your prompt assistance."
+      },
+      {
+        "createdBy": "Customer7",
+        "title": "ASSIGN_M365",
+        "description": "As part of our ongoing expansion, we are onboarding several new employees this month. To ensure they can seamlessly collaborate and access essential tools, we require M365 licenses to be assigned to their accounts. These licenses should include access to email, productivity applications, and cloud storage. We appreciate your support in facilitating this process, and kindly request that you complete this task in preparation for the new hires. If you need any specific details or user information, please let us know. Thank you for your assistance."
+      },
+      {
+        "createdBy": "Customer8",
+        "title": "GRANT_ACCESS",
+        "description": "Our project team needs immediate access to specific client portals to fulfill our contractual obligations and maintain effective communication with our clients. Without access, we risk project delays and client dissatisfaction. We kindly request that you grant our team the necessary permissions to access these portals promptly. If you require any further details or information to complete this request, please don't hesitate to reach out to us. We appreciate your prompt assistance in this matter."
+      },
+      {
+        "createdBy": "Customer9",
+        "title": "RESET_PASSWORD",
+        "description": "I'm experiencing persistent issues with my account access due to repeated password problems. It's become increasingly frustrating, impacting my productivity. I urgently need your assistance to reset my password and investigate the underlying cause of these recurrent issues. Additionally, I would appreciate guidance on how to maintain a secure password in the future to avoid further disruptions. Thank you for your prompt attention to this matter."
+      },
+      {
+        "createdBy": "Customer10",
+        "title": "ADD_USER",
+        "description": "We have a new team member scheduled to join our department in two days. To ensure a smooth onboarding process, we request your assistance in creating their user account and configuring the necessary permissions. This new team member will require access to various systems and applications, including email, project management tools, and document sharing platforms. If you need any specific details about the new employee to complete this task, please let us know. Your support in ensuring a seamless transition is highly appreciated."
+      },
+      {
+        "createdBy": "Customer11",
+        "title": "RESET_PASSWORD",
+        "description": "I've encountered an issue with my account password, and it's preventing me from accessing important resources. Please assist me in resetting my password and ensuring the security of my account. Additionally, if there are any best practices for password management, I'd appreciate some guidance."
+      },
+      {
+        "createdBy": "Customer12",
+        "title": "ADD_USER",
+        "description": "We have a new team member starting next week, and we want to ensure a seamless onboarding process. Please create their user account and configure the necessary permissions for access to essential systems and applications. If you need any specific details about the new employee, please let us know. Your assistance is valued."
+      },
+      {
+        "createdBy": "Customer13",
+        "title": "REMOVE_USER",
+        "description": "One of our employees is leaving the company, and we need to deactivate their access to company resources. This includes revoking permissions and ensuring data security. Can you assist us in this offboarding process? Thank you for your support."
+      },
+      {
+        "createdBy": "Customer14",
+        "title": "SLOW_INTERNET",
+        "description": "Our internet connection has been persistently slow, causing major disruptions in our work. This issue is affecting communication, cloud services, and overall productivity. We need your expertise to diagnose and resolve this problem as soon as possible. Your prompt response is highly appreciated."
+      },
+      {
+        "createdBy": "Customer15",
+        "title": "APP_DOWNTIME",
+        "description": "Our primary application for project management and client collaboration is currently down, leading to missed deadlines and client dissatisfaction. We urgently need your assistance to bring the application back online and ensure its stability. Please prioritize this request."
+      },
+      {
+        "createdBy": "Customer16",
+        "title": "LOW_DISK_SPACE",
+        "description": "We've received a critical alert about low disk space on our server, which is impacting our data storage and system performance. We require your immediate intervention to resolve this issue and optimize our storage resources. Additionally, any recommendations on preventing such problems in the future would be appreciated."
+      },
+      {
+        "createdBy": "Customer17",
+        "title": "ASSIGN_M365",
+        "description": "We're in the process of onboarding new employees who require M365 licenses. These licenses should include access to email, productivity applications, and cloud storage. Your assistance in assigning these licenses is essential for our team's productivity. If you need specific user information, please let us know."
+      },
+      {
+        "createdBy": "Customer18",
+        "title": "GRANT_ACCESS",
+        "description": "Our team needs access to specific client portals to fulfill our contractual obligations and maintain client communication. Without access, we risk project delays and client dissatisfaction. We kindly request that you grant us access rights to these portals promptly. If you need additional details, please don't hesitate to contact us."
+      },
+      {
+        "createdBy": "Customer19",
+        "title": "RESET_PASSWORD",
+        "description": "I've been locked out of my account due to password issues, and it's causing considerable inconvenience. I urgently need assistance in resetting my password and understanding why this issue has occurred multiple times. Your prompt attention to this matter is appreciated."
+      },
+      {
+        "createdBy": "Customer20",
+        "title": "ADD_USER",
+        "description": "We have a new team member joining our department in a few days. To ensure a smooth transition, we request your assistance in creating their user account and configuring permissions. This new member will require access to various systems and applications. If you need specific details, please let us know."
+      },
+      {
+        "createdBy": "Customer21",
+        "title": "REMOVE_USER",
+        "description": "One of our employees has resigned, and we need to deactivate their access to our systems and applications. This is crucial to maintain data security. Your help in this offboarding process is greatly appreciated."
+      },
+      {
+        "createdBy": "Customer22",
+        "title": "SLOW_INTERNET",
+        "description": "Our internet connection has been frustratingly slow, hampering our ability to work efficiently. We need your expertise to resolve this issue and restore normal internet speed. Our productivity is at stake, and we look forward to your prompt assistance."
+      },
+      {
+        "createdBy": "Customer23",
+        "title": "APP_DOWNTIME",
+        "description": "Our primary application for project management is currently down, impacting our ability to meet deadlines and collaborate with clients effectively. Urgent intervention is required to restore access and prevent further disruptions."
       }
     ],
     "server": {
