@@ -98,7 +98,7 @@ Here's a typical workflow progress flow:
 
 ## Testing
 
-To test the functionality of the Worker CLI, a Bash script[script.sh](script%2Fscript.sh) is provided.
+To test the functionality of the Worker CLI, a Bash script[script.sh](script/script.sh) is provided.
 This script allows you to simulate the triggering and interaction with workflows.
 
 The available options include:
