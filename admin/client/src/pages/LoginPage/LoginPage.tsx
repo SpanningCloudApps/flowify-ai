@@ -70,8 +70,7 @@ const LoginPage: FC<AdminLoginPageProps> = ({
             <div className="body">
               <div className="text">
                 <text>
-                  <span style={{ fontWeight: 'bold' }}>Pooper</span>
-                  AI
+                  <span style={{ fontWeight: 'bold' }}>Flowify</span>
                 </text>
               </div>
             </div>

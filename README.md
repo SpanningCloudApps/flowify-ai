@@ -1,16 +1,35 @@
-# FLOWIFY.CO
+# [FLOWIFY.CO](http://flowify-ai.s3-website-us-east-1.amazonaws.com/)
 
 8/9/2023-9/9/2023
 
-# Authors
+# Maintainers
 
-- **admin/client:** Anton Bachykin
-- **admin/server:** Ruslan Zianevich
-- **worker**: Andrei Kozel
-- **ai**: Nikita Gurets
-- **core/client**: Anton Bachykin
-- **core/server**: Alina Glumova
+- **admin/client:** [Anton Bachykin](https://github.com/DenyingTheTruth)
+- **admin/server:** [Ruslan Zianevich](https://github.com/ruslanzianevich)
+- **worker-cli**: [Andrei Kozel](https://github.com/andrey-kozel)
+- **core/server/ai**: [Nikita Gurets](https://github.com/StepanBURNdera)
+- **core/client**: [Anton Bachykin](https://github.com/DenyingTheTruth)
+- **core/server**: [Alina Glumova](https://github.com/aglumova)
 
+Open to [CONTRIBUTING](.github%2FCONTRIBUTING.md)
+
+# Modules
+
+## Core
+
+- [Worker CLI](worker-cli%2FREADME.md)
+- [Communication Hub](core%2Fserver%2FREADME.md)
+- [Communication Hub AI](core%2Fserver%2Fsrc%2Fai%2FREADME.md)
+- [Flowify ChatBot](core%2Fclient%2FREADME.md)
+
+## Administration Panel
+
+- [Server](admin%2Fserver%2FREADME.md)
+- [Client](admin%2Fclient%2FREADME.md)
+
+## Database Migration Tool
+
+- [DB Migration](db%2FREADME.md)
 
 # High Level architecture
 
@@ -20,17 +39,17 @@
 
 ![db_structure.png](docs%2Fimg%2Fdb_structure.png)
 
-
-### Database Migration Tool
+### Migration
 
 First run need to run:
-```
-./dev-setup/run-service-local --init-dbs
+
+```bash
+${AI_HOME}/scripts/run-service-local --init-dbs
 ```
 
 If you want to run just a migration, use:
-```
-./dev-setup/run-service-local --run-db-migrations
+```bash
+${AI_HOME}/scripts/run-service-local --run-db-migrations
 ```
 
 ## Environment Variables

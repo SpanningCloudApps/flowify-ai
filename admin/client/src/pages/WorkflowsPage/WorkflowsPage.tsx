@@ -31,7 +31,7 @@ const WorkflowsPage: FC = () => {
 
   const handleScrollChange = useCallback(() => {
     const pageToken = workflows?.length && workflows[workflows.length - 1].id;
-    workflows({ pageToken, query });
+    getWorkflows({ pageToken, query });
   }, [query, workflows]);
 
   const handleWorkflow = useCallback(() => {
@@ -81,9 +81,9 @@ const WorkflowsPage: FC = () => {
               </Row>
             </Col>
             <Col>
-              <div id="scrollableTarget" className={style.domainsTable}>
+              <div id="scrollableTarget3" className={style.domainsTable}>
                 <InfinityScroll
-                    scrollableTarget="scrollableTarget"
+                    scrollableTarget="scrollableTarget3"
                     next={handleScrollChange}
                     loader={null}
                     dataLength={workflows.length}

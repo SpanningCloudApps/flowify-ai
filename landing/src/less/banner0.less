@@ -15,7 +15,10 @@
   background-attachment: fixed;
   background-position: center;
   & &-text-wrapper {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
     position: absolute;
     top: 20%;
     margin: auto;
@@ -29,8 +32,7 @@
     }
   }
   & &-title {
-    width: 350px;
-    left: 30px;
+    width: 500px;
     min-height: 60px;
     margin: auto;
     display: inline-block;
@@ -41,14 +43,16 @@
     margin-bottom: 20px;
     word-wrap: break-word;
     min-height: 24px;
+    font-size: 28px;
   }
   & &-button {
     border: 1px solid #fff;
     color: #fff;
     background: transparent;
     box-shadow: 0 0 0 transparent;
-    font-size: 16px;
-    height: 40px;
+    font-size: 22px;
+    line-height: 46px;
+    height: 50px;
     transition: background .45s @ease-out, box-shadow .45s @ease-out;
     &:hover {
       color: #fff;

@@ -1,17 +1,53 @@
-# Admin Server
+# Admin Web Console Server
 
-**Admin Server is a server for Admin UI.**
+**Admin Server is a server for Admin web console UI.**
 
-## Authors
-Ruslan Zianevich
+## Maintainers
 
-## Run Locally
-Before start need to set **AI_HOME** env to absolute path of hackathon AI project.
+- [Ruslan Zianevich](https://github.com/ruslanzianevich)
 
-````shell
-cd admin/server
-../mvnw clean spring-boot:run -Dspring-boot.run.profiles=dev
-````
+The Admin Web Console Server is the backend component for the admin web console for managing ticket workflows.
+
+### Prerequisites
+
+Make sure that AI_HOME environment variable is set to absolute path of `hackathon AI` project:
+```bash
+export AI_HOME=/absolute_path_to_project
+```
+
+Up postgresql db using script from root project folder:
+```bash
+cd ${AI_HOME}
+./scripts/run-service-local --db-init
+```
+
+Use the following command to build the project:
+
+```shell
+${AI_HOME}/admin/server
+./mwnw clean package
+```
+
+## Running the Server
+
+### Running Locally
+
+To run the server locally, execute the following commands:
+
+```shell
+cd ${AI_HOME}/admin/server
+./mvnw clean spring-boot:run -Dspring-boot.run.profiles=dev
+```
+
+### Running in Docker
+
+To run the server in a Docker container, use the following command:
+
+```bash
+cd ${AI_HOME}
+./scripts/run-service-local --admin-server
+```
+
 
 ## Environment Variables
 <table>

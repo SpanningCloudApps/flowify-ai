@@ -1,6 +1,5 @@
-# Authors
+# Maintainers
 
-- **worker**: Andrei Kozel
-- **ai**: Nikita Gurets
-- **client**: Anton Bachykin
-- **server**: Alina Glumova
+- **core/server/ai**: [Nikita Gurets](https://github.com/StepanBURNdera)
+- **core/client**: [Anton Bachykin](https://github.com/DenyingTheTruth)
+- **core/server**: [Alina Glumova](https://github.com/aglumova)

@@ -19,8 +19,9 @@ class Footer2 extends React.PureComponent {
           <TweenOne {...dataSource.links}>
             {dataSource.links.children.map((item, i) => {
               return (
-                <a key={i.toString()} {...item}>
+                <a key={i.toString()} {...item} target="_blank">
                   <img src={item.children} height="100%" alt="img" />
+                  <span>{item.name}</span>
                 </a>
               );
             })}

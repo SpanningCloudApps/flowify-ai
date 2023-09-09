@@ -64,7 +64,7 @@
           const json = JSON.parse(event.data);
           switch (json.type) {
             case 'accepted':
-            case 'message':
+            case 'process':
               props.onMessage(json);
               break;
           }
@@ -111,16 +111,27 @@
       event.preventDefault();
       const data = new FormData(event.currentTarget);
       const message = data.get('chat-message');
+      const existingWorkflow = workflow || {};
       if (message && connecting === false && channel) {
-        channel(JSON.stringify({
-          type: 'message',
-          actor: email,
-          data: {
-            response: message,
-            workflowExecutionId: workflow.workflowExecutionId,
-            responseType: workflow.responseType
-          }
-        }));
+        if (message.toLowerCase().includes('yes') && existingWorkflow.workflowName && !existingWorkflow.workflowExecutionId) {
+          channel(JSON.stringify({
+            type: 'start',
+            actor: email,
+            data: {
+              workflowName: existingWorkflow.workflowName
+            }
+          }));
+        } else {
+          channel(JSON.stringify({
+            type: 'process',
+            actor: email,
+            data: {
+              response: message,
+              workflowExecutionId: existingWorkflow.workflowExecutionId,
+              responseType: workflow.responseType
+            }
+          }));
+        }
       }
     }
 
@@ -129,7 +140,7 @@
       handleNext();
       if (email && ticketTitle && connecting === false && channel) {
         channel(JSON.stringify({
-          type: 'start',
+          type: 'initiate',
           actor: email,
           data: {
             title: ticketTitle,
@@ -142,7 +153,17 @@
 
     const displayMessage = React.useCallback(({ data }) => {
       setWorkflow(data);
-      setMessages(prevState => [...prevState, data.response]);
+      let response = data.response;
+      if (!response) {
+        if (data.workflowName !== 'UNKNOWN') {
+          response = `Flowify AI has identified your workflow as "${data.workflowName}."`
+            + 'Would you like it to be processed using automation? [yes/no]';
+        } else {
+          response = 'Flowify AI was unable to classify your workflow at this time.'
+            + ' Please try again later, and we will gain a better understanding soon. :)';
+        }
+      }
+      setMessages(prevState => [...prevState, response]);
     }, [setMessages]);
 
     const openChannel = React.useCallback((inChannel) => {
@@ -150,6 +171,11 @@
         return inChannel;
       });
     }, [setChannel]);
+
+    const backToTicket = React.useCallback(() => {
+      setWorkflow(null);
+      setActiveStep(1);
+    });
 
     function handleNext() {
       if (activeStep === 0) {
@@ -298,6 +324,14 @@
                 sx={{ mt: 3, mb: 2 }}
               >
                 {connecting ? 'Connecting...' : !messages || messages.length === 0 ? 'Processing...' : 'Send'}
+              </Button>
+              <Button fullWidth
+                      color="error"
+                      variant="contained"
+                      onClick={backToTicket}
+                      sx={{ mt: 3, mb: 2 }}
+              >
+                Back
               </Button>
               <Grid container alignItems="center" justifyContent="center">
                 <Grid item>{status}</Grid>

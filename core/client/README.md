@@ -1,3 +1,3 @@
-# Authors
+# Maintainers
 
-Anton Bachykin
+- [Anton Bachykin](https://github.com/DenyingTheTruth)

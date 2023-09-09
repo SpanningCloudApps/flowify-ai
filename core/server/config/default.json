@@ -73,7 +73,7 @@
   },
   "ai": {
     "openai": {
-      "apiKey": "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",
+      "apiKey": "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",
       "maxTokens": 1024,
       "model": "gpt-3.5-turbo",
       "temperature": 0.3
@@ -86,33 +86,29 @@
     "tickets": [
       {
         "createdBy": "CEO X0XL0B",
-        "title": "Reset Password",
+        "title": "RESET_PASSWORD",
         "description": "A user is requesting a password reset due to forgotten credentials."
       },
       {
-        "title": "User Added",
+        "title": "ADD_USER",
         "description": "A new user has been added to the system.",
         "createdBy": "CEO X0XL0B"
       },
       {
-        "title": "Remove User",
+        "title": "REMOVE_USER",
         "description": "A request to remove a user account from the system.",
         "createdBy": "CEO X0XL0B"
       },
       {
-        "title": "Slow Internet",
+        "title": "SLOW_INTERNET",
         "description": "Report of slow internet connectivity issues.",
         "createdBy": "CEO X0XL0B"
       },
       {
-        "title": "App Downtime",
+        "title": "APP_DOWNTIME",
         "description": "Notification of application downtime or unavailability.",
         "createdBy": "CEO X0XL0B"
       }
-    ],
-    "server": {
-      "host": "0.0.0.0",
-      "port": "3080"
-    }
+    ]
   }
 }
