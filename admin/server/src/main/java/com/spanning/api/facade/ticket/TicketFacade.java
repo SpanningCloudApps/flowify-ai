@@ -5,7 +5,7 @@
 package com.spanning.api.facade.ticket;
 
 import java.util.List;
-import java.util.Objects;
+import java.util.Optional;
 
 import com.spanning.api.converter.ticket.TicketConverter;
 import com.spanning.api.dto.request.ticket.SearchTicketsRequestDto;
@@ -16,6 +16,7 @@ import com.spanning.core.dto.request.ticket.SearchParams;
 import com.spanning.core.dto.request.ticket.UpdateParams;
 import com.spanning.core.dto.request.workflow.CreateParams;
 import com.spanning.core.dto.response.ticket.ClassificationResult;
+import com.spanning.core.dto.response.workflow.Workflow;
 import com.spanning.core.service.ticket.TicketService;
 import com.spanning.core.service.workflow.WorkflowService;
 import lombok.AllArgsConstructor;
@@ -47,13 +48,19 @@ public class TicketFacade {
   public void update(final Long id, final UpdateTicketsRequestDto requestDto) {
     final String user = userContext.getUser();
     log.info("User[{}] updating ticket id=[{}], requestDto = [{}]", user, id, requestDto);
-    if (Objects.nonNull(requestDto.getDescription())) {
-      final CreateParams createParams = CreateParams.builder()
-        .description(requestDto.getDescription())
-        .name(requestDto.getWorkflowName())
-        .build();
-      workflowService.create(createParams);
-    }
+
+    final Workflow workflow = Optional.of(id)
+      .map(workflowService::get)
+      .orElseGet(() -> {
+        final CreateParams createParams = CreateParams.builder()
+          .description(requestDto.getDescription())
+          .name(requestDto.getWorkflowName())
+          .build();
+        log.info("User[{}] creating workflow , createParams = [{}]", user, createParams);
+        return workflowService.create(createParams);
+      });
+
+    log.info("User[{}] linking ticket id=[{}] to workflow [{}]", user, id, workflow.getName());
     final UpdateParams updateParams = ticketConverter.convert(id, requestDto);
     ticketService.update(updateParams);
   }

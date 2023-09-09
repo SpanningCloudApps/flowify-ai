@@ -12,7 +12,6 @@ import com.spanning.api.dto.response.workflow.WorkflowResponseDto;
 import com.spanning.api.dto.response.workflow.WorkflowsResponseDto;
 import com.spanning.api.facade.workflow.WorkflowFacade;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -26,7 +25,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/workflows")
 @Validated
-@Slf4j
 public class WorkflowController {
 
   private final WorkflowFacade workflowFacade;
@@ -35,7 +33,6 @@ public class WorkflowController {
   public WorkflowsResponseDto search(
     @Valid @RequestBody final SearchWorkflowsRequestDto requestDto
   ) {
-    log.info(String.valueOf(requestDto));
     return workflowFacade.search(requestDto);
   }
 
@@ -43,13 +40,11 @@ public class WorkflowController {
   public WorkflowResponseDto create(
     @Valid @RequestBody final CreateWorkflowsRequestDto requestDto
   ) {
-    log.info("Create workflow [{}]", requestDto);
     return workflowFacade.create(requestDto);
   }
 
   @DeleteMapping("/{id}")
   public void delete(@PathVariable final long id) {
-    log.info("Delete workflowId = [{}]", id);
     workflowFacade.delete(id);
   }
 

@@ -13,6 +13,15 @@
       </map>
     </option>
   </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/db/pom.xml" />
+        <option value="$PROJECT_DIR$/admin/server/pom.xml" />
+      </list>
+    </option>
+  </component>
   <component name="PDMPlugin">
     <option name="customRuleSets">
       <list>

@@ -5,6 +5,7 @@
 package com.spanning.core.service.ticket;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.spanning.core.dto.request.ticket.SearchParams;
 import com.spanning.core.dto.request.ticket.UpdateParams;
@@ -34,5 +35,11 @@ public class TicketService {
 
   public void update(final UpdateParams updateParams) {
     classificationResultRepository.updateWorkflowName(updateParams.getId(), updateParams.getWorkflowName());
+  }
+
+  public boolean isExistByWorkflow(final String workflowName) {
+    return Optional.ofNullable(workflowName)
+      .map(classificationResultRepository::getAnyByWorkflow)
+      .isPresent();
   }
 }

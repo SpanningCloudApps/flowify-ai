@@ -45,4 +45,10 @@ public interface ClassificationResultRepository extends CrudRepository<Classific
     @Param("limit") final Long limit
   );
 
+  @Query("""
+     SELECT id, cast(input as varchar), workflow_name, probability, cast(data as varchar), created_at
+     FROM classification_result AS c
+       WHERE workflow_name = :workflowName LIMIT 1;
+     """)
+  ClassificationResult getAnyByWorkflow(final String workflowName);
 }
