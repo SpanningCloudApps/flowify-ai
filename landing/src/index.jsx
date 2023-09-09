@@ -35,7 +35,8 @@ import {
   ABOUT_US_LINK,
   FEATURES_LINK,
   ROADMAP_LINK,
-  OUR_TEAM_LINK
+  OUR_TEAM_LINK,
+  CONNECT_LINK
 } from './data.source';
 import './less/antMotionStyle.less';
 
@@ -51,26 +52,21 @@ export default class Home extends React.Component {
     super(props);
     this.state = {
       isMobile,
-      show: !location.port // 如果不是 dva 2.0 请删除
+      show: !location.port
     };
   }
 
   componentDidMount() {
-    // 适配手机屏幕;
     enquireScreen((b) => {
       this.setState({ isMobile: !!b });
     });
-    // dva 2.0 样式在组件渲染之后动态加载，导致滚动组件不生效；线上不影响；
-    /* 如果不是 dva 2.0 请删除 start */
     if (location.port) {
-      // 样式 build 时间在 200-300ms 之间;
       setTimeout(() => {
         this.setState({
           show: true
         });
       }, 500);
     }
-    /* 如果不是 dva 2.0 请删除 end */
   }
 
   render() {
@@ -94,7 +90,7 @@ export default class Home extends React.Component {
         isMobile={this.state.isMobile}
       />,
       <Pricing0
-        id={PRODUCT_LINK}
+        id={CONNECT_LINK}
         key="Pricing0_0"
         dataSource={Pricing00DataSource}
         isMobile={this.state.isMobile}
@@ -106,7 +102,7 @@ export default class Home extends React.Component {
         isMobile={this.state.isMobile}
       />,
       <Content4
-        id="Content4_0"
+        id={PRODUCT_LINK}
         key="Content4_0"
         dataSource={Content40DataSource}
         isMobile={this.state.isMobile}
