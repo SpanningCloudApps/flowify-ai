@@ -5,6 +5,10 @@ import { AIResponse, openAIConnector } from 'openai/OpenAIConnector';
 export interface CategorizationResult {
   probability: number;
   workflowName: string | null;
+  allClassifications: {
+    probability: number;
+    workflowName: string | null;
+  }[];
 }
 
 class OpenAIFacade {
@@ -55,6 +59,8 @@ class OpenAIFacade {
       return value < tokenMatchingThreshold;
     });
 
+    const proceededVariants = recognizedOption ? [...processedResponses, recognizedOption] : [...processedResponses, responses[0]];
+
     const probability = this.calculateProbability(proceededVariants, recognizedOption);
     const allClassifications = processedResponses.map(response => ({
       probability: this.calculateProbability(proceededVariants, response),
@@ -64,17 +70,20 @@ class OpenAIFacade {
     if (recognizedOption) {
       return {
         probability: probability * 100,
-        workflowName: recognizedOption.message.content.split('Title: ')[1]
+        workflowName: recognizedOption.message.content.split('Title: ')[1],
+        allClassifications
       }
     } else if (probability === 1 && proceededVariants[0].message.content.includes('Unable to recognize')) {
       return {
         probability: 100,
-        workflowName: null
+        workflowName: null,
+        allClassifications
       }
     } else {
       return {
         probability: probability * 100,
-        workflowName: responses[0].message.content.split('Title: ')[1]
+        workflowName: responses[0].message.content.split('Title: ')[1],
+        allClassifications
       }
     }
   }
