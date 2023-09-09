@@ -139,7 +139,7 @@ export const Nav00DataSource = {
         className: 'header0-item',
         children: {
           href: `#${ABOUT_US_LINK}`,
-          children: [{ children: 'About Us', name: 'text' }]
+          children: [{ children: 'What we are', name: 'text' }]
         }
       },
       {
@@ -147,7 +147,7 @@ export const Nav00DataSource = {
         className: 'header0-item',
         children: {
           href: `#${PRODUCT_LINK}`,
-          children: [{ children: 'Product', name: 'text' }]
+          children: [{ children: 'Products', name: 'text' }]
         }
       },
       {
