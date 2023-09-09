@@ -9,6 +9,10 @@ import admin_example from './assets/img/admin_example.png';
 import admin_video_preview from './assets/img/admin_site_flow_preview.jpeg';
 import admin_video from './assets/video/admin_site_flow.mp4';
 
+import client_video from './assets/video/client_site_flow.mp4';
+import client_example from './assets/img/client_example.png';
+import client_video_preview from './assets/img/client_site_flow_preview.jpeg';
+
 import photo_anton from './assets/img/team/anton_b.jpeg';
 import photo_evgenij from './assets/img/team/evgenij_u.jpeg';
 import photo_ruslan from './assets/img/team/ruslan_z.jpeg';
@@ -26,7 +30,7 @@ export const OUR_TEAM_LINK = 'our-team';
 
 const product1 = {
   title: 'AI-driven Workflow',
-  imageLink: 'https://gw.alipayobjects.com/mdn/rms_ae7ad9/afts/img/A*OnyWT4Nsxy0AAAAAAAAAAABjARQnAQ',
+  imageLink: client_example,
   content: "Are you ready to streamline your data processing activities and work smarter, not harder? Flowify is here to transform the way you handle workflows with its powerful and intuitive AI-driven workflows. It serves as the central hub for managing data processing activities, ensuring a seamless and organized workflow. With Flowify, you\'re not just managing workflows; you\'re optimizing them for peak efficiency. Embrace the future of AI-driven workflow management and elevate your data processing to new heights.",
   subTitle: 'When Flowify works hard...',
   buttonText: 'To be delivered soon...',
@@ -49,9 +53,9 @@ const product2 = {
 const demoSection = {
   title: 'Demo',
   subTitle: 'Check 18+ video how xoxol fuck CEO',
-  video1Link: 'https://os.alipayobjects.com/rmsportal/EejaUGsyExkXyXr.mp4',
+  video1Link: client_video,
   video2Link: admin_video,
-  video1Preview: 'https://zos.alipayobjects.com/rmsportal/HZgzhugQZkqUwBVeNyfz.jpg',
+  video1Preview: client_video_preview,
   video2Preview: admin_video_preview,
   video1Title: 'Client Application',
   video2Title: 'Admin Application'
