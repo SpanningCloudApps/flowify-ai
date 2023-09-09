@@ -40,9 +40,20 @@ public interface WorkflowConverter {
       .filter(StringUtils::isNotBlank)
       .orElse(null);
 
+    final String description = Optional.ofNullable(requestDto)
+      .map(SearchWorkflowsRequestDto::getSearch)
+      .map(Search::getAll)
+      .filter(StringUtils::isNotBlank)
+      .orElse(null);
+
+    final Long pageToken = Optional.ofNullable(requestDto)
+      .map(SearchWorkflowsRequestDto::getPageToken)
+      .orElse(null);
+
     return SearchParams.builder()
-      .pageToken(requestDto.getPageToken())
+      .pageToken(pageToken)
       .workflowName(workflowName)
+      .description(description)
       .limit(requestDto.getLimit())
       .build();
   }

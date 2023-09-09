@@ -31,9 +31,6 @@ const ClassifiedTickets: FC = () => {
 
   const renderExpandedRow = useCallback(row => {
     const rowForView = { ...row };
-    rowForView.input = isJsonString(rowForView.input)
-        ? JSON.parse(rowForView.input)
-        : rowForView.input;
     rowForView.data = isJsonString(rowForView.data)
         ? JSON.parse(rowForView.data)
         : rowForView.data;
@@ -62,9 +59,9 @@ const ClassifiedTickets: FC = () => {
             </Row>
           </Col>
           <Col>
-            <div id="scrollableTarget" className={style.domainsTable}>
+            <div id="scrollableTarget2" className={style.domainsTable}>
               <InfinityScroll
-                  scrollableTarget="scrollableTarget"
+                  scrollableTarget="scrollableTarget2"
                   next={handleScrollChange}
                   loader={null}
                   dataLength={classifiedTickets.length}

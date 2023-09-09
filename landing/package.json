@@ -14,14 +14,15 @@
     "ci": "npm run build"
   },
   "dependencies": {
-    "@ant-design/icons": "^5.2.6",
-    "antd": "5.6.3",
-    "enquire-js": "^0.2.1",
-    "rc-queue-anim": "^2.0.0",
-    "rc-scroll-anim": "^2.7.6",
-    "rc-tween-one": "^3.0.6",
+    "@ant-design/icons": "5.2.6",
+    "antd": "4.10.3",
+    "enquire-js": "0.2.1",
+    "rc-queue-anim": "2.0.0",
+    "rc-scroll-anim": "2.7.6",
+    "rc-tween-one": "3.0.6",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-sublime-video": "0.2.5"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "4.0.0",

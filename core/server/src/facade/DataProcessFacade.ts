@@ -1,4 +1,4 @@
-import { DataProcessBodyDto } from '../dto/DataDto';
+import { DataPrepareBodyDto, DataProcessBodyDto, DataStorageDto } from '../dto/DataDto';
 import { getLogger } from '../logger/logger';
 import { classifierService } from '../service/ClassifierService';
 import { dataStorageService } from '../service/DataStorageService';
@@ -13,7 +13,7 @@ export class DataProcessFacade {
     return this._instance;
   }
 
-  public async initiate(body: DataProcessBodyDto) {
+  public async initiate(body: DataProcessBodyDto): Promise<DataStorageDto> {
     logger.info(`Data to process: ${JSON.stringify(body)}`);
     const classificationData = await classifierService.classify(body);
     const dataStorageData = {
@@ -26,9 +26,16 @@ export class DataProcessFacade {
     };
     logger.info(`Data to store: ${JSON.stringify(dataStorageData)}`);
     await dataStorageService.store(dataStorageData);
+    return {
+      workflowName: classificationData.workflowName
+    };
+  }
+
+  public async start(body: DataPrepareBodyDto) {
+    logger.info(`Data to prepare start workflow: ${JSON.stringify(body)}`);
     const classificationResult = {
-      workflowName: classificationData.workflowName,
-      actor: body.createdBy
+      workflowName: body.workflowName,
+      actor: body.actor
     };
     logger.info(`Data to initiate workflow: ${JSON.stringify(classificationResult)}`);
     await classificationProcessorService.publishClassificationResult(classificationResult);

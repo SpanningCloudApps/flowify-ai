@@ -1,5 +1,8 @@
 package com.spanning.core.service.workflow;
 
+import java.util.List;
+import java.util.Optional;
+
 import com.spanning.core.dto.request.workflow.CreateParams;
 import com.spanning.core.dto.request.workflow.SearchParams;
 import com.spanning.core.dto.response.workflow.Workflow;
@@ -10,9 +13,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.List;
-import java.util.Optional;
-
 @Component
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class WorkflowService {
@@ -22,6 +22,7 @@ public class WorkflowService {
   public List<Workflow> search(final SearchParams searchParams) {
     return workflowRepository.search(
       searchParams.getWorkflowName(),
+      searchParams.getDescription(),
       searchParams.getPageToken(),
       searchParams.getLimit()
     );
@@ -29,6 +30,10 @@ public class WorkflowService {
 
   public Workflow get(final long id) {
     return workflowRepository.get(id);
+  }
+
+  public Workflow getByName(final String workflowName) {
+    return workflowRepository.getByName(workflowName);
   }
 
   public void delete(final long id) {

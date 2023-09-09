@@ -45,8 +45,9 @@ public class TicketFacade {
     final String user = userContext.getUser();
     log.info("User[{}] updating ticket id=[{}], requestDto = [{}]", user, id, requestDto);
 
-    final Workflow workflow = Optional.of(id)
-      .map(workflowService::get)
+    final Workflow workflow = Optional.of(requestDto)
+      .map(UpdateTicketsRequestDto::getWorkflowName)
+      .map(workflowService::getByName)
       .orElseGet(() -> {
         final CreateParams createParams = CreateParams.builder()
           .description(requestDto.getDescription())

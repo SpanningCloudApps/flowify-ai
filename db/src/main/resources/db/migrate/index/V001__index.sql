@@ -61,6 +61,8 @@ DELETE FROM workflow;
 INSERT INTO workflow (name, description)
 VALUES ('UNKNOWN', 'Can not find solution');
 INSERT INTO workflow (name, description)
+VALUES ('REVIEWED_UNKNOWN', 'There is no any workflow');
+INSERT INTO workflow (name, description)
 VALUES ('ADD_USER', 'Adds new user to microsoft active directory');
 INSERT INTO workflow_step (workflow_id, description, title, type, ordinal)
 VALUES ('ADD_USER', 'Ask customer for user fullname', 'Ask customer for user fullname', 'ASK_FOR_FULL_NAME', 1);
@@ -68,6 +70,7 @@ INSERT INTO workflow_step (workflow_id, description, title, type, ordinal)
 VALUES ('ADD_USER', 'Ask customer for create date', 'Ask customer for create date', 'ASK_ABOUT_THE_DATE', 2);
 INSERT INTO workflow_step (workflow_id, description, title, type, ordinal)
 VALUES ('ADD_USER', 'Create user base on previous data', 'Create user base on previous data', 'CREATE_AD_USER', 3);
+
 
 DELETE FROM classification_result;
 INSERT INTO classification_result (input, workflow_name, probability, data, created_at) VALUES ('{"title": "SGC-12", "createdBy": "alina@email.com", "description": "Some interesting 1", "additionalInfo": ["item1", "item2"]}', 'ADD_USER', 99.013, '{}', '2023-09-08 17:57:25.108141');
