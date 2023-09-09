@@ -1,10 +1,10 @@
 const en = {
-  POOPER_AI: 'Pooper AI',
+  POOPER_AI: 'Flowify',
   LOGIN_BUTTON: 'Login',
   TICKETS: 'Tickets',
   WORKFLOWS: 'Workflows',
   TICKETS_BLOCK_TITLE: 'Tickets',
-  SIDER_TITLE: 'Pooper AI',
+  SIDER_TITLE: 'Flowify',
   NAVIGATION: 'NAVIGATION',
   UNKNOWN: 'Unknown',
   ERROR: 'Error',
