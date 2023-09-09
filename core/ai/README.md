@@ -1,3 +1,0 @@
-# Authors
-
-Nikita Gurets

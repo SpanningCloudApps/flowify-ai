@@ -1,12 +1,8 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
- */
-
 import '@tensorflow/tfjs';
 
 import config from 'config';
 import { load, QuestionAndAnswer } from '@tensorflow-models/qna';
-import { TensorFlowResponse } from 'model/AIConnector';
+import { TensorFlowResponse } from '../model/AIConnector';
 
 export class TensorFlowConnector {
   private static _instance: TensorFlowConnector = new TensorFlowConnector();
@@ -41,7 +37,7 @@ export class TensorFlowConnector {
     try {
       const ticketsList = config.get('ai.tickets');
       const messages = ticketsList
-        .map((ticket, index) => `${index+1}) Request titled as ${ticket.title}: ${ticket.description}.`)
+        .map((ticket, index) => `${index + 1}) Request titled as ${ticket.title}: ${ticket.description}.`)
         .join('\n');
 
       return `  Requester can easily go through the different specified workflows:
