@@ -20,12 +20,38 @@ export const OUR_TEAM_LINK = 'our-team';
 
 const product1 = {
   title: 'Client',
-  imageLink: '',
-  content: '',
-  subTitle: '',
-  buttonText: '',
-  buttonLink: ''
+  imageLink: 'https://gw.alipayobjects.com/mdn/rms_ae7ad9/afts/img/A*OnyWT4Nsxy0AAAAAAAAAAABjARQnAQ',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum sapien a velit sodales, vitae interdum risus finibus. Morbi feugiat dui nec nisi hendrerit, id finibus diam dictum. Suspendisse potenti. Etiam quis gravida mi.',
+  subTitle: 'Generated 5 paragraphs',
+  buttonText: 'Let\'s Try',
+  buttonLink: '#'
 };
+
+const product2 = {
+  title: 'Admin',
+  imageLink: 'https://gw.alipayobjects.com/mdn/rms_ae7ad9/afts/img/A*OnyWT4Nsxy0AAAAAAAAAAABjARQnAQ',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum sapien a velit sodales, vitae interdum risus finibus. Morbi feugiat dui nec nisi hendrerit, id finibus diam dictum. Suspendisse potenti. Etiam quis gravida mi.',
+  subTitle: 'Generated 5 paragraphs',
+  buttonText: 'Let\'s Try',
+  buttonLink: '#'
+};
+
+const demoSection = {
+  title: 'Demo',
+  subTitle: 'Check 18+ video how xoxol fuck CEO',
+  videoLink: 'https://os.alipayobjects.com/rmsportal/EejaUGsyExkXyXr.mp4',
+  videoPreview: 'https://zos.alipayobjects.com/rmsportal/HZgzhugQZkqUwBVeNyfz.jpg'
+};
+
+const aboutUsSection = {
+  title: 'About Us',
+  content: 'We super cool team of poooper enginners',
+  smallContent: 'We work smart!'
+};
+
+const featuresSection = {};
+
+const roadmapSection = {};
 
 export const Nav00DataSource = {
   wrapper: { className: 'header0 home-page-wrapper' },
@@ -93,7 +119,11 @@ export const Banner00DataSource = {
     className: 'banner0-content',
     children: 'Smart Workflow-Driven Classification System '
   },
-  button: { className: 'banner0-button', children: 'Connect' }
+  button: {
+    className: 'banner0-button',
+    children: 'Connect',
+    href: `#${PRODUCT_LINK}`
+  }
 };
 
 export const Pricing00DataSource = {
@@ -104,8 +134,7 @@ export const Pricing00DataSource = {
   img: {
     className: 'pricing0-img',
     name: 'image',
-    children:
-      'https://gw.alipayobjects.com/mdn/rms_ae7ad9/afts/img/A*OnyWT4Nsxy0AAAAAAAAAAABjARQnAQ'
+    children: product1.imageLink
   },
   childWrapper: {
     className: 'pricing0-text-wrapper',
@@ -114,22 +143,21 @@ export const Pricing00DataSource = {
     children: [
       {
         name: 'title',
-        children: '',
+        children: product1.title,
         className: 'pricing0-title'
       },
       {
         name: 'content',
-        children:
-          '云资源集中编排、弹性伸缩、持续发布和部署，高可用及容灾。按金融企业安全要求打造的完整云上安全体系，全方位保障金融应用及数据安全。<br/>500-5Gbps，10 GB-50TB（含），1TB流量包，国内按峰值。',
+        children: product1.content,
         className: 'pricing0-content'
       },
-      { name: 'pricing', children: '¥2,200', className: 'pricing0-pricing' },
+      { name: 'pricing', children: product1.subTitle, className: 'pricing0-pricing' },
       {
         name: 'button',
         children: {
-          href: '#',
+          href: product1.buttonLink,
           type: 'primary',
-          children: '立即购买'
+          children: product1.buttonText
         }
       }
     ]
@@ -143,8 +171,7 @@ export const Pricing01DataSource = {
   img: {
     className: 'pricing0-img',
     name: 'image',
-    children:
-      'https://gw.alipayobjects.com/mdn/rms_ae7ad9/afts/img/A*OnyWT4Nsxy0AAAAAAAAAAABjARQnAQ'
+    children: product2.imageLink
   },
   childWrapper: {
     className: 'pricing0-text-wrapper',
@@ -153,23 +180,21 @@ export const Pricing01DataSource = {
     children: [
       {
         name: 'title',
-        children: 'OceanBase 服务器',
+        children: product2.title,
         className: 'pricing0-title'
       },
       {
         name: 'content',
-        children:
-          '云资源集中编排、弹性伸缩、持续发布和部署，高可用及容灾。按金融企业安全要求打造的完整云上安全体系，全方位保障金融应用及数据安全。<br/>500-5Gbps，10 GB-50TB（含），1TB流量包，国内按峰值。',
+        children: product2.content,
         className: 'pricing0-content'
       },
-      { name: 'pricing', children: '¥2,200', className: 'pricing0-pricing' },
+      { name: 'pricing', children: product2.subTitle, className: 'pricing0-pricing' },
       {
         name: 'button',
         children: {
-          icon: 'shopping-cart',
-          href: '#',
+          href: product2.buttonLink,
           type: 'primary',
-          children: '立即购买'
+          children: product2.buttonText
         }
       }
     ]
@@ -185,21 +210,21 @@ export const Content40DataSource = {
     children: [
       {
         name: 'title',
-        children: '蚂蚁金融云提供专业的服务',
+        children: demoSection.title,
         className: 'title-h1'
       },
       {
         name: 'content',
         className: 'title-content content4-title-content',
-        children: '科技想象力，金融创造力'
+        children: demoSection.subTitle
       }
     ]
   },
   video: {
     className: 'content4-video',
     children: {
-      video: 'https://os.alipayobjects.com/rmsportal/EejaUGsyExkXyXr.mp4',
-      image: 'https://zos.alipayobjects.com/rmsportal/HZgzhugQZkqUwBVeNyfz.jpg'
+      video: demoSection.videoLink,
+      image: demoSection.videoPreview
     }
   }
 };
@@ -219,16 +244,15 @@ export const Content130DataSource = {
           'https://gw.alipayobjects.com/zos/rmsportal/PiqyziYmvbgAudYfhuBr.svg',
         className: 'title-image'
       },
-      { name: 'title', children: '丰富的特色展台', className: 'title-h1' },
+      { name: 'title', children: aboutUsSection.title, className: 'title-h1' },
       {
         name: 'content',
-        children:
-          '特色展台包括 Ant Design 、AntV、AntG、Egg 等明星产品，更有产品专家',
+        children: aboutUsSection.content,
         className: 'title-content'
       },
       {
         name: 'content2',
-        children: '现场问诊，为你答疑解难',
+        children: aboutUsSection.smallContent,
         className: 'title-content'
       }
     ]
