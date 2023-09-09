@@ -36,6 +36,3845 @@
         "title": "App Downtime",
         "description": "Notification of application downtime or unavailability.",
         "createdBy": "CEO X0XL0B"
+      },
+      {
+        "createdBy": "CEO X0XL0B",
+        "title": "Reset Password",
+        "description": "A user is requesting a password reset due to forgotten credentials."
+      },
+      {
+        "createdBy": "CTO A1A2A3",
+        "title": "User Added",
+        "description": "A new user has been added to the system."
+      },
+      {
+        "createdBy": "COO B4B5B6",
+        "title": "Remove User",
+        "description": "A request to remove a user account from the system."
+      },
+      {
+        "createdBy": "CFO C7C8C9",
+        "title": "Slow Internet",
+        "description": "Report of slow internet connectivity issues."
+      },
+      {
+        "createdBy": "CMO D0D1D2",
+        "title": "App Downtime",
+        "description": "Notification of application downtime or unavailability."
+      },
+      {
+        "createdBy": "Manager E3E4E5",
+        "title": "New Feature Request",
+        "description": "A request to add a new feature to the application."
+      },
+      {
+        "createdBy": "Lead Developer F6F7F8",
+        "title": "Bug Report",
+        "description": "A report of a software bug or issue."
+      },
+      {
+        "createdBy": "Product Manager G9G0G1",
+        "title": "Feature Enhancement Request",
+        "description": "A request for enhancing an existing feature."
+      },
+      {
+        "createdBy": "QA Team H2H3H4",
+        "title": "Account Deactivation",
+        "description": "Notification of an account deactivation request."
+      },
+      {
+        "createdBy": "Billing Department I5I6I7",
+        "title": "Payment Received",
+        "description": "Confirmation of a payment received."
+      },
+      {
+        "createdBy": "HR Department J8J9J0",
+        "title": "New Employee Onboarding",
+        "description": "Welcome a new employee to the company."
+      },
+      {
+        "createdBy": "Marketing Team K1K2K3",
+        "title": "Marketing Campaign Launch",
+        "description": "Announcement of a new marketing campaign."
+      },
+      {
+        "createdBy": "Sales Team L4L5L6",
+        "title": "Sales Meeting Agenda",
+        "description": "Agenda for an upcoming sales team meeting."
+      },
+      {
+        "createdBy": "Customer Support M7M8M9",
+        "title": "Customer Complaint",
+        "description": "A customer has submitted a complaint."
+      },
+      {
+        "createdBy": "Legal Department N0N1N2",
+        "title": "Legal Document Review",
+        "description": "Request for legal document review."
+      },
+      {
+        "createdBy": "IT Department O3O4O5",
+        "title": "Server Maintenance",
+        "description": "Notification of upcoming server maintenance."
+      },
+      {
+        "createdBy": "Operations Team P6P7P8",
+        "title": "Inventory Update",
+        "description": "Update on the current inventory status."
+      },
+      {
+        "createdBy": "Research Team Q9Q0Q1",
+        "title": "Research Findings",
+        "description": "Findings from the latest research study."
+      },
+      {
+        "createdBy": "Finance Department R2R3R4",
+        "title": "Budget Approval",
+        "description": "Request for budget approval."
+      },
+      {
+        "createdBy": "Security Team S5S6S7",
+        "title": "Security Incident Report",
+        "description": "Report of a security incident."
+      },
+      {
+        "createdBy": "Support Team T8T9T0",
+        "title": "Technical Support Request",
+        "description": "A request for technical support."
+      },
+      {
+        "createdBy": "Training Department U1U2U3",
+        "title": "Training Session",
+        "description": "Announcement of a training session."
+      },
+      {
+        "createdBy": "Maintenance Team V4V5V6",
+        "title": "Maintenance Request",
+        "description": "A request for maintenance services."
+      },
+      {
+        "createdBy": "Quality Assurance W7W8W9",
+        "title": "Quality Inspection",
+        "description": "Notification of a quality inspection."
+      },
+      {
+        "createdBy": "CEO X0XL0B",
+        "title": "Reset Password",
+        "description": "A user is requesting a password reset due to forgotten credentials."
+      },
+      {
+        "createdBy": "CTO A1A2A3",
+        "title": "User Added",
+        "description": "A new user has been added to the system."
+      },
+      {
+        "createdBy": "COO B4B5B6",
+        "title": "Remove User",
+        "description": "A request to remove a user account from the system."
+      },
+      {
+        "createdBy": "CFO C7C8C9",
+        "title": "Slow Internet",
+        "description": "Report of slow internet connectivity issues."
+      },
+      {
+        "createdBy": "CMO D0D1D2",
+        "title": "App Downtime",
+        "description": "Notification of application downtime or unavailability."
+      },
+      {
+        "createdBy": "Manager E3E4E5",
+        "title": "New Feature Request",
+        "description": "A request to add a new feature to the application."
+      },
+      {
+        "createdBy": "Lead Developer F6F7F8",
+        "title": "Bug Report",
+        "description": "A report of a software bug or issue."
+      },
+      {
+        "createdBy": "Product Manager G9G0G1",
+        "title": "Feature Enhancement Request",
+        "description": "A request for enhancing an existing feature."
+      },
+      {
+        "createdBy": "QA Team H2H3H4",
+        "title": "Account Deactivation",
+        "description": "Notification of an account deactivation request."
+      },
+      {
+        "createdBy": "Billing Department I5I6I7",
+        "title": "Payment Received",
+        "description": "Confirmation of a payment received."
+      },
+      {
+        "createdBy": "HR Department J8J9J0",
+        "title": "New Employee Onboarding",
+        "description": "Welcome a new employee to the company."
+      },
+      {
+        "createdBy": "Marketing Team K1K2K3",
+        "title": "Marketing Campaign Launch",
+        "description": "Announcement of a new marketing campaign."
+      },
+      {
+        "createdBy": "Sales Team L4L5L6",
+        "title": "Sales Meeting Agenda",
+        "description": "Agenda for an upcoming sales team meeting."
+      },
+      {
+        "createdBy": "Customer Support M7M8M9",
+        "title": "Customer Complaint",
+        "description": "A customer has submitted a complaint."
+      },
+      {
+        "createdBy": "Legal Department N0N1N2",
+        "title": "Legal Document Review",
+        "description": "Request for legal document review."
+      },
+      {
+        "createdBy": "IT Department O3O4O5",
+        "title": "Server Maintenance",
+        "description": "Notification of upcoming server maintenance."
+      },
+      {
+        "createdBy": "Operations Team P6P7P8",
+        "title": "Inventory Update",
+        "description": "Update on the current inventory status."
+      },
+      {
+        "createdBy": "Research Team Q9Q0Q1",
+        "title": "Research Findings",
+        "description": "Findings from the latest research study."
+      },
+      {
+        "createdBy": "Finance Department R2R3R4",
+        "title": "Budget Approval",
+        "description": "Request for budget approval."
+      },
+      {
+        "createdBy": "Security Team S5S6S7",
+        "title": "Security Incident Report",
+        "description": "Report of a security incident."
+      },
+      {
+        "createdBy": "CEO X0XL0B",
+        "title": "Reset Password",
+        "description": "A user is requesting a password reset due to forgotten credentials."
+      },
+      {
+        "createdBy": "CTO A1A2A3",
+        "title": "User Added",
+        "description": "A new user has been added to the system."
+      },
+      {
+        "createdBy": "COO B4B5B6",
+        "title": "Remove User",
+        "description": "A request to remove a user account from the system."
+      },
+      {
+        "createdBy": "CFO C7C8C9",
+        "title": "Slow Internet",
+        "description": "Report of slow internet connectivity issues."
+      },
+      {
+        "createdBy": "CMO D0D1D2",
+        "title": "App Downtime",
+        "description": "Notification of application downtime or unavailability."
+      },
+      {
+        "createdBy": "Manager E3E4E5",
+        "title": "New Feature Request",
+        "description": "A request to add a new feature to the application."
+      },
+      {
+        "createdBy": "Lead Developer F6F7F8",
+        "title": "Bug Report",
+        "description": "A report of a software bug or issue."
+      },
+      {
+        "createdBy": "Product Manager G9G0G1",
+        "title": "Feature Enhancement Request",
+        "description": "A request for enhancing an existing feature."
+      },
+      {
+        "createdBy": "QA Team H2H3H4",
+        "title": "Account Deactivation",
+        "description": "Notification of an account deactivation request."
+      },
+      {
+        "createdBy": "Billing Department I5I6I7",
+        "title": "Payment Received",
+        "description": "Confirmation of a payment received."
+      },
+      {
+        "createdBy": "HR Department J8J9J0",
+        "title": "New Employee Onboarding",
+        "description": "Welcome a new employee to the company."
+      },
+      {
+        "createdBy": "Marketing Team K1K2K3",
+        "title": "Marketing Campaign Launch",
+        "description": "Announcement of a new marketing campaign."
+      },
+      {
+        "createdBy": "Sales Team L4L5L6",
+        "title": "Sales Meeting Agenda",
+        "description": "Agenda for an upcoming sales team meeting."
+      },
+      {
+        "createdBy": "Customer Support M7M8M9",
+        "title": "Customer Complaint",
+        "description": "A customer has submitted a complaint."
+      },
+      {
+        "createdBy": "Legal Department N0N1N2",
+        "title": "Legal Document Review",
+        "description": "Request for legal document review."
+      },
+      {
+        "createdBy": "IT Department O3O4O5",
+        "title": "Server Maintenance",
+        "description": "Notification of upcoming server maintenance."
+      },
+      {
+        "createdBy": "Operations Team P6P7P8",
+        "title": "Inventory Update",
+        "description": "Update on the current inventory status."
+      },
+      {
+        "createdBy": "Research Team Q9Q0Q1",
+        "title": "Research Findings",
+        "description": "Findings from the latest research study."
+      },
+      {
+        "createdBy": "Finance Department R2R3R4",
+        "title": "Budget Approval",
+        "description": "Request for budget approval."
+      },
+      {
+        "createdBy": "Security Team S5S6S7",
+        "title": "Security Incident Report",
+        "description": "Report of a security incident."
+      },
+      {
+        "createdBy": "Support Team T8T9T0",
+        "title": "Technical Support Request",
+        "description": "A request for technical support."
+      },
+      {
+        "createdBy": "Training Department U1U2U3",
+        "title": "Training Session",
+        "description": "Announcement of a training session."
+      },
+      {
+        "createdBy": "Maintenance Team V4V5V6",
+        "title": "Maintenance Request",
+        "description": "A request for maintenance services."
+      },
+      {
+        "createdBy": "Quality Assurance W7W8W9",
+        "title": "Quality Inspection",
+        "description": "Notification of a quality inspection."
+      },
+      {
+        "createdBy": "Logistics Team X0X1X2",
+        "title": "Shipping Status Update",
+        "description": "Update on the shipping status of an order."
+      },
+      {
+        "createdBy": "Customer Feedback Team Y3Y4Y5",
+        "title": "Customer Feedback Received",
+        "description": "Feedback received from a customer."
+      },
+      {
+        "createdBy": "HR Department Z6Z7Z8",
+        "title": "Employee Performance Review",
+        "description": "Notification of an upcoming employee performance review."
+      },
+      {
+        "createdBy": "CEO X0XL0B",
+        "title": "Website Crash Due to DDoS Attack",
+        "description": "Report of a website crash caused by a distributed denial-of-service (DDoS) attack."
+      },
+      {
+        "createdBy": "CTO A1A2A3",
+        "title": "System Outage Due to Power Outage",
+        "description": "Report of a system outage caused by a power outage."
+      },
+      {
+        "createdBy": "COO B4B5B6",
+        "title": "Data Loss Due to Human Error",
+        "description": "Report of data loss caused by human error."
+      },
+      {
+        "createdBy": "CFO C7C8C9",
+        "title": "Network Security Breach Due to Phishing Attack",
+        "description": "Report of a network security breach caused by a phishing attack."
+      },
+      {
+        "createdBy": "CMO D0D1D2",
+        "title": "Application Bug Causes Crash",
+        "description": "Report of an application bug that causes a crash."
+      },
+      {
+        "createdBy": "Manager E3E4E5",
+        "title": "Hardware Malfunction Due to Overheating",
+        "description": "Report of a hardware malfunction caused by overheating."
+      },
+      {
+        "createdBy": "Lead Developer F6F7F8",
+        "title": "Software Bug Causes Data Corruption",
+        "description": "Report of a software bug that causes data corruption."
+      },
+      {
+        "createdBy": "Product Manager G9G0G1",
+        "title": "Performance Optimization Request Due to User Complaints",
+        "description": "Request to optimize the performance of an application due to user complaints."
+      },
+      {
+        "createdBy": "QA Team H2H3H4",
+        "title": "Software Testing Issue Leads to Bug Discovery",
+        "description": "Report of a software testing issue that leads to the discovery of a bug."
+      },
+      {
+        "createdBy": "Billing Department I5I6I7",
+        "title": "Customer Payment Dispute Due to Duplicate Charge",
+        "description": "Report of a customer dispute over a payment due to a duplicate charge."
+      },
+      {
+        "createdBy": "HR Department J8J9J0",
+        "title": "Employee Performance Review Shows Improvement",
+        "description": "Notification of an employee performance review that shows improvement."
+      },
+      {
+        "createdBy": "Marketing Team K1K2K3",
+        "title": "Marketing Campaign Success Leads to Increased Sales",
+        "description": "Report of a successful marketing campaign that leads to increased sales."
+      },
+      {
+        "createdBy": "Sales Team L4L5L6",
+        "title": "New Sales Lead Provides Potential for Large Sale",
+        "description": "Report of a new sales lead that provides potential for a large sale."
+      },
+      {
+        "createdBy": "Customer Support M7M8M9",
+        "title": "Support Ticket Closed Successfully",
+        "description": "Notification that a support ticket has been closed successfully."
+      },
+      {
+        "createdBy": "Legal Department N0N1N2",
+        "title": "Legal Settlement Resolves Lawsuit",
+        "description": "Notification of a legal settlement that resolves a lawsuit."
+      },
+      {
+        "createdBy": "IT Department O3O4O5",
+        "title": "System Upgrade Improves Performance",
+        "description": "Notification that a system upgrade has improved performance."
+      },
+      {
+        "createdBy": "John Doe",
+        "title": "Website crash due to DDoS attack",
+        "description": "Report of a website crash caused by a distributed denial-of-service (DDoS) attack."
+      },
+      {
+        "createdBy": "Jane Doe",
+        "title": "System outage due to power outage",
+        "description": "Report of a system outage caused by a power outage."
+      },
+      {
+        "createdBy": "Mary Smith",
+        "title": "Data loss due to human error",
+        "description": "Report of data loss caused by human error."
+      },
+      {
+        "createdBy": "Peter Jones",
+        "title": "Network security breach due to phishing attack",
+        "description": "Report of a network security breach caused by a phishing attack."
+      },
+      {
+        "createdBy": "David Johnson",
+        "title": "Application bug causes crash",
+        "description": "Report of an application bug that causes a crash."
+      },
+      {
+        "createdBy": "Elizabeth Brown",
+        "title": "Hardware malfunction due to overheating",
+        "description": "Report of a hardware malfunction caused by overheating."
+      },
+      {
+        "createdBy": "Michael Williams",
+        "title": "Software bug causes data corruption",
+        "description": "Report of a software bug that causes data corruption."
+      },
+      {
+        "createdBy": "Sarah Green",
+        "title": "Performance optimization request due to user complaints",
+        "description": "Request to optimize the performance of an application due to user complaints."
+      },
+      {
+        "createdBy": "John Smith",
+        "title": "Software testing issue leads to bug discovery",
+        "description": "Report of a software testing issue that leads to the discovery of a bug."
+      },
+      {
+        "createdBy": "Jane Jones",
+        "title": "Customer payment dispute due to duplicate charge",
+        "description": "Report of a customer dispute over a payment due to a duplicate charge."
+      },
+      {
+        "createdBy": "Mary Brown",
+        "title": "Employee performance review shows improvement",
+        "description": "Notification of an employee performance review that shows improvement."
+      },
+      {
+        "createdBy": "Peter Green",
+        "title": "New sales lead provides potential for large sale",
+        "description": "Report of a new sales lead that provides potential for a large sale."
+      },
+      {
+        "createdBy": "David Williams",
+        "title": "Support ticket closed successfully",
+        "description": "Notification that a support ticket has been closed successfully."
+      },
+      {
+        "createdBy": "Elizabeth Johnson",
+        "title": "Legal settlement resolves lawsuit",
+        "description": "Notification of a legal settlement that resolves a lawsuit."
+      },
+      {
+        "createdBy": "Michael Brown",
+        "title": "System upgrade improves performance",
+        "description": "Notification that a system upgrade has improved performance."
+      },
+      {
+        "createdBy": "John Smith",
+        "title": "Website crash due to DDoS attack",
+        "description": "Report of a website crash caused by a distributed denial-of-service (DDoS) attack. The attack was carried out by a group of hackers who used a botnet to generate a large number of requests to the website's servers. The attack lasted for several hours, causing the website to be inaccessible to users."
+      },
+      {
+        "createdBy": "Jane Doe",
+        "title": "System outage due to power outage",
+        "description": "Report of a system outage caused by a power outage. The outage was caused by a power failure at the company's data center. The outage lasted for several hours, impacting all of the company's systems."
+      },
+      {
+        "createdBy": "Mary Smith",
+        "title": "Data loss due to human error",
+        "description": "Report of data loss caused by human error. A data entry clerk accidentally deleted a critical database file. The file contained sensitive customer data, which is now unavailable. The company is working to restore the data."
+      },
+      {
+        "createdBy": "Peter Jones",
+        "title": "Network security breach due to phishing attack",
+        "description": "Report of a network security breach caused by a phishing attack. An employee fell victim to a phishing email, which allowed the attacker to gain access to the company's network. The attacker stole sensitive data, including employee login credentials and customer credit card numbers. The company is working to investigate the breach and mitigate the damage."
+      },
+      {
+        "createdBy": "David Johnson",
+        "title": "Application bug causes crash",
+        "description": "Report of an application bug that causes a crash. The bug was found in a critical application that is used by the company's customer service team. The bug causes the application to crash when a user attempts to access a certain feature. The company is working to fix the bug."
+      },
+      {
+        "createdBy": "Elizabeth Brown",
+        "title": "Hardware malfunction due to overheating",
+        "description": "Report of a hardware malfunction caused by overheating. A server in the company's data center overheated, causing it to malfunction. The server was shut down to prevent further damage. The company is working to repair the server."
+      },
+      {
+        "createdBy": "Michael Williams",
+        "title": "Software bug causes data corruption",
+        "description": "Report of a software bug that causes data corruption. The bug was found in a critical application that is used by the company's finance team. The bug causes data to be corrupted when a user attempts to access a certain feature. The company is working to fix the bug."
+      },
+      {
+        "createdBy": "Sarah Green",
+        "title": "Performance optimization request due to user complaints",
+        "description": "Request to optimize the performance of an application due to user complaints. Users have reported that the application is slow and unresponsive. The company is working to identify the causes of the performance issues and implement solutions."
+      },
+      {
+        "createdBy": "John Smith",
+        "title": "Software testing issue leads to bug discovery",
+        "description": "Report of a software testing issue that leads to bug discovery. A software tester found a bug in a new application that is being developed by the company. The bug could have caused the application to crash or malfunction. The company is working to fix the bug."
+      },
+      {
+        "createdBy": "Jane Jones",
+        "title": "Customer payment dispute due to duplicate charge",
+        "description": "Report of a customer dispute over a payment due to a duplicate charge. A customer was charged twice for the same purchase. The customer is disputing the charge with the company. The company is investigating the dispute."
+      },
+      {
+        "createdBy": "Mary Brown",
+        "title": "Employee performance review shows improvement",
+        "description": "Notification of an employee performance review that shows improvement. An employee's performance review showed significant improvement over the previous review. The employee is being considered for a promotion."
+      },
+      {
+        "createdBy": "John Smith",
+        "title": "Website crash due to DDoS attack",
+        "description": "Report of a website crash caused by a distributed denial-of-service (DDoS) attack. The attack was carried out by a group of hackers who used a botnet to generate a large number of requests to the website's servers. The attack lasted for several hours, causing the website to be inaccessible to users. The attack was mitigated by the company's security team, which was able to identify and block the malicious traffic. The company is working to improve its security measures to prevent future attacks."
+      },
+      {
+        "createdBy": "Jane Doe",
+        "title": "System outage due to power outage",
+        "description": "Report of a system outage caused by a power outage. The outage was caused by a power failure at the company's data center. The outage lasted for several hours, impacting all of the company's systems. The outage was mitigated by the company's backup systems, which allowed the company to continue operating during the outage. The company is working to improve its power redundancy to prevent future outages."
+      },
+      {
+        "createdBy": "Mary Smith",
+        "title": "Data loss due to human error",
+        "description": "Report of data loss caused by human error. A data entry clerk accidentally deleted a critical database file. The file contained sensitive customer data, which is now unavailable. The data loss was mitigated by the company's backup systems, which allowed the company to restore the data. The company is working to improve its data security training to prevent future data loss incidents."
+      },
+      {
+        "createdBy": "Peter Jones",
+        "title": "Network security breach due to phishing attack",
+        "description": "Report of a network security breach caused by a phishing attack. An employee fell victim to a phishing email, which allowed the attacker to gain access to the company's network. The attacker stole sensitive data, including employee login credentials and customer credit card numbers. The breach was mitigated by the company's security team, which was able to identify and contain the attack. The company is working to improve its phishing awareness training to prevent future phishing attacks."
+      },
+      {
+        "createdBy": "David Johnson",
+        "title": "Application bug causes crash",
+        "description": "Report of an application bug that causes a crash. The bug was found in a critical application that is used by the company's customer service team. The bug causes the application to crash when a user attempts to access a certain feature. The bug was mitigated by the company's development team, which was able to fix the bug in a timely manner. The company is working to improve its application testing process to prevent future bugs from causing crashes."
+      },
+      {
+        "createdBy": "Elizabeth Brown",
+        "title": "Hardware malfunction due to overheating",
+        "description": "Report of a hardware malfunction caused by overheating. A server in the company's data center overheated, causing it to malfunction. The server was shut down to prevent further damage. The malfunction was mitigated by the company's IT team, which was able to repair the server in a timely manner. The company is working to improve its data center cooling system to prevent future overheating incidents."
+      },
+      {
+        "createdBy": "Michael Williams",
+        "title": "Software bug causes data corruption",
+        "description": "Report of a software bug that causes data corruption. The bug was found in a critical application that is used by the company's finance team. The bug causes data to be corrupted when a user attempts to access a certain feature. The bug was mitigated by the company's development team, which was able to fix the bug in a timely manner. The company is working to improve its data backup and recovery process to prevent future data corruption incidents."
+      },
+      {
+        "createdBy": "Sarah Green",
+        "title": "Performance optimization request due to user complaints",
+        "description": "Request to optimize the performance of an application due to user complaints. Users have reported that the application is slow and unresponsive. The company is working to identify the causes of the performance issues and implement solutions. The company is also working to improve its communication with users to address performance concerns in a timely manner."
+      },
+      {
+        "createdBy": "Michael Williams",
+        "title": "Software bug causes data corruption",
+        "description": "Report of a software bug that causes data corruption. The bug was found in a critical application that is used by the company's finance team. The bug causes data to be corrupted when a user attempts to access a certain feature. The bug was mitigated by the company's development team, which was able to fix the bug in a timely manner. The company is working to improve its data backup and recovery process to prevent future data corruption incidents."
+      },
+      {
+        "createdBy": "Sarah Green",
+        "title": "Performance optimization request due to user complaints",
+        "description": "Request to optimize the performance of an application due to user complaints. Users have reported that the application is slow and unresponsive. The company is working to identify the causes of the performance issues and implement solutions. The company is also working to improve its communication with users to address performance concerns in a timely manner."
+      },
+      {
+        "createdBy": "John Smith",
+        "title": "New Product Launch Announcement",
+        "description": "Announcement of a new product launch. The company is excited to introduce a new product to the market and is expecting it to be a game-changer. The launch event will include a live demonstration of the product's features and benefits."
+      },
+      {
+        "createdBy": "Emma Johnson",
+        "title": "Employee Recognition Award",
+        "description": "Announcement of an employee recognition award. The company recognizes the outstanding contributions and dedication of an employee who has consistently gone above and beyond in their role. The award will be presented at an upcoming company event."
+      },
+      {
+        "createdBy": "Robert Davis",
+        "title": "Vendor Partnership Agreement",
+        "description": "Announcement of a new vendor partnership agreement. The company has entered into a strategic partnership with a trusted vendor to enhance its product offerings and improve customer service. This partnership is expected to bring significant benefits to both parties."
+      },
+      {
+        "createdBy": "Laura Martinez",
+        "title": "Upcoming Training Workshop",
+        "description": "Notification of an upcoming training workshop. The company is organizing a workshop to provide employees with valuable skills and knowledge. The workshop will cover relevant topics and enhance professional development."
+      },
+      {
+        "createdBy": "James Wilson",
+        "title": "Company Milestone Celebration",
+        "description": "Announcement of a milestone celebration event. The company is celebrating a significant achievement or anniversary and invites employees, clients, and partners to join in the festivities. The event will include speeches, entertainment, and networking opportunities."
+      },
+      {
+        "createdBy": "Michael Williams",
+        "title": "Software bug causes data corruption",
+        "description": "Report of a software bug that causes data corruption. The bug was found in a critical application that is used by the company's finance team. The bug causes data to be corrupted when a user attempts to access a certain feature. The bug was mitigated by the company's development team, which was able to fix the bug in a timely manner. The company is working to improve its data backup and recovery process to prevent future data corruption incidents."
+      },
+      {
+        "createdBy": "Sarah Green",
+        "title": "Performance optimization request due to user complaints",
+        "description": "Request to optimize the performance of an application due to user complaints. Users have reported that the application is slow and unresponsive. The company is working to identify the causes of the performance issues and implement solutions. The company is also working to improve its communication with users to address performance concerns in a timely manner."
+      },
+      {
+        "createdBy": "John Smith",
+        "title": "New Product Launch Announcement",
+        "description": "Announcement of a new product launch. The company is excited to introduce a new product to the market and is expecting it to be a game-changer. The launch event will include a live demonstration of the product's features and benefits."
+      },
+      {
+        "createdBy": "Emma Johnson",
+        "title": "Employee Recognition Award",
+        "description": "Announcement of an employee recognition award. The company recognizes the outstanding contributions and dedication of an employee who has consistently gone above and beyond in their role. The award will be presented at an upcoming company event."
+      },
+      {
+        "createdBy": "Robert Davis",
+        "title": "Vendor Partnership Agreement",
+        "description": "Announcement of a new vendor partnership agreement. The company has entered into a strategic partnership with a trusted vendor to enhance its product offerings and improve customer service. This partnership is expected to bring significant benefits to both parties."
+      },
+      {
+        "createdBy": "Laura Martinez",
+        "title": "Upcoming Training Workshop",
+        "description": "Notification of an upcoming training workshop. The company is organizing a workshop to provide employees with valuable skills and knowledge. The workshop will cover relevant topics and enhance professional development."
+      },
+      {
+        "createdBy": "James Wilson",
+        "title": "Company Milestone Celebration",
+        "description": "Announcement of a milestone celebration event. The company is celebrating a significant achievement or anniversary and invites employees, clients, and partners to join in the festivities. The event will include speeches, entertainment, and networking opportunities."
+      },
+      {
+        "createdBy": "Maria Rodriguez",
+        "title": "Customer Survey Feedback",
+        "description": "Summary of customer survey feedback. The company has conducted a customer satisfaction survey and is sharing the results with its teams. The feedback will be used to improve products and services."
+      },
+      {
+        "createdBy": "Daniel Lee",
+        "title": "New Project Kickoff",
+        "description": "Kickoff meeting for a new project. The company is starting a new project and will discuss project goals, timelines, and roles and responsibilities in this meeting."
+      },
+      {
+        "createdBy": "Sophia Turner",
+        "title": "Employee Benefits Update",
+        "description": "Update on employee benefits. The company is making changes to its employee benefits program and will provide details on the new offerings and enrollment process."
+      },
+      {
+        "createdBy": "William Hall",
+        "title": "Financial Performance Report",
+        "description": "Financial performance report for the last quarter. The company is sharing its financial results, including revenue, expenses, and profits, with stakeholders."
+      },
+      {
+        "createdBy": "Olivia White",
+        "title": "Company Charity Event",
+        "description": "Announcement of a charity event organized by the company. Employees are encouraged to participate and contribute to a charitable cause."
+      },
+      {
+        "createdBy": "Sophie Baker",
+        "title": "Customer Testimonial",
+        "description": "A testimonial from a satisfied customer. The customer shares their positive experience with the company's products or services and how it has benefited them."
+      },
+      {
+        "createdBy": "David Garcia",
+        "title": "Technology Conference Attendance",
+        "description": "Notification of the company's participation in a technology conference. The company is sending representatives to the conference to stay updated on industry trends and network with other professionals."
+      },
+      {
+        "createdBy": "Ella Moore",
+        "title": "Community Volunteer Opportunity",
+        "description": "Announcement of a volunteer opportunity for employees to give back to the community. The company is organizing a community service event to support a local cause."
+      },
+      {
+        "createdBy": "Benjamin Scott",
+        "title": "Product Recall Notice",
+        "description": "Product recall notice for a specific product due to safety concerns. The company is taking immediate action to recall the product and ensure customer safety."
+      },
+      {
+        "createdBy": "Isabella Taylor",
+        "title": "Client Onboarding Workshop",
+        "description": "Notification of a client onboarding workshop. The company is organizing a workshop to introduce new clients to its products and services and help them get started."
+      },
+      {
+        "createdBy": "Alexander Martinez",
+        "title": "Emergency Response Drill",
+        "description": "Notification of an emergency response drill. The company is conducting a drill to test its emergency procedures and ensure the safety of employees."
+      },
+      {
+        "createdBy": "Mia Clark",
+        "title": "New Office Location Announcement",
+        "description": "Announcement of a new office location. The company is expanding and opening a new office to better serve its clients and partners."
+      },
+      {
+        "createdBy": "Michael Williams",
+        "title": "Software bug causes data corruption",
+        "description": "Report of a software bug that causes data corruption. The bug was found in a critical application that is used by the company's finance team. The bug causes data to be corrupted when a user attempts to access a certain feature. The bug was mitigated by the company's development team, which was able to fix the bug in a timely manner. The company is working to improve its data backup and recovery process to prevent future data corruption incidents."
+      },
+      {
+        "createdBy": "Sarah Green",
+        "title": "Performance optimization request due to user complaints",
+        "description": "Request to optimize the performance of an application due to user complaints. Users have reported that the application is slow and unresponsive. The company is working to identify the causes of the performance issues and implement solutions. The company is also working to improve its communication with users to address performance concerns in a timely manner."
+      },
+      {
+        "createdBy": "John Smith",
+        "title": "New Product Launch Announcement",
+        "description": "Announcement of a new product launch. The company is excited to introduce a new product to the market and is expecting it to be a game-changer. The launch event will include a live demonstration of the product's features and benefits."
+      },
+      {
+        "createdBy": "Emma Johnson",
+        "title": "Employee Recognition Award",
+        "description": "Announcement of an employee recognition award. The company recognizes the outstanding contributions and dedication of an employee who has consistently gone above and beyond in their role. The award will be presented at an upcoming company event."
+      },
+      {
+        "createdBy": "Robert Davis",
+        "title": "Vendor Partnership Agreement",
+        "description": "Announcement of a new vendor partnership agreement. The company has entered into a strategic partnership with a trusted vendor to enhance its product offerings and improve customer service. This partnership is expected to bring significant benefits to both parties."
+      },
+      {
+        "createdBy": "Laura Martinez",
+        "title": "Upcoming Training Workshop",
+        "description": "Notification of an upcoming training workshop. The company is organizing a workshop to provide employees with valuable skills and knowledge. The workshop will cover relevant topics and enhance professional development."
+      },
+      {
+        "createdBy": "James Wilson",
+        "title": "Company Milestone Celebration",
+        "description": "Announcement of a milestone celebration event. The company is celebrating a significant achievement or anniversary and invites employees, clients, and partners to join in the festivities. The event will include speeches, entertainment, and networking opportunities."
+      },
+      {
+        "createdBy": "Maria Rodriguez",
+        "title": "Customer Survey Feedback",
+        "description": "Summary of customer survey feedback. The company has conducted a customer satisfaction survey and is sharing the results with its teams. The feedback will be used to improve products and services."
+      },
+      {
+        "createdBy": "Daniel Lee",
+        "title": "New Project Kickoff",
+        "description": "Kickoff meeting for a new project. The company is starting a new project and will discuss project goals, timelines, and roles and responsibilities in this meeting."
+      },
+      {
+        "createdBy": "Sophia Turner",
+        "title": "Employee Benefits Update",
+        "description": "Update on employee benefits. The company is making changes to its employee benefits program and will provide details on the new offerings and enrollment process."
+      },
+      {
+        "createdBy": "William Hall",
+        "title": "Financial Performance Report",
+        "description": "Financial performance report for the last quarter. The company is sharing its financial results, including revenue, expenses, and profits, with stakeholders."
+      },
+      {
+        "createdBy": "Olivia White",
+        "title": "Company Charity Event",
+        "description": "Announcement of a charity event organized by the company. Employees are encouraged to participate and contribute to a charitable cause."
+      },
+      {
+        "createdBy": "Sophie Baker",
+        "title": "Customer Testimonial",
+        "description": "A testimonial from a satisfied customer. The customer shares their positive experience with the company's products or services and how it has benefited them."
+      },
+      {
+        "createdBy": "David Garcia",
+        "title": "Technology Conference Attendance",
+        "description": "Notification of the company's participation in a technology conference. The company is sending representatives to the conference to stay updated on industry trends and network with other professionals."
+      },
+      {
+        "createdBy": "Ella Moore",
+        "title": "Community Volunteer Opportunity",
+        "description": "Announcement of a volunteer opportunity for employees to give back to the community. The company is organizing a community service event to support a local cause."
+      },
+      {
+        "createdBy": "Benjamin Scott",
+        "title": "Product Recall Notice",
+        "description": "Product recall notice for a specific product due to safety concerns. The company is taking immediate action to recall the product and ensure customer safety."
+      },
+      {
+        "createdBy": "Michael Williams",
+        "title": "Software bug causes data corruption",
+        "description": "Report of a software bug that causes data corruption. The bug was found in a critical application that is used by the company's finance team. The bug causes data to be corrupted when a user attempts to access a certain feature. The bug was mitigated by the company's development team, which was able to fix the bug in a timely manner. The company is working to improve its data backup and recovery process to prevent future data corruption incidents."
+      },
+      {
+        "createdBy": "Sarah Green",
+        "title": "Performance optimization request due to user complaints",
+        "description": "Request to optimize the performance of an application due to user complaints. Users have reported that the application is slow and unresponsive. The company is working to identify the causes of the performance issues and implement solutions. The company is also working to improve its communication with users to address performance concerns in a timely manner."
+      },
+      {
+        "createdBy": "John Smith",
+        "title": "New Product Launch Announcement",
+        "description": "Announcement of a new product launch. The company is excited to introduce a new product to the market and is expecting it to be a game-changer. The launch event will include a live demonstration of the product's features and benefits."
+      },
+      {
+        "createdBy": "Emma Johnson",
+        "title": "Employee Recognition Award",
+        "description": "Announcement of an employee recognition award. The company recognizes the outstanding contributions and dedication of an employee who has consistently gone above and beyond in their role. The award will be presented at an upcoming company event."
+      },
+      {
+        "createdBy": "Robert Davis",
+        "title": "Vendor Partnership Agreement",
+        "description": "Announcement of a new vendor partnership agreement. The company has entered into a strategic partnership with a trusted vendor to enhance its product offerings and improve customer service. This partnership is expected to bring significant benefits to both parties."
+      },
+      {
+        "createdBy": "Laura Martinez",
+        "title": "Upcoming Training Workshop",
+        "description": "Notification of an upcoming training workshop. The company is organizing a workshop to provide employees with valuable skills and knowledge. The workshop will cover relevant topics and enhance professional development."
+      },
+      {
+        "createdBy": "James Wilson",
+        "title": "Company Milestone Celebration",
+        "description": "Announcement of a milestone celebration event. The company is celebrating a significant achievement or anniversary and invites employees, clients, and partners to join in the festivities. The event will include speeches, entertainment, and networking opportunities."
+      },
+      {
+        "createdBy": "Maria Rodriguez",
+        "title": "Customer Survey Feedback",
+        "description": "Summary of customer survey feedback. The company has conducted a customer satisfaction survey and is sharing the results with its teams. The feedback will be used to improve products and services."
+      },
+      {
+        "createdBy": "Daniel Lee",
+        "title": "New Project Kickoff",
+        "description": "Kickoff meeting for a new project. The company is starting a new project and will discuss project goals, timelines, and roles and responsibilities in this meeting."
+      },
+      {
+        "createdBy": "Sophia Turner",
+        "title": "Employee Benefits Update",
+        "description": "Update on employee benefits. The company is making changes to its employee benefits program and will provide details on the new offerings and enrollment process."
+      },
+      {
+        "createdBy": "William Hall",
+        "title": "Financial Performance Report",
+        "description": "Financial performance report for the last quarter. The company is sharing its financial results, including revenue, expenses, and profits, with stakeholders."
+      },
+      {
+        "createdBy": "Olivia White",
+        "title": "Company Charity Event",
+        "description": "Announcement of a charity event organized by the company. Employees are encouraged to participate and contribute to a charitable cause."
+      },
+      {
+        "createdBy": "Sophie Baker",
+        "title": "Customer Testimonial",
+        "description": "A testimonial from a satisfied customer. The customer shares their positive experience with the company's products or services and how it has benefited them."
+      },
+      {
+        "createdBy": "David Garcia",
+        "title": "Technology Conference Attendance",
+        "description": "Notification of the company's participation in a technology conference. The company is sending representatives to the conference to stay updated on industry trends and network with other professionals."
+      },
+      {
+        "createdBy": "Ella Moore",
+        "title": "Community Volunteer Opportunity",
+        "description": "Announcement of a volunteer opportunity for employees to give back to the community. The company is organizing a community service event to support a local cause."
+      },
+      {
+        "createdBy": "Benjamin Scott",
+        "title": "Product Recall Notice",
+        "description": "Product recall notice for a specific product due to safety concerns. The company is taking immediate action to recall the product and ensure customer safety."
+      },
+      {
+        "createdBy": "Isabella Taylor",
+        "title": "Client Onboarding Workshop",
+        "description": "Notification of a client onboarding workshop. The company is organizing a workshop to introduce new clients to its products and services and help them get started."
+      },
+      {
+        "createdBy": "Alexander Martinez",
+        "title": "Emergency Response Drill",
+        "description": "Notification of an emergency response drill. The company is conducting a drill to test its emergency procedures and ensure the safety of employees."
+      },
+      {
+        "createdBy": "Mia Clark",
+        "title": "New Office Location Announcement",
+        "description": "Announcement of a new office location. The company is expanding and opening a new office to better serve its clients and partners."
+      },
+      {
+        "createdBy": "Lucas Anderson",
+        "title": "Company Awards Ceremony",
+        "description": "Invitation to a company awards ceremony. The company is recognizing outstanding employees and achievements during the ceremony, followed by a reception."
+      },
+      {
+        "createdBy": "Sophia Walker",
+        "title": "Upcoming Webinar",
+        "description": "Announcement of an upcoming webinar. The company is hosting a webinar on a relevant industry topic, and registration details will be provided soon."
+      },
+      {
+        "createdBy": "Matthew Turner",
+        "title": "Customer Support Update",
+        "description": "Update on customer support improvements. The company is enhancing its customer support services and will share details on how customers can benefit."
+      },
+      {
+        "createdBy": "Lily Moore",
+        "title": "New Employee Introduction",
+        "description": "Introduction of a new employee. The company welcomes a new team member and provides some background information about their role and experience."
+      },
+      {
+        "createdBy": "Sophia Walker",
+        "title": "Upcoming Webinar",
+        "description": "Announcement of an upcoming webinar. The company is hosting a webinar on a relevant industry topic, and registration details will be provided soon."
+      },
+      {
+        "createdBy": "Matthew Turner",
+        "title": "Customer Support Update",
+        "description": "Update on customer support improvements. The company is enhancing its customer support services and will share details on how customers can benefit."
+      },
+      {
+        "createdBy": "Lily Moore",
+        "title": "New Employee Introduction",
+        "description": "Introduction of a new employee. The company welcomes a new team member and provides some background information about their role and experience."
+      },
+      {
+        "createdBy": "Emma Thompson",
+        "title": "Important Security Notice",
+        "description": "Urgent security notice. The company has identified a security vulnerability and is taking immediate action to address it. Detailed information on the issue and recommended actions will be provided."
+      },
+      {
+        "createdBy": "William Turner",
+        "title": "Company Town Hall Meeting",
+        "description": "Invitation to a company town hall meeting. The company's leadership team will provide updates on the company's performance, goals, and future plans. Employees are encouraged to attend and ask questions."
+      },
+      {
+        "createdBy": "Ava Roberts",
+        "title": "Product Enhancement Announcement",
+        "description": "Announcement of product enhancements. The company has made improvements to its products based on customer feedback and is excited to share the enhancements with customers."
+      },
+      {
+        "createdBy": "Lucas Anderson",
+        "title": "Customer Appreciation Event",
+        "description": "Invitation to a customer appreciation event. The company is hosting an event to express gratitude to its valued customers. The event will include special offers and activities."
+      },
+      {
+        "createdBy": "Sophia Turner",
+        "title": "New Website Launch",
+        "description": "Announcement of a new website launch. The company has redesigned its website to provide a better user experience. The new website will feature updated content and navigation."
+      },
+      {
+        "createdBy": "Oliver Davis",
+        "title": "Employee Training Session",
+        "description": "Notification of an employee training session. The company is conducting a training session to enhance employee skills and knowledge in specific areas."
+      },
+      {
+        "createdBy": "Aria Johnson",
+        "title": "Product Recall Update",
+        "description": "Update on a product recall. The company is providing additional information on the recalled product, including instructions on how customers can return it for a refund or replacement."
+      },
+      {
+        "createdBy": "Ethan Moore",
+        "title": "Quarterly Sales Report",
+        "description": "Quarterly sales report. The company is sharing its sales performance for the last quarter, including revenue, growth, and market trends."
+      },
+      {
+        "createdBy": "Nora Martinez",
+        "title": "Customer Feedback Survey",
+        "description": "Invitation to participate in a customer feedback survey. The company values customer feedback and is seeking input to improve its products and services. Participants may have a chance to win a gift card."
+      },
+      {
+        "createdBy": "Henry Lewis",
+        "title": "Company Diversity and Inclusion Workshop",
+        "description": "Announcement of a diversity and inclusion workshop. The company is committed to fostering a diverse and inclusive workplace and will host a workshop to promote understanding and inclusivity among employees."
+      },
+      {
+        "createdBy": "Aiden Turner",
+        "title": "New Office Location Opening",
+        "description": "Invitation to the grand opening of a new office location. The company is expanding its presence and invites clients, partners, and employees to celebrate the opening with food, drinks, and tours of the new facility."
+      },
+      {
+        "createdBy": "Olivia White",
+        "title": "Product Showcase Event",
+        "description": "Announcement of a product showcase event. The company is hosting an event to showcase its latest products and innovations. Attendees will have the opportunity to interact with the products and meet the development team."
+      },
+      {
+        "createdBy": "Leo Garcia",
+        "title": "Company Wellness Program",
+        "description": "Introduction of a company wellness program. The company is launching a wellness program to promote the health and well-being of employees. The program will include fitness classes, nutrition guidance, and stress management workshops."
+      },
+      {
+        "createdBy": "Mia Clark",
+        "title": "New Partnership Announcement",
+        "description": "Announcement of a new partnership. The company has formed a strategic partnership with another organization to expand its offerings and reach. This partnership will benefit both parties and customers."
+      },
+      {
+        "createdBy": "William Turner",
+        "title": "Employee Recognition Dinner",
+        "description": "Invitation to an employee recognition dinner. The company is hosting a dinner to honor outstanding employees who have made significant contributions to the organization."
+      },
+      {
+        "createdBy": "Ella Moore",
+        "title": "Cybersecurity Awareness Training",
+        "description": "Notification of a cybersecurity awareness training session. The company is conducting a training session to educate employees about cybersecurity best practices and the importance of protecting company data."
+      },
+      {
+        "createdBy": "Lucas Anderson",
+        "title": "New Product Release",
+        "description": "Announcement of a new product release. The company is excited to launch a new product that offers innovative features and benefits. Customers can learn more and place orders on the company's website."
+      },
+      {
+        "createdBy": "Sophia Turner",
+        "title": "Customer Success Story",
+        "description": "Sharing a customer success story. The company highlights a customer's successful experience with its products or services and how it has positively impacted their business."
+      },
+      {
+        "createdBy": "Oliver Davis",
+        "title": "Quarterly Financial Report",
+        "description": "Quarterly financial report. The company is providing an update on its financial performance, including revenue, expenses, and profit margins, for the previous quarter."
+      },
+      {
+        "createdBy": "Aria Johnson",
+        "title": "Employee Training Workshop",
+        "description": "Announcement of an upcoming employee training workshop. The company is organizing a workshop to enhance employee skills and knowledge in specific areas relevant to their roles."
+      },
+      {
+        "createdBy": "Ethan Moore",
+        "title": "New Company Policies",
+        "description": "Notification of new company policies. The company has updated its policies to ensure compliance with current regulations and industry standards. Employees are encouraged to review the changes."
+      },
+      {
+        "createdBy": "Nora Martinez",
+        "title": "Customer Appreciation Day",
+        "description": "Invitation to a customer appreciation day. The company is dedicating a day to show gratitude to its loyal customers. The event will include discounts, giveaways, and special offers."
+      },
+      {
+        "createdBy": "Henry Lewis",
+        "title": "Team Building Retreat",
+        "description": "Announcement of a team-building retreat. The company is organizing a retreat for employees to foster teamwork, collaboration, and relaxation. Activities and bonding exercises will be included."
+      },
+      {
+        "createdBy": "Aiden Turner",
+        "title": "Product Demo Webinar",
+        "description": "Invitation to a product demo webinar. The company will demonstrate its latest product's features and benefits. Attendees can ask questions and gain insights into product usage."
+      },
+      {
+        "createdBy": "Olivia White",
+        "title": "Company Culture Survey",
+        "description": "Invitation to participate in a company culture survey. The company values employee feedback and is conducting a survey to gauge employee satisfaction and suggestions for improvement."
+      },
+      {
+        "createdBy": "Leo Garcia",
+        "title": "New Office Opening Ceremony",
+        "description": "Announcement of the opening ceremony for a new office. The company is expanding its presence and invites employees and partners to celebrate the new location with speeches, ribbon-cutting, and refreshments."
+      },
+      {
+        "createdBy": "Mia Clark",
+        "title": "Product Launch Event",
+        "description": "Announcement of a product launch event. The company is launching an innovative product and invites customers, partners, and media to attend the event for a firsthand look at the product."
+      },
+      {
+        "createdBy": "William Turner",
+        "title": "Employee of the Month Recognition",
+        "description": "Recognition of the Employee of the Month. The company acknowledges outstanding employee performance and dedication by awarding the Employee of the Month title."
+      },
+      {
+        "createdBy": "Ella Moore",
+        "title": "Remote Work Policy Update",
+        "description": "Notification of updates to the remote work policy. The company has revised its remote work guidelines and expectations to align with the evolving work environment."
+      },
+      {
+        "createdBy": "Sophia Turner",
+        "title": "Annual Company Picnic",
+        "description": "Invitation to the annual company picnic. The company is organizing a fun-filled picnic for employees and their families to enjoy a day of relaxation, games, and delicious food."
+      },
+      {
+        "createdBy": "Oliver Davis",
+        "title": "New Service Launch",
+        "description": "Announcement of a new service launch. The company is expanding its offerings with a new service that provides additional value to customers. Details on the service and its benefits will be provided."
+      },
+      {
+        "createdBy": "Aria Johnson",
+        "title": "Safety Training Session",
+        "description": "Notification of an upcoming safety training session. The company is committed to ensuring a safe workplace and will conduct a training session to educate employees on safety protocols and procedures."
+      },
+      {
+        "createdBy": "Ethan Moore",
+        "title": "Company Charity Drive",
+        "description": "Announcement of a company charity drive. The company is organizing a drive to collect donations for a charitable cause. Employees are encouraged to contribute to make a positive impact."
+      },
+      {
+        "createdBy": "Nora Martinez",
+        "title": "Customer Advisory Panel Invitation",
+        "description": "Invitation to join the customer advisory panel. The company is seeking input from valued customers to shape future products and services. Panel members will have opportunities to provide feedback and insights."
+      },
+      {
+        "createdBy": "Henry Lewis",
+        "title": "New Employee Handbook",
+        "description": "Notification of the release of the new employee handbook. The company has updated the handbook to provide comprehensive information on company policies, benefits, and expectations."
+      },
+      {
+        "createdBy": "Aiden Turner",
+        "title": "Product Roadmap Webinar",
+        "description": "Invitation to a product roadmap webinar. The company will share its product development roadmap, including upcoming features and enhancements. Attendees can gain insights into the company's product direction."
+      },
+      {
+        "createdBy": "Olivia White",
+        "title": "Company Anniversary Celebration",
+        "description": "Announcement of the company's anniversary celebration. The company is commemorating a milestone anniversary with special events, promotions, and activities throughout the month."
+      },
+      {
+        "createdBy": "Leo Garcia",
+        "title": "Employee Satisfaction Survey",
+        "description": "Invitation to participate in an employee satisfaction survey. The company values employee feedback and is conducting a survey to assess job satisfaction and identify areas for improvement."
+      },
+      {
+        "createdBy": "Mia Clark",
+        "title": "New Product Beta Testing",
+        "description": "Call for participants in a new product beta testing program. The company is inviting customers to test a pre-release version of a product and provide feedback to help refine the final version."
+      },
+      {
+        "createdBy": "William Turner",
+        "title": "Company Rebranding Announcement",
+        "description": "Announcement of a company rebranding initiative. The company is unveiling a new brand identity and logo to better reflect its values and mission. More details about the rebranding will be shared soon."
+      },
+      {
+        "createdBy": "Ella Moore",
+        "title": "Employee Recognition Program Update",
+        "description": "Update on the employee recognition program. The company is enhancing its employee recognition program to acknowledge and reward outstanding performance and contributions."
+      },
+      {
+        "createdBy": "Sophia Turner",
+        "title": "Diversity and Inclusion Training",
+        "description": "Notification of a diversity and inclusion training session. The company is committed to fostering a diverse and inclusive workplace and will provide training to promote awareness and inclusivity among employees."
+      },
+      {
+        "createdBy": "Oliver Davis",
+        "title": "New Product Showcase Event",
+        "description": "Announcement of a new product showcase event. The company is hosting an event to showcase its latest product innovations, including live demonstrations and opportunities for hands-on exploration."
+      },
+      {
+        "createdBy": "Aria Johnson",
+        "title": "Employee Wellness Challenge",
+        "description": "Announcement of an employee wellness challenge. The company is launching a wellness challenge to encourage employees to adopt healthy habits and lifestyle changes."
+      },
+      {
+        "createdBy": "Ethan Moore",
+        "title": "Customer Loyalty Program Launch",
+        "description": "Announcement of a customer loyalty program launch. The company is introducing a loyalty program to reward loyal customers with exclusive benefits, discounts, and rewards."
+      },
+      {
+        "createdBy": "Nora Martinez",
+        "title": "Company Town Hall Meeting",
+        "description": "Invitation to a company town hall meeting. The company's leadership team will provide updates on the company's performance, strategic direction, and answer employee questions."
+      },
+      {
+        "createdBy": "Henry Lewis",
+        "title": "Product Feature Enhancement",
+        "description": "Notification of product feature enhancements. The company has improved specific product features based on customer feedback and suggestions."
+      },
+      {
+        "createdBy": "Aiden Turner",
+        "title": "Community Cleanup Initiative",
+        "description": "Announcement of a community cleanup initiative. The company is organizing a volunteer event to clean up a local community area and contribute to environmental sustainability."
+      },
+      {
+        "createdBy": "Olivia White",
+        "title": "Company Awards Gala",
+        "description": "Invitation to the company's annual awards gala. The company will recognize exceptional employees and achievements during an elegant gala event."
+      },{
+        "createdBy": "William Turner",
+        "title": "Company Rebranding Announcement",
+        "description": "Announcement of a company rebranding initiative. The company is unveiling a new brand identity and logo to better reflect its values and mission. More details about the rebranding will be shared soon."
+      },
+      {
+        "createdBy": "Ella Moore",
+        "title": "Employee Recognition Program Update",
+        "description": "Update on the employee recognition program. The company is enhancing its employee recognition program to acknowledge and reward outstanding performance and contributions."
+      },
+      {
+        "createdBy": "Sophia Turner",
+        "title": "Diversity and Inclusion Training",
+        "description": "Notification of a diversity and inclusion training session. The company is committed to fostering a diverse and inclusive workplace and will provide training to promote awareness and inclusivity among employees."
+      },
+      {
+        "createdBy": "Oliver Davis",
+        "title": "New Product Showcase Event",
+        "description": "Announcement of a new product showcase event. The company is hosting an event to showcase its latest product innovations, including live demonstrations and opportunities for hands-on exploration."
+      },
+      {
+        "createdBy": "Aria Johnson",
+        "title": "Employee Wellness Challenge",
+        "description": "Announcement of an employee wellness challenge. The company is launching a wellness challenge to encourage employees to adopt healthy habits and lifestyle changes."
+      },
+      {
+        "createdBy": "Ethan Moore",
+        "title": "Customer Loyalty Program Launch",
+        "description": "Announcement of a customer loyalty program launch. The company is introducing a loyalty program to reward loyal customers with exclusive benefits, discounts, and rewards."
+      },
+      {
+        "createdBy": "Nora Martinez",
+        "title": "Company Town Hall Meeting",
+        "description": "Invitation to a company town hall meeting. The company's leadership team will provide updates on the company's performance, strategic direction, and answer employee questions."
+      },
+      {
+        "createdBy": "Henry Lewis",
+        "title": "Product Feature Enhancement",
+        "description": "Notification of product feature enhancements. The company has improved specific product features based on customer feedback and suggestions."
+      },
+      {
+        "createdBy": "Aiden Turner",
+        "title": "Community Cleanup Initiative",
+        "description": "Announcement of a community cleanup initiative. The company is organizing a volunteer event to clean up a local community area and contribute to environmental sustainability."
+      },
+      {
+        "createdBy": "Olivia White",
+        "title": "Company Awards Gala",
+        "description": "Invitation to the company's annual awards gala. The company will recognize exceptional employees and achievements during an elegant gala event."
+      },
+      {
+        "title": "New User Onboarding Request",
+        "description": "A ticket has been created to request onboarding assistance for a new employee who is starting today.",
+        "createdBy": "ITSupport"
+      },
+      {
+        "title": "Add User to PSA Contacts",
+        "description": "CooperBot is requested to add the new employee to the PSA contacts.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Grant Portal Access",
+        "description": "CooperBot is requested to grant the new user access to relevant client portals.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Assign M365 License",
+        "description": "CooperBot is requested to assign an appropriate M365 license to the new user.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "User Distribution Groups",
+        "description": "CooperBot is requested to assign the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Add Password to ITG",
+        "description": "CooperBot is requested to add the new user's password to the ITG system.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Form Request",
+        "description": "CooperBot is requested to send an onboarding form link to the end-user for required information.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Information Gathering",
+        "description": "CooperBot is actively gathering onboarding information from the technician via chat.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Task Completed",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Ticket Closure Confirmation",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Ticket Closed",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "New Employee Onboarding Assistance",
+        "description": "A ticket has been created for onboarding assistance for a new employee.",
+        "createdBy": "ITSupport"
+      },
+      {
+        "title": "User Provisioning Request",
+        "description": "CooperBot is requested to assist in provisioning the new employee.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "User Information Request",
+        "description": "CooperBot asks the technician for required information via chat.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "User Provisioned in PSA",
+        "description": "CooperBot adds the new user to the PSA contacts.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Portal Access Granted",
+        "description": "CooperBot grants the new user access to relevant client portals.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "M365 License Assigned",
+        "description": "CooperBot assigns an appropriate M365 license to the new user.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "User Distribution Groups Updated",
+        "description": "CooperBot assigns the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Password Added to ITG",
+        "description": "CooperBot adds the new user's password to the ITG system.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Form Link Sent",
+        "description": "CooperBot sends an onboarding form link to the end-user for required information.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Information Gathering in Progress",
+        "description": "CooperBot is actively gathering onboarding information from the technician via chat.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Task Completion Notification",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Ticket Closure Confirmation Request",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Ticket Closed Confirmation",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "User Onboarding Support",
+        "description": "A ticket has been raised to request assistance with onboarding a new hire.",
+        "createdBy": "ITSupport"
+      },
+      {
+        "title": "User Provisioning Assistance",
+        "description": "CooperBot is requested to assist in provisioning the new hire.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Technician-Provided Information",
+        "description": "CooperBot is actively collecting required information from the technician via chat.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "User Added to PSA Contacts for New Employee",
+        "description": "CooperBot successfully adds the new employee to the PSA contacts.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Portal Access Granted for New Employee",
+        "description": "CooperBot grants the new employee access to relevant client portals.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "M365 License Assignment for New Employee",
+        "description": "CooperBot assigns the appropriate M365 license to the new employee.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Distribution Groups Updated for New Employee",
+        "description": "CooperBot assigns the new employee to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Password Added to ITG for New Employee",
+        "description": "CooperBot adds the new employee's password to the ITG system.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Form Link Sent for New Employee",
+        "description": "CooperBot sends an onboarding form link to the new employee for required information.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "New Employee Onboarding Assistance Request for New Employee",
+        "description": "A ticket has been created to request onboarding assistance for a new employee who is starting today.",
+        "createdBy": "ITSupport"
+      },
+      {
+        "title": "Add User to PSA Contacts for New Employee",
+        "description": "CooperBot is requested to add the new employee to the PSA contacts.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Grant Portal Access for New Employee",
+        "description": "CooperBot is requested to grant the new user access to relevant client portals.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Assign M365 License for New Employee",
+        "description": "CooperBot is requested to assign an appropriate M365 license to the new user.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "User Distribution Groups for New Employee",
+        "description": "CooperBot is requested to assign the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Add Password to ITG for New Employee",
+        "description": "CooperBot is requested to add the new employee's password to the ITG system.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Form Request for New Employee",
+        "description": "CooperBot is requested to send an onboarding form link to the end-user for required information.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Information Gathering for New Employee",
+        "description": "CooperBot is actively gathering onboarding information from the technician via chat.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Task Completion Notification for New Employee",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Ticket Closure Confirmation Request for New Employee",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Ticket Closed for New Employee",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "New User Onboarding Request",
+        "description": "A ticket has been created to request onboarding assistance for a new employee who is starting today.",
+        "createdBy": "ITSupport"
+      },
+      {
+        "title": "Add User to PSA Contacts",
+        "description": "CooperBot is requested to add the new employee to the PSA contacts.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Grant Portal Access",
+        "description": "CooperBot is requested to grant the new user access to relevant client portals.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Assign M365 License",
+        "description": "CooperBot is requested to assign an appropriate M365 license to the new user.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "User Distribution Groups",
+        "description": "CooperBot is requested to assign the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Add Password to ITG",
+        "description": "CooperBot is requested to add the new user's password to the ITG system.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Form Request",
+        "description": "CooperBot is requested to send an onboarding form link to the end-user for required information.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Information Gathering",
+        "description": "CooperBot is actively gathering onboarding information from the technician via chat.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Task Completed",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Ticket Closure Confirmation",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Ticket Closed",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "New Employee Onboarding Assistance",
+        "description": "A ticket has been created for onboarding assistance for a new employee.",
+        "createdBy": "ITSupport"
+      },
+      {
+        "title": "User Provisioning Request",
+        "description": "CooperBot is requested to assist in provisioning the new employee.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "User Information Request",
+        "description": "CooperBot asks the technician for required information via chat.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "User Provisioned in PSA",
+        "description": "CooperBot adds the new user to the PSA contacts.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Portal Access Granted",
+        "description": "CooperBot grants the new user access to relevant client portals.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "M365 License Assigned",
+        "description": "CooperBot assigns an appropriate M365 license to the new user.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "User Distribution Groups Updated",
+        "description": "CooperBot assigns the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Password Added to ITG",
+        "description": "CooperBot adds the new user's password to the ITG system.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Form Link Sent",
+        "description": "CooperBot sends an onboarding form link to the end-user for required information.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Information Gathering in Progress",
+        "description": "CooperBot is actively gathering onboarding information from the technician via chat.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Task Completion Notification",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Ticket Closure Confirmation Request",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Ticket Closed Confirmation",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "User Onboarding Support",
+        "description": "A ticket has been raised to request assistance with onboarding a new hire.",
+        "createdBy": "ITSupport"
+      },
+      {
+        "title": "User Provisioning Assistance",
+        "description": "CooperBot is requested to assist in provisioning the new hire.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Technician-Provided Information",
+        "description": "CooperBot is actively collecting required information from the technician via chat.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "User Added to PSA Contacts for New Employee",
+        "description": "CooperBot successfully adds the new employee to the PSA contacts.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Portal Access Granted for New Employee",
+        "description": "CooperBot grants the new employee access to relevant client portals.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "M365 License Assignment for New Employee",
+        "description": "CooperBot assigns the appropriate M365 license to the new employee.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Distribution Groups Updated for New Employee",
+        "description": "CooperBot assigns the new employee to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Password Added to ITG for New Employee",
+        "description": "CooperBot adds the new employee's password to the ITG system.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Form Link Sent for New Employee",
+        "description": "CooperBot sends an onboarding form link to the new employee for required information.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "New Employee Onboarding Assistance Request for New Employee",
+        "description": "A ticket has been created to request onboarding assistance for a new employee who is starting today.",
+        "createdBy": "ITSupport"
+      },
+      {
+        "title": "Add User to PSA Contacts for New Employee",
+        "description": "CooperBot is requested to add the new employee to the PSA contacts.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Grant Portal Access for New Employee",
+        "description": "CooperBot is requested to grant the new user access to relevant client portals.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Assign M365 License for New Employee",
+        "description": "CooperBot is requested to assign an appropriate M365 license to the new user.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "User Distribution Groups for New Employee",
+        "description": "CooperBot is requested to assign the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Add Password to ITG for New Employee",
+        "description": "CooperBot is requested to add the new employee's password to the ITG system.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Form Request for New Employee",
+        "description": "CooperBot is requested to send an onboarding form link to the end-user for required information.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Information Gathering for New Employee",
+        "description": "CooperBot is actively gathering onboarding information from the technician via chat.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Task Completion Notification for New Employee",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Ticket Closure Confirmation Request for New Employee",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Ticket Closed for New Employee",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Task Completed",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Ticket Closure Confirmation",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Ticket Closed",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "User Information Request",
+        "description": "CooperBot asks the technician for required information via chat.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "User Provisioned in PSA",
+        "description": "CooperBot adds the new user to the PSA contacts.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Portal Access Granted",
+        "description": "CooperBot grants the new user access to relevant client portals.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "M365 License Assigned",
+        "description": "CooperBot assigns an appropriate M365 license to the new user.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "User Distribution Groups Updated",
+        "description": "CooperBot assigns the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Password Added to ITG",
+        "description": "CooperBot adds the new user's password to the ITG system.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Form Link Sent",
+        "description": "CooperBot sends an onboarding form link to the end-user for required information.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Information Gathering in Progress",
+        "description": "CooperBot is actively gathering onboarding information from the technician via chat.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Onboarding Task Completion Notification",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Ticket Closure Confirmation Request",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Ticket Closed Confirmation",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Technician-Provided Information",
+        "description": "CooperBot is actively collecting required information from the technician via chat.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "User Added to PSA Contacts",
+        "description": "CooperBot successfully adds the new hire to the PSA contacts.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "Portal Access Granted for New Hire",
+        "description": "CooperBot grants the new hire access to relevant client portals.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "M365 License Assignment",
+        "description": "CooperBot assigns the appropriate M365 license to the new hire.",
+        "createdBy": "CooperBot"
+      },
+      {
+        "title": "New User Onboarding Request",
+        "description": "A ticket has been created to request onboarding assistance for a new employee who is starting today.",
+        "createdBy": "john.doe@example.com"
+      },
+      {
+        "title": "Add User to PSA Contacts",
+        "description": "CooperBot is requested to add the new employee to the PSA contacts.",
+        "createdBy": "jane.smith@example.com"
+      },
+      {
+        "title": "Grant Portal Access",
+        "description": "CooperBot is requested to grant the new user access to relevant client portals.",
+        "createdBy": "mark.jones@example.com"
+      },
+      {
+        "title": "Assign M365 License",
+        "description": "CooperBot is requested to assign an appropriate M365 license to the new user.",
+        "createdBy": "susan.wilson@example.com"
+      },
+      {
+        "title": "User Distribution Groups",
+        "description": "CooperBot is requested to assign the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "david.brown@example.com"
+      },
+      {
+        "title": "Add Password to ITG",
+        "description": "CooperBot is requested to add the new user's password to the ITG system.",
+        "createdBy": "lisa.anderson@example.com"
+      },
+      {
+        "title": "Onboarding Form Request",
+        "description": "CooperBot is requested to send an onboarding form link to the end-user for required information.",
+        "createdBy": "robert.martin@example.com"
+      },
+      {
+        "title": "Onboarding Information Gathering",
+        "description": "CooperBot is actively gathering onboarding information from the technician via chat.",
+        "createdBy": "emily.evans@example.com"
+      },
+      {
+        "title": "Onboarding Task Completed",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "michael.thompson@example.com"
+      },
+      {
+        "title": "Ticket Closure Confirmation",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "linda.miller@example.com"
+      },
+      {
+        "title": "Ticket Closed",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "william.harris@example.com"
+      },
+      {
+        "title": "New Employee Onboarding Assistance",
+        "description": "A ticket has been created for onboarding assistance for a new employee.",
+        "createdBy": "olivia.wright@example.com"
+      },
+      {
+        "title": "User Provisioning Request",
+        "description": "CooperBot is requested to assist in provisioning the new employee.",
+        "createdBy": "james.jackson@example.com"
+      },
+      {
+        "title": "User Information Request",
+        "description": "CooperBot asks the technician for required information via chat.",
+        "createdBy": "elizabeth.davis@example.com"
+      },
+      {
+        "title": "User Provisioned in PSA",
+        "description": "CooperBot adds the new user to the PSA contacts.",
+        "createdBy": "chris.wilson@example.com"
+      },
+      {
+        "title": "Portal Access Granted",
+        "description": "CooperBot grants the new user access to relevant client portals.",
+        "createdBy": "patricia.johnson@example.com"
+      },
+      {
+        "title": "M365 License Assigned",
+        "description": "CooperBot assigns an appropriate M365 license to the new user.",
+        "createdBy": "steven.brown@example.com"
+      },
+      {
+        "title": "User Distribution Groups Updated",
+        "description": "CooperBot assigns the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "laura.martinez@example.com"
+      },
+      {
+        "title": "Password Added to ITG",
+        "description": "CooperBot adds the new user's password to the ITG system.",
+        "createdBy": "daniel.lee@example.com"
+      },
+      {
+        "title": "Onboarding Form Link Sent",
+        "description": "CooperBot sends an onboarding form link to the end-user for required information.",
+        "createdBy": "sarah.gonzalez@example.com"
+      },
+      {
+        "title": "Onboarding Information Gathering in Progress",
+        "description": "CooperBot is actively gathering onboarding information from the technician via chat.",
+        "createdBy": "ryan.taylor@example.com"
+      },
+      {
+        "title": "Onboarding Task Completion Notification",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "maria.rodriguez@example.com"
+      },
+      {
+        "title": "Ticket Closure Confirmation Request",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "joseph.hernandez@example.com"
+      },
+      {
+        "title": "Ticket Closed Confirmation",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "karen.perez@example.com"
+      },
+      {
+        "title": "User Onboarding Support",
+        "description": "A ticket has been raised to request assistance with onboarding a new hire.",
+        "createdBy": "andrew.nguyen@example.com"
+      },
+      {
+        "title": "User Provisioning Assistance",
+        "description": "CooperBot is requested to assist in provisioning the new hire.",
+        "createdBy": "eric.white@example.com"
+      },
+      {
+        "title": "Technician-Provided Information",
+        "description": "CooperBot is actively collecting required information from the technician via chat.",
+        "createdBy": "jennifer.park@example.com"
+      },
+      {
+        "title": "User Added to PSA Contacts for New Employee",
+        "description": "CooperBot successfully adds the new employee to the PSA contacts.",
+        "createdBy": "michael.ng@example.com"
+      },
+      {
+        "title": "Portal Access Granted for New Employee",
+        "description": "CooperBot grants the new employee access to relevant client portals.",
+        "createdBy": "amanda.johnson@example.com"
+      },
+      {
+        "title": "M365 License Assignment for New Employee",
+        "description": "CooperBot assigns the appropriate M365 license to the new employee.",
+        "createdBy": "kevin.clark@example.com"
+      },
+      {
+        "title": "Distribution Groups Updated for New Employee",
+        "description": "CooperBot assigns the new employee to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "lisa.roberts@example.com"
+      },
+      {
+        "title": "Password Added to ITG for New Employee",
+        "description": "CooperBot is requested to add the new employee's password to the ITG system.",
+        "createdBy": "timothy.hall@example.com"
+      },
+      {
+        "title": "Onboarding Form Link Sent for New Employee",
+        "description": "CooperBot sends an onboarding form link to the new employee for required information.",
+        "createdBy": "sandra.morris@example.com"
+      },
+      {
+        "title": "New Employee Onboarding Assistance Request for New Employee",
+        "description": "A ticket has been created to request onboarding assistance for a new employee who is starting today.",
+        "createdBy": "robert.anderson@example.com"
+      },
+      {
+        "title": "Add User to PSA Contacts for New Employee",
+        "description": "CooperBot is requested to add the new employee to the PSA contacts.",
+        "createdBy": "elizabeth.martin@example.com"
+      },
+      {
+        "title": "Grant Portal Access for New Employee",
+        "description": "CooperBot is requested to grant the new user access to relevant client portals.",
+        "createdBy": "james.thomas@example.com"
+      },
+      {
+        "title": "Assign M365 License for New Employee",
+        "description": "CooperBot is requested to assign an appropriate M365 license to the new user.",
+        "createdBy": "mary.young@example.com"
+      },
+      {
+        "title": "User Distribution Groups for New Employee",
+        "description": "CooperBot is requested to assign the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "john.walker@example.com"
+      },
+      {
+        "title": "Add Password to ITG for New Employee",
+        "description": "CooperBot is requested to add the new employee's password to the ITG system.",
+        "createdBy": "linda.thompson@example.com"
+      },
+      {
+        "title": "Onboarding Form Request for New Employee",
+        "description": "CooperBot is requested to send an onboarding form link to the end-user for required information.",
+        "createdBy": "william.brown@example.com"
+      },
+      {
+        "title": "Onboarding Information Gathering for New Employee",
+        "description": "CooperBot is actively gathering onboarding information from the technician via chat.",
+        "createdBy": "patricia.martinez@example.com"
+      },
+      {
+        "title": "Onboarding Task Completion Notification for New Employee",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "daniel.lee@example.com"
+      },
+      {
+        "title": "Ticket Closure Confirmation Request for New Employee",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "susan.garcia@example.com"
+      },
+      {
+        "title": "Ticket Closed for New Employee",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "joseph.hernandez@example.com"
+      },
+      {
+        "title": "New User Onboarding Request",
+        "description": "A ticket has been created to request onboarding assistance for a new employee who is starting today.",
+        "createdBy": "olivia.smith@example.com"
+      },
+      {
+        "title": "Add User to PSA Contacts",
+        "description": "CooperBot is requested to add the new employee to the PSA contacts.",
+        "createdBy": "george.perez@example.com"
+      },
+      {
+        "title": "Grant Portal Access",
+        "description": "CooperBot is requested to grant the new user access to relevant client portals.",
+        "createdBy": "sarah.johnson@example.com"
+      },
+      {
+        "title": "Assign M365 License",
+        "description": "CooperBot is requested to assign an appropriate M365 license to the new user.",
+        "createdBy": "michael.jones@example.com"
+      },
+      {
+        "title": "User Distribution Groups",
+        "description": "CooperBot is requested to assign the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "laura.davis@example.com"
+      },
+      {
+        "title": "Add Password to ITG",
+        "description": "CooperBot is requested to add the new user's password to the ITG system.",
+        "createdBy": "james.martin@example.com"
+      },
+      {
+        "title": "Onboarding Form Request",
+        "description": "CooperBot is requested to send an onboarding form link to the end-user for required information.",
+        "createdBy": "emily.anderson@example.com"
+      },
+      {
+        "title": "Onboarding Information Gathering",
+        "description": "CooperBot is actively gathering onboarding information from the technician via chat.",
+        "createdBy": "david.gonzalez@example.com"
+      },
+      {
+        "title": "Onboarding Task Completed",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "susan.miller@example.com"
+      },
+      {
+        "title": "Ticket Closure Confirmation",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "john.carter@example.com"
+      },
+      {
+        "title": "Ticket Closed",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "mary.wilson@example.com"
+      },
+      {
+        "title": "New Employee Onboarding Assistance",
+        "description": "A ticket has been created for onboarding assistance for a new employee.",
+        "createdBy": "william.brown@example.com"
+      },
+      {
+        "title": "User Provisioning Request",
+        "description": "CooperBot is requested to assist in provisioning the new employee.",
+        "createdBy": "patricia.martinez@example.com"
+      },
+      {
+        "title": "User Information Request",
+        "description": "CooperBot asks the technician for required information via chat.",
+        "createdBy": "robert.martin@example.com"
+      },
+      {
+        "title": "User Provisioned in PSA",
+        "description": "CooperBot adds the new user to the PSA contacts.",
+        "createdBy": "elizabeth.martin@example.com"
+      },
+      {
+        "title": "Portal Access Granted",
+        "description": "CooperBot grants the new user access to relevant client portals.",
+        "createdBy": "susan.miller@example.com"
+      },
+      {
+        "title": "M365 License Assigned",
+        "description": "CooperBot assigns an appropriate M365 license to the new user.",
+        "createdBy": "michael.thompson@example.com"
+      },
+      {
+        "title": "User Distribution Groups Updated",
+        "description": "CooperBot assigns the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "george.johnson@example.com"
+      },
+      {
+        "title": "Password Added to ITG",
+        "description": "CooperBot adds the new user's password to the ITG system.",
+        "createdBy": "linda.smith@example.com"
+      },
+      {
+        "title": "Onboarding Form Link Sent",
+        "description": "CooperBot sends an onboarding form link to the end-user for required information.",
+        "createdBy": "daniel.lee@example.com"
+      },
+      {
+        "title": "Onboarding Information Gathering in Progress",
+        "description": "CooperBot is actively gathering onboarding information from the technician via chat.",
+        "createdBy": "olivia.smith@example.com"
+      },
+      {
+        "title": "Onboarding Task Completion Notification for New Employee",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "john.doe@example.com"
+      },
+      {
+        "title": "Ticket Closure Confirmation Request for New Employee",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "jane.smith@example.com"
+      },
+      {
+        "title": "Ticket Closed for New Employee",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "mark.jones@example.com"
+      },
+      {
+        "title": "New Employee Onboarding Assistance",
+        "description": "A ticket has been created for onboarding assistance for a new employee.",
+        "createdBy": "susan.wilson@example.com"
+      },
+      {
+        "title": "User Provisioning Request",
+        "description": "CooperBot is requested to assist in provisioning the new employee.",
+        "createdBy": "david.brown@example.com"
+      },
+      {
+        "title": "User Information Request",
+        "description": "CooperBot asks the technician for required information via chat.",
+        "createdBy": "lisa.anderson@example.com"
+      },
+      {
+        "title": "User Provisioned in PSA",
+        "description": "CooperBot adds the new user to the PSA contacts.",
+        "createdBy": "robert.martin@example.com"
+      },
+      {
+        "title": "Portal Access Granted",
+        "description": "CooperBot grants the new user access to relevant client portals.",
+        "createdBy": "emily.evans@example.com"
+      },
+      {
+        "title": "M365 License Assigned",
+        "description": "CooperBot assigns an appropriate M365 license to the new user.",
+        "createdBy": "michael.thompson@example.com"
+      },
+      {
+        "title": "User Distribution Groups Updated",
+        "description": "CooperBot assigns the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "linda.miller@example.com"
+      },
+      {
+        "title": "Password Added to ITG",
+        "description": "CooperBot adds the new user's password to the ITG system.",
+        "createdBy": "william.harris@example.com"
+      },
+      {
+        "title": "Onboarding Form Link Sent",
+        "description": "CooperBot sends an onboarding form link to the end-user for required information.",
+        "createdBy": "olivia.wright@example.com"
+      },
+      {
+        "title": "Onboarding Information Gathering in Progress",
+        "description": "CooperBot is actively gathering onboarding information from the technician via chat.",
+        "createdBy": "james.jackson@example.com"
+      },
+      {
+        "title": "Onboarding Task Completion Notification for New Employee",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "elizabeth.davis@example.com"
+      },
+      {
+        "title": "Ticket Closure Confirmation Request for New Employee",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "chris.wilson@example.com"
+      },
+      {
+        "title": "Ticket Closed for New Employee",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "patricia.johnson@example.com"
+      },
+      {
+        "title": "New Employee Onboarding Assistance Request for New Employee",
+        "description": "A ticket has been created to request onboarding assistance for a new employee who is starting today.",
+        "createdBy": "steven.brown@example.com"
+      },
+      {
+        "title": "Add User to PSA Contacts for New Employee",
+        "description": "CooperBot is requested to add the new employee to the PSA contacts.",
+        "createdBy": "laura.martinez@example.com"
+      },
+      {
+        "title": "Grant Portal Access for New Employee",
+        "description": "CooperBot is requested to grant the new user access to relevant client portals.",
+        "createdBy": "daniel.lee@example.com"
+      },
+      {
+        "title": "Assign M365 License for New Employee",
+        "description": "CooperBot is requested to assign an appropriate M365 license to the new user.",
+        "createdBy": "sarah.gonzalez@example.com"
+      },
+      {
+        "title": "User Distribution Groups Updated for New Employee",
+        "description": "CooperBot assigns the new employee to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "ryan.taylor@example.com"
+      },
+      {
+        "title": "Password Added to ITG for New Employee",
+        "description": "CooperBot is requested to add the new employee's password to the ITG system.",
+        "createdBy": "maria.rodriguez@example.com"
+      },
+      {
+        "title": "Onboarding Form Link Sent for New Employee",
+        "description": "CooperBot sends an onboarding form link to the new employee for required information.",
+        "createdBy": "joseph.hernandez@example.com"
+      },
+      {
+        "title": "New Employee Onboarding Assistance",
+        "description": "A ticket has been raised to request assistance with onboarding a new hire.",
+        "createdBy": "andrew.nguyen@example.com"
+      },
+      {
+        "title": "User Provisioning Assistance",
+        "description": "CooperBot is requested to assist in provisioning the new hire.",
+        "createdBy": "eric.white@example.com"
+      },
+      {
+        "title": "Technician-Provided Information",
+        "description": "CooperBot is actively collecting required information from the technician via chat.",
+        "createdBy": "jennifer.park@example.com"
+      },
+      {
+        "title": "User Added to PSA Contacts for New Employee",
+        "description": "CooperBot successfully adds the new employee to the PSA contacts.",
+        "createdBy": "michael.ng@example.com"
+      },
+      {
+        "title": "Portal Access Granted for New Employee",
+        "description": "CooperBot grants the new employee access to relevant client portals.",
+        "createdBy": "amanda.johnson@example.com"
+      },
+      {
+        "title": "M365 License Assignment for New Employee",
+        "description": "CooperBot assigns the appropriate M365 license to the new employee.",
+        "createdBy": "kevin.clark@example.com"
+      },
+      {
+        "title": "Distribution Groups Updated for New Employee",
+        "description": "CooperBot assigns the new employee to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "lisa.roberts@example.com"
+      },
+      {
+        "title": "Password Added to ITG for New Employee",
+        "description": "CooperBot is requested to add the new employee's password to the ITG system.",
+        "createdBy": "timothy.hall@example.com"
+      },
+      {
+        "title": "Onboarding Form Link Sent for New Employee",
+        "description": "CooperBot sends an onboarding form link to the new employee for required information.",
+        "createdBy": "sandra.morris@example.com"
+      },
+      {
+        "title": "New Employee Onboarding Assistance Request for New Employee",
+        "description": "A ticket has been created to request onboarding assistance for a new employee who is starting today.",
+        "createdBy": "robert.anderson@example.com"
+      },
+      {
+        "title": "Add User to PSA Contacts for New Employee",
+        "description": "CooperBot is requested to add the new employee to the PSA contacts.",
+        "createdBy": "elizabeth.martin@example.com"
+      },
+      {
+        "title": "Grant Portal Access for New Employee",
+        "description": "CooperBot is requested to grant the new user access to relevant client portals.",
+        "createdBy": "james.thomas@example.com"
+      },
+      {
+        "title": "Assign M365 License for New Employee",
+        "description": "CooperBot is requested to assign an appropriate M365 license to the new user.",
+        "createdBy": "mary.young@example.com"
+      },
+      {
+        "title": "User Distribution Groups for New Employee",
+        "description": "CooperBot is requested to assign the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "john.walker@example.com"
+      },
+      {
+        "title": "Add Password to ITG for New Employee",
+        "description": "CooperBot is requested to add the new employee's password to the ITG system.",
+        "createdBy": "linda.thompson@example.com"
+      },
+      {
+        "title": "Onboarding Form Request for New Employee",
+        "description": "CooperBot is requested to send an onboarding form link to the end-user for required information.",
+        "createdBy": "william.brown@example.com"
+      },
+      {
+        "title": "Onboarding Information Gathering for New Employee",
+        "description": "CooperBot is actively gathering onboarding information from the technician via chat.",
+        "createdBy": "patricia.martinez@example.com"
+      },
+      {
+        "title": "Onboarding Task Completion Notification for New Employee",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "daniel.lee@example.com"
+      },
+      {
+        "title": "Ticket Closure Confirmation Request for New Employee",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "susan.garcia@example.com"
+      },
+      {
+        "title": "Ticket Closed for New Employee",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "joseph.hernandez@example.com"
+      },
+      {
+        "title": "New User Onboarding Request",
+        "description": "A ticket has been created to request onboarding assistance for a new employee who is starting today.",
+        "createdBy": "olivia.smith@example.com"
+      },
+      {
+        "title": "Add User to PSA Contacts",
+        "description": "CooperBot is requested to add the new employee to the PSA contacts.",
+        "createdBy": "george.perez@example.com"
+      },
+      {
+        "title": "Grant Portal Access",
+        "description": "CooperBot is requested to grant the new user access to relevant client portals.",
+        "createdBy": "sarah.johnson@example.com"
+      },
+      {
+        "title": "Assign M365 License",
+        "description": "CooperBot is requested to assign an appropriate M365 license to the new user.",
+        "createdBy": "michael.jones@example.com"
+      },
+      {
+        "title": "User Distribution Groups",
+        "description": "CooperBot is requested to assign the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "laura.davis@example.com"
+      },
+      {
+        "title": "Add Password to ITG",
+        "description": "CooperBot is requested to add the new user's password to the ITG system.",
+        "createdBy": "james.martin@example.com"
+      },
+      {
+        "title": "Onboarding Form Request",
+        "description": "CooperBot is requested to send an onboarding form link to the end-user for required information.",
+        "createdBy": "emily.anderson@example.com"
+      },
+      {
+        "title": "Onboarding Information Gathering",
+        "description": "CooperBot is actively gathering onboarding information from the technician via chat.",
+        "createdBy": "david.gonzalez@example.com"
+      },
+      {
+        "title": "Onboarding Task Completed",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "susan.miller@example.com"
+      },
+      {
+        "title": "Ticket Closure Confirmation",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "john.carter@example.com"
+      },
+      {
+        "title": "Ticket Closed",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "mary.wilson@example.com"
+      },
+      {
+        "title": "New Employee Onboarding Assistance",
+        "description": "A ticket has been created for onboarding assistance for a new employee.",
+        "createdBy": "william.brown@example.com"
+      },
+      {
+        "title": "User Provisioning Request",
+        "description": "CooperBot is requested to assist in provisioning the new employee.",
+        "createdBy": "patricia.martinez@example.com"
+      },
+      {
+        "title": "User Information Request",
+        "description": "CooperBot asks the technician for required information via chat.",
+        "createdBy": "robert.martin@example.com"
+      },
+      {
+        "title": "User Provisioned in PSA",
+        "description": "CooperBot adds the new user to the PSA contacts.",
+        "createdBy": "elizabeth.martin@example.com"
+      },
+      {
+        "title": "Portal Access Granted",
+        "description": "CooperBot grants the new user access to relevant client portals.",
+        "createdBy": "susan.miller@example.com"
+      },
+      {
+        "title": "M365 License Assigned",
+        "description": "CooperBot assigns an appropriate M365 license to the new user.",
+        "createdBy": "michael.thompson@example.com"
+      },
+      {
+        "title": "User Distribution Groups Updated",
+        "description": "CooperBot assigns the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "george.johnson@example.com"
+      },
+      {
+        "title": "Password Added to ITG",
+        "description": "CooperBot adds the new user's password to the ITG system.",
+        "createdBy": "linda.smith@example.com"
+      },
+      {
+        "title": "Onboarding Form Link Sent",
+        "description": "CooperBot sends an onboarding form link to the end-user for required information.",
+        "createdBy": "daniel.lee@example.com"
+      },
+      {
+        "title": "Onboarding Information Gathering in Progress",
+        "description": "CooperBot is actively gathering onboarding information from the technician via chat.",
+        "createdBy": "olivia.smith@example.com"
+      },
+      {
+        "title": "Onboarding Task Completion Notification for New Employee",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "john.doe@example.com"
+      },
+      {
+        "title": "Ticket Closure Confirmation Request for New Employee",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "jane.smith@example.com"
+      },
+      {
+        "title": "Ticket Closed for New Employee",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "mark.jones@example.com"
+      },
+      {
+        "title": "New Employee Onboarding Assistance",
+        "description": "A ticket has been created for onboarding assistance for a new employee.",
+        "createdBy": "susan.wilson@example.com"
+      },
+      {
+        "title": "User Provisioning Request",
+        "description": "CooperBot is requested to assist in provisioning the new employee.",
+        "createdBy": "david.brown@example.com"
+      },
+      {
+        "title": "User Information Request",
+        "description": "CooperBot asks the technician for required information via chat.",
+        "createdBy": "lisa.anderson@example.com"
+      },
+      {
+        "title": "User Provisioned in PSA",
+        "description": "CooperBot adds the new user to the PSA contacts.",
+        "createdBy": "robert.martin@example.com"
+      },
+      {
+        "title": "Portal Access Granted",
+        "description": "CooperBot grants the new user access to relevant client portals.",
+        "createdBy": "emily.evans@example.com"
+      },
+      {
+        "title": "M365 License Assigned",
+        "description": "CooperBot assigns an appropriate M365 license to the new user.",
+        "createdBy": "michael.thompson@example.com"
+      },
+      {
+        "title": "User Distribution Groups Updated",
+        "description": "CooperBot assigns the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "linda.miller@example.com"
+      },
+      {
+        "title": "Password Added to ITG",
+        "description": "CooperBot adds the new user's password to the ITG system.",
+        "createdBy": "william.harris@example.com"
+      },
+      {
+        "title": "Onboarding Form Link Sent",
+        "description": "CooperBot sends an onboarding form link to the end-user for required information.",
+        "createdBy": "olivia.wright@example.com"
+      },
+      {
+        "title": "Onboarding Information Gathering in Progress",
+        "description": "CooperBot is actively gathering onboarding information from the technician via chat.",
+        "createdBy": "james.jackson@example.com"
+      },
+      {
+        "title": "Onboarding Task Completion Notification for New Employee",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "elizabeth.davis@example.com"
+      },
+      {
+        "title": "Ticket Closure Confirmation Request for New Employee",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "chris.wilson@example.com"
+      },
+      {
+        "title": "Ticket Closed for New Employee",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "patricia.johnson@example.com"
+      },
+      {
+        "title": "New Employee Onboarding Assistance Request for New Employee",
+        "description": "A ticket has been created to request onboarding assistance for a new employee who is starting today.",
+        "createdBy": "steven.brown@example.com"
+      },
+      {
+        "title": "Add User to PSA Contacts for New Employee",
+        "description": "CooperBot is requested to add the new employee to the PSA contacts.",
+        "createdBy": "laura.martinez@example.com"
+      },
+      {
+        "title": "Grant Portal Access for New Employee",
+        "description": "CooperBot is requested to grant the new user access to relevant client portals.",
+        "createdBy": "daniel.lee@example.com"
+      },
+      {
+        "title": "Assign M365 License for New Employee",
+        "description": "CooperBot is requested to assign an appropriate M365 license to the new user.",
+        "createdBy": "sarah.gonzalez@example.com"
+      },
+      {
+        "title": "User Distribution Groups Updated for New Employee",
+        "description": "CooperBot assigns the new employee to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "ryan.taylor@example.com"
+      },
+      {
+        "title": "Password Added to ITG for New Employee",
+        "description": "CooperBot is requested to add the new employee's password to the ITG system.",
+        "createdBy": "maria.rodriguez@example.com"
+      },
+      {
+        "title": "Onboarding Form Link Sent for New Employee",
+        "description": "CooperBot sends an onboarding form link to the new employee for required information.",
+        "createdBy": "joseph.hernandez@example.com"
+      },
+      {
+        "title": "New Employee Onboarding Assistance",
+        "description": "A ticket has been raised to request assistance with onboarding a new hire.",
+        "createdBy": "andrew.nguyen@example.com"
+      },
+      {
+        "title": "User Provisioning Assistance",
+        "description": "CooperBot is requested to assist in provisioning the new hire.",
+        "createdBy": "eric.white@example.com"
+      },
+      {
+        "title": "Technician-Provided Information",
+        "description": "CooperBot is actively collecting required information from the technician via chat.",
+        "createdBy": "jennifer.park@example.com"
+      },
+      {
+        "title": "User Added to PSA Contacts for New Employee",
+        "description": "CooperBot successfully adds the new employee to the PSA contacts.",
+        "createdBy": "michael.ng@example.com"
+      },
+      {
+        "title": "Portal Access Granted for New Employee",
+        "description": "CooperBot grants the new employee access to relevant client portals.",
+        "createdBy": "amanda.johnson@example.com"
+      },
+      {
+        "title": "M365 License Assignment for New Employee",
+        "description": "CooperBot assigns the appropriate M365 license to the new employee.",
+        "createdBy": "kevin.clark@example.com"
+      },
+      {
+        "title": "Distribution Groups Updated for New Employee",
+        "description": "CooperBot assigns the new employee to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "lisa.roberts@example.com"
+      },
+      {
+        "title": "Password Added to ITG for New Employee",
+        "description": "CooperBot is requested to add the new employee's password to the ITG system.",
+        "createdBy": "timothy.hall@example.com"
+      },
+      {
+        "title": "Onboarding Form Link Sent for New Employee",
+        "description": "CooperBot sends an onboarding form link to the new employee for required information.",
+        "createdBy": "sandra.morris@example.com"
+      },
+      {
+        "title": "New Employee Onboarding Assistance Request for New Employee",
+        "description": "A ticket has been created to request onboarding assistance for a new employee who is starting today.",
+        "createdBy": "robert.anderson@example.com"
+      },
+      {
+        "title": "Add User to PSA Contacts for New Employee",
+        "description": "CooperBot is requested to add the new employee to the PSA contacts.",
+        "createdBy": "elizabeth.martin@example.com"
+      },
+      {
+        "title": "Grant Portal Access for New Employee",
+        "description": "CooperBot is requested to grant the new user access to relevant client portals.",
+        "createdBy": "james.thomas@example.com"
+      },
+      {
+        "title": "Assign M365 License for New Employee",
+        "description": "CooperBot is requested to assign an appropriate M365 license to the new user.",
+        "createdBy": "mary.young@example.com"
+      },
+      {
+        "title": "User Distribution Groups for New Employee",
+        "description": "CooperBot is requested to assign the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "john.walker@example.com"
+      },
+      {
+        "title": "Add Password to ITG for New Employee",
+        "description": "CooperBot is requested to add the new employee's password to the ITG system.",
+        "createdBy": "linda.thompson@example.com"
+      },
+      {
+        "title": "Onboarding Form Request for New Employee",
+        "description": "CooperBot is requested to send an onboarding form link to the end-user for required information.",
+        "createdBy": "william.brown@example.com"
+      },
+      {
+        "title": "Onboarding Information Gathering for New Employee",
+        "description": "CooperBot is actively gathering onboarding information from the technician via chat.",
+        "createdBy": "patricia.martinez@example.com"
+      },
+      {
+        "title": "Onboarding Task Completion Notification for New Employee",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "daniel.lee@example.com"
+      },
+      {
+        "title": "Ticket Closure Confirmation Request for New Employee",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "susan.garcia@example.com"
+      },
+      {
+        "title": "Ticket Closed for New Employee",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "joseph.hernandez@example.com"
+      },
+      {
+        "title": "New User Onboarding Request",
+        "description": "A ticket has been created to request onboarding assistance for a new employee who is starting today.",
+        "createdBy": "olivia.smith@example.com"
+      },
+      {
+        "title": "Add User to PSA Contacts",
+        "description": "CooperBot is requested to add the new employee to the PSA contacts.",
+        "createdBy": "george.perez@example.com"
+      },
+      {
+        "title": "Grant Portal Access",
+        "description": "CooperBot is requested to grant the new user access to relevant client portals.",
+        "createdBy": "sarah.johnson@example.com"
+      },
+      {
+        "title": "Assign M365 License",
+        "description": "CooperBot is requested to assign an appropriate M365 license to the new user.",
+        "createdBy": "michael.jones@example.com"
+      },
+      {
+        "title": "User Distribution Groups",
+        "description": "CooperBot is requested to assign the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "laura.davis@example.com"
+      },
+      {
+        "title": "Add Password to ITG",
+        "description": "CooperBot is requested to add the new user's password to the ITG system.",
+        "createdBy": "james.martin@example.com"
+      },
+      {
+        "title": "Onboarding Form Request",
+        "description": "CooperBot is requested to send an onboarding form link to the end-user for required information.",
+        "createdBy": "emily.anderson@example.com"
+      },
+      {
+        "title": "Onboarding Information Gathering",
+        "description": "CooperBot is actively gathering onboarding information from the technician via chat.",
+        "createdBy": "david.gonzalez@example.com"
+      },
+      {
+        "title": "Onboarding Task Completed",
+        "description": "CooperBot notifies the technician that all onboarding tasks have been completed.",
+        "createdBy": "susan.miller@example.com"
+      },
+      {
+        "title": "Ticket Closure Confirmation",
+        "description": "CooperBot requests confirmation from the technician to close the ticket.",
+        "createdBy": "john.carter@example.com"
+      },
+      {
+        "title": "Ticket Closed",
+        "description": "CooperBot closes the ticket after receiving confirmation from the technician.",
+        "createdBy": "mary.wilson@example.com"
+      },
+      {
+        "title": "New Employee Onboarding Assistance",
+        "description": "A ticket has been created for onboarding assistance for a new employee.",
+        "createdBy": "william.brown@example.com"
+      },
+      {
+        "title": "User Provisioning Request",
+        "description": "CooperBot is requested to assist in provisioning the new employee.",
+        "createdBy": "patricia.martinez@example.com"
+      },
+      {
+        "title": "User Information Request",
+        "description": "CooperBot asks the technician for required information via chat.",
+        "createdBy": "robert.martin@example.com"
+      },
+      {
+        "title": "User Provisioned in PSA",
+        "description": "CooperBot adds the new user to the PSA contacts.",
+        "createdBy": "elizabeth.martin@example.com"
+      },
+      {
+        "title": "Portal Access Granted",
+        "description": "CooperBot grants the new user access to relevant client portals.",
+        "createdBy": "susan.miller@example.com"
+      },
+      {
+        "title": "Internet Connection Issue",
+        "description": "Customer reports frequent internet disconnections affecting work.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Email Not Sending",
+        "description": "Customer is unable to send emails from their account.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Printer Offline",
+        "description": "Customer's printer is showing as offline and not printing documents.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Slow Computer",
+        "description": "Customer complains of slow computer performance, impacting productivity.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Software Crashing",
+        "description": "Customer experiences frequent crashes of a specific software application.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Forgotten Password",
+        "description": "Customer needs assistance in resetting their forgotten password.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Account Locked",
+        "description": "Customer's account is locked, preventing access to critical files.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Virus Detected",
+        "description": "Customer's antivirus software has detected a virus on their computer.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Data Loss",
+        "description": "Customer accidentally deleted important files and needs data recovery help.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Mobile App Not Working",
+        "description": "Customer cannot use a mobile app, it keeps crashing upon launch.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Network Printer Not Found",
+        "description": "Customer can't locate the network printer to print documents.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Email Account Hacked",
+        "description": "Customer suspects their email account has been hacked.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Software Installation Error",
+        "description": "Customer encounters errors while installing software.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Blue Screen Error",
+        "description": "Customer's computer displays a blue screen with an error message.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Cannot Access Shared Drive",
+        "description": "Customer cannot access files on a shared network drive.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "No Sound on Laptop",
+        "description": "Customer reports no audio coming from their laptop.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Cannot Connect to Wi-Fi",
+        "description": "Customer's device cannot connect to the office Wi-Fi network.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Excel Spreadsheet Errors",
+        "description": "Customer's Excel spreadsheet is displaying errors and formulas are not calculating correctly.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Email Attachment Issue",
+        "description": "Customer cannot open or save email attachments.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Printer Paper Jam",
+        "description": "Customer's printer is jamming repeatedly.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Browser Pop-up Ads",
+        "description": "Customer encounters unwanted pop-up ads while browsing.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Outlook Not Syncing",
+        "description": "Customer's Outlook email is not syncing properly.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Login Problems",
+        "description": "Customer has trouble logging into their account.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Mobile Device Won't Turn On",
+        "description": "Customer's mobile device is unresponsive and won't power on.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Slow Internet Browsing",
+        "description": "Customer experiences slow internet browsing speeds.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Application License Expired",
+        "description": "Customer's software license has expired, and they need to renew it.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Lost Smartphone",
+        "description": "Customer's smartphone is lost, and they need assistance tracking it.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "PDF Printing Issue",
+        "description": "Customer cannot print PDF documents correctly.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Emails Marked as Spam",
+        "description": "Customer's legitimate emails are being marked as spam by recipients.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Printer Driver Not Found",
+        "description": "Customer's computer cannot find the printer driver.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Computer Overheating",
+        "description": "Customer's computer is overheating and shutting down.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Voicemail Setup",
+        "description": "Customer needs help setting up voicemail on their office phone.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Software Updates Needed",
+        "description": "Customer's software requires updates but encounters errors during the process.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Network File Access Permission",
+        "description": "Customer needs access permissions to a specific network folder.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Mobile App Permissions",
+        "description": "Customer wants to grant or revoke permissions for a mobile app.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Taskbar Missing",
+        "description": "Customer's Windows taskbar has disappeared.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "Bluetooth Pairing Issue",
+        "description": "Customer's device cannot connect to Bluetooth accessories.",
+        "createdBy": "customer@example.com"
+      },
+      {
+        "title": "New Employee Onboarding Request",
+        "description": "A ticket comes in from an end-user stating that they have a new employee starting that morning.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "CooperBot Assistance Requested",
+        "description": "CooperBot appears within the ticket and asks the technician if they would like CooperBot to assist in provisioning the new employee.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Technician Accepts Assistance",
+        "description": "The technician clicks on the 'Yes' button to accept CooperBot's assistance.",
+        "createdBy": "technician@example.com"
+      },
+      {
+        "title": "Additional Information Required",
+        "description": "CooperBot indicates that it needs additional information from the technician to proceed.",
+        "createdBy": "technician@example.com"
+      },
+      {
+        "title": "Information Sharing Option",
+        "description": "CooperBot asks the technician if they would like to share information via a form link or provide it directly.",
+        "createdBy": "technician@example.com"
+      },
+      {
+        "title": "Technician Chooses to Provide Information",
+        "description": "The technician clicks on the 'Provide' button to share the required information directly.",
+        "createdBy": "technician@example.com"
+      },
+      {
+        "title": "CooperBot Chat Initiated",
+        "description": "CooperBot opens a chat box to collect the necessary information.",
+        "createdBy": "cooperbot@example.com"
+      },
+      {
+        "title": "Information Gathering",
+        "description": "CooperBot proceeds to ask the technician for the required information via chat.",
+        "createdBy": "cooperbot@example.com"
+      },
+      {
+        "title": "User Provisioning",
+        "description": "Based on the information provided, CooperBot adds the new user to contacts in PSA and other relevant ITC modules.",
+        "createdBy": "cooperbot@example.com"
+      },
+      {
+        "title": "Client Portal Access Granted",
+        "description": "CooperBot grants the new user access to all relevant ITC module client portals.",
+        "createdBy": "cooperbot@example.com"
+      },
+      {
+        "title": "M365 License Assigned",
+        "description": "CooperBot assigns the new user the appropriate M365 license.",
+        "createdBy": "cooperbot@example.com"
+      },
+      {
+        "title": "Distribution Group Assignment",
+        "description": "CooperBot assigns the new user to the proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "cooperbot@example.com"
+      },
+      {
+        "title": "Password Added to ITG",
+        "description": "CooperBot adds the new user's password to ITG.",
+        "createdBy": "cooperbot@example.com"
+      },
+      {
+        "title": "Task Completed",
+        "description": "CooperBot notifies the technician that all tasks have been completed.",
+        "createdBy": "cooperbot@example.com"
+      },
+      {
+        "title": "Ticket Closure Confirmation",
+        "description": "CooperBot requests if the technician would like to close the ticket.",
+        "createdBy": "cooperbot@example.com"
+      },
+      {
+        "title": "Technician Confirms Ticket Closure",
+        "description": "The technician clicks on the 'Yes' button to confirm ticket closure.",
+        "createdBy": "technician@example.com"
+      },
+      {
+        "title": "Ticket Closed",
+        "description": "CooperBot closes the ticket.",
+        "createdBy": "cooperbot@example.com"
+      },
+      {
+        "title": "PSA Trigger - New Employee",
+        "description": "A trigger mechanism in PSA detects the keyword 'New employee' in the ticket description/title and launches CooperBot interaction.",
+        "createdBy": "psa@example.com"
+      },
+      {
+        "title": "PSA Trigger - New User",
+        "description": "A trigger mechanism in PSA detects the keyword 'New user' in the ticket description/title and launches CooperBot interaction.",
+        "createdBy": "psa@example.com"
+      },
+      {
+        "title": "PSA Trigger - Add Employee",
+        "description": "A trigger mechanism in PSA detects the keyword 'Add employee' in the ticket description/title and launches CooperBot interaction.",
+        "createdBy": "psa@example.com"
+      },
+      {
+        "title": "PSA Trigger - Add User",
+        "description": "A trigger mechanism in PSA detects the keyword 'Add user' in the ticket description/title and launches CooperBot interaction.",
+        "createdBy": "psa@example.com"
+      },
+      {
+        "title": "PSA Trigger - Onboard New Employee",
+        "description": "A trigger mechanism in PSA detects the keyword 'Onboard new employee' in the ticket description/title and launches CooperBot interaction.",
+        "createdBy": "psa@example.com"
+      },
+      {
+        "title": "PSA Trigger - Onboard New User",
+        "description": "A trigger mechanism in PSA detects the keyword 'Onboard new user' in the ticket description/title and launches CooperBot interaction.",
+        "createdBy": "psa@example.com"
+      },
+      {
+        "title": "PSA Trigger - New Hire",
+        "description": "A trigger mechanism in PSA detects the keyword 'New hire' in the ticket description/title and launches CooperBot interaction.",
+        "createdBy": "psa@example.com"
+      },
+      {
+        "title": "PSA Trigger - Add New Hire",
+        "description": "A trigger mechanism in PSA detects the keyword 'Add new hire' in the ticket description/title and launches CooperBot interaction.",
+        "createdBy": "psa@example.com"
+      },
+      {
+        "title": "PSA Trigger - Onboard New Hire",
+        "description": "A trigger mechanism in PSA detects the keyword 'Onboard new hire' in the ticket description/title and launches CooperBot interaction.",
+        "createdBy": "psa@example.com"
+      },
+      {
+        "title": "PSA Interactive UI - Chat Initiated",
+        "description": "An interactive user interface within PSA UI allows the ability to open a chat box for free form responses.",
+        "createdBy": "psa@example.com"
+      },
+      {
+        "title": "PSA Interactive UI - Predefined Clickable Buttons",
+        "description": "An interactive user interface within PSA UI includes predefined clickable button responses such as 'Yes,' 'No,' 'Provide,' 'Send a form.'",
+        "createdBy": "psa@example.com"
+      },
+      {
+        "title": "ITC Modules - Add User as a Contact",
+        "description": "A real-time mechanism in ITC modules detects actions from PSA and adds a new user as a contact.",
+        "createdBy": "itc@example.com"
+      },
+      {
+        "title": "ITC Modules - Grant Client Portal Access",
+        "description": "A real-time mechanism in ITC modules detects actions from PSA and grants a new user access to relevant client portals.",
+        "createdBy": "itc@example.com"
+      },
+      {
+        "title": "RMM - Assign M365 License",
+        "description": "A real-time mechanism in RMM detects actions from PSA and assigns the new user an appropriate M365 license.",
+        "createdBy": "rmm@example.com"
+      },
+      {
+        "title": "RMM - Assign Distribution Groups",
+        "description": "A real-time mechanism in RMM detects actions from PSA and assigns the new user to proper distribution groups and shared mailboxes in Exchange Admin.",
+        "createdBy": "rmm@example.com"
+      },
+      {
+        "title": "ITG - Add User's Password to Active Directory",
+        "description": "A real-time mechanism in ITG detects actions from PSA and adds the new user's password to Active Directory.",
+        "createdBy": "itg@example.com"
+      },
+      {
+        "title": "Workflow Automation Engine - BPA",
+        "description": "MSPs use the Workflow Automation Engine to automate manual and repetitive tasks across their Kaseya stack.",
+        "createdBy": "msp@example.com"
+      },
+      {
+        "title": "Interactive Intelligence Engine",
+        "description": "The Interactive Intelligence Engine helps IT professionals and managers make better decisions based on intelligent alerts, recommendations, assignments, and screen prompts.",
+        "createdBy": "it@example.com"
+      },
+      {
+        "title": "ITC Modules - Grant Portal Access",
+        "description": "A real-time mechanism in ITC modules detects actions from PSA and grants access to a client portal for an existing user.",
+        "createdBy": "itc@example.com"
+      },
+      {
+        "title": "RMM - Additional M365 Actions",
+        "description": "A real-time mechanism in RMM detects actions from PSA and performs additional M365 actions for a user.",
+        "createdBy": "rmm@example.com"
+      },
+      {
+        "title": "ITG - Password Reset",
+        "description": "A real-time mechanism in ITG detects a password reset request and updates the user's password in Active Directory.",
+        "createdBy": "itg@example.com"
+      },
+      {
+        "title": "Workflow Automation Engine - Ticket Routing",
+        "description": "MSPs use the Workflow Automation Engine to route tickets to appropriate technicians based on criteria such as issue type and priority.",
+        "createdBy": "msp@example.com"
+      },
+      {
+        "title": "Interactive Intelligence Engine - Intelligent Alerts",
+        "description": "The Interactive Intelligence Engine generates intelligent alerts for IT professionals based on system health and performance metrics.",
+        "createdBy": "it@example.com"
+      },
+      {
+        "title": "Software Deployment Request",
+        "description": "A request comes in to deploy new software for a user's workstation.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Software Licensing Inquiry",
+        "description": "A user inquires about the licensing status of a specific software product.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Network Connectivity Issue",
+        "description": "A user reports a network connectivity issue affecting multiple devices in their office.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "VPN Setup Request",
+        "description": "A user requests assistance with setting up a VPN connection for remote work.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Server Performance Degradation",
+        "description": "A technician receives an alert about server performance degradation and investigates the issue.",
+        "createdBy": "tech@example.com"
+      },
+      {
+        "title": "Data Backup Request",
+        "description": "A user requests a data backup for critical files and documents.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Security Patch Deployment",
+        "description": "A request comes in to deploy critical security patches to servers and workstations.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Hardware Failure Alert",
+        "description": "An alert is triggered due to a hardware failure on a server, requiring immediate attention.",
+        "createdBy": "tech@example.com"
+      },
+      {
+        "title": "Email Migration Request",
+        "description": "A user requests assistance with migrating their email data to a new platform.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Software Update Rollback",
+        "description": "A request is made to rollback a recent software update that caused issues.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Network Firewall Configuration",
+        "description": "A request comes in to configure network firewall rules for enhanced security.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "External Hard Drive Not Recognized",
+        "description": "A user reports that their external hard drive is not recognized by their computer.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Email Not Receiving",
+        "description": "A user can send emails but is unable to receive them.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "File Sharing Permissions",
+        "description": "A user needs assistance setting up file sharing permissions for a project folder.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Mobile App Crashes on Launch",
+        "description": "A user's mobile app crashes immediately upon launch.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Browser Cache Clearing",
+        "description": "A user wants guidance on clearing their browser cache for better performance.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Email Account Deletion",
+        "description": "A user requests the deletion of their email account.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Printer Network Connection",
+        "description": "A user's printer is not connecting to the office network.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Application License Transfer",
+        "description": "A user needs to transfer a software license to a new computer.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "No Signal on Monitor",
+        "description": "A user's monitor displays 'No Signal' when the computer is on.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Software Configuration Error",
+        "description": "A user encounters errors while configuring a software application.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Bluetooth Device Pairing",
+        "description": "A user wants to pair a new Bluetooth device with their computer.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Printer Queue",
+        "description": "A user's print jobs are stuck in the printer queue.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Webcam Privacy Concerns",
+        "description": "A user has concerns about webcam privacy and wants guidance.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Disk Cleanup",
+        "description": "A user wants to perform disk cleanup to free up storage space.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Lost Password",
+        "description": "A user has lost their password and needs assistance with recovery.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "System Update Errors",
+        "description": "A user encounters errors while attempting to update their operating system.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Printer Paper Jam",
+        "description": "A user's printer is repeatedly jamming paper.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Browser Pop-up Ads",
+        "description": "A user encounters unwanted pop-up ads while browsing.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Outlook Not Syncing",
+        "description": "A user's Outlook email is not syncing properly.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Wireless Network Setup",
+        "description": "A user needs assistance setting up a wireless network at home.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Software Uninstall",
+        "description": "A user wants to uninstall a software application from their computer.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Account Lockout",
+        "description": "A user's account is locked, and they cannot log in.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Security Software Installation",
+        "description": "A user needs to install security software on their computer.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "VPN Connection Issue",
+        "description": "A user experiences connectivity issues with a VPN connection.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Software Compatibility",
+        "description": "A user wants to ensure software compatibility with their operating system.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Data Recovery",
+        "description": "A user needs assistance with data recovery from a damaged storage device.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Software License Renewal",
+        "description": "A user's software license is expiring, and they need to renew it.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Email Signature Setup",
+        "description": "A user requests assistance with setting up an email signature.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Remote Desktop Connection",
+        "description": "A user needs help establishing a remote desktop connection.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Network Printer Configuration",
+        "description": "A user wants to configure a network printer for their office.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Browser Performance Issues",
+        "description": "A user reports slow browser performance and seeks optimization.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Hardware Installation",
+        "description": "A user needs guidance on installing new hardware components.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Email Filter Settings",
+        "description": "A user requests assistance with email filter settings to reduce spam.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Software Patching",
+        "description": "A user requests software patching to address security vulnerabilities.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Server Configuration Change",
+        "description": "A change in server configuration is requested for improved performance.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Mobile Device Setup",
+        "description": "A user needs help setting up their mobile device for work email access.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Data Backup Verification",
+        "description": "A user wants to verify the success of their data backup process.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Printer Driver Installation",
+        "description": "A user needs assistance installing a printer driver on their computer.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Network Connectivity Troubleshooting",
+        "description": "A user is experiencing network connectivity issues and seeks troubleshooting assistance.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "VPN Configuration Error",
+        "description": "A user encounters errors while configuring a VPN connection.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Software Update Notification",
+        "description": "A notification is sent to inform users of an upcoming software update.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Server Backup Request",
+        "description": "A user requests a backup of critical server data.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Software License Compliance",
+        "description": "A user requests an audit to ensure software license compliance.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Email Configuration Issue",
+        "description": "A user encounters problems with their email configuration and needs resolution.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Printer Scanner Setup",
+        "description": "A user wants assistance setting up the scanner function on their printer.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "System Error Message",
+        "description": "A user receives a system error message and requires troubleshooting.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Web Application Access",
+        "description": "A user needs assistance accessing a web application for work.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Network Printer Paper Jam",
+        "description": "A network printer is repeatedly jamming paper, and assistance is needed.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Software License Transfer",
+        "description": "A user requests to transfer a software license to a different user or device.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Email Attachment Issue",
+        "description": "A user experiences problems with email attachments and seeks resolution.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Printer Toner Replacement",
+        "description": "A user needs replacement toner cartridges for their printer.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Mobile Device Connectivity",
+        "description": "A user encounters connectivity issues with their mobile device and seeks assistance.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Software Data Recovery",
+        "description": "A user needs assistance recovering data from a software application.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Network Firewall Update",
+        "description": "A user requests an update to network firewall rules for security purposes.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "External Hard Drive Data Recovery",
+        "description": "A user's external hard drive data needs to be recovered after a failure.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Email Account Setup",
+        "description": "A user requests assistance setting up a new email account.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Printer Configuration",
+        "description": "A user needs assistance configuring printer settings for specific requirements.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "VPN Connection Setup",
+        "description": "A user needs assistance setting up a secure VPN connection.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Software Performance Optimization",
+        "description": "A user wants to optimize the performance of a software application.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Server Hardware Upgrade",
+        "description": "A user requests an upgrade of server hardware components for improved performance.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "title": "Mobile Device Security",
+        "description": "A user needs assistance enhancing the security of their mobile device.",
+        "createdBy": "user@example.com"
+      },
+      {
+        "createdBy": "Customer X",
+        "title": "G Suite Email Setup",
+        "description": "Customer X needs assistance setting up email accounts in G Suite."
+      },
+      {
+        "createdBy": "Customer Y",
+        "title": "Microsoft Office 365 Migration",
+        "description": "Customer Y is migrating to Microsoft Office 365 and requires support."
+      },
+      {
+        "createdBy": "Customer Z",
+        "title": "G Suite Calendar Integration",
+        "description": "Customer Z is facing issues integrating their calendar with G Suite."
+      },
+      {
+        "createdBy": "Customer A",
+        "title": "Microsoft Teams Configuration",
+        "description": "Customer A needs help configuring Microsoft Teams for their organization."
+      },
+      {
+        "createdBy": "Customer B",
+        "title": "G Suite User Access",
+        "description": "Customer B is having trouble granting user access in G Suite."
+      },
+      {
+        "createdBy": "Customer C",
+        "title": "Microsoft SharePoint Permissions",
+        "description": "Customer C requires assistance with managing permissions in Microsoft SharePoint."
+      },
+      {
+        "createdBy": "Customer D",
+        "title": "G Suite Data Migration",
+        "description": "Customer D needs to migrate data to G Suite and is seeking guidance."
+      },
+      {
+        "createdBy": "Customer E",
+        "title": "Microsoft Exchange Issues",
+        "description": "Customer E is experiencing problems with Microsoft Exchange server."
+      },
+      {
+        "createdBy": "Customer F",
+        "title": "G Suite Security Configuration",
+        "description": "Customer F wants to enhance security settings in G Suite."
+      },
+      {
+        "createdBy": "Customer G",
+        "title": "Microsoft Azure Integration",
+        "description": "Customer G is integrating their services with Microsoft Azure and needs support."
+      },
+      {
+        "createdBy": "Customer H",
+        "title": "G Suite Data Backup",
+        "description": "Customer H is looking for a backup solution for their G Suite data."
+      },
+      {
+        "createdBy": "Customer I",
+        "title": "Microsoft Licensing",
+        "description": "Customer I has questions about Microsoft licensing for their organization."
+      },
+      {
+        "createdBy": "Customer J",
+        "title": "G Suite Mobile Device Management",
+        "description": "Customer J wants to implement mobile device management for G Suite."
+      },
+      {
+        "createdBy": "Customer K",
+        "title": "Microsoft Active Directory Configuration",
+        "description": "Customer K requires assistance with configuring Microsoft Active Directory."
+      },
+      {
+        "createdBy": "Customer L",
+        "title": "G Suite Collaboration Tools",
+        "description": "Customer L needs help with using collaboration tools in G Suite."
+      },
+      {
+        "createdBy": "Customer M",
+        "title": "Microsoft OneDrive Setup",
+        "description": "Customer M is setting up Microsoft OneDrive and needs guidance."
+      },
+      {
+        "createdBy": "Customer N",
+        "title": "G Suite Single Sign-On",
+        "description": "Customer N wants to implement single sign-on in G Suite."
+      },
+      {
+        "createdBy": "Customer O",
+        "title": "Microsoft Teams Meeting Issues",
+        "description": "Customer O is encountering issues with Microsoft Teams meetings."
+      },
+      {
+        "createdBy": "Customer P",
+        "title": "G Suite Training Request",
+        "description": "Customer P is requesting training for their team on using G Suite."
+      },
+      {
+        "createdBy": "Customer Q",
+        "title": "Microsoft Intune Enrollment",
+        "description": "Customer Q needs assistance with enrolling devices in Microsoft Intune."
+      },
+      {
+        "createdBy": "Customer R",
+        "title": "G Suite Email Filtering",
+        "description": "Customer R wants to set up email filtering in G Suite."
+      },
+      {
+        "createdBy": "User A",
+        "title": "App Crash",
+        "description": "The application crashed unexpectedly."
+      },
+      {
+        "createdBy": "User B",
+        "title": "Login Failure",
+        "description": "Users are unable to log in to the application."
+      },
+      {
+        "createdBy": "User C",
+        "title": "Slow Performance",
+        "description": "The application is running slowly."
+      },
+      {
+        "createdBy": "User D",
+        "title": "Feature Request",
+        "description": "A request for a new feature in the application."
+      },
+      {
+        "createdBy": "User E",
+        "title": "Data Loss",
+        "description": "Data was lost during an application operation."
+      },
+      {
+        "createdBy": "User F",
+        "title": "Security Vulnerability",
+        "description": "A potential security vulnerability in the application."
+      },
+      {
+        "createdBy": "User G",
+        "title": "UI Bug",
+        "description": "A bug in the user interface of the application."
+      },
+      {
+        "createdBy": "User H",
+        "title": "Database Error",
+        "description": "An error occurred in the application's database."
+      },
+      {
+        "createdBy": "User I",
+        "title": "API Integration Issue",
+        "description": "An issue with an external API integration."
+      },
+      {
+        "createdBy": "User J",
+        "title": "File Upload Problem",
+        "description": "Users are unable to upload files in the application."
+      },
+      {
+        "createdBy": "User K",
+        "title": "Notification Delay",
+        "description": "Delays in sending notifications from the application."
+      },
+      {
+        "createdBy": "User L",
+        "title": "Compatibility Issue",
+        "description": "Compatibility problems with certain devices."
+      },
+      {
+        "createdBy": "User M",
+        "title": "Data Synchronization Failure",
+        "description": "Synchronization issues with data in the application."
+      },
+      {
+        "createdBy": "User N",
+        "title": "Outage Report",
+        "description": "Reporting a complete outage of the application."
+      },
+      {
+        "createdBy": "User O",
+        "title": "User Permissions Issue",
+        "description": "Issues with user permissions in the application."
+      },
+      {
+        "createdBy": "User P",
+        "title": "Dashboard Error",
+        "description": "Errors in the application's dashboard functionality."
+      },
+      {
+        "createdBy": "User Q",
+        "title": "Mobile App Crashes",
+        "description": "Frequent crashes in the mobile version of the application."
+      },
+      {
+        "createdBy": "User R",
+        "title": "Payment Processing Problem",
+        "description": "Problems with processing payments in the application."
+      },
+      {
+        "createdBy": "User S",
+        "title": "Server Overload",
+        "description": "The server is overloaded, causing issues in the application."
+      },
+      {
+        "createdBy": "User T",
+        "title": "Data Export Error",
+        "description": "Errors when exporting data from the application."
+      },
+      {
+        "createdBy": "User U",
+        "title": "Network Connectivity Issue",
+        "description": "Users are experiencing network connectivity issues with the application."
+      },
+      {
+        "createdBy": "User V",
+        "title": "Update Request",
+        "description": "A request to update the application to the latest version."
+      },
+      {
+        "createdBy": "User W",
+        "title": "Feature Enhancement",
+        "description": "Request for enhancement of existing application features."
+      },
+      {
+        "createdBy": "User X",
+        "title": "User Interface Improvement",
+        "description": "Suggestion for improving the user interface of the application."
+      },
+      {
+        "createdBy": "User Y",
+        "title": "Performance Optimization",
+        "description": "Request to optimize the application's performance."
+      },
+      {
+        "createdBy": "User Z",
+        "title": "Backup and Restore Issue",
+        "description": "Problems with backup and restore functionality in the application."
+      },
+      {
+        "createdBy": "Client A",
+        "title": "Client Onboarding Request",
+        "description": "A new client is requesting onboarding assistance."
+      },
+      {
+        "createdBy": "Client B",
+        "title": "License Assignment Error",
+        "description": "An error occurred while assigning licenses to users."
+      },
+      {
+        "createdBy": "Client C",
+        "title": "Client Data Import Issue",
+        "description": "Issues with importing client data into the system."
+      },
+      {
+        "createdBy": "Client D",
+        "title": "License Renewal Problem",
+        "description": "Clients are facing issues while renewing their licenses."
+      },
+      {
+        "createdBy": "User A",
+        "title": "App Crash",
+        "description": "The application crashed unexpectedly."
+      },
+      {
+        "createdBy": "User B",
+        "title": "Login Failure",
+        "description": "Users are unable to log in to the application."
+      },
+      {
+        "createdBy": "User C",
+        "title": "Slow Performance",
+        "description": "The application is running slowly."
+      },
+      {
+        "createdBy": "User D",
+        "title": "Feature Request",
+        "description": "A request for a new feature in the application."
+      },
+      {
+        "createdBy": "User E",
+        "title": "Data Loss",
+        "description": "Data was lost during an application operation."
+      },
+      {
+        "createdBy": "User F",
+        "title": "Security Vulnerability",
+        "description": "A potential security vulnerability in the application."
+      },
+      {
+        "createdBy": "User G",
+        "title": "UI Bug",
+        "description": "A bug in the user interface of the application."
+      },
+      {
+        "createdBy": "User H",
+        "title": "Database Error",
+        "description": "An error occurred in the application's database."
+      },
+      {
+        "createdBy": "User I",
+        "title": "API Integration Issue",
+        "description": "An issue with an external API integration."
+      },
+      {
+        "createdBy": "User J",
+        "title": "File Upload Problem",
+        "description": "Users are unable to upload files in the application."
+      },
+      {
+        "createdBy": "User K",
+        "title": "Notification Delay",
+        "description": "Delays in sending notifications from the application."
+      },
+      {
+        "createdBy": "User L",
+        "title": "Compatibility Issue",
+        "description": "Compatibility problems with certain devices."
+      },
+      {
+        "createdBy": "User M",
+        "title": "Data Synchronization Failure",
+        "description": "Synchronization issues with data in the application."
+      },
+      {
+        "createdBy": "User N",
+        "title": "Outage Report",
+        "description": "Reporting a complete outage of the application."
+      },
+      {
+        "createdBy": "User O",
+        "title": "User Permissions Issue",
+        "description": "Issues with user permissions in the application."
+      },
+      {
+        "createdBy": "User P",
+        "title": "Dashboard Error",
+        "description": "Errors in the application's dashboard functionality."
+      },
+      {
+        "createdBy": "User Q",
+        "title": "Mobile App Crashes",
+        "description": "Frequent crashes in the mobile version of the application."
+      },
+      {
+        "createdBy": "User R",
+        "title": "Payment Processing Problem",
+        "description": "Problems with processing payments in the application."
+      },
+      {
+        "createdBy": "User S",
+        "title": "Server Overload",
+        "description": "The server is overloaded, causing issues in the application."
+      },
+      {
+        "createdBy": "User T",
+        "title": "Data Export Error",
+        "description": "Errors when exporting data from the application."
+      },
+      {
+        "createdBy": "User U",
+        "title": "Network Connectivity Issue",
+        "description": "Users are experiencing network connectivity issues with the application."
+      },
+      {
+        "createdBy": "User V",
+        "title": "Update Request",
+        "description": "A request to update the application to the latest version."
+      },
+      {
+        "createdBy": "User W",
+        "title": "Feature Enhancement",
+        "description": "Request for enhancement of existing application features."
+      },
+      {
+        "createdBy": "User X",
+        "title": "User Interface Improvement",
+        "description": "Suggestion for improving the user interface of the application."
+      },
+      {
+        "createdBy": "User Y",
+        "title": "Performance Optimization",
+        "description": "Request to optimize the application's performance."
+      },
+      {
+        "createdBy": "User Z",
+        "title": "Backup and Restore Issue",
+        "description": "Problems with backup and restore functionality in the application."
       }
     ],
     "server": {
