@@ -24,7 +24,7 @@ Before you begin, ensure you have the following prerequisites:
 
 To set up the required infrastructure, follow these steps:
 
-1. Run the script `./infrastructure/deploy.sh`.
+1. Run the script `./infrastructure/deploy.sh --run-ec2`.
 
 This script performs the following actions:
    - Creates an SSH key pair and saves it as `FlowifyKeyPair.pem` in the same folder.
@@ -33,7 +33,7 @@ This script performs the following actions:
 
 # Removing Infrastructure
 
-To remove the infrastructure, run the cleanup function from the script.
+To remove the infrastructure, run the cleanup function from the script `./infrastructure/deploy.sh --cleanup-ec2`.
 
 # Accessing the EC2 Instance
 
@@ -63,6 +63,7 @@ To access the EC2 instance, follow these steps:
 5. Inside the `hackathon-ai` folder, execute the following command to start all the services:
 
     ```bash
+    git pull
     ./scripts/run-service-local.sh --internal
     ```
 
