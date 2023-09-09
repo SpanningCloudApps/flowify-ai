@@ -12,13 +12,14 @@ where 'XXX' is a version number such as '001' (ex: ```V001__index.sql```, ```V00
 the corresponding database.
 
 ### Migration
+
 To execute a migration, after the project is build, from <AI_HOME> run:
 ```
-./scripts/run-db-migration.sh
+${AI_HOME}/scripts/run-db-migration.sh
 ```
 
 If you need to change database configuration, specify a file path:
 
 ```
-./scripts/run-db-migration.sh ${PATH_TO_FILE}
+${AI_HOME}/scripts/run-db-migration.sh ${PATH_TO_FILE}
 ```
