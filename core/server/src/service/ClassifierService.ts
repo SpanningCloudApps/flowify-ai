@@ -37,9 +37,9 @@ export class ClassifierService {
 
     logger.info(`Data to classify: ${JSON.stringify(classificationData)}`);
 
-    const result = await aiContext
-      .withAIStrategy(config.has('ai.mode') ? config.get('ai.mode') : AIMode.OPENAI)
-      .categorize(classificationData);
+    const result =
+      await (aiContext.withAIStrategy(config.has('ai.mode') ? config.get('ai.mode') : AIMode.OPENAI))
+        .categorize(classificationData);
 
     return {
       workflowName: result.workflowName || Workflow.UNKNOWN,
