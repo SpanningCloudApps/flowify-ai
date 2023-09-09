@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+        "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
+        "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+
+<module name="Checker">
+  <property name="charset" value="UTF-8"/>
+  <property name="severity" value="error"/>
+  <property name="fileExtensions" value="java, properties, xml"/>
+
+  <!-- Checks for whitespace -->
+  <module name="FileTabCharacter">
+    <property name="eachLine" value="true"/>
+  </module>
+
+  <module name="LineLength">
+    <property name="max" value="120"/>
+    <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
+    <property name="severity" value="warning"/>
+  </module>
+
+  <module name="SuppressWarningsFilter" />
+
+  <module name="TreeWalker">
+
+    <module name="SuppressWarningsHolder" />
+
+    <module name="FinalLocalVariable"/>
+    <module name="FinalParameters">
+      <property name="tokens" value="METHOD_DEF, CTOR_DEF, LITERAL_CATCH, FOR_EACH_CLAUSE"/>
+    </module>
+
+    <!-- Javadoc -->
+    <module name="JavadocType">
+      <property name="severity" value="warning"/>
+    </module>
+    <module name="JavadocMethod">
+      <property name="allowMissingReturnTag" value="true"/> <!-- Sometimes its just overkill -->
+      <property name="allowMissingParamTags" value="true"/> <!-- Sometimes its just overkill -->
+      <property name="tokens" value="METHOD_DEF"/> <!-- Constructors don't always need Javadoc -->
+      <property name="severity" value="warning"/>
+    </module>
+    <module name="JavadocStyle">
+      <property name="severity" value="warning"/>
+    </module>
+
+    <!-- Formatting -->
+    <module name="MethodParamPad"/>
+    <module name="EqualsAvoidNull"/>
+    <module name="NoWhitespaceAfter"/>
+    <module name="NoWhitespaceBefore"/>
+    <module name="ParenPad"/>
+    <module name="TypecastParenPad">
+      <property name="option" value="nospace"/>
+    </module>
+    <module name="WhitespaceAfter">
+      <property name="tokens" value="COMMA, SEMI"/> <!-- not typecasts -->
+    </module>
+    <module name="WhitespaceAround">
+      <property name="allowEmptyConstructors" value="true"/>
+      <property name="allowEmptyMethods" value="true"/>
+      <property name="allowEmptyTypes" value="true"/>
+      <property name="allowEmptyLoops" value="true"/>
+      <property name="allowEmptyLambdas" value="true"/>
+      <property name="tokens"
+                value="ASSIGN, BAND, BAND_ASSIGN, BOR, BOR_ASSIGN, BSR, BSR_ASSIGN, BXOR, BXOR_ASSIGN, COLON, DIV, DIV_ASSIGN, DO_WHILE, EQUAL, GE, GT, LAMBDA, LAND, LCURLY, LE, LITERAL_CATCH, LITERAL_DO, LITERAL_ELSE, LITERAL_FINALLY, LITERAL_FOR, LITERAL_IF, LITERAL_RETURN, LITERAL_SWITCH, LITERAL_SYNCHRONIZED, LITERAL_TRY, LITERAL_WHILE, LOR, LT, MINUS, MINUS_ASSIGN, MOD, MOD_ASSIGN, NOT_EQUAL, PLUS, PLUS_ASSIGN, QUESTION, RCURLY, SL, SLIST, SL_ASSIGN, SR, SR_ASSIGN, STAR_ASSIGN, LITERAL_ASSERT, TYPE_EXTENSION_AND"/>
+    </module>
+    <module name="GenericWhitespace"/>
+    <module name="ModifierOrder"/>
+    <module name="EmptyBlock">
+      <!-- Put a comment in it if you need one explaining why -->
+      <property name="option" value="text"/>
+    </module>
+    <module name="LeftCurly"/>
+    <module name="RightCurly"/>
+    <module name="EmptyStatement"/>
+    <module name="UpperEll"/> <!-- Lowercase l is hard to read -->
+    <module name="ArrayTypeStyle"/>
+
+    <!-- Naming conventions -->
+    <module name="PackageName">
+      <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]*)*$"/>
+    </module>
+    <module name="TypeName"/>
+    <module name="ConstantName">
+      <!-- Allow "log". There might be other non-constant static finals but they should be rare enough we can just list them
+		here when they come up. -->
+      <property name="format" value="^([A-Z][A-Z0-9]*(_[A-Z0-9]+)*|log)$"/>
+    </module>
+    <module name="MemberName"/>
+    <module name="LocalFinalVariableName"/>
+    <module name="LocalVariableName"/>
+    <module name="ParameterName"/>
+    <module name="StaticVariableName"/>
+    <module name="UnnecessaryParentheses"/>
+    <module name="PackageDeclaration"/>
+
+    <!-- Import -->
+    <module name="AvoidStarImport"/>
+    <module name="IllegalImport"/>
+    <module name="RedundantImport"/>
+    <module name="UnusedImports"/>
+    <module name="ImportOrder">
+      <property name="groups" value="java,/^javax?\./,*"/>
+      <property name="ordered" value="true"/>
+      <property name="separated" value="true"/>
+      <property name="option" value="bottom"/>
+      <property name="sortStaticImportsAlphabetically" value="true"/>
+      <property name="severity" value="warning"/>
+    </module>
+
+    <module name="Indentation">
+      <property name="basicOffset" value="2"/>
+      <property name="braceAdjustment" value="0"/>
+      <property name="caseIndent" value="2"/>
+      <property name="throwsIndent" value="4"/>
+      <property name="lineWrappingIndentation" value="2"/>
+      <property name="arrayInitIndent" value="2"/>
+    </module>
+
+    <!-- Common coding problems/opinionates stuff -->
+    <module name="CovariantEquals"/>
+    <module name="EqualsHashCode"/>
+    <module name="InnerAssignment"/>
+    <module name="NoFinalizer"/>
+    <module name="ModifiedControlVariable"/>
+    <module name="SimplifyBooleanExpression"/>
+    <module name="SimplifyBooleanReturn"/>
+    <module name="StringLiteralEquality"/>
+    <module name="SuperClone"/>
+    <module name="SuperFinalize"/>
+    <module name="ExplicitInitialization"/> <!-- May as well let Java do what its going to do -->
+    <module name="DefaultComesLast"/>
+    <module name="NestedForDepth">
+      <property name="max" value="2"/>
+    </module>
+    <module name="NestedIfDepth">
+      <property name="max" value="3"/>
+    </module>
+    <module name="NestedTryDepth">
+      <property name="max" value="3"/>
+    </module>
+    <module name="MultipleVariableDeclarations"/>
+    <module name="InnerTypeLast"/>
+    <module name="HideUtilityClassConstructor"/>
+    <module name="MutableException"/>
+    <module name="OneStatementPerLine"/>
+  </module>
+
+  <!-- More formatting stuff that can't be in TreeWalker -->
+  <module name="NewlineAtEndOfFile"/>
+  <module name="RegexpSingleline">
+    <property name="format" value="[ \t]+$"/>
+    <property name="message" value="Line has trailing spaces."/>
+  </module>
+</module>
