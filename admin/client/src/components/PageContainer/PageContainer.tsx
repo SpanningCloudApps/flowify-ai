@@ -1,8 +1,6 @@
-import React, { FC, useCallback } from 'react';
-import { useHistory } from 'react-router';
-import { Tooltip, Typography } from 'antd';
+import { FC, useCallback } from 'react';
+import { Typography } from 'antd';
 import { AxiosError } from 'axios';
-import { LeftCircleOutlined } from '@ant-design/icons';
 
 import { ErrorBoundary } from '../ErrorBoundary';
 import style from './style.module.scss';
@@ -19,23 +17,7 @@ interface PageContainerProps {
   error?: AxiosError | null
 }
 
-const PageContainer: FC<PageContainerProps> = ({ title, backButtonLabel, backHash, error = null, children }) => {
-  const history = useHistory();
-
-  const goBack = useCallback(() => {
-    if (backHash) {
-      history.push(backHash);
-    }
-  }, [backHash]);
-
-  const backButton = backHash && (
-    <Tooltip title={backButtonLabel}>
-      <LeftCircleOutlined
-        onClick={goBack}
-        className={style.page__backButton}
-      />
-    </Tooltip>
-  );
+const PageContainer: FC<PageContainerProps> = ({ title, error = null, children }) => {
 
   const getTemplate = useCallback(() => {
     if (error && error.response && error.response.status === 404) {
@@ -48,17 +30,16 @@ const PageContainer: FC<PageContainerProps> = ({ title, backButtonLabel, backHas
   }, [error, children]);
 
   return (
-    <ErrorBoundary>
-      <div className={style.page__wrap}>
-        <div className={style.page__header}>
-          {backButton}
-          <Text className={style.page__title}>
-            {title}
-          </Text>
+      <ErrorBoundary>
+        <div className={style.page__wrap}>
+          <div className={style.page__header}>
+            <Text className={style.page__title}>
+              {title}
+            </Text>
+          </div>
+          {getTemplate()}
         </div>
-        {getTemplate()}
-      </div>
-    </ErrorBoundary>
+      </ErrorBoundary>
 
   );
 };

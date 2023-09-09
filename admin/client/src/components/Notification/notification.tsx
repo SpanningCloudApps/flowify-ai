@@ -1,10 +1,9 @@
-import { notification, Space, Typography } from 'antd';
+import { notification, Typography } from 'antd';
 import { intl } from '../../intl';
-import { CheckOutlined, CopyOutlined } from '@ant-design/icons';
 import { getErrorMessage, isJsonString } from '../../utils/helper';
 import './styles.scss';
 
-const { Text, Link } = Typography;
+const { Text } = Typography;
 
 const defaultNotificationProps = {
   className: 'custom-notification'
@@ -13,24 +12,12 @@ const defaultNotificationProps = {
 const SUCCESS_NOTIFICATION_DURATION = 5; // seconds
 const ERROR_NOTIFICATION_DURATION = 30; // seconds
 
-const CopyNotificationBtn = <Space direction="horizontal" size="small" style={{ margin: 0 }}>
-  <Link>{intl.formatMessage({ id: 'NOTIFICATION_COPY_MESSAGE' })}</Link>
-  <CopyOutlined />
-</Space>;
-
-const CopiedNotificationBtn = <Space direction="horizontal" size="small">
-  <Link>{intl.formatMessage({ id: 'NOTIFICATION_COPY_MESSAGE' })}</Link>
-  <CheckOutlined />
-</Space>;
-
 const getNotificationDescription = (desc: string, isJson: boolean) => {
   return desc ? (<div>
     <Text
-      style={{ marginLeft: -4 }}
-      copyable={{
-        text: desc,
-        icon: [CopyNotificationBtn, CopiedNotificationBtn]
-      }} />
+        style={{ marginLeft: -4 }}
+        copyable
+    />
     <div className="custom-notification-description">
       {isJson ? <pre>
       <code>

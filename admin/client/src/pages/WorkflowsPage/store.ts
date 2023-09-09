@@ -4,7 +4,6 @@ import { AxiosError } from 'axios';
 import workflowsService from '../../services/workflowsService';
 import { PAGE_ENTITIES_LIMIT } from '../../constants/constants';
 import { showErrorNotification } from '../../components/Notification';
-import { intl } from '../../intl';
 
 export const initialState: any = {
   workflows: [],
@@ -51,7 +50,7 @@ export const useWorkflowsStore = create<any>((set, get) => ({
   },
 
   addWorkflow: async (props: any): Promise<void> => {
-    const { workflowName, description, id } = props;
+    const { workflowName, description } = props;
     const reqParams = {
       workflowName,
       description
