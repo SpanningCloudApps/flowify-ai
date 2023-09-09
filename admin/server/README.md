@@ -2,8 +2,9 @@
 
 **Admin Server is a server for Admin UI.**
 
-## Authors
-Ruslan Zianevich
+## Maintainers
+
+- [Ruslan Zianevich](https://github.com/ruslanzianevich)
 
 ## Run Locally
 Before start need to set **AI_HOME** env to absolute path of hackathon AI project.
