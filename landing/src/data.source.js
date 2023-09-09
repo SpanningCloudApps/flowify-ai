@@ -18,6 +18,7 @@ import photo_alina from './assets/img/team/alina_g.jpeg';
 import photo_andrey from './assets/img/team/andrey_k.jpeg';
 
 export const PRODUCT_LINK = 'product';
+export const CONNECT_LINK = 'connect';
 export const ABOUT_US_LINK = 'about-us';
 export const FEATURES_LINK = 'features';
 export const ROADMAP_LINK = 'roadmap';
@@ -134,19 +135,19 @@ export const Nav00DataSource = {
     className: 'header0-menu',
     children: [
       {
-        name: 'item0',
-        className: 'header0-item',
-        children: {
-          href: `#${PRODUCT_LINK}`,
-          children: [{ children: 'Product', name: 'text' }]
-        }
-      },
-      {
         name: 'item1',
         className: 'header0-item',
         children: {
           href: `#${ABOUT_US_LINK}`,
           children: [{ children: 'About Us', name: 'text' }]
+        }
+      },
+      {
+        name: 'item0',
+        className: 'header0-item',
+        children: {
+          href: `#${PRODUCT_LINK}`,
+          children: [{ children: 'Product', name: 'text' }]
         }
       },
       {
@@ -192,7 +193,7 @@ export const Banner00DataSource = {
   button: {
     className: 'banner0-button',
     children: 'Connect',
-    href: `#${PRODUCT_LINK}`
+    href: `#${CONNECT_LINK}`
   }
 };
 
