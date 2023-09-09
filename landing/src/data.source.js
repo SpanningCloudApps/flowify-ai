@@ -19,20 +19,22 @@ export const ROADMAP_LINK = 'roadmap';
 export const OUR_TEAM_LINK = 'our-team';
 
 const product1 = {
-  title: 'Client',
+  title: 'AI-driven Workflow',
   imageLink: 'https://gw.alipayobjects.com/mdn/rms_ae7ad9/afts/img/A*OnyWT4Nsxy0AAAAAAAAAAABjARQnAQ',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum sapien a velit sodales, vitae interdum risus finibus. Morbi feugiat dui nec nisi hendrerit, id finibus diam dictum. Suspendisse potenti. Etiam quis gravida mi.',
-  subTitle: 'Generated 5 paragraphs',
-  buttonText: 'Let\'s Try',
+  content: "Are you ready to streamline your data processing activities and work smarter, not harder? Flowify is here to transform the way you handle workflows with its powerful and intuitive AI-driven workflows. It serves as the central hub for managing data processing activities, ensuring a seamless and organized workflow. With Flowify, you\'re not just managing workflows; you\'re optimizing them for peak efficiency. Embrace the future of AI-driven workflow management and elevate your data processing to new heights.",
+  subTitle: 'When Flowify works hard...',
+  buttonText: 'To be delivered soon...',
   buttonLink: '#'
 };
 
 const product2 = {
-  title: 'Admin',
+  title: 'Administration Panel',
   imageLink: 'https://gw.alipayobjects.com/mdn/rms_ae7ad9/afts/img/A*OnyWT4Nsxy0AAAAAAAAAAABjARQnAQ',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum sapien a velit sodales, vitae interdum risus finibus. Morbi feugiat dui nec nisi hendrerit, id finibus diam dictum. Suspendisse potenti. Etiam quis gravida mi.',
-  subTitle: 'Generated 5 paragraphs',
-  buttonText: 'Let\'s Try',
+  content: 'Our intuitive web-based admin console makes ticket workflow management a piece of cake. No more headaches or hassles; just a smooth, streamlined process.'
+    + 'The Data Workflow Admin Web Console is your secret weapon for simplifying data management. It\'s designed to empower administrators like you with a suite of tools to create, update, and monitor data workflows effortlessly.'
+    + 'With Flowify, you\'ll never miss a beat. Keep your data handling organized and efficient, ensuring that every issue is addressed promptly.',
+  subTitle: '... you work smart',
+  buttonText: 'To be delivered soon...',
   buttonLink: '#'
 };
 
@@ -44,9 +46,9 @@ const demoSection = {
 };
 
 const aboutUsSection = {
-  title: 'About Us',
-  content: 'We super cool team of poooper enginners',
-  smallContent: 'We work smart!'
+  title: 'Effortless Data Workflow Management',
+  content: 'Welcome to Flowify, where data management becomes a breeze with our user-friendly administration panel.',
+  smallContent: 'Say goodbye to the complexities of data workflows and hello to seamless, efficient operations.'
 };
 
 const featuresSection = {
