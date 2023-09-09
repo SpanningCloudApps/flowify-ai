@@ -25,11 +25,13 @@ class Content8 extends React.PureComponent {
     return (
       <TweenOne component={Col} animation={liAnim} key={i.toString()} {...item}>
         <div {...children}>
-          <div className="image-wrapper" {...children.img}>
-            <img src={children.img.children} alt="img" />
-          </div>
-          <h2 {...children.title}>{children.title.children}</h2>
-          <div {...children.content}>{children.content.children}</div>
+          <a href={children.link} target="_blank">
+            <div className="image-wrapper" {...children.img}>
+              <img src={children.img.children} alt="img" />
+            </div>
+            <h2 {...children.title}>{children.title.children}</h2>
+            <div {...children.content}>{children.content.children}</div>
+          </a>
         </div>
       </TweenOne>
     );
