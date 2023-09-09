@@ -1,4 +1,4 @@
-# [FLOWIFY.CO](http://flowify-ai.s3-website-us-east-1.amazonaws.com/)
+# [Flowify.co](http://flowify-ai.s3-website-us-east-1.amazonaws.com)
 
 8/9/2023-9/9/2023
 
@@ -10,34 +10,45 @@
 - **core/server/ai**: [Nikita Gurets](https://github.com/StepanBURNdera)
 - **core/client**: [Anton Bachykin](https://github.com/DenyingTheTruth)
 - **core/server**: [Alina Glumova](https://github.com/aglumova)
+- **landing**: [Anton Bachykin](https://github.com/DenyingTheTruth)
 
-Open to [CONTRIBUTING](.github%2FCONTRIBUTING.md)
+Open to [CONTRIBUTING](.github/CONTRIBUTING.md)
 
 # Modules
 
 ## Core
 
-- [Worker CLI](worker-cli%2FREADME.md)
-- [Communication Hub](core%2Fserver%2FREADME.md)
-- [Communication Hub AI](core%2Fserver%2Fsrc%2Fai%2FREADME.md)
-- [Flowify ChatBot](core%2Fclient%2FREADME.md)
+- [Worker CLI](worker-cli/README.md)
+- [Communication Hub](core/server/README.md)
+- [Communication Hub AI](core/server/src/ai/README.md)
+- [Flowify ChatBot](core/client/README.md)
+
+#### Client Chat Bot UI
+  ![client_1_step.png](docs/img/client_1_step.png)
+  ![client_2_step.png](docs/img/client_2_step.png)
+  ![client_chat_bot.png](docs/img/client_chat_bot.png)
 
 ## Administration Panel
 
-- [Server](admin%2Fserver%2FREADME.md)
-- [Client](admin%2Fclient%2FREADME.md)
+- [Server](admin/server/README.md)
+- [Client](admin/client/README.md)
+
+#### Admin Client UI
+
+![admin_tickets_page.png](docs/img/admin_tickets_page.png)
+![admin_classify_ticket.png](docs/img/admin_classify_ticket.png)
 
 ## Database Migration Tool
 
-- [DB Migration](db%2FREADME.md)
+- [DB Migration](db/README.md)
 
 # High Level architecture
 
-![high_level_architecture.png](docs%2Fimg%2Fhigh_level_architecture.png)
+![high_level_architecture.png](docs/img/high_level_architecture.png)
 
 # DB Structure
 
-![db_structure.png](docs%2Fimg%2Fdb_structure.png)
+![db_structure.png](docs/img/db_structure.png)
 
 # Billing Model
 
