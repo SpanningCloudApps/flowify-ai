@@ -5,17 +5,20 @@
 /* eslint no-undef: 0 */
 /* eslint arrow-parens: 0 */
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { enquireScreen } from 'enquire-js';
 
 import Nav0 from './Nav0';
 import Banner0 from './Banner0';
 import Pricing0 from './Pricing0';
+import Pricing01 from './Pricing01';
 import Content4 from './Content4';
 import Content13 from './Content13';
 import Content3 from './Content3';
 import Content9 from './Content9';
 import Teams4 from './Teams4';
 import Footer2 from './Footer2';
+import 'antd/dist/antd.css';
 
 import {
   Nav00DataSource,
@@ -27,11 +30,11 @@ import {
   Content30DataSource,
   Content90DataSource,
   Teams40DataSource,
-  Footer20DataSource,
+  Footer20DataSource
 } from './data.source';
 import './less/antMotionStyle.less';
 
-let isMobile;
+let isMobile = false;
 enquireScreen((b) => {
   isMobile = b;
 });
@@ -43,7 +46,7 @@ export default class Home extends React.Component {
     super(props);
     this.state = {
       isMobile,
-      show: !location.port, // 如果不是 dva 2.0 请删除
+      show: !location.port // 如果不是 dva 2.0 请删除
     };
   }
 
@@ -58,7 +61,7 @@ export default class Home extends React.Component {
       // 样式 build 时间在 200-300ms 之间;
       setTimeout(() => {
         this.setState({
-          show: true,
+          show: true
         });
       }, 500);
     }
@@ -85,7 +88,7 @@ export default class Home extends React.Component {
         dataSource={Pricing00DataSource}
         isMobile={this.state.isMobile}
       />,
-      <Pricing0
+      <Pricing01
         id="Pricing0_1"
         key="Pricing0_1"
         dataSource={Pricing01DataSource}
@@ -126,7 +129,7 @@ export default class Home extends React.Component {
         key="Footer2_0"
         dataSource={Footer20DataSource}
         isMobile={this.state.isMobile}
-      />,
+      />
     ];
     return (
       <div
@@ -142,3 +145,8 @@ export default class Home extends React.Component {
     );
   }
 }
+
+ReactDOM.render(
+  <Home />,
+  document.getElementById('root')
+);
