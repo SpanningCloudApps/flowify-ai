@@ -32,6 +32,10 @@ public class WorkflowService {
     return workflowRepository.get(id);
   }
 
+  public Workflow getByName(final String workflowName) {
+    return workflowRepository.getByName(workflowName);
+  }
+
   public void delete(final long id) {
     workflowRepository.delete(id);
   }
