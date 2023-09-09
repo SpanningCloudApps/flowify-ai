@@ -5,6 +5,7 @@ valid_options=(
   "--setup-infrastructure"
   "--worker-cli"
   "--server"
+  "--admin-client"
   "--init-dbs"
   "--run-db-migrations"
   "--internal"
@@ -46,6 +47,7 @@ Options:
   --run-db-migrations          Run timescaledb db migrations script.
   --worker-cli                 Run worker-cli
   --server                     Run server
+  --admin-client               Run admin client
   --internal                   Runs all the previous commands in appropriate order to setup full infrastructure
 EOF
 }
@@ -74,14 +76,26 @@ function run_worker_cli() {
 
 function run_server() {
   if array_contains options "--server" || array_contains options "--internal"; then
-      echo "Run server in the doсker"
-      pushd "${AI_HOME}/core/server"
-        ./script/build-image.sh server
-      popd
-      pushd "${AI_HOME}"
-        docker-compose up -d server
-      popd
-    fi
+    echo "Run server in the doсker"
+    pushd "${AI_HOME}/core/server"
+      ./script/build-image.sh server
+    popd
+    pushd "${AI_HOME}"
+      docker-compose up -d server
+    popd
+  fi
+}
+
+function run_admin_client() {
+  if array_contains options "--admin-client" || array_contains options "--internal"; then
+    echo "Run admin-client in the doсker"
+    pushd "${AI_HOME}/admin/client"
+      ./scripts/development/run-service-local.sh --build-image
+    popd
+    pushd "${AI_HOME}"
+      docker-compose up -d admin-client
+    popd
+  fi
 }
 
 function init_dbs() {
@@ -150,6 +164,7 @@ function main() {
   run_db_migrations
   run_worker_cli
   run_server
+  run_admin_client
 }
 
 main "${@}"

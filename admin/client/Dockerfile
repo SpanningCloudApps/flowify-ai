@@ -1,7 +1,8 @@
 FROM node:18.17.1-alpine as build
+LABEL stage=build
 WORKDIR /app
 ENV PATH ./node_modules/.bin:$PATH
-COPY package.json tsconfig.json tsconfig.node.json package-lock.json ./
+COPY package.json tsconfig.json tsconfig.node.json package-lock.json index.html ./
 RUN npm install
 COPY ./src ./src
 RUN ["npm", "run", "build"]
@@ -11,4 +12,4 @@ COPY ./nginx /etc/nginx/templates
 COPY --from=build ./app/dist /usr/share/nginx/html
 RUN touch /var/run/nginx.pid \
     && chown -R nginx: /usr/share/nginx/html /etc/nginx/conf.d /var/cache/nginx /var/log/nginx /var/run/nginx.pid
-EXPOSE 80
+EXPOSE 8080
