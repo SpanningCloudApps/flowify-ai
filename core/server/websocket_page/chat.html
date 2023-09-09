@@ -111,13 +111,14 @@
       event.preventDefault();
       const data = new FormData(event.currentTarget);
       const message = data.get('chat-message');
+      const existingWorkflow = workflow || {};
       if (message && connecting === false && channel) {
-        if (message.toLowerCase().includes('yes') && workflow?.workflowName && !workflow?.workflowExecutionId) {
+        if (message.toLowerCase().includes('yes') && existingWorkflow.workflowName && !existingWorkflow.workflowExecutionId) {
           channel(JSON.stringify({
             type: 'start',
             actor: email,
             data: {
-              workflowName: workflow.workflowName
+              workflowName: existingWorkflow.workflowName
             }
           }));
         } else {
@@ -126,7 +127,7 @@
             actor: email,
             data: {
               response: message,
-              workflowExecutionId: workflow.workflowExecutionId,
+              workflowExecutionId: existingWorkflow.workflowExecutionId,
               responseType: workflow.responseType
             }
           }));
