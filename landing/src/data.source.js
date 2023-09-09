@@ -182,7 +182,7 @@ export const Banner00DataSource = {
   },
   content: {
     className: 'banner0-content',
-    children: 'Smart Workflow-Driven Classification System '
+    children: 'AI-driven Workflow Classification System '
   },
   button: {
     className: 'banner0-button',
