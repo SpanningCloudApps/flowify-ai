@@ -1,5 +1,4 @@
-# Authors
+# Maintainers
 
-client: Anton Bachykin
-
-server: Ruslan Zianevich
+- **admin/client:** [Anton Bachykin](https://github.com/DenyingTheTruth)
+- **admin/server:** [Ruslan Zianevich](https://github.com/ruslanzianevich)

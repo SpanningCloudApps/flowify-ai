@@ -2,8 +2,9 @@
 
 **Admin Server is a server for Admin web console UI.**
 
-## Authors
-Ruslan Zianevich
+## Maintainers
+
+- [Ruslan Zianevich](https://github.com/ruslanzianevich)
 
 The Admin Web Console Server is the backend component that powers the admin web console for managing ticket workflows.
 

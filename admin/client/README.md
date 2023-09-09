@@ -1,6 +1,6 @@
-# Authors
+# Maintainers
 
-Anton Bachykin
+- [Anton Bachykin](https://github.com/DenyingTheTruth)
 
 # Ticket Workflow Admin Web Console
 
