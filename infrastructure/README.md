@@ -67,3 +67,8 @@ To access the EC2 instance, follow these steps:
     ```
 
 This setup will help you configure AWS credentials, deploy and remove infrastructure, and access the EC2 instance for running your services.
+
+# Deploy landing
+1. Go to `${AI_HOME}/infrastructure`
+2. Run `./deploy.sh --create-s3` to create s3 bucket for frontend
+3. Run `./deploy.sh --deploy-landing` to deploy landing page

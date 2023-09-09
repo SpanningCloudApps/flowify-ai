@@ -8,6 +8,53 @@ instance_type="t2.medium"
 subnet_id="subnet-056d6c9dbb2b8f49b"
 instance_name="FlowifyInstance1"
 security_group_id="sg-0624ca135de0d8548"
+bucket_name="flowify-ai"
+
+valid_options=(
+  "--help"
+  "--deploy-landing"
+  "--create-s3"
+  "--cleanup-ec2"
+  "--run-ec2"
+)
+
+function array_contains() {
+  local array="$1[@]"
+  local seeking=$2
+  local in=1
+  for element in "${!array}"; do
+    if [[ $seeking == $element* ]]; then
+      return 0
+    fi
+  done
+  return 1
+}
+
+function check_options_are_valid() {
+  for option in "${options[@]}"; do
+    if ! array_contains valid_options ${option}; then
+      echo "Command does not contain option: ${option}"
+      get_help_message
+      exit
+    fi
+  done
+}
+
+function get_help_message() {
+  cat <<EOF
+Usage:
+  ./run-service-local.sh - prepare the local environment.
+  ./run-service-local.sh [options]
+
+Options:
+  --help                       Prints this message
+
+  --deploy-landing             Deploys frontend landing page
+  --create-s3                  Creates s3 bucket that server frontend
+  --run-ec2                    Creates ec2 instance and runs our service
+  --cleanup-ec2                Removes created ec2 instance
+EOF
+}
 
 function run_ec2() {
   pushd "${AI_HOME}/infrastructure"
@@ -45,14 +92,6 @@ function run_ec2() {
   echo "EC2 instance is being created. Please check the AWS Management Console for the status."
 
   popd
-}
-
-function pull_code() {
-  echo 'Pulling code'
-}
-
-function run_services() {
-  echo 'Running services'
 }
 
 function cleanup() {
@@ -132,12 +171,22 @@ function deploy_landing() {
 }
 
 function main() {
-#  run_ec2
-#  pull_code
-#  run_services
-#  cleanup
-  create_s3
-  deploy_landing
+  options=("$@")
+  if array_contains options "--run-ec2"; then
+    run_ec2
+  fi
+
+  if array_contains options "--cleanup-ec2"; then
+    cleanup
+  fi
+
+  if array_contains options "--create-s3"; then
+    create_s3
+  fi
+
+  if array_contains options "--deploy-landing"; then
+    deploy_landing
+  fi
 }
 
 main "${@}"
