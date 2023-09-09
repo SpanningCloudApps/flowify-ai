@@ -6,35 +6,16 @@
 
 - [Ruslan Zianevich](https://github.com/ruslanzianevich)
 
-The Admin Web Console Server is the backend component that powers the admin web console for managing ticket workflows.
-
-## Table of Contents
-
-- [About](#about)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Running the Server](#running-the-server)
-  - [Running Locally](#running-locally)
-  - [Running in Docker](#running-in-docker)
-- [Usage](#usage)
-- [Environment Variables](#environment-variables)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
-
-## About
-
-The Admin Server is a backend component designed for the Admin web console UI. It provides functionality for managing ticket workflows.
-
-## Getting Started
-
-To set up and run the Admin Web Console Server, follow these instructions:
+The Admin Web Console Server is the backend component for the admin web console for managing ticket workflows.
 
 ### Prerequisites
-Before you begin, ensure you have set the **AI_HOME** environment variable to the absolute path of the `hackathon AI` project.
 
-Up postgresql db using script from root project folder ():
+Make sure that AI_HOME environment variable is set to absolute path of `hackathon AI` project:
+```bash
+export AI_HOME=/absolute_path_to_project
+```
+
+Up postgresql db using script from root project folder:
 ```bash
 cd ${AI_HOME}
 ./scripts/run-service-local --db-init

@@ -111,13 +111,14 @@
       event.preventDefault();
       const data = new FormData(event.currentTarget);
       const message = data.get('chat-message');
+      const existingWorkflow = workflow || {};
       if (message && connecting === false && channel) {
-        if (message.toLowerCase().includes('yes') && workflow?.workflowName && !workflow?.workflowExecutionId) {
+        if (message.toLowerCase().includes('yes') && existingWorkflow.workflowName && !existingWorkflow.workflowExecutionId) {
           channel(JSON.stringify({
             type: 'start',
             actor: email,
             data: {
-              workflowName: workflow.workflowName
+              workflowName: existingWorkflow.workflowName
             }
           }));
         } else {
@@ -126,7 +127,7 @@
             actor: email,
             data: {
               response: message,
-              workflowExecutionId: workflow.workflowExecutionId,
+              workflowExecutionId: existingWorkflow.workflowExecutionId,
               responseType: workflow.responseType
             }
           }));
@@ -170,6 +171,11 @@
         return inChannel;
       });
     }, [setChannel]);
+
+    const backToTicket = React.useCallback(() => {
+      setWorkflow(null);
+      setActiveStep(1);
+    });
 
     function handleNext() {
       if (activeStep === 0) {
@@ -318,6 +324,14 @@
                 sx={{ mt: 3, mb: 2 }}
               >
                 {connecting ? 'Connecting...' : !messages || messages.length === 0 ? 'Processing...' : 'Send'}
+              </Button>
+              <Button fullWidth
+                      color="error"
+                      variant="contained"
+                      onClick={backToTicket}
+                      sx={{ mt: 3, mb: 2 }}
+              >
+                Back
               </Button>
               <Grid container alignItems="center" justifyContent="center">
                 <Grid item>{status}</Grid>
