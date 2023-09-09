@@ -1,4 +1,4 @@
-import React, { FC, useCallback } from 'react';
+import { FC, useCallback } from 'react';
 import { Result, Button } from 'antd';
 import { useIntl } from 'react-intl';
 
@@ -10,11 +10,11 @@ export const DefaultFallback: FC = () => {
   }, []);
 
   return (
-    <Result
-      status="500"
-      title={'Oops!'}
-      subTitle={formatMessage({ id: 'SOMETHING_WENT_WRONG' })}
-      extra={<Button type="primary" onClick={handleReloadPage}>{formatMessage({ id: 'RELOAD_PAGE' })}</Button>}
-    />
+      <Result
+          status="500"
+          title={'Oops!'}
+          subTitle={formatMessage({ id: 'SOMETHING_WENT_WRONG' })}
+          extra={<Button type="primary" onClick={handleReloadPage}>{formatMessage({ id: 'RELOAD_PAGE' })}</Button>}
+      />
   );
 };

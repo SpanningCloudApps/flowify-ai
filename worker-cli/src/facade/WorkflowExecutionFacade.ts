@@ -39,6 +39,12 @@ export default class WorkflowExecutionFacade {
     const { workflowName, actor } = message;
     const workflow: any = await this.workflowService.getWorkflow(workflowName);
     const workflowSteps: any[] = await this.workflowStepService.getWorkflowSteps(workflowName);
+
+    if (!workflowSteps.length) {
+      logger.info(`Workflow doesn't has steps. Workflow=${workflowName}`);
+      return;
+    }
+
     const workflowExecution = await this.executedWorkflowService.createExecutedWorkflow(workflow, workflowSteps[0].type, actor);
     let nextStep = await this.executedWorkflowStepService.getNextStep(workflowExecution.id!, workflowSteps);
     let nextExecutor = this.workflowStepExecutor.getExecutor(nextStep.type);
