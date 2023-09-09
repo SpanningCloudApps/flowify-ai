@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
   <!-- Icons to support Material Design -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABH9JREFUWEe9V7lKLFEQre6ecd/NTdw38BcE8R/8EEVQBDVQxAWXzMDAQFTMjEQ0EAQFIzHxAwzEwH13+nHuzLlW3+72PZMnFD3T0/Y5darq3nM93/dzIiKe5+ESueIew/d9+5nP8vkwDM3/4i+Xywm+/xR8Fs94IOAV3qgBNTDAdfA3i+qAg4QOALnE8C9hGIaWgAtOwCAIRAfu47tWofAyA/L19WXB8ZlBQloZcPCCIEAJjAgIDZzJZCQp+AxJMEMS+Pz8FB0gge8JJPIEgE4CyA4A2WzWRlFRkSB4D6TYE8yemX58fAji/f3dgPKKe1qNghJRAi44QEtKSqS4uNgG7oGALoPOHEBvb282QADfcR+ESCJGgLXFi5lxaWmp6CAZKEEV8CJKDDDE6+uriZeXF/uZvzkqhF4mkzElIAG8nJmXlZVJeXm5idnZWenu7raNn9SEerweHx+lv79fnp+fDQmqwt4oTMU3AWSOrEAAmSJzAFdUVEhlZaXMzc1JV1eXO3mp30Ggt7dXnp6eLAmooEthxhAK+L6PZjQEkL0LXlVVJVNTU9LR0fErAn19fZYAygEV2JQoRYwAskfDQXpmDvCamhoZHx+Xtra2XxFACaAEVCABTkmMAOUHAUgP2QleW1sro6Oj0tLSEiFweXkpNzc3prt196PmAF5bW4sRSFQgCAKUwtafBKqrqwXgdXV1Mjw8LM3NzRECe3t7AhLIDlne39+buLu7M9eHhwcTSQrYJsxms6YHWH80IAggexAAOGJoaEiampoiBPb39w0BdDoyJvjt7W2EAH7XJeCqaHogjQDASaC+vl4GBwelsbExVoLr62vTWGgwzv75+bmcnJyY7EFMjyJXxB8VQAOy/lQgiUBaR25vb8vy8rIBJwFOwH8hsLm5KYuLi6kToDal5BJoBdiEUMDtgTQFNjY2ZGFhwRLgSuisgvl1IK0HMIaYfxBAYApcAldXV6bjOYa8HhwcyM7OTqT7OX54RnmC/Er40xhyFEdGRmJjuLW1JWdnZyZTNBzIcPTQeOx+LsHudmwMCZdijqFeCQHOZhwbG5PW1taI6uvr63J6empB2fUghLEDAXcr1tYsRoBLMfYCLsVcEScnJ6W9vT1CYHV1VY6Pj43UBMdnvfDo7LUjsp7Q3YygAAhgPwA4iCCmp6els7MzQmBpaUmOjo4MoA76Ab37aZOqtu3odkzLpbdj+oH5+fmIH8BLZmZm5PDw0MrNzEFAN502qrTwhWvUkHA/oCEBOB3RysqK9PT0RBSYmJgQLMeoN90Pru6+nyC9FcE6IjgceAKqgFJACcbAwIA0NDRYO44Mdnd35eLiIuJ4dNOpNd84YhpYlcW3KdV2XJOAGiCjfSBPQHS92njS8aTYcHftirpikuBZQFtz1wlDAa5sNBn6LOCeARKyN7di5wKWgoC88nSkjScXFm23kzJPAf8moE9G7umIbpnqaALMkl3udrvT8Ulbx/fZEL8mnYb1MSztPMjV7R9l10TyBAjukkg6LWsF/nYE18f2tJ3zD4aWTENnR9X5AAAAAElFTkSuQmCC" />
   <style>
       html {
           height: 100vh;
@@ -290,6 +291,7 @@
 
     const backToTicket = React.useCallback(() => {
       setWorkflow(null);
+      setMessages([]);
       setActiveStep(1);
     });
 
