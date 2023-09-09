@@ -1,14 +1,14 @@
 {
   "name": "landing",
   "version": "1.0.0",
-  "description": "Pooper Presentation",
+  "description": "Flowify Presentation",
   "main": "index.js",
   "engines": {
     "node": "^18.0.0"
   },
   "type": "module",
   "scripts": {
-    "dev": "vite --host 127.0.0.1",
+    "start:dev": "vite --host 127.0.0.1",
     "build": "vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives",
     "ci": "npm run build"
