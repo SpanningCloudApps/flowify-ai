@@ -63,31 +63,31 @@ const aboutUsSection = {
 };
 
 const featuresSection = {
-  title: 'Features',
-  content: 'some text',
+  title: 'Features Flowify Offers Right Now',
+  content: 'At Flowify, we\'re all about delivering practical solutions for your workflow needs. Here\'s what Flowify can do for you today',
   feature1: {
-    title: 'Feature 1',
-    content: 'Some content of Feature 1'
+    title: 'AI-Driven Workflow: Seamless Intelligence On and Offline',
+    content: 'Experience the power of AI-driven workflow management like never before with our Offline (Tensorflow) and Online (OpenAI) modes. Our cutting-edge technology ensures that you stay productive and efficient, regardless of your connectivity status.'
   },
   feature2: {
-    title: 'Feature 2',
-    content: 'Some content of Feature 2'
+    title: 'Isolated Workflow Environment: Your Personal Data Fortress',
+    content: 'Our Isolated Workflow Environment is designed with one thing in mind: security and trust. This feature allows you to create a dedicated workspace where you can work exclusively with your personal data model, ensuring the utmost privacy and familiarity.'
   },
   feature3: {
-    title: 'Feature 3',
-    content: 'Some content of Feature 3. Some info about this super puper coool features.'
+    title: 'ChatBot: Your Interactive Feedback Companion',
+    content: 'Our ChatBot feature revolutionizes the way you communicate, ensuring a seamless and interactive experience for gathering feedback, classifying data, and planning future workflow runs. It impowers you to maintain a strong connection with your users, improving data quality, and ensuring that your workflows are always on point. Say hello to interactive communication and a more efficient workflow management process.'
   },
   feature4: {
-    title: 'Feature 4',
-    content: 'Some content of Feature 4'
+    title: 'Manual Reclassify with AI Reinforcement Learning: Elevate Data Classification',
+    content: 'Our Manual Reclassify with Reinforcement Learning feature empowers you to take control of your data classification process like never before. It\'s the ultimate tool for efficiently categorizing all uncategorized data flows through the power of AI-driven reinforcement learning.'
   },
   feature5: {
-    title: 'Feature 5',
-    content: 'Some content of Feature 5. Some info about this super puper coool features.'
+    title: 'Data Streamline API: Supercharge Your Workflow',
+    content: 'Our Data Streamline API is the key to unlocking lightning-fast data processing and workflow initiation. With this feature, you can seamlessly stream data through a public API, turbocharging your workflow and ensuring that you start your processes at the speed of light.'
   },
   feature6: {
-    title: 'Feature 6',
-    content: 'Some content of Feature 6. Some info about this super puper coool features.'
+    title: 'Workflow Automation Steps: The Power to Enhance Efficiency',
+    content: 'Our Workflow Automation Steps feature is your secret weapon for achieving unparalleled efficiency in your processes. It\'s designed to seamlessly identify and address data gaps, ensuring that your workflows move forward without a hitch, whether through direct chat collaboration or our intuitive Administration panel.'
   }
 };
 
