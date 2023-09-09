@@ -2,14 +2,16 @@
 
 8/9/2023-9/9/2023
 
-# Authors
+# Maintainers
 
-- **admin/client:** Anton Bachykin
-- **admin/server:** Ruslan Zianevich
-- **worker-cli**: Andrei Kozel
-- **core/ai**: Nikita Gurets
-- **core/client**: Anton Bachykin
-- **core/server**: Alina Glumova
+- **admin/client:** [Anton Bachykin](https://github.com/DenyingTheTruth)
+- **admin/server:** [Ruslan Zianevich](https://github.com/ruslanzianevich)
+- **worker-cli**: [Andrei Kozel](https://github.com/andrey-kozel)
+- **core/ai**: [Nikita Gurets](https://github.com/StepanBURNdera)
+- **core/client**: [Anton Bachykin](https://github.com/DenyingTheTruth)
+- **core/server**: [Alina Glumova](https://github.com/aglumova)
+
+Open to [CONTRIBUTING](.github%2FCONTRIBUTING.md)
 
 # Modules
 
