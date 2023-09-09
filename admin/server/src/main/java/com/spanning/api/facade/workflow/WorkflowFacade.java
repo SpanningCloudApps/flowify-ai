@@ -46,6 +46,7 @@ public class WorkflowFacade {
   public WorkflowResponseDto create(final CreateWorkflowsRequestDto requestDto) {
     final String user = userContext.getUser();
     log.info("User[{}] creating workflow , requestDto = [{}]", user, requestDto);
+
     final CreateParams createParams = workflowConverter.convert(requestDto);
     final Workflow workflow = workflowService.create(createParams);
     return workflowConverter.convertToResponseDto(workflow);

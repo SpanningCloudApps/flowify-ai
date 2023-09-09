@@ -71,7 +71,7 @@ export class OpenAIConnector {
     try {
       const ticketsList = config.get('ai.tickets');
       const messages = ticketsList
-        .map((ticket, index) => `${index++}) Request titled as ${ticket.title}: ${ticket.description}.`)
+        .map((ticket, index) => `${index+1}) Request titled as ${ticket.title}: ${ticket.description}.`)
         .join('\n');
 
       return `Please imagine you're trying to help user according to the following flow:
