@@ -7,7 +7,7 @@
 - **admin/client:** [Anton Bachykin](https://github.com/DenyingTheTruth)
 - **admin/server:** [Ruslan Zianevich](https://github.com/ruslanzianevich)
 - **worker-cli**: [Andrei Kozel](https://github.com/andrey-kozel)
-- **core/ai**: [Nikita Gurets](https://github.com/StepanBURNdera)
+- **core/server/ai**: [Nikita Gurets](https://github.com/StepanBURNdera)
 - **core/client**: [Anton Bachykin](https://github.com/DenyingTheTruth)
 - **core/server**: [Alina Glumova](https://github.com/aglumova)
 
@@ -19,6 +19,7 @@ Open to [CONTRIBUTING](.github%2FCONTRIBUTING.md)
 
 - [Worker CLI](worker-cli%2FREADME.md)
 - [Communication Hub](core%2Fserver%2FREADME.md)
+- [Communication Hub AI](core%2Fserver%2Fsrc%2Fai%2FREADME.md)
 - [Flowify ChatBot](core%2Fclient%2FREADME.md)
 
 ## Administration Panel

@@ -1,8 +1,8 @@
 # Worker CLI Documentation
 
-## Authors
+# Maintainers
 
-Andrei Kozel
+- [Andrei Kozel](https://github.com/andrey-kozel)
 
 ## Introduction
 
