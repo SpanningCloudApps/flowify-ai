@@ -39,6 +39,10 @@ Open to [CONTRIBUTING](.github%2FCONTRIBUTING.md)
 
 ![db_structure.png](docs%2Fimg%2Fdb_structure.png)
 
+# Billing Model
+
+[Billing Model](BILLIING_MODEL.md)
+
 ### Migration
 
 First run need to run:
