@@ -81,9 +81,9 @@ const WorkflowsPage: FC = () => {
               </Row>
             </Col>
             <Col>
-              <div id="scrollableTarget" className={style.domainsTable}>
+              <div id="scrollableTarget3" className={style.domainsTable}>
                 <InfinityScroll
-                    scrollableTarget="scrollableTarget"
+                    scrollableTarget="scrollableTarget3"
                     next={handleScrollChange}
                     loader={null}
                     dataLength={workflows.length}

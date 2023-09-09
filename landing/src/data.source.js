@@ -7,7 +7,7 @@ export const Nav00DataSource = {
   page: { className: 'home-page' },
   logo: {
     className: 'header0-logo',
-    children: 'https://os.alipayobjects.com/rmsportal/mlcYmsRilwraoAe.svg'
+    children: 'src/assets/img/flowify.png'
   },
   Menu: {
     className: 'header0-menu',
@@ -100,12 +100,13 @@ export const Nav00DataSource = {
   },
   mobileMenu: { className: 'header0-mobile-menu' }
 };
+
 export const Banner00DataSource = {
   wrapper: { className: 'banner0' },
   textWrapper: { className: 'banner0-text-wrapper' },
   title: {
     className: 'banner0-title',
-    children: 'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png'
+    children: 'src/assets/img/flowify.png'
   },
   content: {
     className: 'banner0-content',
@@ -113,6 +114,7 @@ export const Banner00DataSource = {
   },
   button: { className: 'banner0-button', children: 'Learn More' }
 };
+
 export const Pricing00DataSource = {
   wrapper: { className: 'home-page-wrapper pricing0-wrapper' },
   OverPack: { playScale: 0.3, className: 'home-page pricing0' },
@@ -152,6 +154,7 @@ export const Pricing00DataSource = {
     ]
   }
 };
+
 export const Pricing01DataSource = {
   wrapper: { className: 'home-page-wrapper pricing0-wrapper' },
   OverPack: { playScale: 0.3, className: 'home-page pricing0' },
@@ -191,6 +194,7 @@ export const Pricing01DataSource = {
     ]
   }
 };
+
 export const Content40DataSource = {
   wrapper: { className: 'home-page-wrapper content4-wrapper' },
   page: { className: 'home-page content4' },
@@ -218,6 +222,7 @@ export const Content40DataSource = {
     }
   }
 };
+
 export const Content130DataSource = {
   OverPack: {
     className: 'home-page-wrapper content13-wrapper lmb7ztoc1wo-editor_css',
@@ -247,6 +252,7 @@ export const Content130DataSource = {
     ]
   }
 };
+
 export const Content30DataSource = {
   wrapper: { className: 'home-page-wrapper content3-wrapper' },
   page: { className: 'home-page content3' },
@@ -392,6 +398,7 @@ export const Content30DataSource = {
     ]
   }
 };
+
 export const Content90DataSource = {
   wrapper: { className: 'home-page-wrapper content9-wrapper' },
   page: { className: 'home-page content9' },
@@ -521,6 +528,7 @@ export const Content90DataSource = {
     ]
   }
 };
+
 export const Teams40DataSource = {
   wrapper: { className: 'home-page-wrapper content8-wrapper' },
   page: { className: 'home-page content8' },
@@ -534,7 +542,7 @@ export const Teams40DataSource = {
           'https://gw.alipayobjects.com/zos/rmsportal/PiqyziYmvbgAudYfhuBr.svg',
         className: 'title-image'
       },
-      { name: 'title', children: '特邀嘉宾', className: 'title-h1' }
+      { name: 'title', children: 'Our Team', className: 'title-h1' }
     ]
   },
   block: {
@@ -547,15 +555,15 @@ export const Teams40DataSource = {
         className: 'content8-block-wrapper',
         children: {
           className: 'content8-block',
+          link: 'https://www.linkedin.com/in/alina-glumova-67b0b292/',
           img: {
             className: 'content8-img',
-            children:
-              'https://gw.alipayobjects.com/zos/rmsportal/JahzbVrdHdJlkJjkNsBJ.png'
+            children: 'src/assets/img/team/alina_g.jpeg'
           },
-          title: { className: 'content8-title', children: 'Jack' },
+          title: { className: 'content8-title', children: 'Alina Glumova' },
           content: {
             className: 'content8-content',
-            children: '公司+职位 信息暂缺'
+            children: 'Solution Architect'
           }
         }
       },
@@ -566,15 +574,15 @@ export const Teams40DataSource = {
         className: 'content8-block-wrapper',
         children: {
           className: 'content8-block',
+          link: 'https://www.linkedin.com/in/anton-bachikin/',
           img: {
             className: 'content8-img',
-            children:
-              'https://gw.alipayobjects.com/zos/rmsportal/JahzbVrdHdJlkJjkNsBJ.png'
+            children: 'src/assets/img/team/anton_b.jpeg'
           },
-          title: { className: 'content8-title', children: 'Jack' },
+          title: { className: 'content8-title', children: 'Anton Bachykin' },
           content: {
             className: 'content8-content',
-            children: '公司+职位 信息暂缺'
+            children: 'Software Engineer & UI/UX Designer'
           }
         }
       },
@@ -585,15 +593,15 @@ export const Teams40DataSource = {
         className: 'content8-block-wrapper',
         children: {
           className: 'content8-block',
+          link: 'https://www.linkedin.com/in/nikita-gurets-71a039197/',
           img: {
             className: 'content8-img',
-            children:
-              'https://gw.alipayobjects.com/zos/rmsportal/JahzbVrdHdJlkJjkNsBJ.png'
+            children: 'src/assets/img/team/nikita_g.jpeg'
           },
-          title: { className: 'content8-title', children: 'Jack' },
+          title: { className: 'content8-title', children: 'Nikita Gurets' },
           content: {
             className: 'content8-content',
-            children: '公司+职位 信息暂缺'
+            children: 'Software Engineer & AI Coach'
           }
         }
       },
@@ -604,15 +612,15 @@ export const Teams40DataSource = {
         className: 'content8-block-wrapper',
         children: {
           className: 'content8-block',
+          link: 'https://www.linkedin.com/in/andrey-kozel-255a33156/',
           img: {
             className: 'content8-img',
-            children:
-              'https://gw.alipayobjects.com/zos/rmsportal/JahzbVrdHdJlkJjkNsBJ.png'
+            children: 'src/assets/img/team/andrey_k.jpeg'
           },
-          title: { className: 'content8-title', children: 'Jack' },
+          title: { className: 'content8-title', children: 'Andrey Kozel' },
           content: {
             className: 'content8-content',
-            children: '公司+职位 信息暂缺'
+            children: 'Principal Software Engineer & Infrastructure Engineer'
           }
         }
       },
@@ -623,15 +631,15 @@ export const Teams40DataSource = {
         className: 'content8-block-wrapper',
         children: {
           className: 'content8-block',
+          link: 'https://www.linkedin.com/in/ruslan-zianevich-57ab2940/',
           img: {
             className: 'content8-img',
-            children:
-              'https://gw.alipayobjects.com/zos/rmsportal/JahzbVrdHdJlkJjkNsBJ.png'
+            children: 'src/assets/img/team/ruslan_z.jpeg'
           },
-          title: { className: 'content8-title', children: 'Jack' },
+          title: { className: 'content8-title', children: 'Ruslan Zianevich' },
           content: {
             className: 'content8-content',
-            children: '公司+职位 信息暂缺'
+            children: 'Principal Software Engineer'
           }
         }
       },
@@ -642,15 +650,15 @@ export const Teams40DataSource = {
         className: 'content8-block-wrapper',
         children: {
           className: 'content8-block',
+          link: 'https://www.linkedin.com/in/maksim-melnikau-2a3a58141/',
           img: {
             className: 'content8-img',
-            children:
-              'https://gw.alipayobjects.com/zos/rmsportal/JahzbVrdHdJlkJjkNsBJ.png'
+            children: 'src/assets/img/team/maksim_m.jpeg'
           },
-          title: { className: 'content8-title', children: 'Jack' },
+          title: { className: 'content8-title', children: 'Maksim Melnikau' },
           content: {
             className: 'content8-content',
-            children: '公司+职位 信息暂缺'
+            children: 'Delivery Manager'
           }
         }
       },
@@ -661,40 +669,22 @@ export const Teams40DataSource = {
         className: 'content8-block-wrapper',
         children: {
           className: 'content8-block',
+          link: 'https://www.linkedin.com/in/evgenij-uelsky-137b69136/',
           img: {
             className: 'content8-img',
-            children:
-              'https://gw.alipayobjects.com/zos/rmsportal/JahzbVrdHdJlkJjkNsBJ.png'
+            children: 'src/assets/img/team/evgenij_u.jpeg'
           },
-          title: { className: 'content8-title', children: 'Jack' },
+          title: { className: 'content8-title', children: 'Evgenij Uelsky' },
           content: {
             className: 'content8-content',
-            children: '公司+职位 信息暂缺'
-          }
-        }
-      },
-      {
-        name: 'block7',
-        md: 6,
-        xs: 24,
-        className: 'content8-block-wrapper',
-        children: {
-          className: 'content8-block',
-          img: {
-            className: 'content8-img',
-            children:
-              'https://gw.alipayobjects.com/zos/rmsportal/JahzbVrdHdJlkJjkNsBJ.png'
-          },
-          title: { className: 'content8-title', children: 'Jack' },
-          content: {
-            className: 'content8-content',
-            children: '公司+职位 信息暂缺'
+            children: 'CEO'
           }
         }
       }
     ]
   }
 };
+
 export const Footer20DataSource = {
   wrapper: { className: 'home-page-wrapper footer2-wrapper' },
   OverPack: { className: 'home-page footer2', playScale: 0.05 },
