@@ -1,17 +1,10 @@
 import config from 'config';
 import { TicketDto } from 'dto/Ticket';
-import { AIResponse, openAIConnector } from 'openai/OpenAIConnector';
+import { AIResponse } from 'model/AIConnector';
+import { AIFacade, CategorizationResult } from 'model/AIFacade';
+import { openAIConnector } from 'openai/OpenAIConnector';
 
-export interface CategorizationResult {
-  probability: number;
-  workflowName: string | null;
-  allClassifications: {
-    probability: number;
-    workflowName: string | null;
-  }[];
-}
-
-class OpenAIFacade {
+class OpenAIFacade implements AIFacade {
   private static _instance: OpenAIFacade;
 
   static get instance(): OpenAIFacade {
