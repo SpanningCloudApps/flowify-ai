@@ -29,6 +29,8 @@ Open to [CONTRIBUTING](.github/CONTRIBUTING.md)
 ![client_2_step.png](docs/img/client_2_step.png)
 ![client_chat_bot.png](docs/img/client_chat_bot.png)
 
+Video
+
 [![client_1_step.png](docs/img/client_1_step.png)](docs/videos/client_site_flow.mp4)
 
 ## Administration Panel
@@ -40,6 +42,8 @@ Open to [CONTRIBUTING](.github/CONTRIBUTING.md)
 
 ![admin_tickets_page.png](docs/img/admin_tickets_page.png)
 ![admin_classify_ticket.png](docs/img/admin_classify_ticket.png)
+
+Video
 
 [![admin_tickets_page.mp4](docs/img/admin_tickets_page.png)](docs/videos/admin_site_flow.mp4)
 
