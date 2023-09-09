@@ -34,14 +34,14 @@ export class DataStorageRepository {
 
   public async save(params: {
     input: Record<string, unknown>;
-    workflow_id: string;
+    workflow_name: string;
     probability: number;
     data: Record<string, unknown>;
   }) {
     const currentTimestamp: moment.Moment = moment.utc();
     const insertParams: ClassificationRow = {
       input: params.input,
-      workflow_id: params.workflow_id,
+      workflow_name: params.workflow_name,
       probability: params.probability,
       data: params.data,
       created_at: currentTimestamp

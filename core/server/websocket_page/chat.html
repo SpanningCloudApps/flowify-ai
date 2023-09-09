@@ -30,17 +30,18 @@
     Container,
     createTheme,
     Box,
-    SvgIcon,
-    Link,
+    Stepper,
+    Step,
+    StepLabel
   } = MaterialUI;
 
   // Create a theme instance.
   const theme = createTheme({
     palette: {
-      primary: { main: '#556cd6', },
-      secondary: { main: '#19857b', },
-      error: { main: colors.red.A400, },
-    },
+      primary: { main: '#556cd6' },
+      secondary: { main: '#19857b' },
+      error: { main: colors.red.A400 }
+    }
   });
 
   function WsConnection(props) {
@@ -49,12 +50,12 @@
 
       ws.onopen = () => {
         console.log('WebSocket connection opened');
-        props.onOpen()
+        props.onOpen();
         props.onChannelOpened(function (message) {
           if (ws.readyState === 1) {
             ws.send(message);
           }
-        })
+        });
       };
 
       ws.onmessage = (event) => {
@@ -64,7 +65,7 @@
           switch (json.type) {
             case 'accepted':
             case 'message':
-              props.onMessage(json)
+              props.onMessage(json);
               break;
           }
         } catch (e) {
@@ -74,13 +75,13 @@
 
       ws.onclose = function (event) {
         console.log('WebSocket connection closed', ws.readyState, event);
-        props.onClose()
+        props.onClose();
       };
 
       ws.onerror = function (error) {
         console.log('WebSocket error: ', error);
         if (ws.readyState === 1) {
-          props.onError(error)
+          props.onError(error);
           ws.close(error);
         }
       };
@@ -91,14 +92,20 @@
       };
     }, []);
 
-    return false
+    return false;
   }
 
   function App() {
+    const [activeStep, setActiveStep] = React.useState(0);
+    const [email, setEmail] = React.useState('');
+    const [emailError, setEmailError] = React.useState(false);
+    const [ticketTitle, setTicketTitle] = React.useState('');
+    const [ticketDescription, setTicketDescription] = React.useState('');
+    const [workflow, setWorkflow] = React.useState({});
     const [connecting, setConnecting] = React.useState(true);
     const [status, setStatus] = React.useState('');
     const [messages, setMessages] = React.useState([]);
-    const [channel, setChannel] = React.useState(null)
+    const [channel, setChannel] = React.useState(null);
 
     function submitMessage(event) {
       event.preventDefault();
@@ -107,18 +114,58 @@
       if (message && connecting === false && channel) {
         channel(JSON.stringify({
           type: 'message',
-          data: message,
-        }))
+          actor: email,
+          data: {
+            response: message,
+            workflowExecutionId: workflow.workflowExecutionId,
+            responseType: workflow.responseType
+          }
+        }));
       }
-    };
+    }
+
+    function startChat(event) {
+      event.preventDefault();
+      if (email && ticketTitle && connecting === false && channel) {
+        channel(JSON.stringify({
+          type: 'start',
+          actor: email,
+          data: {
+            title: ticketTitle,
+            description: ticketDescription,
+            additionalInfo: []
+          }
+        }));
+        handleNext();
+      }
+    }
 
     const displayMessage = React.useCallback(({ data }) => {
-      setMessages(prevState => [...prevState, data]);
+      setWorkflow(data.data);
+      setMessages(prevState => [...prevState, data.data.response]);
     }, [setMessages]);
 
     const openChannel = React.useCallback((inChannel) => {
-      setChannel(() => { return inChannel })
+      setChannel(() => {
+        return inChannel;
+      });
     }, [setChannel]);
+
+    function handleNext() {
+      if (activeStep === 0) {
+        if (!isValidEmail(email)) {
+          setEmailError(true);
+          return;
+        }
+        setEmailError(false);
+      }
+      setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    }
+
+    function isValidEmail(email) {
+      const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+      return emailRegex.test(email);
+    }
 
     return (
       <Container component="main" maxWidth="xs">
@@ -128,7 +175,7 @@
             marginTop: 8,
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
+            alignItems: 'center'
           }}
         >
           <Typography component="h1" variant="h5">
@@ -139,40 +186,124 @@
             onOpen={() => setConnecting(false)}
             onChannelOpened={openChannel}
             onMessage={displayMessage}
-            onClose={() => { setConnecting(true); setStatus('Disconnected') }}
-            onError={(error) => { setConnecting(true); setStatus(error.message) }}
+            onClose={() => {
+              setConnecting(true);
+              setStatus('Disconnected');
+            }}
+            onError={(error) => {
+              setConnecting(true);
+              setStatus(error.message);
+            }}
           />
-          <Box component="form" onSubmit={submitMessage} noValidate sx={{ mt: 1 }}>
-            <TextareaAutosize
-              maxRows={12}
-              style={{ width: theme.spacing(60) }}
-              aria-label="maximum height"
-              placeholder="Chat messages will appear here"
-              value={messages.join('\n')}
-            />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="chat-message"
-              label="Chat message"
-              type="chat-message"
-              id="chat-message"
-              autoComplete="current-chat-message"
-            />
-            <Button
-              type="submit"
-              fullWidth
-              disabled={connecting}
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              {connecting ? 'Connecting...' : 'Send'}
-            </Button>
-            <Grid container alignItems="center" justifyContent="center">
-              <Grid item>{status}</Grid>
-            </Grid>
-          </Box>
+
+          <Stepper activeStep={activeStep} alternativeLabel>
+            <Step key="UserInfo">
+              <StepLabel>User</StepLabel>
+            </Step>
+            <Step key="TicketInfo">
+              <StepLabel>Ticket</StepLabel>
+            </Step>
+          </Stepper>
+
+          {activeStep === 0 && (
+            <Box component="form" onSubmit={handleNext} noValidate sx={{ mt: 1 }}>
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                id="email"
+                label="Email"
+                name="email"
+                autoComplete="email"
+                autoFocus
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                error={emailError}
+                helperText={emailError ? 'Invalid email address' : ''}
+              />
+              <Button
+                type="button"
+                fullWidth
+                variant="contained"
+                onClick={handleNext}
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Next
+              </Button>
+            </Box>
+          )}
+
+          {activeStep === 1 && (
+            <Box component="form" onSubmit={startChat} noValidate sx={{ mt: 1 }}>
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                id="ticketTitle"
+                label="Ticket Title"
+                name="ticketTitle"
+                autoComplete="ticketTitle"
+                value={ticketTitle}
+                onChange={(e) => setTicketTitle(e.target.value)}
+              />
+              <TextareaAutosize
+                minRows={12}
+                maxRows={22}
+                style={{ width: '100%' }}
+                aria-label="Ticket Description"
+                placeholder="Ticket Description"
+                value={ticketDescription}
+                onChange={(e) => setTicketDescription(e.target.value)}
+              />
+              {activeStep < 2 && (
+                <Button
+                  type="submit"
+                  fullWidth
+                  disabled={connecting}
+                  variant="contained"
+                  sx={{ mt: 3, mb: 2 }}
+                >
+                  {connecting ? 'Connecting...' : 'Start'}
+                </Button>
+              )}
+            </Box>
+          )}
+
+          {activeStep === 2 && (
+            <Box component="form" onSubmit={submitMessage} noValidate sx={{ mt: 1 }}>
+              <TextareaAutosize
+                minRows={12}
+                maxRows={22}
+                style={{ width: theme.spacing(60) }}
+                aria-label="maximum height"
+                placeholder="Flowify processing your request..."
+                value={messages.join('\n')}
+              />
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                name="chat-message"
+                disabled={!messages || messages.length === 0}
+                label="Type your message"
+                type="chat-message"
+                id="chat-message"
+                autoComplete="current-chat-message"
+              />
+              <Button
+                type="submit"
+                fullWidth
+                disabled={connecting || !messages || messages.length === 0}
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                {connecting ? 'Connecting...' : !messages || messages.length === 0 ? 'Processing...' : 'Send'}
+              </Button>
+              <Grid container alignItems="center" justifyContent="center">
+                <Grid item>{status}</Grid>
+              </Grid>
+            </Box>
+          )}
         </Box>
       </Container>
     );
@@ -182,7 +313,7 @@
     <ThemeProvider theme={theme}>
       <App />
     </ThemeProvider>,
-    document.querySelector('#root'),
+    document.querySelector('#root')
   );
 </script>
 </body>

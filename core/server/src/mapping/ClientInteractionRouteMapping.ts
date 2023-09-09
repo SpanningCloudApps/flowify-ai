@@ -25,10 +25,11 @@ const clientInteractionRoute = async (server: FastifyInstance): Promise<void> =>
           try {
             const json = JSON.parse(message.toString());
             switch (json.type) {
-              case 'message': {
-                logger.info(`broadcasting to all clients. Data ${json.data}`);
-                await webSocketManager.process(json.data);
-              }
+              case 'start':
+                await webSocketManager.start(json.actor, json.data);
+                break;
+              case 'message':
+                await webSocketManager.process(json.actor, json.data);
                 break;
 
               default:
@@ -36,6 +37,7 @@ const clientInteractionRoute = async (server: FastifyInstance): Promise<void> =>
                 break;
             }
           } catch (error) {
+            logger.error('An error occurred during flowify chat', error);
             sendMessage({ type: WebSocketEventType.ERROR, data: error.message });
           }
         });

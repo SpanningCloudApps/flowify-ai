@@ -14,7 +14,7 @@ export const Classification = define<'classification_result', ClassificationRow>
   schema: '',
   name: 'classification_result',
   columns: {
-    id: { dataType: 'bigserial', notNull: true },
+    id: { dataType: 'bigserial', notNull: true, primaryKey: true },
     input: { dataType: 'jsonb', notNull: true, defaultValue: {} },
     workflow_name: { dataType: 'varchar', notNull: true },
     probability: { dataType: 'flot', notNull: true },

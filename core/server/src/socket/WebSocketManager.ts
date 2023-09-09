@@ -15,6 +15,8 @@ export class WebSocketManager {
 
   private websocketServer: WebSocket.Server | null = null;
 
+  private readonly connectedClients = new Set();
+
   static get instance(): WebSocketManager {
     return this._instance;
   }
@@ -22,17 +24,28 @@ export class WebSocketManager {
   public init(websocketServer) {
     if (!this.websocketServer) {
       this.websocketServer = websocketServer;
+      if (this.websocketServer) {
+        this.websocketServer
+          .on('connection', client => {
+            this.connectedClients.add(client);
+          })
+          .on('close', client => {
+            this.connectedClients.delete(client);
+          });
+      }
     }
   }
 
   public async publish(actor: string, data: Record<string, unknown>) {
     logger.info(`WEBSOCKET = [${actor}] send = ${JSON.stringify(data)}`);
     const event = {
-      actor,
-      workflowExecutionId: data.workflowExecutionId,
-      responseType: data.type,
-      data: data.result,
-      type: WebSocketEventType.ACCEPTED
+      type: WebSocketEventType.ACCEPTED,
+      data: {
+        actor,
+        workflowExecutionId: data.workflowExecutionId,
+        responseType: data.type,
+        response: data.result
+      }
     };
 
     for (const client of this.websocketServer.clients) {
@@ -41,7 +54,7 @@ export class WebSocketManager {
   }
 
   public async process(actor: string, clientData: Record<string, unknown>) {
-    logger.info(`WEBSOCKET = [${actor}] receive = ${JSON.stringify(clientData)}`);
+    logger.info(`WEBSOCKET CONTINUE = [${actor}] receive = ${JSON.stringify(clientData)}`);
     const data = {
       actor,
       clientResponse: clientData.response,
@@ -49,6 +62,17 @@ export class WebSocketManager {
       type: clientData.responseType
     };
     await dataProcessFacade.process(data);
+  }
+
+  public async start(actor: string, clientData: Record<string, unknown>) {
+    logger.info(`WEBSOCKET START = [${actor}] receive = ${JSON.stringify(clientData)}`);
+    const data = {
+      createdBy: actor,
+      title: clientData.title,
+      description: clientData.description,
+      additionalInfo: clientData.additionalInfo
+    };
+    await dataProcessFacade.initiate(data);
   }
 }
 
