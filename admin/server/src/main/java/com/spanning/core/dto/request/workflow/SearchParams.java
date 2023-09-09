@@ -12,6 +12,7 @@ import lombok.ToString;
 public class SearchParams {
 
   private final String workflowName;
+  private final String description;
   private final Long pageToken;
   private final long limit;
 }
