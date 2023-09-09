@@ -14,6 +14,8 @@ Manage your ticket workflows effortlessly with our intuitive web-based admin con
 - [Demo](#demo)
 - [Features](#features)
 - [Getting Started](#getting-started)
+  - [Run Locally](#run-locally)
+  - [Run in Docker](#run-in-docker)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -30,7 +32,7 @@ Explore our live demo to see the Ticket Workflow Admin Web Console in action: [D
 ## Features
 
 - Create and manage ticket workflows.
-- Assign tickets to workflow.
+- Assign tickets to workflows.
 
 ## Getting Started
 
@@ -39,7 +41,7 @@ To get started with the Ticket Workflow Admin Web Console, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/ticket-workflow-console.git
+   git clone https://github.com/SpanningCloudApps/hackathon-ai.git
    ```
 
    Make sure that AI_HOME environment variable is set;
