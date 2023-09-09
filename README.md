@@ -1,6 +1,6 @@
 # [Flowify.co](http://flowify-ai.s3-website-us-east-1.amazonaws.com)
 
-8/9/2023-9/9/2023
+Hackathon: 8/9/2023-9/9/2023
 
 # Maintainers
 
