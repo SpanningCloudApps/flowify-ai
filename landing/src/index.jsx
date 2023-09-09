@@ -30,7 +30,12 @@ import {
   Content30DataSource,
   Content90DataSource,
   Teams40DataSource,
-  Footer20DataSource
+  Footer20DataSource,
+  PRODUCT_LINK,
+  ABOUT_US_LINK,
+  FEATURES_LINK,
+  ROADMAP_LINK,
+  OUR_TEAM_LINK
 } from './data.source';
 import './less/antMotionStyle.less';
 
@@ -83,7 +88,7 @@ export default class Home extends React.Component {
         isMobile={this.state.isMobile}
       />,
       <Pricing0
-        id="Pricing0_0"
+        id={PRODUCT_LINK}
         key="Pricing0_0"
         dataSource={Pricing00DataSource}
         isMobile={this.state.isMobile}
@@ -101,25 +106,25 @@ export default class Home extends React.Component {
         isMobile={this.state.isMobile}
       />,
       <Content13
-        id="Content13_0"
+        id={ABOUT_US_LINK}
         key="Content13_0"
         dataSource={Content130DataSource}
         isMobile={this.state.isMobile}
       />,
       <Content3
-        id="Content3_0"
+        id={FEATURES_LINK}
         key="Content3_0"
         dataSource={Content30DataSource}
         isMobile={this.state.isMobile}
       />,
       <Content9
-        id="Content9_0"
+        id={ROADMAP_LINK}
         key="Content9_0"
         dataSource={Content90DataSource}
         isMobile={this.state.isMobile}
       />,
       <Teams4
-        id="Teams4_0"
+        id={OUR_TEAM_LINK}
         key="Teams4_0"
         dataSource={Teams40DataSource}
         isMobile={this.state.isMobile}
@@ -138,9 +143,7 @@ export default class Home extends React.Component {
           this.dom = d;
         }}
       >
-        {/* 如果不是 dva 2.0 替换成 {children} start */}
         {this.state.show && children}
-        {/* 如果不是 dva 2.0 替换成 {children} end */}
       </div>
     );
   }
