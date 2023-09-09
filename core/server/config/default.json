@@ -73,7 +73,7 @@
   },
   "ai": {
     "openai": {
-      "apiKey": "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",
+      "apiKey": "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",
       "maxTokens": 1024,
       "model": "gpt-3.5-turbo",
       "temperature": 0.3
