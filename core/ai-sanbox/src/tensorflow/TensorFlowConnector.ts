@@ -5,7 +5,7 @@
 import '@tensorflow/tfjs';
 
 import config from 'config';
-import { load, QuestionAndAnswer } from '@tensorflow-models/qna';
+import { load } from '@tensorflow-models/qna';
 import { TensorFlowResponse } from 'model/AIConnector';
 
 export class TensorFlowConnector {
@@ -15,15 +15,9 @@ export class TensorFlowConnector {
     return this._instance;
   }
 
-  private readonly QnAModel: Promise<QuestionAndAnswer>;
-
-  constructor() {
-    this.QnAModel = load();
-  }
-
   public async executeWithContext(requests: (string | null)[]): Promise<TensorFlowResponse[]> {
     try {
-      const modelInstance = await this.QnAModel;
+      const modelInstance = await load();
 
       const context = this.prepareContext();
 

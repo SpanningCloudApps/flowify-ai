@@ -44,14 +44,14 @@ const addOpenAiRoutes = (server: FastifyInstance) => {
     app.post(
       '/experimental',
       async (req: FastifyRequest, res) => {
-        const input = req.body.message;
+        const { message, context } = req.body;
 
         try {
           const tokenizer = await loadTokenizer()
 
-          const result = tokenizer.tokenize(input);
+          const result = tokenizer.processTokenization(message, context);
 
-          res.send(result);
+          res.send({ result });
         } catch (err) {
           console.error('Request to /ai/test failed', err);
           res.status(500).send({ errorMessage: err.message });

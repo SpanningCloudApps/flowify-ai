@@ -15,6 +15,9 @@ export const VOCAB_BASE =
   'https://tfhub.dev/tensorflow/tfjs-model/mobilebert/1/';
 export const VOCAB_URL = VOCAB_BASE + 'processed_vocab.json?tfjs-format=file';
 
+const MAX_QUERY_LEN = 64;
+const MAX_SEQ_LEN = 384;
+
 class TrieNode {
   parent: TrieNode;
   children: { [key: string]: TrieNode } = {};
@@ -105,7 +108,6 @@ export class BertTokenizer {
     this.vocab = await this.loadVocab();
 
     this.trie = new Trie();
-    // Actual tokens start at 999.
     for (let vocabIndex = 999; vocabIndex < this.vocab.length; vocabIndex++) {
       const word = this.vocab[vocabIndex];
       this.trie.insert(word, 1, vocabIndex);
@@ -136,12 +138,10 @@ export class BertTokenizer {
     return flattenTokens;
   }
 
-  /* Performs invalid character removal and whitespace cleanup on text. */
   private cleanText(text: string, charOriginalIndex: number[]): string {
     const stringBuilder: string[] = [];
     let originalCharIndex = 0, newCharIndex = 0;
     for (const ch of text) {
-      // Skip the characters that cannot be used.
       if (isInvalid(ch)) {
         originalCharIndex += ch.length;
         continue;
@@ -166,7 +166,6 @@ export class BertTokenizer {
     return stringBuilder.join('');
   }
 
-  /* Splits punctuation on a piece of text. */
   private runSplitOnPunc(
     text: string, count: number,
     charOriginalIndex: number[]): Token[] {
@@ -244,6 +243,105 @@ export class BertTokenizer {
     }
 
     return outputTokens;
+  }
+
+  public processTokenization(
+    query: string,
+    context: string,
+    maxQueryLen: number = MAX_QUERY_LEN,
+    maxSeqLen: number = MAX_SEQ_LEN,
+    docStride = 128
+  ) {
+    const queryTokens = this.tokenize(query);
+
+    const origTokens = this.processInput(context.trim());
+    const tokenToOrigIndex: number[] = [];
+    const allDocTokens: number[] = [];
+    for (let i = 0; i < origTokens.length; i++) {
+      const token = origTokens[i].text;
+      const subTokens = this.tokenize(token);
+      for (let j = 0; j < subTokens.length; j++) {
+        const subToken = subTokens[j];
+        tokenToOrigIndex.push(i);
+        allDocTokens.push(subToken);
+      }
+    }
+    const maxContextLen = maxSeqLen - queryTokens.length - 3;
+
+    const docSpans: { start: number, length: number }[] = [];
+    let startOffset = 0;
+    while (startOffset < allDocTokens.length) {
+      let length = allDocTokens.length - startOffset;
+      if (length > maxContextLen) {
+        length = maxContextLen;
+      }
+      docSpans.push({start: startOffset, length});
+      if (startOffset + length === allDocTokens.length) {
+        break;
+      }
+      startOffset += Math.min(length, docStride);
+    }
+
+    const features = docSpans.map(docSpan => {
+      const tokens = [];
+      const segmentIds = [];
+      const tokenToOrigMap: { [index: number]: number } = {};
+      tokens.push(CLS_INDEX);
+      segmentIds.push(0);
+      for (let i = 0; i < queryTokens.length; i++) {
+        const queryToken = queryTokens[i];
+        tokens.push(queryToken);
+        segmentIds.push(0);
+      }
+      tokens.push(SEP_INDEX);
+      segmentIds.push(0);
+      for (let i = 0; i < docSpan.length; i++) {
+        const splitTokenIndex = i + docSpan.start;
+        const docToken = allDocTokens[splitTokenIndex];
+        tokens.push(docToken);
+        segmentIds.push(1);
+        tokenToOrigMap[tokens.length] = tokenToOrigIndex[splitTokenIndex];
+      }
+      tokens.push(SEP_INDEX);
+      segmentIds.push(1);
+      const inputIds = tokens;
+      const inputMask = inputIds.map(id => 1);
+      while ((inputIds.length < maxSeqLen)) {
+        inputIds.push(0);
+        inputMask.push(0);
+        segmentIds.push(0);
+      }
+      return {inputIds, inputMask, segmentIds, origTokens, tokenToOrigMap};
+    });
+
+    const inputIdArray = features.map(f => f.inputIds);
+    const segmentIdArray = features.map(f => f.segmentIds);
+    const inputMaskArray = features.map(f => f.inputMask);
+
+    const globalStep = tf.scalar(1, 'int32');
+    const batchSize = features.length;
+    return tf.tidy(() => {
+      const inputIds =
+        tf.tensor2d(inputIdArray, [batchSize, MAX_SEQ_LEN], 'int32');
+      const segmentIds =
+        tf.tensor2d(segmentIdArray, [batchSize, MAX_SEQ_LEN], 'int32');
+      const inputMask =
+        tf.tensor2d(inputMaskArray, [batchSize, MAX_SEQ_LEN], 'int32');
+      return {
+        input_ids: inputIds,
+        segment_ids: segmentIds,
+        input_mask: inputMask,
+        global_step: globalStep
+      }
+    });
+  }
+
+  public async getValidationTensor(query: string, context: string,) {
+    const inputTensors = this.processTokenization(query, context);
+
+    const model = await tf.loadGraphModel('https://tfhub.dev/tensorflow/tfjs-model/mobilebert/1');
+
+    const result model.execute(inputTensors, ['start_log_tensors', 'end_log_tensors']);
   }
 }
 
