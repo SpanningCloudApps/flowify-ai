@@ -1,15 +1,10 @@
+
 import config from 'config';
 import OpenAI from 'openai';
 
-export interface AIResponse {
-  index: number;
-  message: {
-    role: string;
-    content: string;
-  }
-}
+import { AIConnector, AIResponse } from 'model/AIConnector';
 
-export class OpenAIConnector {
+export class OpenAIConnector implements AIConnector {
   private static _instance = new OpenAIConnector();
 
   static get instance(): OpenAIConnector {
@@ -35,7 +30,7 @@ export class OpenAIConnector {
 
   public async executeWithContext(requestContent: string): Promise<AIResponse[]> {
     try {
-      const context = await this.prepareContext();
+      const context = this.prepareContext();
 
       const completion = await this.openAIClient.chat.completions.create({
         messages: [
@@ -67,7 +62,7 @@ export class OpenAIConnector {
     }
   }
 
-  private async prepareContext(): Promise<string> {
+  private prepareContext(): string {
     try {
       const ticketsList = config.get('ai.tickets');
       const messages = ticketsList

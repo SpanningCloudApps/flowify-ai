@@ -4,6 +4,11 @@
 
 import flowify from './assets/img/flowify.png';
 import github from './assets/img/github.png';
+
+import admin_example from './assets/img/admin_example.png';
+import admin_video_preview from './assets/img/admin_site_flow_preview.jpeg';
+import admin_video from './assets/video/admin_site_flow.mp4';
+
 import photo_anton from './assets/img/team/anton_b.jpeg';
 import photo_evgenij from './assets/img/team/evgenij_u.jpeg';
 import photo_ruslan from './assets/img/team/ruslan_z.jpeg';
@@ -13,27 +18,30 @@ import photo_alina from './assets/img/team/alina_g.jpeg';
 import photo_andrey from './assets/img/team/andrey_k.jpeg';
 
 export const PRODUCT_LINK = 'product';
+export const CONNECT_LINK = 'connect';
 export const ABOUT_US_LINK = 'about-us';
 export const FEATURES_LINK = 'features';
 export const ROADMAP_LINK = 'roadmap';
 export const OUR_TEAM_LINK = 'our-team';
 
 const product1 = {
-  title: 'Client',
+  title: 'AI-driven Workflow',
   imageLink: 'https://gw.alipayobjects.com/mdn/rms_ae7ad9/afts/img/A*OnyWT4Nsxy0AAAAAAAAAAABjARQnAQ',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum sapien a velit sodales, vitae interdum risus finibus. Morbi feugiat dui nec nisi hendrerit, id finibus diam dictum. Suspendisse potenti. Etiam quis gravida mi.',
-  subTitle: 'Generated 5 paragraphs',
-  buttonText: 'Let\'s Try',
+  content: "Are you ready to streamline your data processing activities and work smarter, not harder? Flowify is here to transform the way you handle workflows with its powerful and intuitive AI-driven workflows. It serves as the central hub for managing data processing activities, ensuring a seamless and organized workflow. With Flowify, you\'re not just managing workflows; you\'re optimizing them for peak efficiency. Embrace the future of AI-driven workflow management and elevate your data processing to new heights.",
+  subTitle: 'When Flowify works hard...',
+  buttonText: 'To be delivered soon...',
   buttonLink: '#',
   buttonDisabled: true
 };
 
 const product2 = {
-  title: 'Admin',
-  imageLink: 'https://gw.alipayobjects.com/mdn/rms_ae7ad9/afts/img/A*OnyWT4Nsxy0AAAAAAAAAAABjARQnAQ',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum sapien a velit sodales, vitae interdum risus finibus. Morbi feugiat dui nec nisi hendrerit, id finibus diam dictum. Suspendisse potenti. Etiam quis gravida mi.',
-  subTitle: 'Generated 5 paragraphs',
-  buttonText: 'Let\'s Try',
+  title: 'Administration Panel',
+  imageLink: admin_example,
+  content: 'Our intuitive web-based admin console makes ticket workflow management a piece of cake. No more headaches or hassles; just a smooth, streamlined process.'
+    + 'The Data Workflow Admin Web Console is your secret weapon for simplifying data management. It\'s designed to empower administrators like you with a suite of tools to create, update, and monitor data workflows effortlessly.'
+    + 'With Flowify, you\'ll never miss a beat. Keep your data handling organized and efficient, ensuring that every issue is addressed promptly.',
+  subTitle: '... you work smart',
+  buttonText: 'To be delivered soon...',
   buttonLink: '#',
   buttonDisabled: true
 };
@@ -42,77 +50,77 @@ const demoSection = {
   title: 'Demo',
   subTitle: 'Check 18+ video how xoxol fuck CEO',
   video1Link: 'https://os.alipayobjects.com/rmsportal/EejaUGsyExkXyXr.mp4',
-  video2Link: 'https://os.alipayobjects.com/rmsportal/EejaUGsyExkXyXr.mp4',
+  video2Link: admin_video,
   video1Preview: 'https://zos.alipayobjects.com/rmsportal/HZgzhugQZkqUwBVeNyfz.jpg',
-  video2Preview: 'https://zos.alipayobjects.com/rmsportal/HZgzhugQZkqUwBVeNyfz.jpg',
+  video2Preview: admin_video_preview,
   video1Title: 'Client Application',
   video2Title: 'Admin Application'
 };
 
 const aboutUsSection = {
-  title: 'About Us',
-  content: 'We super cool team of poooper enginners',
-  smallContent: 'We work smart!'
+  title: 'Effortless Data Workflow Management',
+  content: 'Welcome to Flowify, where data management becomes a breeze with our user-friendly administration panel.',
+  smallContent: 'Say goodbye to the complexities of data workflows and hello to seamless, efficient operations.'
 };
 
 const featuresSection = {
-  title: 'Features',
-  content: 'some text',
+  title: 'Features Flowify Offers Right Now',
+  content: 'At Flowify, we\'re all about delivering practical solutions for your workflow needs. Here\'s what Flowify can do for you today',
   feature1: {
-    title: 'Feature 1',
-    content: 'Some content of Feature 1'
+    title: 'AI-Driven Workflow: Seamless Intelligence On and Offline',
+    content: 'Experience the power of AI-driven workflow management like never before with our Offline (Tensorflow) and Online (OpenAI) modes. Our cutting-edge technology ensures that you stay productive and efficient, regardless of your connectivity status.'
   },
   feature2: {
-    title: 'Feature 2',
-    content: 'Some content of Feature 2'
+    title: 'Isolated Workflow Environment: Your Personal Data Fortress',
+    content: 'Our Isolated Workflow Environment is designed with one thing in mind: security and trust. This feature allows you to create a dedicated workspace where you can work exclusively with your personal data model, ensuring the utmost privacy and familiarity.'
   },
   feature3: {
-    title: 'Feature 3',
-    content: 'Some content of Feature 3. Some info about this super puper coool features.'
+    title: 'ChatBot: Your Interactive Feedback Companion',
+    content: 'Our ChatBot feature revolutionizes the way you communicate, ensuring a seamless and interactive experience for gathering feedback, classifying data, and planning future workflow runs. It impowers you to maintain a strong connection with your users, improving data quality, and ensuring that your workflows are always on point. Say hello to interactive communication and a more efficient workflow management process.'
   },
   feature4: {
-    title: 'Feature 4',
-    content: 'Some content of Feature 4'
+    title: 'Manual Reclassify with AI Reinforcement Learning: Elevate Data Classification',
+    content: 'Our Manual Reclassify with Reinforcement Learning feature empowers you to take control of your data classification process like never before. It\'s the ultimate tool for efficiently categorizing all uncategorized data flows through the power of AI-driven reinforcement learning.'
   },
   feature5: {
-    title: 'Feature 5',
-    content: 'Some content of Feature 5. Some info about this super puper coool features.'
+    title: 'Data Streamline API: Supercharge Your Workflow',
+    content: 'Our Data Streamline API is the key to unlocking lightning-fast data processing and workflow initiation. With this feature, you can seamlessly stream data through a public API, turbocharging your workflow and ensuring that you start your processes at the speed of light.'
   },
   feature6: {
-    title: 'Feature 6',
-    content: 'Some content of Feature 6. Some info about this super puper coool features.'
+    title: 'Workflow Automation Steps: The Power to Enhance Efficiency',
+    content: 'Our Workflow Automation Steps feature is your secret weapon for achieving unparalleled efficiency in your processes. It\'s designed to seamlessly identify and address data gaps, ensuring that your workflows move forward without a hitch, whether through direct chat collaboration or our intuitive Administration panel.'
   }
 };
 
 const roadmapSection = {
   title: 'Roadmap',
   step1: {
-    name: 'Step 1',
-    post: 'Flowify v1',
-    time: '2023 year',
-    title: 'Release Some shit',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum sapien a velit sodales, vitae interdum risus finibus. Morbi feugiat dui nec nisi hendrerit, id finibus diam dictum. Suspendisse potenti. Etiam quis gravida mi.'
+    name: 'Microsoft Teams Integration',
+    post: 'This feature will take your collaboration to the next level.',
+    time: 'Q1 2024 year',
+    title: 'Interactive Collaboration Through Microsoft Teams',
+    content: 'With this feature, you\'ll be able to seamlessly integrate Flowify with Microsoft Teams, enhancing your team\'s ability to work together efficiently and effectively.'
   },
   step2: {
-    name: 'Step 2',
-    post: 'Flowify v2',
-    time: '2024 year',
-    title: 'Second Release Some shit',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum sapien a velit sodales, vitae interdum risus finibus. Morbi feugiat dui nec nisi hendrerit, id finibus diam dictum. Suspendisse potenti. Etiam quis gravida mi.'
+    name: 'Jira and Zendesk Integration',
+    post: 'This feature will revolutionize your workflow management.',
+    time: 'Q2 2024 year',
+    title: 'Tickets Streaming from Jira and Zendesk',
+    content: 'With this feature, you\'ll be able to seamlessly integrate Flowify with your Jira and Zendesk platforms, streamlining your ticket management process and ensuring that you have real-time access to critical information.'
   },
   step3: {
-    name: 'Step 3',
-    post: '',
-    time: '2025 year',
-    title: 'Next Release Some shit',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum sapien a velit sodales, vitae interdum risus finibus. Morbi feugiat dui nec nisi hendrerit, id finibus diam dictum. Suspendisse potenti. Etiam quis gravida mi.'
+    name: 'Custom Categorization',
+    post: 'This feature will give you even greater control and flexibility.',
+    time: 'Q2 2024 year',
+    title: 'Enhanced Administration Panel for Custom Categorization',
+    content: 'This feature is designed to empower you with the ability to fine-tune and review categorizations that were generated by AI but require human intervention for workflow adoption.'
   },
   step4: {
-    name: 'Step 4',
-    post: 'Flowify v4',
-    time: '2026 year',
-    title: 'Z Release Some shit',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum sapien a velit sodales, vitae interdum risus finibus. Morbi feugiat dui nec nisi hendrerit, id finibus diam dictum. Suspendisse potenti. Etiam quis gravida mi.'
+    name: 'Virtual Assistant',
+    post: 'This feature will be your go-to guide for maximizing the potential of your workflow.',
+    time: 'Q3 2024 year',
+    title: 'Virtual Assistant Emily - Your Workflow Wizard',
+    content: 'Emily is designed to be your workflow wizard, walking administrators through the panel and suggesting interactions for automation.'
   }
 };
 
@@ -127,19 +135,19 @@ export const Nav00DataSource = {
     className: 'header0-menu',
     children: [
       {
-        name: 'item0',
-        className: 'header0-item',
-        children: {
-          href: `#${PRODUCT_LINK}`,
-          children: [{ children: 'Product', name: 'text' }]
-        }
-      },
-      {
         name: 'item1',
         className: 'header0-item',
         children: {
           href: `#${ABOUT_US_LINK}`,
-          children: [{ children: 'About Us', name: 'text' }]
+          children: [{ children: 'What we are', name: 'text' }]
+        }
+      },
+      {
+        name: 'item0',
+        className: 'header0-item',
+        children: {
+          href: `#${PRODUCT_LINK}`,
+          children: [{ children: 'Products', name: 'text' }]
         }
       },
       {
@@ -180,12 +188,12 @@ export const Banner00DataSource = {
   },
   content: {
     className: 'banner0-content',
-    children: 'Smart Workflow-Driven Classification System '
+    children: 'AI-driven Workflow Classification System '
   },
   button: {
     className: 'banner0-button',
     children: 'Connect',
-    href: `#${PRODUCT_LINK}`
+    href: `#${CONNECT_LINK}`
   }
 };
 
