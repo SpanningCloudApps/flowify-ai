@@ -1,13 +1,9 @@
-/*
- * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
- */
-
 import config from 'config';
-import { CategorizationResult, Data } from '../../model/Data';
-import { AIResponse, openAIConnector } from '../OpenAIConnector';
-import { Connector } from '../../Connector';
+import { AIResponse } from '../../model/AIConnector';
+import { AIFacade, CategorizationResult, Data } from '../../model/AIFacade';
+import { openAIConnector } from '../OpenAIConnector';
 
-class OpenAIFacade implements Connector {
+class OpenAIFacade implements AIFacade {
   private static _instance: OpenAIFacade;
 
   static get instance(): OpenAIFacade {
@@ -15,12 +11,12 @@ class OpenAIFacade implements Connector {
   }
 
   public async categorize(data: Data): Promise<CategorizationResult> {
-    let dataPrompt = `Request's title: ${data.title}, the request is following: ${data.description}.`;
+    let ticketPrompt = `Request's title: ${data.title}, the request is following: ${data.description}.`;
     if (data.additionalInfo) {
-      dataPrompt = `${dataPrompt}. Additional helpful information: ${data.additionalInfo.join(', ')}.`;
+      ticketPrompt = `${ticketPrompt}. Additional helpful information: ${data.additionalInfo.join(', ')}.`;
     }
 
-    const responses = await openAIConnector.executeWithContext(dataPrompt);
+    const responses = await openAIConnector.executeWithContext(ticketPrompt);
     return this.parseResponses(responses);
   }
 
@@ -51,7 +47,7 @@ class OpenAIFacade implements Connector {
 
     const processedResponses = responses.filter(response => {
       const value = response.message.content.split(' ')
-          .filter(token => probableTokens.includes(token)).length / probableTokens.length;
+        .filter(token => probableTokens.includes(token)).length / probableTokens.length;
       return value < tokenMatchingThreshold;
     });
 

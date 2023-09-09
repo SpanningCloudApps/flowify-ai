@@ -23,6 +23,8 @@
     "typescript": "5.1.6"
   },
   "dependencies": {
+    "@tensorflow/tfjs": "4.10.0",
+    "@tensorflow-models/qna": "1.0.2",
     "@aws-sdk/client-sqs": "3.408.0",
     "@fastify/static": "6.11.0",
     "@fastify/swagger": "8.10.0",
