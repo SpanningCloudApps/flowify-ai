@@ -1,6 +1,7 @@
 import { getLogger } from '../logger/logger';
-import { openAIFacade } from '../ai/openai/facade/OpenAIFacade';
+import { aiContext, AIMode } from '../ai/context/AIContext';
 import { DataProcessBodyDto } from '../dto/DataDto';
+import config from 'config';
 
 const logger = getLogger();
 
@@ -36,7 +37,9 @@ export class ClassifierService {
 
     logger.info(`Data to classify: ${JSON.stringify(classificationData)}`);
 
-    const result = await openAIFacade.categorize(classificationData);
+    const result = await aiContext
+      .withAIStrategy(config.has('ai.mode') ? config.get('ai.mode') : AIMode.OPENAI)
+      .categorize(classificationData);
 
     return {
       workflowName: result.workflowName || Workflow.UNKNOWN,

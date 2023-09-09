@@ -72,6 +72,7 @@
     }
   },
   "ai": {
+    "mode": "tensorflow",
     "openai": {
       "apiKey": "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",
       "maxTokens": 1024,

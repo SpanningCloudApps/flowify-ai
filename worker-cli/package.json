@@ -17,7 +17,7 @@
     "/oclif.manifest.json"
   ],
   "dependencies": {
-    "@aws-sdk/client-sqs": "3.408.0",
+    "@aws-sdk/client-sqs": "3.409.0",
     "@oclif/core": "2.15.0",
     "@oclif/plugin-help": "5.2.19",
     "@oclif/plugin-plugins": "3.5.0",
