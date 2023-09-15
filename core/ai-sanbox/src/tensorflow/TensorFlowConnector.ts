@@ -8,6 +8,7 @@ import config from 'config';
 import { load } from '@tensorflow-models/qna';
 import { TensorFlowResponse } from 'model/AIConnector';
 
+//TODO: adjust connector to use original model instead of MobileBERT
 export class TensorFlowConnector {
   private static _instance: TensorFlowConnector = new TensorFlowConnector();
 

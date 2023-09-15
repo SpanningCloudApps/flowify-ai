@@ -4,7 +4,6 @@ import { openAIFacade } from 'facades/OpenAIFacade';
 import { tensorFlowFacade } from 'facades/TensorFlowFacade';
 import { OpenAIRequestBody, ReinforcementRequestBody } from 'dto/RequestDto';
 import { aiContext } from 'context/AIContext';
-import { loadTokenizer } from 'tensorflow/BertTokenizer';
 
 const addOpenAiRoutes = (server: FastifyInstance) => {
   server.register((app, _, done) => {
@@ -36,24 +35,6 @@ const addOpenAiRoutes = (server: FastifyInstance) => {
           res.status(204);
         } catch (err) {
           console.error('Request to /ai/learn failed', err);
-          res.status(500).send({ errorMessage: err.message });
-        }
-      }
-    );
-
-    app.post(
-      '/experimental',
-      async (req: FastifyRequest, res) => {
-        const { message, context } = req.body;
-
-        try {
-          const tokenizer = await loadTokenizer()
-
-          const result = tokenizer.processTokenization(message, context);
-
-          res.send({ result });
-        } catch (err) {
-          console.error('Request to /ai/test failed', err);
           res.status(500).send({ errorMessage: err.message });
         }
       }

@@ -3,8 +3,11 @@
  */
 
 import * as tf from '@tensorflow/tfjs';
+import { Trie } from './Trie';
 
-const SEPERATOR = '\u2581';
+const SEPARATOR = '\u2581';
+const MAX_SEQ_LEN = 384;
+
 export const UNK_INDEX = 100;
 export const CLS_INDEX = 101;
 export const CLS_TOKEN = '[CLS]';
@@ -14,86 +17,7 @@ export const NFKC_TOKEN = 'NFKC';
 export const VOCAB_BASE =
   'https://tfhub.dev/tensorflow/tfjs-model/mobilebert/1/';
 export const VOCAB_URL = VOCAB_BASE + 'processed_vocab.json?tfjs-format=file';
-
-const MAX_QUERY_LEN = 64;
-const MAX_SEQ_LEN = 384;
-
-class TrieNode {
-  parent: TrieNode;
-  children: { [key: string]: TrieNode } = {};
-  end = false;
-  score: number;
-  index: number;
-  constructor(private key: string) {}
-
-  getWord(): [string[], number, number] {
-    const output: string[] = [];
-    let node: TrieNode = this;
-
-    while (node != null) {
-      if (node.key != null) {
-        output.unshift(node.key);
-      }
-      node = node.parent;
-    }
-
-    return [output, this.score, this.index];
-  }
-}
-
-class Trie {
-  private root = new TrieNode(null);
-
-  insert(word: string, score: number, index: number) {
-    let node = this.root;
-
-    const symbols = [];
-    for (const symbol of word) {
-      symbols.push(symbol);
-    }
-
-    for (let i = 0; i < symbols.length; i++) {
-      if (node.children[symbols[i]] == null) {
-        node.children[symbols[i]] = new TrieNode(symbols[i]);
-        node.children[symbols[i]].parent = node;
-      }
-
-      node = node.children[symbols[i]];
-
-      if (i === symbols.length - 1) {
-        node.end = true;
-        node.score = score;
-        node.index = index;
-      }
-    }
-  }
-
-  find(token: string): TrieNode {
-    let node = this.root;
-    let iter = 0;
-
-    while (iter < token.length && node != null) {
-      node = node.children[token[iter]];
-      iter++;
-    }
-
-    return node;
-  }
-}
-
-function isWhitespace(ch: string): boolean {
-  return /\s/.test(ch);
-}
-
-function isInvalid(ch: string): boolean {
-  return (ch.charCodeAt(0) === 0 || ch.charCodeAt(0) === 0xfffd);
-}
-
-const punctuations = '[~`!@#$%^&*(){}[];:"\'<,.>?/\\|-_+=';
-
-function isPunctuation(ch: string): boolean {
-  return punctuations.indexOf(ch) !== -1;
-}
+export const MAX_QUERY_LEN = 128;
 
 export interface Token {
   text: string;
@@ -104,7 +28,9 @@ export class BertTokenizer {
   private vocab: string[];
   private trie: Trie;
 
-  async load() {
+  private readonly punctuations = '[~`!@#$%^&*(){}[];:"\'<,.>?/\\|-_+=';
+
+  public async load() {
     this.vocab = await this.loadVocab();
 
     this.trie = new Trie();
@@ -115,10 +41,10 @@ export class BertTokenizer {
   }
 
   private async loadVocab(): Promise<[]> {
-    return tf.util.fetch(VOCAB_URL).then(d => d.json());
+    return tf.util.fetch(VOCAB_URL).then(vocabulary => vocabulary.json());
   }
 
-  processInput(text: string): Token[] {
+  public processInput(text: string): Token[] {
     const charOriginalIndex: number[] = [];
     const cleanedText = this.cleanText(text, charOriginalIndex);
     const origTokens = cleanedText.split(' ');
@@ -142,11 +68,11 @@ export class BertTokenizer {
     const stringBuilder: string[] = [];
     let originalCharIndex = 0, newCharIndex = 0;
     for (const ch of text) {
-      if (isInvalid(ch)) {
+      if (this.isInvalid(ch)) {
         originalCharIndex += ch.length;
         continue;
       }
-      if (isWhitespace(ch)) {
+      if (this.isWhitespace(ch)) {
         if (stringBuilder.length > 0 &&
           stringBuilder[stringBuilder.length - 1] !== ' ') {
           stringBuilder.push(' ');
@@ -172,7 +98,7 @@ export class BertTokenizer {
     const tokens: Token[] = [];
     let startNewWord = true;
     for (const ch of text) {
-      if (isPunctuation(ch)) {
+      if (this.isPunctuation(ch)) {
         tokens.push({text: ch, index: charOriginalIndex[count]});
         count += ch.length;
         startNewWord = true;
@@ -188,13 +114,13 @@ export class BertTokenizer {
     return tokens;
   }
 
-  tokenize(text: string): number[] {
+  public tokenize(text: string): number[] {
     let outputTokens: number[] = [];
 
     const words = this.processInput(text);
     words.forEach(word => {
       if (word.text !== CLS_TOKEN && word.text !== SEP_TOKEN) {
-        word.text = `${SEPERATOR}${word.text.normalize(NFKC_TOKEN)}`;
+        word.text = `${SEPARATOR}${word.text.normalize(NFKC_TOKEN)}`;
       }
     });
 
@@ -242,13 +168,12 @@ export class BertTokenizer {
       }
     }
 
-    return outputTokens;
+    return this.maskTokens(outputTokens);
   }
 
   public processTokenization(
     query: string,
     context: string,
-    maxQueryLen: number = MAX_QUERY_LEN,
     maxSeqLen: number = MAX_SEQ_LEN,
     docStride = 128
   ) {
@@ -311,7 +236,7 @@ export class BertTokenizer {
         inputMask.push(0);
         segmentIds.push(0);
       }
-      return {inputIds, inputMask, segmentIds, origTokens, tokenToOrigMap};
+      return { inputIds, inputMask, segmentIds, origTokens, tokenToOrigMap };
     });
 
     const inputIdArray = features.map(f => f.inputIds);
@@ -336,12 +261,27 @@ export class BertTokenizer {
     });
   }
 
-  public async getValidationTensor(query: string, context: string,) {
-    const inputTensors = this.processTokenization(query, context);
+  private maskTokens(outputTokens: number[]): number[] {
+    if (outputTokens.length < MAX_QUERY_LEN) {
+      const mask = new Array(MAX_QUERY_LEN - outputTokens.length).fill(0);
+      outputTokens.splice(0, 0, ...mask);
+    } else {
+      outputTokens = outputTokens.slice(0, -(outputTokens.length - MAX_QUERY_LEN));
+    }
 
-    const model = await tf.loadGraphModel('https://tfhub.dev/tensorflow/tfjs-model/mobilebert/1');
+    return outputTokens;
+  }
 
-    const result model.execute(inputTensors, ['start_log_tensors', 'end_log_tensors']);
+  private isWhitespace(ch: string): boolean {
+    return /\s/.test(ch);
+  }
+
+  private isInvalid(ch: string): boolean {
+    return (ch.charCodeAt(0) === 0 || ch.charCodeAt(0) === 0xfffd);
+  }
+
+  private isPunctuation(ch: string): boolean {
+    return this.punctuations.indexOf(ch) !== -1;
   }
 }
 
