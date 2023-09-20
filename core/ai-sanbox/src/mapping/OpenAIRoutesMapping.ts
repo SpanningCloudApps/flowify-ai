@@ -54,7 +54,7 @@ const addOpenAiRoutes = (server: FastifyInstance) => {
           res.status(500).send({ errorMessage: err.message });
         }
       }
-    )
+    );
 
     done();
   }, { prefix: 'ai' })

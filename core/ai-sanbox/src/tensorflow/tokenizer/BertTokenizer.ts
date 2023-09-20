@@ -2,6 +2,7 @@
  * Copyright (C) 2023 Spanning Cloud Apps.  All rights reserved.
  */
 
+import { writeFileSync } from 'fs';
 import * as tf from '@tensorflow/tfjs';
 import { Trie } from './Trie';
 
@@ -14,9 +15,6 @@ export const CLS_TOKEN = '[CLS]';
 export const SEP_INDEX = 102;
 export const SEP_TOKEN = '[SEP]';
 export const NFKC_TOKEN = 'NFKC';
-export const VOCAB_BASE =
-  'https://tfhub.dev/tensorflow/tfjs-model/mobilebert/1/';
-export const VOCAB_URL = VOCAB_BASE + 'processed_vocab.json?tfjs-format=file';
 export const MAX_QUERY_LEN = 128;
 
 export interface Token {
@@ -41,7 +39,7 @@ export class BertTokenizer {
   }
 
   private async loadVocab(): Promise<[]> {
-    return tf.util.fetch(VOCAB_URL).then(vocabulary => vocabulary.json());
+    return require('tensorflow/model/processed_vocab.json');
   }
 
   public processInput(text: string): Token[] {
@@ -163,6 +161,7 @@ export class BertTokenizer {
 
       if (isUnknown) {
         outputTokens.push(UNK_INDEX);
+        this.addWordToVocab(words[i].text);
       } else {
         outputTokens = outputTokens.concat(subTokens);
       }
@@ -270,6 +269,14 @@ export class BertTokenizer {
     }
 
     return outputTokens;
+  }
+
+  private addWordToVocab(word: string): void {
+    let origVocab = this.vocab;
+    if (!origVocab.includes(word)) {
+      origVocab.push(word);
+      writeFileSync('src/tensorflow/model/processed_vocab.json', JSON.stringify(origVocab));
+    }
   }
 
   private isWhitespace(ch: string): boolean {

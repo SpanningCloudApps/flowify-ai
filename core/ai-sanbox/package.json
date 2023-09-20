@@ -16,6 +16,7 @@
     "@tensorflow/tfjs-converter": "^4.10.0",
     "@tensorflow/tfjs-node": "4.10.0",
     "@tensorflow/tfjs-node-gpu": "4.10.0",
+    "bert-tokenizer": "1.1.8",
     "config": "3.3.9",
     "fastify": "4.22.2",
     "moment": "2.29.4",
