@@ -3,7 +3,7 @@
  */
 
 import { TicketDto } from 'dto/Ticket';
-import { AIResponse, TensorFlowResponse } from 'model/AIConnector';
+import { AIResponse } from 'model/AIConnector';
 
 export interface CategorizationResult {
   probability: number;
@@ -16,5 +16,5 @@ export interface CategorizationResult {
 
 export interface AIFacade {
   categorize: (ticket: TicketDto) => Promise<CategorizationResult>;
-  parseResponses: (responses: (TensorFlowResponse | AIResponse)[]) => CategorizationResult;
+  parseResponses: (responses: (number | AIResponse)[]) => CategorizationResult;
 }

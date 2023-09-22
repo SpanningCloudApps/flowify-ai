@@ -5,13 +5,13 @@
   "main": "AIConnector.ts",
   "scripts": {
     "start": "TZ=UTC ts-node --transpile-only ./src/AIConnector.ts",
+    "assemble": "TZ=UTC ts-node --transpile-only ./src/tensorflow/index.ts",
     "validate": "tsc && eslint -c .eslintrc.json 'src/**/*.ts'",
     "test": "NODE_CONFIG_DIR=config NODE_ENV=development jest",
     "default": "npm run validate && npm run test",
     "ci": "npm run default"
   },
   "dependencies": {
-    "@tensorflow-models/qna": "1.0.2",
     "@tensorflow/tfjs": "4.10.0",
     "@tensorflow/tfjs-converter": "^4.10.0",
     "@tensorflow/tfjs-node": "4.10.0",
