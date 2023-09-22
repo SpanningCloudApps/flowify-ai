@@ -22,6 +22,7 @@ Open to [CONTRIBUTING](.github/CONTRIBUTING.md)
 - [Communication Hub](core/server/README.md)
 - [Communication Hub AI](core/server/src/ai/README.md)
 - [Flowify ChatBot](core/client/README.md)
+- [AI Model](core/ai-sanbox/README.md)
 
 #### Client Chat Bot UI
 
