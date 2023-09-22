@@ -4,7 +4,7 @@
 
 import { TicketDto } from 'dto/Ticket';
 import { tensorFlowConnector } from 'tensorflow/TensorFlowConnector';
-import { TensorFlowResponse } from 'model/AIConnector';
+import { workflowEncodeMap } from 'tensorflow/model/TerratriceModel';
 import { AIFacade, CategorizationResult } from 'model/AIFacade';
 
 class TensorFlowFacade implements AIFacade {
@@ -15,16 +15,11 @@ class TensorFlowFacade implements AIFacade {
   }
 
   public async categorize(ticket: TicketDto): Promise<CategorizationResult> {
-    const firstTicketPrompt = `Through what workflow should requester go if: ${ticket.title}?`;
-    const secondTicketPrompt = `Through what workflow should requester go if: ${ticket.description}`;
-    const thirdTicketPrompt = ticket.additionalInfo ?
-      `Through what workflow should requester go if: ${ticket.additionalInfo.join(', ')}` : null;
-
-    const responses = await tensorFlowConnector.executeWithContext([firstTicketPrompt, secondTicketPrompt, thirdTicketPrompt]);
+    const responses = await tensorFlowConnector.executeWithContext(ticket.description);
     return this.parseResponses(responses);
   }
 
-  private parseResponses(responses: TensorFlowResponse[]): CategorizationResult {
+  private parseResponses(responses: number[]): CategorizationResult {
     if (responses.length === 0) {
       return {
         workflowName: null,
@@ -32,37 +27,25 @@ class TensorFlowFacade implements AIFacade {
         allClassifications: []
       }
     }
-    const parsedResponses = responses.map(response => ({
-      workflowName: response.text.split('$')[1],
-      score: response.score
-    }));
 
-    let estimatedValue = 0;
-    const responseMap = {};
+    const probability = Math.max(...responses);
+    const workflowIndex = Number(responses.indexOf(probability));
+    let recognizedWorkflow;
+    let allClassifications = [];
 
-    parsedResponses.forEach(response => {
-      estimatedValue += response.score;
-      if (responseMap.hasOwnProperty(response.workflowName)) {
-        responseMap[response.workflowName] += response.score;
-      } else {
-        responseMap[response.workflowName] = response.score;
+    responses.forEach((probability, index) => {
+      for (const [workflowNaming, code] of Object.entries(workflowEncodeMap)) {
+        if (code[workflowIndex] === 1) {
+          recognizedWorkflow = workflowNaming;
+        } else if (code[index] === 1) {
+          allClassifications.push({ probability: probability * 100, workflowName: workflowNaming });
+        }
       }
     });
 
-    const recognizedWorkflow = Object.keys(responseMap)
-      .find(key => responseMap[key] === Math.max(...Object.values(responseMap))) as string;
-
-    let allClassifications = [];
-
-    for (const workflowName in responseMap) {
-      if (workflowName !== recognizedWorkflow) {
-        allClassifications.push({workflowName, probability: responseMap[workflowName] / estimatedValue});
-      }
-    }
-
     return {
       workflowName: recognizedWorkflow,
-      probability: (responseMap[recognizedWorkflow] / estimatedValue) * 100,
+      probability: probability * 100,
       allClassifications
     }
   }
