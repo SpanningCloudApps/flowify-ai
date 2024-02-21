@@ -19,7 +19,7 @@
     <java.version>17</java.version>
     <lombok.version>1.18.28</lombok.version>
     <org.flywaydb.core.version>9.22.0</org.flywaydb.core.version>
-    <org.postgresql.version>42.6.0</org.postgresql.version>
+    <org.postgresql.version>42.7.2</org.postgresql.version>
   </properties>
 
   <dependencies>
